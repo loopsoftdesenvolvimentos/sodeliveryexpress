@@ -1,0 +1,12 @@
+@font-face{
+  font-family: 'Raleway';
+  src: url('../fonts/Raleway/Raleway-Regular.ttf');
+}
+@font-face{
+  font-family: 'Raleway Black';
+  src: url('../fonts/Raleway/Raleway-Black.ttf');
+}
+@font-face{
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto/Roboto-Regular.ttf');
+}

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Só Delivery</title>
+    <link rel="stylesheet" href="public/css/index.css">
+    <link rel="stylesheet" href="public/css/fonts.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+    <link rel="shortcut icon" href="public/img/logo.png" />
+  </head>
+  <body>
+    <header>
+      <div class="logo-publicidade content">
+        <div class="logo">
+          <img src="public/img/logo.png" alt="logo Só Delivery">
+        </div>
+        <div class="publicidade">
+          <p style="text-align: center; color: white;
+          line-height: 100px; font-size: 18px;
+          ">espaço reservado a publicidade</p>
+        </div>
+      </div>
+
+      <div class="menu-conta">
+        <div class="menu-bar">
+          <div class="pesquisa">
+            <input type="text" id="pesquisa">
+            <button type="submit">Buscar</button>
+          </div>
+
+          <nav>
+            <ul>
+              <li>
+                <a href="index.html" class="nomarginleft">
+                  <div class="icon-menu">
+                    <img src="public/img/icons/home.svg" alt="icone de frete">
+                    <p>Home</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="frete.html">
+                  <div class="icon-menu">
+                    <img src="public/img/icons/frete.svg" alt="icone de frete">
+                    <p>Frete</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="veiculo.html">
+                  <div class="icon-menu">
+                    <img src="public/img/icons/truck-front.svg" alt="icone de frete">
+                    <p>Veículo</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="icon-menu">
+                    <img src="public/img/icons/empresa.svg" alt="icone de frete">
+                    <p>Empresa</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="icon-menu">
+                    <img src="public/img/icons/Statistics.svg" alt="icone de frete">
+                    <p>Estatística</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="icon-menu">
+                    <img src="public/img/icons/payment.svg" alt="icone de frete">
+                    <p>Pagamento</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#" id="noborderbottom">
+                  <div class="icon-menu">
+                    <img src="public/img/icons/DUVIDAS.svg" alt="icone de frete">
+                    <p>Dúvidas</p>
+                  </div>
+                </a>
+              </li>
+
+            </ul>
+          </nav>
+        </div>
+
+        <div class="conta">
+          <div class="mobile-cadastro">
+            <a href="#">
+              <img class="somepreto" src="public/img/icons/login-dark.svg" alt="">
+              realizar cadastro
+            </a>
+            <a href="#" id="login">
+                <img src="public/img/icons/login.svg" alt="">
+              login
+            </a>
+          </div>
+          <div class="desk-cadastro">
+            <a href="">
+                <img src="public/img/icons/login.svg" alt="">
+                <p>Entre ou cadastre-se</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="clear"></div>
+      <div class="video-map content">
+        <div class="video-explicativo">
+          <h2>Veja como funciona</h2>
+          <img src="public/img/como-funciona.png" alt="imagem-explicativa">
+        </div>
+
+        <div class="clear"></div>
+
+        <div class="map">
+          <object height="100%" width="100%" data="public/img/icons/map.svg" type="image/svg+xml"></object>
+        </div>
+      </div>
+
+      <div class="clear"></div>
+
+      <div class="estados content">
+        <div class="estado-nome">
+          <img src="public/img/icons/package.svg" alt="icone de pacote">
+          <h2>Escolhe seu Estado:</h2>
+        </div>
+
+        <select class="lista_option_estados">
+          <option value="AC">Acre </option>
+          <option value="AL">Alagoas</option>
+          <option value="AP">Amapá</option>
+          <option value="AM">Amazonas</option>
+          <option value="BA">Bahia</option>
+          <option value="CE">Ceará</option>
+          <option value="DF">Distrito Federal</option>
+          <option value="ES">Espirito Santo</option>
+          <option value="GO">Goiás</option>
+          <option value="MA">Maranhão</option>
+          <option value="MT">Mato Grosso</option>
+          <option value="MS">Mato Grosso do Sul</option>
+          <option value="MG">Minas Gerais</option>
+          <option value="PA">Pará </option>
+          <option value="PB">Paraíba</option>
+          <option value="PR">Paraná</option>
+          <option value="PE">Pernambuco</option>
+          <option value="PI">Piauí</option>
+          <option value="RJ">Rio de Janeiro</option>
+          <option value="RN">Rio Grande do Norte</option>
+          <option value="RS">Rio Grande do Sul</option>
+          <option value="RO">Rondônia</option>
+          <option value="RR">Roraima</option>
+          <option value="SC">Santa Catarina</option>
+          <option value="SP">São Paulo</option>
+          <option value="SE">Sergipe</option>
+          <option value="TO">Tocantins</option>
+        </select>
+
+        <ul id="lista_estados">
+          <li><a href="#">AC</a></li>
+          <li><a href="#">AL</a></li>
+          <li><a href="#">AP</a></li>
+          <li><a href="#">AM</a></li>
+          <li><a href="#">BA</a></li>
+          <li><a href="#">CE</a></li>
+          <li><a href="#">DF</a></li>
+          <li><a href="#">ES</a></li>
+          <li><a href="#">GO</a></li>
+          <li><a href="#">MA</a></li>
+          <li><a href="#">MT</a></li>
+          <li><a href="#">MS</a></li>
+          <li><a href="#">MG</a></li>
+          <li><a href="#">PA</a></li>
+          <li><a href="#">PB</a></li>
+          <li><a href="#">PR</a></li>
+          <li><a href="#">PE</a></li>
+          <li><a href="#">PI</a></li>
+          <li><a href="#">RJ</a></li>
+          <li><a href="#">RN</a></li>
+          <li><a href="#">RS</a></li>
+          <li><a href="#">RO</a></li>
+          <li><a href="#">RR</a></li>
+          <li><a href="#">SC</a></li>
+          <li><a href="#">SP</a></li>
+          <li><a href="#">SE</a></li>
+          <li><a href="#">TO</a></li>
+        </ul>
+      </div>
+      <div class="clear"></div>
+      <div class="borderred"></div>
+    </main>
+
+
+    <footer>
+      <div class="content footer">
+        <div class="relatorio">
+          <div class="nome">
+            <img src="public/img/icons/relatorio.svg" alt="">
+            <h3>Relatórios</h3>
+          </div>
+
+          <div class="clear"></div>
+
+          <a href="#">
+            <img src="public/img/icons/download.svg">
+            Vendas
+          </a>
+
+          <a href="#">
+            <img src="public/img/icons/download.svg">
+            Veículos
+          </a>
+
+          <a href="#">
+            <img src="public/img/icons/download.svg">
+            Frete
+          </a>
+
+          <a href="#" id="button_relatorio">
+            <span>+</span>
+            Mostrar mais
+          </a>
+        </div>
+
+        <div class="estatisticas">
+          <div class="nome">
+            <img src="public/img/icons/Statistics.svg">
+            <h3>Estatísticas</h3>
+          </div>
+        </div>
+
+        <div class="menu-footer">
+          <div class="sobre">
+            <h3>Sobre Nós</h3>
+            <ul>
+              <li><a href="#">Contato</a></li>
+              <li><a href="#">Quem somos</a></li>
+              <li><a href="#">Estatísticas</a></li>
+            </ul>
+          </div>
+
+          <div class="borderred"></div>
+
+          <div class="servicos">
+            <h3>Serviços</h3>
+            <ul>
+              <li><a href="veiculo.html">Veículos</a></li>
+              <li><a href="frete.html">Fretes</a></li>
+              <li><a href="#">Relatórios</a></li>
+            </ul>
+          </div>
+
+          <div class="borderred"></div>
+
+          <div class="redes-sociais">
+            <h3>Redes Sociais</h3>
+            <a href="#"><img src="public/img/icons/facebook.svg"></a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; <b>Loop Soft</b> Internet Serviços LTDA</p>
+      </div>
+    </footer>
+  </body>
+</html>

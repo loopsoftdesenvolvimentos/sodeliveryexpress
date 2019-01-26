@@ -1,0 +1,417 @@
+.carousel{
+	position: relative;
+}
+
+.carousel img{
+	width: 100%;
+}
+
+.container-informacao{
+	background: rgba(0,0,0,0.7);
+	position: absolute;
+	bottom: 4px;
+	left: 0;
+	right: 0;
+	padding: 1rem;
+	color: var(--branco);
+	text-align: center;
+}
+
+.container-informacao h2{
+	font-weight: 700;
+	font-size: 1.1rem;
+}
+
+.container-informacao p{
+	font-size: 0.8rem;
+	margin-top: 10px;
+}
+
+.bolinha{
+	display: flex;
+	padding: 1rem;
+	justify-content: center;
+}
+
+.boll{
+	width: 15px;
+	height: 15px;
+	margin-left: 10px;
+	border: solid 2px var(--vermelho);
+	border-radius: 50px;
+	background: var(--amarelo);
+	cursor: pointer;
+}
+
+
+.menu{
+	background: var(--amarelo);
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	padding: 1rem;
+}
+
+.menu p{
+	text-decoration: none;
+	color: var(--preto);
+	font-weight: 700;
+	font-size: 1rem;
+	cursor: pointer;
+}
+
+.risquinho{
+	position: absolute;
+	left: 10px;
+	cursor: pointer;
+}
+.risco{
+	height: 6px;
+	background: red;
+	width: 40px;
+	margin-bottom: 4px;
+}
+
+/*PESQUISA FILTRO*/
+.overlay {
+	background: var(--branco-mesmo);
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 0;
+  overflow-x: hidden;
+  transition: var(--transition3);
+}
+
+.overlay-content {
+  position: relative;
+  top: 8%;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  padding: 0.5rem;
+  border: solid 1px var(--vermelho);
+  border-radius: 14px;
+ }
+
+.overlay a {
+  text-decoration: none;
+  display: block;
+  color: var(--preto);
+}
+
+.overlay a:hover,
+.overlay a:focus {
+	color: var(--vermelho);
+	transition: var(--transition3);
+}
+
+.overlay .closebtn {
+	background: none;
+	border: none;
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 40px;
+}
+
+.menu .nome{
+	width: 90%;
+	background: var(--amarelo);
+}	
+
+.menu .nome h3{
+	font-weight: 700;
+	color: var(--preto);
+}
+
+.filtros{
+	width: 80%;
+	margin: 0 auto;
+}
+
+.origem-destino{
+	padding: 1rem;
+}
+
+.origem,
+.destino{
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.origem span,
+.destino span{
+	font-weight: 700;
+	margin-bottom: 10px;
+}
+
+.origem select,
+.destino select{
+	background: var(--amarelo-claro);
+	border: none;
+	outline: none;
+	width: 70%;
+	padding: 0.15rem;
+	text-align-last: center;
+}
+
+.filtros .borderred{
+	background: var(--preto);
+	height: 1px;
+}
+
+.veiculo,
+.complementos,
+.faixa-preco{
+	padding: 1rem;
+}
+
+.veiculo ul a,
+.complementos ul a,
+.faixa-preco span{
+	font-size: 0.9rem;
+}
+
+.option-veiculo,
+.option-complemento{
+	display: flex;
+	align-items: center;	
+	cursor: pointer;
+	margin-top: 10px;
+}
+
+.option-faixa{
+	padding: 5px;
+}
+
+.baixo img{
+	transform: rotate(90deg);
+}
+
+.veiculo ul,
+.complemento ul{
+	list-style: none;
+}
+
+.veiculo a,
+.complemento a{
+	margin-left: 50px;
+}
+
+.faixa{
+	margin-top: 10px;
+}
+
+.veiculo li,
+.complemento li{
+	padding: 0.3rem;
+	text-align: left;
+}
+
+.mostra-fretes h3,
+.mostra-veiculos h3{
+	display: block;
+	height: 50px;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 22px;
+}
+
+.mostra-fretes,
+.mostra-veiculos{
+	padding: 1rem;
+}
+
+.container-frete{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0.5rem;
+	width: 90%;
+	margin: 0 auto;
+	box-shadow: 0px 3px 20px rgba(0,0,0,0.35);
+}
+
+.frete-info{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.img{
+	padding: 0.5rem;
+}
+
+.frete-info ul{
+	padding: 0.5rem;
+	list-style: none;
+}
+
+.frete-info ul li{
+	font-size: 0.9rem;
+}
+
+.marginbottom{
+	margin-bottom: 10px;
+}
+
+.overlay .mostra-fretes{
+	display: none;
+}
+
+.frete-info li{
+	padding: 5px;
+}
+
+@media screen and (min-width: 940px){
+	.container-informacao{
+		height: 120px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.carousel img{
+		width: 100%;
+	}
+	.container-informacao h2{
+		font-size: 1.8rem;
+	}
+
+	.container-informacao p{
+		font-size: 1.1rem;
+	}
+
+	.overlay-content{
+		width: 500px;
+	}
+
+	.menu{
+		width: 95%;
+	}
+
+	.mostra-fretes h3,
+	.mostra-veiculos h3{
+		font-size: 26px;
+	}
+
+	.container-frete{
+		flex-direction: row;
+		justify-content: space-around;
+		width: 70%;
+	}
+
+	.frete-info{
+		flex-direction: row;
+		width: 80%;
+		justify-content: space-between;
+	}
+
+	.mostra-veiculos .frete-info .borderred{
+		display: none;
+	}
+
+	.mostra-veiculos .frete-info{
+		width: 60%;
+	}
+
+	.mostra-veiculos .container-frete{
+		width: 70%;
+	}
+}
+
+@media screen and (min-width: 1336px){
+	.risquinho{
+		display: none;
+	}
+
+	.menu{
+		background: unset;
+	}
+
+	.menu p{
+		font-size: 0px;
+	}
+
+	.overlay{
+		width: 1038px;
+		z-index: 0;
+		background: unset;
+		position: static;
+		transition: unset;
+		display: flex;
+		justify-content: space-around;
+	}
+
+	.overlay .closebtn{
+		display: none;
+	}
+
+	.overlay-content{
+		background: var(--branco);
+		border: solid 1px var(--vermelho);
+		width: 350px;
+		overflow-x: hidden;
+		height: 700px;
+		margin: 0;
+		border-radius: 8px;
+	}
+
+	.overlay-content::-webkit-scrollbar {
+    width: 5px;
+	}
+	.overlay-content::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 30px;
+    background: var(--vermelho);
+	}
+
+	.mostra-fretes{
+		display: none;
+	}
+
+	.mostra-veiculos{
+		display: none;
+	}
+
+	.overlay .mostra-fretes{
+		display: block;
+	}
+
+	.overlay .mostra-fretes h3{
+		text-align: center;
+	}
+
+	.overlay .container-frete{
+		width: 98%;
+		margin: 0 auto;
+	}
+
+	.overlay .frete-info{
+		width: 100%;
+	}
+
+	.overlay .mostra-veiculos{
+		display: block;
+	}
+
+	.overlay .mostra-veiculos .frete-info{
+		width: 100%;
+	}
+
+	.overlay .mostra-veiculos .container-frete{
+		width: 100%;
+	}
+
+	.overlay #no_clear{
+		display: none;
+	}
+}
