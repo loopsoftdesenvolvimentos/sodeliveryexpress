@@ -68,12 +68,13 @@ header{
 .menu-mobile {
   position: absolute;
   top: 18px;
-  right: 5%;
+  right: 0%;
 }
 .menu-mobile i{
   font-size: 2.5rem;
   padding-right: 2rem;
   height: 0;
+  cursor: pointer;
 }
 .pesquisa{
   width: 80%;
@@ -387,6 +388,10 @@ nav a{
     width: 500px;
   }
 
+  .pesquisa{
+    margin: 0 auto;
+  }
+
   .pesquisa input[type="text"]{
     width: 68%;
   }
@@ -476,6 +481,10 @@ nav a{
 
   .nome{
     width: 90%;
+  }
+
+  .overlay .mostra-veiculos{
+    display: none;
   }
 }
 
