@@ -202,7 +202,6 @@ nav a{
 
 .map{
   text-align: center;
-  width: 100vw;
   height: 600px;
   align-items: center;
   justify-content: center;
@@ -581,6 +580,7 @@ nav a{
 
   .map{
     height: unset;
+    width: 100vw;
   }
 
   .lista_option_estados{
