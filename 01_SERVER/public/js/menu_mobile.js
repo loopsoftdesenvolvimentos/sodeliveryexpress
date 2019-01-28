@@ -13,12 +13,11 @@ class Media_screen{
 }
 let menu_screen = new Media_screen('940px');
 let icon = document.querySelector('.menu-mobile');
-
-  if (menu_screen) {
-    icon[0].className = 'mobile';
-  }else{
-    icon[0].className = 'desktop'
-  }
+  // if (menu_screen) {
+  //   icon.className = 'mobile';
+  // }else{
+  //   icon.className = 'desktop'
+  // }
 
 function openNav() {
   document.getElementsByTagName('nav')[0].style.display = "block";
