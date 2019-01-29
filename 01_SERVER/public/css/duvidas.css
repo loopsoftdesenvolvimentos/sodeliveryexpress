@@ -1,0 +1,70 @@
+.nome-page{
+	padding: 1rem;
+}
+
+.nome-page h2{
+	text-align: center;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 1.5rem;
+}
+
+.linha-nome{
+	padding: 0.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.linha-nome a{
+	text-decoration: none;
+	color: var(--preto);
+	font-size: 1.4rem;
+	font-weight: 700;
+}
+
+.linha-nome img{
+	width: 50px;
+}
+
+.down{
+	transform: rotate(90deg);
+}
+
+.lista-artigos{
+	padding: 0.5rem;
+}
+
+.resumo-artigo{
+	width: 85%;
+	margin: auto;
+}
+
+.resumo-artigo h3{
+	margin-bottom: 10px;
+	font-size: 1rem;
+}
+
+
+.resumo-artigo p{ 
+	text-align: justify;
+}
+
+@media screen and (min-width: 724px){
+
+	.lista-artigos{
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	.resumo-artigo{
+		width: 92%;
+	}
+}
+
+@media screen and (min-width: 1224px){
+
+	.resumo-artigo{
+		width: 95%;
+	}
+}

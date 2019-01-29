@@ -196,6 +196,17 @@ nav a{
   width: 100%;
 }
 
+.video-explicativo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video-explicativo iframe{
+  width: 98%;
+  height: 250px;
+}
+
 .video-explicativo h2{
   text-align: center;
   padding: 1rem;
@@ -454,6 +465,15 @@ nav a{
     width: 30px;
   }
 
+  .video-explicativo iframe{
+    height: 600px;
+    width: 90%;
+  }
+
+  .map svg{
+    width: 60%;
+  }
+
   .footer{
     justify-content: space-between;
     display: flex;
@@ -598,6 +618,11 @@ nav a{
 
   .video-explicativo img{
     width: 450px;
+  }
+
+  .video-explicativo iframe{
+    width: 450px;
+    height: 300px;
   }
 
   .map{
