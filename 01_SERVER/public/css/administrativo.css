@@ -1,10 +1,8 @@
 header{
-	/*border: solid 2px green;*/
-	border-bottom: solid 4px red;
+	border-bottom: solid 4px var(--vermelho);
 }
 
 .logo-config{
-	/*border: solid 2px red;*/
 	width: 100%;
 	position: relative;
 }
