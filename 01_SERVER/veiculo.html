@@ -6,6 +6,7 @@
     <title>SóDelivery - Veículos</title>
     <link rel="stylesheet" href="public/css/index.css">
     <link rel="stylesheet" href="public/css/fonts.css">
+    <link rel="stylesheet" href="public/css/form.css">
     <link rel="stylesheet" href="public/css/frete_e_veiculo.css">
     <link rel="shortcut icon" href="public/img/logo.png" />
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
@@ -20,7 +21,7 @@
             <img src="public/img/logo.png" alt="logo Só Delivery">
           </a>
         </div>
-        <div class="publicidade">
+        <div class="publicidade none">
           <p style="text-align: center; color: white;
           line-height: 100px; font-size: 18px;
           ">espaço reservado a publicidade</p>
@@ -116,17 +117,13 @@
 
         <div class="conta">
           <div class="mobile-cadastro">
-            <a href="#">
-              <img class="somepreto" src="public/img/icons/login-dark.svg" alt="">
-              realizar cadastro
-            </a>
-            <a href="#" id="login">
+            <a href="login.html" id="login">
                 <img src="public/img/icons/login.svg" alt="">
               login
             </a>
           </div>
           <div class="desk-cadastro">
-            <a href="">
+            <a href="login.html">
                 <img src="public/img/icons/login.svg" alt="">
                 <p>Entre ou cadastre-se</p>
             </a>
@@ -139,10 +136,6 @@
       <div class="clear"></div>
       <div class="carousel content">
         <img src="public/img/carousel-teste.png">
-        <div class="container-informacao">
-          <h2>Os melhores Veículos do Brasil</h2>
-          <p>Confira nossos veículos</p>
-        </div>
       </div>
 
       <div class="bolinha">
@@ -156,184 +149,167 @@
           <a href="javascript:void(0)" class="closebtn" onclick="closePesquisa()">&times;</a>
           <!-- "pesquisa" -->
           <div class="overlay-content">
-            <div class="nome">
-              <h3>Filtros de busca</h3>
-            </div>
-
-            <div class="clear"></div>
-
-            <div class="filtros">
-              <div class="origem-destino">
-                <div class="origem">
-                  <span>Origem:</span>
-                  <select>
-                    <option value="AC">Acre </option>
-                    <option value="AL">Alagoas</option>
-                    <option value="AP">Amapá</option>
-                    <option value="AM">Amazonas</option>
-                    <option value="BA">Bahia</option>
-                    <option value="CE">Ceará</option>
-                    <option value="DF">Distrito Federal</option>
-                    <option value="ES">Espirito Santo</option>
-                    <option value="GO">Goiás</option>
-                    <option value="MA">Maranhão</option>
-                    <option value="MT">Mato Grosso</option>
-                    <option value="MS">Mato Grosso do Sul</option>
-                    <option value="MG">Minas Gerais</option>
-                    <option value="PA">Pará </option>
-                    <option value="PB">Paraíba</option>
-                    <option value="PR">Paraná</option>
-                    <option value="PE">Pernambuco</option>
-                    <option value="PI">Piauí</option>
-                    <option value="RJ">Rio de Janeiro</option>
-                    <option value="RN">Rio Grande do Norte</option>
-                    <option value="RS">Rio Grande do Sul</option>
-                    <option value="RO">Rondônia</option>
-                    <option value="RR">Roraima</option>
-                    <option value="SC">Santa Catarina</option>
-                    <option value="SP">São Paulo</option>
-                    <option value="SE">Sergipe</option>
-                    <option value="TO">Tocantins</option>
-                  </select>
-                </div>
-
-
-                <div class="destino">
-                  <span>Destino:</span>
-                  <select>
-                    <option value="AC">Acre </option>
-                    <option value="AL">Alagoas</option>
-                    <option value="AP">Amapá</option>
-                    <option value="AM">Amazonas</option>
-                    <option value="BA">Bahia</option>
-                    <option value="CE">Ceará</option>
-                    <option value="DF">Distrito Federal</option>
-                    <option value="ES">Espirito Santo</option>
-                    <option value="GO">Goiás</option>
-                    <option value="MA">Maranhão</option>
-                    <option value="MT">Mato Grosso</option>
-                    <option value="MS">Mato Grosso do Sul</option>
-                    <option value="MG">Minas Gerais</option>
-                    <option value="PA">Pará </option>
-                    <option value="PB">Paraíba</option>
-                    <option value="PR">Paraná</option>
-                    <option value="PE">Pernambuco</option>
-                    <option value="PI">Piauí</option>
-                    <option value="RJ">Rio de Janeiro</option>
-                    <option value="RN">Rio Grande do Norte</option>
-                    <option value="RS">Rio Grande do Sul</option>
-                    <option value="RO">Rondônia</option>
-                    <option value="RR">Roraima</option>
-                    <option value="SC">Santa Catarina</option>
-                    <option value="SP">São Paulo</option>
-                    <option value="SE">Sergipe</option>
-                    <option value="TO">Tocantins</option>
-                  </select>
-                </div>
+              <div class="nome">
+                <h3>Filtros de busca</h3>
               </div>
-              <div class="borderred"></div>
-
-
-              <div class="veiculo">
-                <h3>Veículo: </h3>
-
-
-                <div class="veiculos-pesados">
-                  <div class="option-veiculo">
-                    <img src="public/img/icons/triangle-right.png" width="30">
-                    <span>Pesados:</span>
+              <div class="filtros">
+                <div class="container-form">
+                  <form class="form-filtro" action="" method="post">
+                    <div class="content-form">
+                      <div class="container-input">
+                        <label for="nomeMotorista_veiculo">Nome do Motorista</label>
+                        <input type="text" name="nomeMotorista_veiculo" placeholder="Digite o nome do motorista">
+                      </div>
+                      <img src="public/img/icons/search.svg" alt="lupa de pesquisa">
+                    </div>
+                  </form>
+                </div>
+                <div class="borderred"></div>
+                <div class="origem-destino">
+                  <div class="origem">
+                    <span>Estado:</span>
+                    <select>
+                      <option selected disabled>Selecione o Estado</option>
+                      <option value="AL">Alagoas</option>
+                      <option value="AP">Amapá</option>
+                      <option value="AM">Amazonas</option>
+                      <option value="BA">Bahia</option>
+                      <option value="CE">Ceará</option>
+                      <option value="DF">Distrito Federal</option>
+                      <option value="ES">Espirito Santo</option>
+                      <option value="GO">Goiás</option>
+                      <option value="MA">Maranhão</option>
+                      <option value="MT">Mato Grosso</option>
+                      <option value="MS">Mato Grosso do Sul</option>
+                      <option value="MG">Minas Gerais</option>
+                      <option value="PA">Pará </option>
+                      <option value="PB">Paraíba</option>
+                      <option value="PR">Paraná</option>
+                      <option value="PE">Pernambuco</option>
+                      <option value="PI">Piauí</option>
+                      <option value="RJ">Rio de Janeiro</option>
+                      <option value="RN">Rio Grande do Norte</option>
+                      <option value="RS">Rio Grande do Sul</option>
+                      <option value="RO">Rondônia</option>
+                      <option value="RR">Roraima</option>
+                      <option value="SC">Santa Catarina</option>
+                      <option value="SP">São Paulo</option>
+                      <option value="SE">Sergipe</option>
+                      <option value="TO">Tocantins</option>
+                    </select>
+                  </div>
+  
+  
+                  <div class="destino">
+                    <span>Cidade:</span>
+                    <select>
+                      <option selected disabled>Selecione a Cidade</option>
+                    </select>
                   </div>
                 </div>
-
-                 <div class="veiculos-medios">
-                  <div class="option-veiculo">
-                    <img src="public/img/icons/triangle-right.png" width="30">
-                    <span>Médios:</span>
+                <div class="borderred"></div>
+  
+  
+                <div class="veiculo">
+                  <h3>Veículo: </h3>
+  
+  
+                  <div class="veiculos-pesados">
+                    <div class="option-veiculo">
+                      <img src="public/img/icons/triangle-right.png" width="30">
+                      <span>Pesados:</span>
+                    </div>
+                  </div>
+  
+                   <div class="veiculos-medios">
+                    <div class="option-veiculo">
+                      <img src="public/img/icons/triangle-right.png" width="30">
+                      <span>Médios:</span>
+                    </div>
+                  </div>
+  
+                  <div class="veiculos-leves">
+                    <div class="option-veiculo baixo">
+                      <img src="public/img/icons/triangle-right.png" width="30">
+                      <span>Leves:</span>
+                    </div>
+                    <ul>
+                      <li><a href="#">Todo</a></li>
+                      <li><a href="#">3/4</a></li>
+                      <li><a href="#">VLC</a></li>
+                    </ul>
                   </div>
                 </div>
-
-                <div class="veiculos-leves">
-                  <div class="option-veiculo baixo">
-                    <img src="public/img/icons/triangle-right.png" width="30">
-                    <span>Leves:</span>
+  
+                <div class="borderred"></div>
+  
+                <div class="complementos">
+                  <h3>Complemento</h3>
+  
+                  <div class="complemento">
+                    <div class="option-complemento baixo">
+                      <img src="public/img/icons/triangle-right.png" width="30">
+                      <span>Sim</span>
+                    </div>
+                    <ul>
+                      <li><a href="#">Baú</a></li>
+                      <li><a href="#">Baú Frigorifico</a></li>
+                      <li><a href="#">Sider</a></li>
+                      <li><a href="#">Caçamba</a></li>
+                      <li><a href="#">Grande Baixa</a></li>
+                      <li><a href="#">Grandeleiro</a></li>
+                      <li><a href="#">Prancha</a></li>
+                      <li><a href="#">Cavaqueira</a></li>
+                      <li><a href="#">Bug Porta Container</a></li>
+                      <li><a href="#">Munk</a></li>
+                      <li><a href="#">Silo</a></li>
+                      <li><a href="#">Tank</a></li>
+                      <li><a href="#">Gaiola</a></li>
+                      <li><a href="#">Cegonheiro</a></li>
+                      <li><a href="#">Apenas cavalo</a></li>
+                    </ul>
                   </div>
-                  <ul>
-                    <li><a href="#">Todo</a></li>
-                    <li><a href="#">3/4</a></li>
-                    <li><a href="#">VLC</a></li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="borderred"></div>
-
-              <div class="complementos">
-                <h3>Complemento</h3>
-
-                <div class="complemento">
-                  <div class="option-complemento baixo">
-                    <img src="public/img/icons/triangle-right.png" width="30">
-                    <span>Sim</span>
-                  </div>
-                  <ul>
-                    <li><a href="#">Baú</a></li>
-                    <li><a href="#">Baú Frigorifico</a></li>
-                    <li><a href="#">Sider</a></li>
-                    <li><a href="#">Caçamba</a></li>
-                    <li><a href="#">Grande Baixa</a></li>
-                    <li><a href="#">Grandeleiro</a></li>
-                    <li><a href="#">Prancha</a></li>
-                    <li><a href="#">Cavaqueira</a></li>
-                    <li><a href="#">Bug Porta Container</a></li>
-                    <li><a href="#">Munk</a></li>
-                    <li><a href="#">Silo</a></li>
-                    <li><a href="#">Tank</a></li>
-                    <li><a href="#">Gaiola</a></li>
-                    <li><a href="#">Cegonheiro</a></li>
-                    <li><a href="#">Apenas cavalo</a></li>
-                  </ul>
-                </div>
-
-                <div class="complemento">
-                  <div class="option-complemento">
-                    <img src="public/img/icons/triangle-right.png" width="30">
-                    <span>Não</span>
+  
+                  <div class="complemento">
+                    <div class="option-complemento">
+                      <img src="public/img/icons/triangle-right.png" width="30">
+                      <span>Não</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-
-              <div class="borderred"></div>
-
-              <div class="faixa-preco">
-                <h3>Faixa de Preço</h3>
-
-                <div class="faixa">
-                  <div class="option-faixa">
-                    <input type="checkbox" name="a_combinar">
-                    <span>A combinar</span>
-                  </div>
-
-                  <div class="option-faixa">
-                    <input type="checkbox" name="ate_2500">
-                    <span>Até R$ 2500</span>
-                  </div>
-
-                  <div class="option-faixa">
-                    <input type="checkbox" name="de_2500_a_5000">
-                    <span>R$ 2500 a R$ 5000</span>
-                  </div>
-
-                  <div class="option-faixa">
-                    <input type="checkbox" id="check" name="acima_5000">
-                    <span>Acima de R$ 5000</span>
+  
+                <div class="borderred"></div>
+  
+                <div class="faixa-preco">
+                  <h3>Faixa de Preço</h3>
+  
+                  <div class="faixa">
+                    <div class="option-faixa">
+                      <input type="checkbox" name="a_combinar">
+                      <span>A combinar</span>
+                    </div>
+  
+                    <div class="option-faixa">
+                      <input type="checkbox" name="ate_2500">
+                      <span>Até R$ 2500</span>
+                    </div>
+  
+                    <div class="option-faixa">
+                      <input type="checkbox" name="de_2500_a_5000">
+                      <span>R$ 2500 a R$ 5000</span>
+                    </div>
+  
+                    <div class="option-faixa">
+                      <input type="checkbox" id="check" name="acima_5000">
+                      <span>Acima de R$ 5000</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
 
           <div class="mostra-veiculos">
-            <h3>Veiculos</h3>
+            <h3>Veículos</h3>
             <div class="container-frete">
               <div class="img">
                 <img src="public/img/logo.png" width="100">
@@ -388,7 +364,7 @@
       <div class="clear"></div>
 
       <div class="mostra-veiculos">
-        <h3>Veiculos</h3>
+        <h3>Veículos</h3>
         <div class="container-frete">
           <div class="img">
             <img src="public/img/logo.png" width="100">
@@ -461,10 +437,10 @@
             Frete
           </a>
 
-          <a href="#" id="button_relatorio">
+          <!-- <a href="#" id="button_relatorio">
             <span>+</span>
             Mostrar mais
-          </a>
+          </a> -->
         </div>
 
         <div class="estatisticas">

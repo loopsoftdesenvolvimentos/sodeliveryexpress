@@ -50,7 +50,7 @@ header{
 .info-servico,
 .info-conta{
 	padding: 2.5rem;
-	width: 94%;
+	/* width: 94%; */
 	background: var(--amarelo);
 	margin: 10px 10px;
 	border-radius: 10px;
@@ -262,6 +262,7 @@ header{
 
 	.informacoes-topo{
 		display: flex;
+		justify-content: center;
 	}
 
 	.info-servico,

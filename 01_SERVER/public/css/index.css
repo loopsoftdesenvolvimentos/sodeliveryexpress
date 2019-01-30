@@ -257,6 +257,12 @@ nav a{
   margin-top: 20px;
   outline: none;
   font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  color: var(--preto);
+  background: var(--amarelo-claro);
+  text-align-last: center;
+  outline: none;
+  border: none;
 }
 
 .estados option{
