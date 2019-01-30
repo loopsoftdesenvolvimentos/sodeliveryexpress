@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Fretes</title>
+    <title>SóDelivery - Fretes</title>
+    <link rel="stylesheet" href="public/css/form.css">
     <link rel="stylesheet" href="public/css/index.css">
     <link rel="stylesheet" href="public/css/fonts.css">
     <link rel="stylesheet" href="public/css/frete_e_veiculo.css">
@@ -139,10 +140,10 @@
       <div class="clear"></div>
       <div class="carousel content">
         <img src="public/img/carousel-teste.png">
-        <div class="container-informacao">
+        <!-- <div class="container-informacao">
           <h2>Os melhores Veículos do Brasil</h2>
           <p>Confira nossos veículos</p>
-        </div>
+        </div> -->
       </div>
 
       <div class="bolinha">
@@ -159,15 +160,24 @@
             <div class="nome">
               <h3>Filtros de busca</h3>
             </div>
-
-            <div class="clear"></div>
-
             <div class="filtros">
+              <div class="container-form">
+                <form class="form-filtro" action="" method="post">
+                  <div class="content-form">
+                    <div class="container-input">
+                      <label for="nomeEmpresa_frete">Nome da empresa</label>
+                      <input type="text" name="nomeEmpresa_frete" placeholder="Digite o nome da empresa">
+                    </div>
+                    <img src="public/img/icons/search.svg" alt="lupa de pesquisa">
+                  </div>
+                </form>
+              </div>
+              <div class="borderred"></div>
               <div class="origem-destino">
                 <div class="origem">
-                  <span>Origem:</span>
+                  <span>Estado:</span>
                   <select>
-                    <option value="AC">Acre </option>
+                    <option selected disabled>Selecione o Estado</option>
                     <option value="AL">Alagoas</option>
                     <option value="AP">Amapá</option>
                     <option value="AM">Amazonas</option>
@@ -199,35 +209,9 @@
 
 
                 <div class="destino">
-                  <span>Destino:</span>
+                  <span>Cidade:</span>
                   <select>
-                    <option value="AC">Acre </option>
-                    <option value="AL">Alagoas</option>
-                    <option value="AP">Amapá</option>
-                    <option value="AM">Amazonas</option>
-                    <option value="BA">Bahia</option>
-                    <option value="CE">Ceará</option>
-                    <option value="DF">Distrito Federal</option>
-                    <option value="ES">Espirito Santo</option>
-                    <option value="GO">Goiás</option>
-                    <option value="MA">Maranhão</option>
-                    <option value="MT">Mato Grosso</option>
-                    <option value="MS">Mato Grosso do Sul</option>
-                    <option value="MG">Minas Gerais</option>
-                    <option value="PA">Pará </option>
-                    <option value="PB">Paraíba</option>
-                    <option value="PR">Paraná</option>
-                    <option value="PE">Pernambuco</option>
-                    <option value="PI">Piauí</option>
-                    <option value="RJ">Rio de Janeiro</option>
-                    <option value="RN">Rio Grande do Norte</option>
-                    <option value="RS">Rio Grande do Sul</option>
-                    <option value="RO">Rondônia</option>
-                    <option value="RR">Roraima</option>
-                    <option value="SC">Santa Catarina</option>
-                    <option value="SP">São Paulo</option>
-                    <option value="SE">Sergipe</option>
-                    <option value="TO">Tocantins</option>
+                    <option selected disabled>Selecione a Cidade</option>
                   </select>
                 </div>
               </div>
@@ -525,7 +509,7 @@
         <p>&copy; <b>Loop Soft</b> Internet Serviços LTDA</p>
       </div>
     </footer>
-    
+
   <!-- SCRIPTS -->
   <script type="text/javascript" src="public/js/menu_mobile.js"></script>
   <script type="text/javascript" src="public/js/pesquisa.js"></script>

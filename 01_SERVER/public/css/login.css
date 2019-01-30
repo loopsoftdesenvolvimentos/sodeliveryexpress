@@ -104,7 +104,7 @@ form legend{
 .user-icon .user-path {
   -webkit-animation: dash  .6s linear forwards;
   animation: dash  .6s linear forwards;
-  animation-delay: .8s;
+  animation-delay:   .8s;
 }
 input {
   color: var(--preto);

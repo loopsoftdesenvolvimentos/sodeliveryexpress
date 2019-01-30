@@ -1,0 +1,71 @@
+:root{
+  --preto: #232323;
+  --branco: #f7f4ff;
+
+  --azul_focus: #4f7bff;
+
+}
+form{
+  width: 100%;
+  height: 100%;
+}
+form legend,
+form h1{
+  font-size: 1.3rem;
+  font-family: 'Raleway Bold', sans-serif;
+}
+form input{
+  border-radius: 5px;
+  background: rgba(238, 238, 238, 0.5);
+  padding: 1rem;
+  outline: none;
+  border: none;
+  text-indent: 5px;
+  transition: all ease-in .3s
+}
+form input::-moz-placeholder{
+  font-size: .9rem;
+  font-family: 'Roboto', sans-serif;
+  color: var(--preto);
+}
+form input::placeholder{
+  font-size: .9rem;
+  font-family: 'Roboto', sans-serif;
+  color: var(--preto);
+}
+form input::-webkit-input-placeholder{
+  font-size: .9rem;
+  font-family: 'Roboto', sans-serif;
+  color: var(--preto);
+}
+form input:focus {
+  border-bottom: solid 2px var(--azul_focus);
+}
+
+form label{
+  font-size: 1.1rem;
+  font-family: 'Raleway Bold', sans-serif;
+  font-weight: 700;
+  color: var(--preto);
+}
+.content-form{
+
+}
+/* filtros */
+.form-filtro label ,
+.form-filtro input{
+  display: block;
+  width: 80%;
+  margin: auto;
+  margin: 50px 0;
+}
+.form-filtro .container-input{
+  position: relative;
+}
+.form-filtro .content-form img{
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 0;
+  right: 0
+}

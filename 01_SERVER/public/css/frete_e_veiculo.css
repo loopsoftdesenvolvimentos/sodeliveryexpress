@@ -96,7 +96,6 @@
   margin-top: 30px;
   margin-bottom: 10px;
   padding: 0.5rem;
-  border: solid 1px var(--vermelho);
   border-radius: 14px;
  }
 
@@ -124,18 +123,22 @@
 .menu .nome{
 	width: 90%;
 	background: var(--amarelo);
-}	
+}
 
 .menu .nome h3{
+	font-family: 'Raleway Black', sans-serif;
 	font-weight: 700;
 	color: var(--preto);
 }
 
 .filtros{
-	width: 80%;
+	width: 100%;
 	margin: 0 auto;
 }
-
+.container-form{
+	margin: 0 auto;
+	width: 80%
+}
 .origem-destino{
 	padding: 1rem;
 }
@@ -149,23 +152,32 @@
 
 .origem span,
 .destino span{
+	font-size: 1.1rem;
+	font-family: 'Raleway Bold', sans-serif;
 	font-weight: 700;
-	margin-bottom: 10px;
+	color: var(--preto);
+	margin-bottom: 10px
 }
 
 .origem select,
 .destino select{
+	font-size: .9rem;
+  font-family: 'Roboto', sans-serif;
+  color: var(--preto);
 	background: var(--amarelo-claro);
 	border: none;
 	outline: none;
-	width: 70%;
-	padding: 0.15rem;
+	width: 100%;
+	padding: .5rem;
 	text-align-last: center;
 }
 
-.filtros .borderred{
+.filtros .borderred,
+.overlay-content .borderred{
 	background: var(--preto);
 	height: 1px;
+	width: 280px;
+	margin: 0 auto;
 }
 
 .veiculo,
@@ -183,7 +195,7 @@
 .option-veiculo,
 .option-complemento{
 	display: flex;
-	align-items: center;	
+	align-items: center;
 	cursor: pointer;
 	margin-top: 10px;
 }
@@ -356,7 +368,7 @@
 	}
 
 	.overlay-content{
-		background: var(--branco);
+		background: var(--branco_rgba);
 		border: solid 1px var(--vermelho);
 		width: 350px;
 		overflow-x: hidden;

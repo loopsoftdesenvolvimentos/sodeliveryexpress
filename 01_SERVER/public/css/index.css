@@ -6,15 +6,23 @@
 
 :root{
   --vermelho: #FF0001;
+  --vermelho_claro: #FF3334;
   --vermelho_escuro: #800001;
   --amarelo: #FFFF5F;
-  --amarelo-claro: #eded63;
-  --amarelo_escuro: #d2d248;
-  --azul: #6083ea;
+  --amarelo-claro: #FFFF9F;
+  --amarelo_escuro: #e9db5c;
+  --amareloRGBA_escuro: rgba(233, 219, 92, 0.82);
+  --amarelo_2: #f7ce28;
+
+  --azul: #4f7bff;
+  --azul_escuro: #4f7bff;
   --roxo: #6D17E5;
   --verde: #59FF7C;
+
+
   --preto: #232323;
   --branco: #f7f4ff;
+  --branco_rgba: rgba(250, 249, 255, 0.8);
   --transition3: 0.3s;
   --branco-mesmo: #fff;
 }

@@ -1,20 +1,62 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SóDelivery - Fórum de Dúvidas</title>
+    <title>Só Delivery - Estatística</title>
     <link rel="stylesheet" href="public/css/index.css">
     <link rel="stylesheet" href="public/css/fonts.css">
-    <link rel="stylesheet" href="public/css/duvidas.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
     <link rel="shortcut icon" href="public/img/logo.png" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-	</head>
-	<body>
-		<header>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Usuário Online', 'Usuário Ofline'],
+          ['Usuário Online',     5],
+          ['Usuário Ofline',     5]
+        ]);
+        var options = {
+          title: 'Usuários',
+          colors: ['#9dbbff', '#ff3334'],
+          annotations: {
+            textStyle: {
+              fontName: 'Times-Roman',
+              fontSize: 18,
+              bold: true,
+              italic: true,
+              // The color of the text.
+              color: '#871b47',
+              // The color of the text outline.
+              auraColor: '#d799ae',
+              // The transparency of the text.
+              opacity: 0.8
+            }
+          }
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+
+        console.log(chart);
+      }
+    </script>
+    <style>
+      #piechart.google-title{
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
       <div class="logo-publicidade content">
         <div class="logo">
           <a href="index.html">
@@ -101,7 +143,7 @@
                 </a>
               </li>
               <li>
-                <a href="duvidas.html" id="noborderbottom">
+                <a href="#" id="noborderbottom">
                   <div class="icon-menu">
                     <img src="public/img/icons/DUVIDAS.svg" alt="icone de frete">
                     <p>Dúvidas</p>
@@ -131,58 +173,16 @@
     </header>
 
     <main>
-    	<div class="clear"></div>
+      <div class="clear"></div>
+      <div class="graph1">
+          <div id="piechart" style="width: 900px; height: 500px;"></div>
+      </div>
 
-    	<div class="nome-page">
-    		<h2>Fórum de Dúvidas</h2>
-    	</div>
-
-    	<div class="clear"></div>
-
-    	<div class="lista-artigos content">
-				<details class="artigo">
-					<summary class="linha-nome">
-						<a href="#">Título do artigo</a>
-					</summary>
-					<div class="resumo-artigo">
-						<h3>Resumo do artigo</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur.</p>
-					</div>
-				</details>
-				<details class="artigo">
-					<summary class="linha-nome">
-						<a href="#">Título do artigo</a>
-					</summary>
-					<div class="resumo-artigo">
-						<h3>Resumo do artigo</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur.</p>
-					</div>
-				</details>
-				<details class="artigo">
-					<summary class="linha-nome">
-						<a href="#">Título do artigo</a>
-					</summary>
-					<div class="resumo-artigo">
-						<h3>Resumo do artigo</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur.</p>
-					</div>
-				</details>
+      <div class="clear"></div>
 
 
-    	</div>
     </main>
+
 
     <footer>
       <div class="content footer">
@@ -255,7 +255,7 @@
         <p>&copy; <b>Loop Soft</b> Internet Serviços LTDA.</p>
       </div>
     </footer>
+  </body>
   <!-- SCRIPTS -->
   <script type="text/javascript" src="public/js/menu_mobile.js"></script>
-	</body>
 </html>

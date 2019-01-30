@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Só Delivery</title>
+    <title>SóDelivery - Login</title>
     <link rel="stylesheet" href="public/css/fonts.css">
     <link rel="stylesheet" href="public/css/normalize.css">
     <link rel="stylesheet" href="public/css/login.css">
@@ -20,7 +20,7 @@
     <div class="container">
       <form class="cadastrar-form" action="/cadastrar" method="post">
         <div class="cadastrar form">
-          <a class="home" href="/">
+          <a class="home" href="index.html">
             <i class="fas fa-home"></i>
           </a>
           <div class="login-icon-field">
@@ -52,7 +52,7 @@
       </form>
       <form  class="login-form" action="/logar" method="post">
           <div id="login" class="login form">
-            <a class="home" href="/">
+            <a class="home" href="index.html">
               <i class="fas fa-home"></i>
             </a>
             <div class="login-icon-field">
@@ -83,7 +83,6 @@
                 <input type="email" id="username_input" class="username-input" placeholder="Email"></input>
               </div>
               <div class="input-containers password-row row">
-                <!--  class="password-icon" class="key-path"-->
                 <label for="password_input">
                 <svg version="1.1" class="password-icon animate-icon" x="0px" y="0px"
                   viewBox="0 0 512 512" height="36px" width="30px">
@@ -105,44 +104,6 @@
             </div>
           </div>
       </form>
-    <script type="text/javascript">
-      // jQuery & Velocity.js
-
-      function slideUpIn() {
-        $("#login").velocity("transition.slideUpIn", 1250)
-      };
-
-      function slideLeftIn() {
-        $(".row").velocity("transition.slideLeftIn", {stagger: 500})
-      }
-
-      function shake() {
-        $(".password-row").velocity("callout.shake");
-      }
-
-      slideUpIn();
-      slideLeftIn();
-      $("button").on("click", function () {
-        shake();
-      });
-
-      $('#btn-cadastrar').click(function() {
-        $('.login-form').animate({
-          width: 'hide'
-        },500);
-        $('.cadastrar-form').animate({
-          width: 'show'
-        },600);
-      })
-      $('#btn-voltar').click(function() {
-        $('.cadastrar-form').animate({
-          width: 'hide'
-        },500);
-        $('.login-form').animate({
-          width: 'show'
-        },600);
-      })
-    </script>
-    <!-- <script type="text/javascript" src="js/clube/Velocity.js"></script> -->
+    <script type="text/javascript" src="public/js/login.js"></script>
   </body>
 </html>
