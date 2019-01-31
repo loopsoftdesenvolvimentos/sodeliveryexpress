@@ -3,7 +3,7 @@
   --branco: #f7f4ff;
 
   --azul_focus: #4f7bff;
-
+  --btn-azul_escuro: #405599;
 }
 form{
   width: 100%;
@@ -41,15 +41,15 @@ form input::-webkit-input-placeholder{
 form input:focus {
   border-bottom: solid 2px var(--azul_focus);
 }
-
 form label{
   font-size: 1.1rem;
   font-family: 'Raleway Bold', sans-serif;
   font-weight: 700;
   color: var(--preto);
 }
-.content-form{
-
+.container-input input,
+.container-input label{
+  display: block;
 }
 /* filtros */
 .form-filtro label ,
@@ -68,4 +68,50 @@ form label{
   height: 25px;
   top: 15px;
   right: 30px;
+}
+/* forms */
+.form{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 90%;
+  margin-bottom: 50px;
+}
+.form legend{
+  font-size: 1.3rem;
+  font-family: 'Raleway Black', sans-serif;
+}
+.container-input{
+  padding: 1.2rem 2rem;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.container-input label{
+  font-family: 'Raleway', sans-serif;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+.container-buttons input{
+  margin: 0 auto;
+  display: block;
+  padding: 1rem 2rem;
+  background: var(--azul_focus);
+  font-size: 1rem;
+  color: var(--branco);
+  font-family: 'Raleway Bold', sans-serif;
+  font-weight: 600;
+}
+@media screen and (min-width: 1224px){
+  .container-buttons input[type='button'],
+  .container-buttons input[type='submit']{
+    cursor: pointer;
+    transition: all ease-in .2s;
+  }
+  .container-buttons input[type='button']:hover,
+  .container-buttons input[type='submit']:hover{
+    transform: scale(1.02);
+    background: var(--btn-azul_escuro)
+  }
 }

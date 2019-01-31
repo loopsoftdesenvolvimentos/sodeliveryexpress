@@ -1,0 +1,23 @@
+
+.content{
+		min-height: 70vh;
+}
+.content-area{
+  display: flex;
+  flex-wrap: wrap;
+}
+.content-veiculos a p{
+  font-family: 'Raleway Black', sans-serif;
+}
+.content-veiculos a p span{
+  font-family: 'Raleway', sans-serif;
+}
+.content-veiculos img{
+    width: 250px;
+    border-radius: 50%;
+}
+@media screen and (min-width: 1224px){
+  .content-veiculos a{
+    margin: 0 2rem;
+  }
+}
