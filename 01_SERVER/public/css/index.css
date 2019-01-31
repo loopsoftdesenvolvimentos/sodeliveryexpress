@@ -277,7 +277,7 @@ nav a{
   width: 50%;
   margin: 0 auto;
   justify-content: center;
-  padding: 0.4rem;
+  padding: 0.8rem;
   font-size: 18px;
   font-weight: 700;
   border-radius: 0px 0px 25px 25px;
@@ -366,7 +366,9 @@ nav a{
   line-height: 100px;
   color: var(--branco);
 }
-
+.desk-cadastro   a img{
+  width:45px;
+}
 @media screen and (min-width: 768px){
   .mobile-cadastro{
     display: none;
@@ -565,7 +567,7 @@ nav a{
   }
 
   .menu-bar{
-    background-image: -webkit-linear-gradient(150deg, var(--preto) 80px, var(--vermelho) 8%);
+    background-image: -webkit-linear-gradient(150deg, var(--preto) 100px, var(--vermelho) 8%);
   }
 
   .conta{
@@ -690,7 +692,7 @@ nav a{
   }
 
   .relatorio a img{
-    width: 20px;
+    width: 30px;
   }
 
   .menu-footer{
@@ -706,6 +708,4 @@ nav a{
   .conta img, .relatorio img, .estatisticas img{
     width: 25px;
   }
-
-
 }

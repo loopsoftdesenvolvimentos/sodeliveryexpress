@@ -52,3 +52,9 @@
   font-family: 'Roboto';
   src: url('../fonts/Roboto/Roboto-Regular.ttf');
 }
+input[type='submit'],
+input[type='button'],
+button,
+select{
+  border-radius:4px;
+}
