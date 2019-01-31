@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SóDelivery - Painel administrativo</title>
+    <link rel="stylesheet" href="public/css/areacadastro.css">
+    <link rel="stylesheet" href="public/css/form.css">
+    <link rel="stylesheet" href="public/css/index.css">
+    <link rel="stylesheet" href="public/css/fonts.css">
+    <link rel="stylesheet" href="public/css/administrativo.css">
+    <link rel="shortcut icon" href="public/img/logo.png" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Usuário Online', 'Usuário Ofline'],
+          ['Usuário Online',     5],
+          ['Usuário Ofline',     5]
+        ]);
+        var options = {
+          title: 'Usuários',
+          colors: ['#9dbbff', '#ff3334'],
+          annotations: {
+            textStyle: {
+              fontName: 'Times-Roman',
+              fontSize: 18,
+              bold: true,
+              italic: true,
+              // The color of the text.
+              color: '#871b47',
+              // The color of the text outline.
+              auraColor: '#d799ae',
+              // The transparency of the text.
+              opacity: 0.8
+            }
+          }
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+
+        console.log(chart);
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="logo-config">
+        <div class="logo">
+          <a href="index.html">
+            <img src="public/img/logo.png" alt="logo Só delivery">
+          </a>
+          <div class="content-titles">
+            <h2>Painel Administrativo</h2>
+            <p>Área de monitoramento</p>
+          </div>
+        </div>
+
+        <div class="config">
+          <img id="blank" src="public/img/icons/settings-work-tool.svg">
+          <img src="public/img/icons/settings-work-tool-dark.svg">
+          <span>Configurações</span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+
+      <div class="clear"></div>
+
+      <div class="content">
+        <div id="verEstatisticas" class="area2">
+          <div class="area-nome">
+            <h3>Ver Estatísticas Empresariais</h3>
+          </div>
+          <div class="area-container">
+            <div class="container">
+              <div id="piechart" style="width: 900px; height: 500px;"></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="verFretes" class="area2">
+          <div class="area-nome">
+            <h3>Meus Fretes</h3>
+          </div>
+          <div class="area-container">
+            <div class="container">
+              <div class="content-fretes content-area">
+                <a href="areavizualizacao.html#verFretes">
+                  <img src="public/img/veiculos01.jpeg">
+                  <p>Placa: <span>AAA 0000</span></p>
+                </a>
+                <a href="areavizualizacao.html#verFretes">
+                  <img src="public/img/veiculos01.jpeg">
+                  <p>Placa: <span>AAA 0000</span></p>
+                </a>
+                <a href="areavizualizacao.html#verFretes">
+                  <img src="public/img/veiculos01.jpeg">
+                  <p>Placa: <span>AAA 0000</span></p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="verVeiculos" class="area2">
+          <div class="area-nome">
+            <h3>Meus Veículos</h3>
+          </div>
+          <div class="area-container">
+            <div class="container">
+              <div class="content-veiculos content-area">
+                <a href="areavizualizacao.html#verFretes">
+                  <img src="public/img/veiculos01.jpeg">
+                  <p>Placa: <span>AAA 0000</span></p>
+                </a>
+                <a href="areavizualizacao.html#verFretes">
+                  <img src="public/img/veiculos01.jpeg">
+                  <p>Placa: <span>AAA 0000</span></p>
+                </a>
+                <a href="areavizualizacao.html#verFretes">
+                  <img src="public/img/veiculos01.jpeg">
+                  <p>Placa: <span>AAA 0000</span></p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="clear"></div>
+      <div class="borderred"></div>
+    </main>
+
+    <footer>
+      <div class="copyright">
+        <p>&copy; <b>Loop Soft</b> Internet Serviços LTDA</p>
+      </div>
+    </footer>
+  </body>
+</html>
