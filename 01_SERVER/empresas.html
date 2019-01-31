@@ -3,11 +3,12 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SóDelivery - Veículos</title>
+    <title>SóDelivery - Empresas</title>
     <link rel="stylesheet" href="public/css/index.css">
     <link rel="stylesheet" href="public/css/fonts.css">
     <link rel="stylesheet" href="public/css/form.css">
     <link rel="stylesheet" href="public/css/frete_e_veiculo.css">
+    <link rel="stylesheet" type="text/css" href="public/css/empresa.css">
     <link rel="shortcut icon" href="public/img/logo.png" />
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
@@ -134,7 +135,7 @@
 
     <main>
       <div class="clear"></div>
-      <div class="carousel content">
+<!--       <div class="carousel content">
         <img src="public/img/carousel-teste.png">
       </div>
 
@@ -143,7 +144,7 @@
         <div class="boll"></div>
         <div class="boll"></div>
       </div>
-
+ -->
       <div class="menu">
         <div id="myPesquisa" class="overlay">
           <a href="javascript:void(0)" class="closebtn" onclick="closePesquisa()">&times;</a>
@@ -157,8 +158,8 @@
                   <form class="form-filtro" action="" method="post">
                     <div class="content-form">
                       <div class="container-input">
-                        <label for="nomeMotorista_veiculo">Nome do Motorista</label>
-                        <input type="text" name="nomeMotorista_veiculo" placeholder="Digite o nome do motorista">
+                        <label for="nomeEmpresa_consulta">Nome da Empresa</label>
+                        <input type="text" name="nomeEmpresa_consulta" placeholder="Digite o nome da empresa">
                       </div>
                       <img src="public/img/icons/search.svg" alt="lupa de pesquisa">
                     </div>
@@ -210,122 +211,54 @@
                 <div class="borderred"></div>
   
   
-                <div class="veiculo">
-                  <h3>Veículo: </h3>
-  
-  
-                  <div class="veiculos-pesados">
-                    <div class="option-veiculo">
-                      <img src="public/img/icons/triangle-right.png" width="30">
-                      <span>Pesados:</span>
-                    </div>
-                  </div>
-  
-                   <div class="veiculos-medios">
-                    <div class="option-veiculo">
-                      <img src="public/img/icons/triangle-right.png" width="30">
-                      <span>Médios:</span>
-                    </div>
-                  </div>
-  
-                  <div class="veiculos-leves">
-                    <div class="option-veiculo baixo">
-                      <img src="public/img/icons/triangle-right.png" width="30">
-                      <span>Leves:</span>
-                    </div>
+                <div class="ramo">
+                  <div class="ramo1">
+                  <h3>Ramo: </h3>
+
+                  <div class="lista-ramo">
                     <ul>
-                      <li><a href="#">Todo</a></li>
-                      <li><a href="#">3/4</a></li>
-                      <li><a href="#">VLC</a></li>
+                      <a href=""><li>Transportadora</li> <span>01</span></a>
+                      <a href=""><li>Embarcadora</li> <span>1.332</span></a>
+                      <a href=""><li>Agenciadora</li> <span>12.111</span></a>
+                      <a href=""><li>Fornecedora</li> <span>40</span></a>
                     </ul>
+                  </div>
                   </div>
                 </div>
   
                 <div class="borderred"></div>
   
-                <div class="complementos">
-                  <h3>Complemento</h3>
-  
-                  <div class="complemento">
-                    <div class="option-complemento baixo">
-                      <img src="public/img/icons/triangle-right.png" width="30">
-                      <span>Sim</span>
-                    </div>
+                <div class="raio">
+                  <h3>Raio</h3>
+
+                  <div class="lista-raio">
                     <ul>
-                      <li><a href="#">Baú</a></li>
-                      <li><a href="#">Baú Frigorifico</a></li>
-                      <li><a href="#">Sider</a></li>
-                      <li><a href="#">Caçamba</a></li>
-                      <li><a href="#">Grande Baixa</a></li>
-                      <li><a href="#">Grandeleiro</a></li>
-                      <li><a href="#">Prancha</a></li>
-                      <li><a href="#">Cavaqueira</a></li>
-                      <li><a href="#">Bug Porta Container</a></li>
-                      <li><a href="#">Munk</a></li>
-                      <li><a href="#">Silo</a></li>
-                      <li><a href="#">Tank</a></li>
-                      <li><a href="#">Gaiola</a></li>
-                      <li><a href="#">Cegonheiro</a></li>
-                      <li><a href="#">Apenas cavalo</a></li>
+                      <a href=""><li>50 km</li></a>
+                      <a href=""><li>100 km</li></a>
+                      <a href=""><li>200 km</li></a>
                     </ul>
-                  </div>
-  
-                  <div class="complemento">
-                    <div class="option-complemento">
-                      <img src="public/img/icons/triangle-right.png" width="30">
-                      <span>Não</span>
-                    </div>
-                  </div>
-                </div>
-  
-                <div class="borderred"></div>
-  
-                <div class="faixa-preco">
-                  <h3>Faixa de Preço</h3>
-  
-                  <div class="faixa">
-                    <div class="option-faixa">
-                      <input type="checkbox" name="a_combinar">
-                      <span>A combinar</span>
-                    </div>
-  
-                    <div class="option-faixa">
-                      <input type="checkbox" name="ate_2500">
-                      <span>Até R$ 2500</span>
-                    </div>
-  
-                    <div class="option-faixa">
-                      <input type="checkbox" name="de_2500_a_5000">
-                      <span>R$ 2500 a R$ 5000</span>
-                    </div>
-  
-                    <div class="option-faixa">
-                      <input type="checkbox" id="check" name="acima_5000">
-                      <span>Acima de R$ 5000</span>
-                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
           <div class="mostra-veiculos">
-            <h3>Veículos</h3>
+            <h3>Empresas</h3>
             <div class="container-frete">
               <div class="img">
                 <img src="public/img/logo.png" width="100">
               </div>
               <div class="frete-info">
                 <ul>
-                  <li class="marginbottom">Motorista: <b>Nome_Motorista</b></li>
-                  <li>Veículo: Carreta - Volvo</li>
+                  <li class="marginbottom">Nome: <b>Nome_Empresa</b></li>
+                  <li class="localizacao">Localização: Rua arapongas, 1450 - Jarim Vista Alegre</li>
                 </ul>
 
                 <div class="borderred"></div>
 
                 <ul>
-                  <li class="marginbottom">Placa: <b>AAA0000</b></li>
-                  <li>Cidade: São Paulo/SP</li>
-                  <li>Empresa: SóDelivery</li>
+                  <li class="marginbottom">Telefone: <b>(67) 9923 - 45355</b></li>
+                  <li class="email">Email: eletronicasaopaulo@gmail.com</li>
                 </ul>
               </div>
             </div>
@@ -338,19 +271,39 @@
               </div>
               <div class="frete-info">
                 <ul>
-                  <li class="marginbottom">Motorista: <b>Nome_Motorista</b></li>
-                  <li>Veículo: Carreta - Volvo</li>
+                  <li class="marginbottom">Nome: <b>Nome_Empresa</b></li>
+                  <li class="localizacao">Localização: Rua arapongas, 1450 - Jarim Vista Alegre</li>
                 </ul>
 
                 <div class="borderred"></div>
 
                 <ul>
-                  <li class="marginbottom">Placa: <b>AAA0000</b></li>
-                  <li>Cidade: São Paulo/SP</li>
-                  <li>Empresa: SóDelivery</li>
+                  <li class="marginbottom">Telefone: <b>(67) 9923 - 45355</b></li>
+                  <li class="email">Email: eletronicasaopaulo@gmail.com</li>
                 </ul>
               </div>
-            </div>
+            </div> 
+
+            <div class="clear"></div>
+
+            <div class="container-frete">
+              <div class="img">
+                <img src="public/img/logo.png" width="100">
+              </div>
+              <div class="frete-info">
+                <ul>
+                  <li class="marginbottom">Nome: <b>Nome_Empresa</b></li>
+                  <li class="localizacao">Localização: Rua arapongas, 1450 - Jarim Vista Alegre</li>
+                </ul>
+
+                <div class="borderred"></div>
+
+                <ul>
+                  <li class="marginbottom">Telefone: <b>(67) 9923 - 45355</b></li>
+                  <li class="email">Email: eletronicasaopaulo@gmail.com</li>
+                </ul>
+              </div>
+            </div>           
           </div>
 
         <div id="no_clear" class="clear"></div>
@@ -363,50 +316,69 @@
 
       <div class="clear"></div>
 
-      <div class="mostra-veiculos">
-        <h3>Veículos</h3>
-        <div class="container-frete">
-          <div class="img">
-            <img src="public/img/logo.png" width="100">
+          <div class="mostra-veiculos">
+            <h3>Empresas</h3>
+            <div class="container-frete">
+              <div class="img">
+                <img src="public/img/logo.png" width="100">
+              </div>
+              <div class="frete-info">
+                <ul>
+                  <li class="marginbottom">Nome: <b>Nome_Empresa</b></li>
+                  <li class="localizacao">Localização: Rua arapongas, 1450 - Jarim Vista Alegre</li>
+                </ul>
+
+                <div class="borderred"></div>
+
+                <ul>
+                  <li class="marginbottom">Telefone: <b>(67) 9923 - 45355</b></li>
+                  <li class="email">Email: eletronicasaopaulo@gmail.com</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="clear"></div>
+
+            <div class="container-frete">
+              <div class="img">
+                <img src="public/img/logo.png" width="100">
+              </div>
+              <div class="frete-info">
+                <ul>
+                  <li class="marginbottom">Nome: <b>Nome_Empresa</b></li>
+                  <li class="localizacao">Localização: Rua arapongas, 1450 - Jarim Vista Alegre</li>
+                </ul>
+
+                <div class="borderred"></div>
+
+                <ul>
+                  <li class="marginbottom">Telefone: <b>(67) 9923 - 45355</b></li>
+                  <li class="email">Email: eletronicasaopaulo@gmail.com</li>
+                </ul>
+              </div>
+            </div> 
+
+            <div class="clear"></div>
+
+            <div class="container-frete">
+              <div class="img">
+                <img src="public/img/logo.png" width="100">
+              </div>
+              <div class="frete-info">
+                <ul>
+                  <li class="marginbottom">Nome: <b>Nome_Empresa</b></li>
+                  <li class="localizacao">Localização: Rua arapongas, 1450 - Jarim Vista Alegre</li>
+                </ul>
+
+                <div class="borderred"></div>
+
+                <ul>
+                  <li class="marginbottom">Telefone: <b>(67) 9923 - 45355</b></li>
+                  <li class="email">Email: eletronicasaopaulo@gmail.com</li>
+                </ul>
+              </div>
+            </div>           
           </div>
-          <div class="frete-info">
-            <ul>
-              <li class="marginbottom">Motorista: <b>Nome_Motorista</b></li>
-              <li>Veículo: Carreta - Volvo</li>
-            </ul>
-
-            <div class="borderred"></div>
-
-            <ul>
-              <li class="marginbottom">Placa: <b>AAA0000</b></li>
-              <li>Cidade: São Paulo/SP</li>
-              <li>Empresa: SóDelivery</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="clear"></div>
-
-        <div class="container-frete">
-          <div class="img">
-            <img src="public/img/logo.png" width="100">
-          </div>
-          <div class="frete-info">
-            <ul>
-              <li class="marginbottom">Motorista: <b>Nome_Motorista</b></li>
-              <li>Veículo: Carreta - Volvo</li>
-            </ul>
-
-            <div class="borderred"></div>
-
-            <ul>
-              <li class="marginbottom">Placa: <b>AAA0000</b></li>
-              <li>Cidade: São Paulo/SP</li>
-              <li>Empresa: SóDelivery</li>
-            </ul>
-          </div>
-        </div>
-      </div>
 
       <div class="borderred"></div>
     </main>

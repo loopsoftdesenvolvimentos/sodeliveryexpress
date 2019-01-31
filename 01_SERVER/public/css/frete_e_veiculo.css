@@ -275,7 +275,8 @@
 	margin-bottom: 10px;
 }
 
-.overlay .mostra-fretes{
+.overlay .mostra-fretes,
+.overlay .mostra-veiculos{
 	display: none;
 }
 

@@ -1,0 +1,32 @@
+.localizacao,
+.email{
+	width: 200px;
+}
+
+.ramo,
+.raio{
+	padding: 1.5rem;	
+}
+
+.lista-ramo,
+.lista-raio{
+	padding: 1rem;
+
+}
+
+.lista-ramo ul,
+.lista-raio ul{
+	list-style: none;
+}
+
+.lista-ramo ul a,
+.lista-raio ul a{
+	display: flex;
+	padding: 6px;
+	justify-content: space-between;
+}
+
+.lista-ramo span{
+	color: rgba(0,0,0,0.6);
+}
+

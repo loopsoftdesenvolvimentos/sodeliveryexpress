@@ -18,11 +18,12 @@
 	outline: none;
 }
 
-.linha-nome a{
+.linha-nome h2{
 	text-decoration: none;
 	color: var(--preto);
 	font-size: 1.4rem;
 	font-weight: 700;
+	cursor: pointer;
 }
 
 .linha-nome img{
