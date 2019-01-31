@@ -25,7 +25,7 @@
 	padding:20px 20px;
 	width:100vw;
 	margin-right:20px;
-	margin-top:4rem;
+	margin-top:2rem;
 
 }
 .container-empresa-titulo{
@@ -145,7 +145,7 @@ select{
 	width:150px;
 }
 .fundo{
-	margin-top:20px;
+	/*margin-top:20px;*/
 	position:absolute;
 	z-index:-999;
 	display:none;
@@ -154,6 +154,19 @@ select{
 .fundo img{
 	height:450px;
 	width:100%;
+}
+.container-menu ul {
+	list-style:none;
+}
+.container-menu li{
+	line-height:1.2rem;
+}
+.container-menu li a{
+	color:var(--preto);
+	text-decoration:none;
+}
+.container-menu li a b{
+	float:right;
 }
 @media screen and (min-width:640px){
 	.container-empresa{

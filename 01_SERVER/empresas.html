@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SóDelivery - Veiculos</title>
+    <title>SóDelivery - Empresas</title>
     <link rel="stylesheet" href="public/css/index.css">
     <link rel="stylesheet" href="public/css/fonts&color.css">
     <link rel="stylesheet" href="public/css/frete_e_veiculo.css">
@@ -127,13 +127,13 @@
                 </div>
                 <div class="container-empresa-filtro">
                   <div class="container-empresa-inputs">
-                      <label>Origem</label>
+                      <label>UF:</label>
                       <select>
                         <option>Selecionar opção</option>
                       </select>
                   </div>
                   <div class="container-empresa-inputs">
-                      <label>Destino:</label>
+                      <label>Cidade:</label>
                       <select>
                         <option>Selecionar opção</option>
                       </select>
@@ -141,59 +141,40 @@
                 </div>
                 <div class="container-empresa-filtro">
                   <div class="container-empresa-titulo-2">
-                    <h1>Veiculos</h1>
+                    <h1>Ramo</h1>
                   </div>
                   <div class="container-empresa-filtro-espaco">
-                    <details>
-                      <summary>Pesados</summary>
-                    </details>
-                    <details>
-                      <summary>Médios</summary>
-                    </details>
-                    <details>
-                      <summary>Leves</summary>
-                    </details>
+                    <ul>
+                      <li><a href="">Transportadora <b>10</b></a></li>
+                       <li><a href="">Embarcadora <b>10</b></a></li>
+                       <li><a href="">Agenciadora <b>10</b></a></li>
+                    </ul>
                   </div>
                 </div>
                   <div class="container-empresa-filtro">
                   <div class="container-empresa-titulo-2">
-                    <h1>Complemento</h1>
+                    <h1>Raio(Distancia)</h1>
                   </div>
                   <div class="container-empresa-filtro-espaco">
-                    <details>
-                      <summary>Sim</summary>
-                    </details>
+                    <ul>
+                      <li><a href=""> 50KM</a></li>
+                       <li><a href="">100KM</a></li>
+                       <li><a href="">200KM</a></li>
+                    </ul>
                   </div>
                 </div>
               <div class="container-empresa-filtro">
                     <div class="container-empresa-titulo-2">
-                      <h1>Faixa de  Preço</h1>
+                      <h1>Buscar por Palavra</h1>
                     </div>
                     <div class="container-empresa-inputs">
-                    <div>
-                      <label class="container-checkbox">A Combinar
-                        <input type="checkbox" value='A Combinar'>
-                        <span class="checkmark"></span>
-                      </label>
-                      <label class="container-checkbox">Até R$ 2500
-                        <input type="checkbox" value='2500'>
-                        <span class="checkmark"></span>
-                      </label>
-                      <label class="container-checkbox">R$ 2500 a R$5000
-                        <input type="checkbox" value='5000'>
-                        <span class="checkmark"></span>
-                      </label>
-                      <label class="container-checkbox">acima de R$ 5000
-                        <input type="checkbox" value='5000'>
-                        <span class="checkmark"></span>
-                      </label>
-                    </div>
-                  </div>  
+                        <input type="text" name="seach">  
+                     </div>  
                   </div>
               </section>
               <section class="container-content-fretes-empresas-veiculos">
                 <section class="img_titulo">
-                    <img src="public/img/logoVeículos.png">
+                    <img src="public/img/Fretes.png">
                 </section>
                 <section class="item-frete-empresa-veiculo">
                      <div class="img-empresa">
@@ -252,7 +233,7 @@
                           <li>Carregar em: Posto da base</li>
                         </ul>
                       </div>
-                      <div c>
+                      <div >
                         <ul>
                           <li>Destino: <b>Bar da preta - MS</b></li>
                           <li>Produtos: Gramas</li>
