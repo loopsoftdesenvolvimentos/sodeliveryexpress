@@ -1,0 +1,711 @@
+html,
+body{
+  height: 100%;
+}
+
+header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mobile{
+  display: block;
+}
+.desktop{
+  display: none;
+}
+.none{
+  display: none;
+}
+.logo img{
+  padding: 1rem;
+  width: 250px;
+}
+
+.publicidade{
+  height: 100px;
+  background: rgba(0,0,0,0.8);
+  width: 100%;
+}
+
+.logo-publicidade{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.menu-conta{
+  width: 100%;
+}
+.menu-bar{
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background: var(--vermelho);
+  margin-top: 10px;
+  position: relative;
+}
+.menu-mobile {
+  position: absolute;
+  top: 18px;
+  right: 0%;
+}
+.menu-mobile i{
+  font-size: 2.5rem;
+  padding-right: 2rem;
+  height: 0;
+  cursor: pointer;
+}
+.pesquisa{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+.pesquisa input[type="text"]{
+  padding: 0.35rem;
+  border-radius: 6px 0px 0px 6px;
+  width: 65%;
+  outline: unset;
+  border: none;
+  font-size: 16px;
+  text-indent: 10px;
+}
+
+.pesquisa button{
+  border: none;
+  background: var(--amarelo);
+  outline: unset;
+  padding: 0.75rem;
+  color: var(--vermelho);
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 0px 6px 6px 0px;
+  width: 25%;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+nav ul{
+  list-style: none;
+  margin-top: 10px;
+}
+
+nav li{
+  padding: 0.25rem;
+}
+
+nav a{
+  border-bottom: solid 2px rgba(255, 255, 95,0.7);
+  width: 95%;
+  margin: 0 auto;
+  text-decoration: none;
+  display: block;
+  padding: 0.2rem;
+}
+
+#noborderbottom{
+  border: none;
+}
+
+.icon-menu{
+  display: flex;
+  align-items: center;
+}
+
+.icon-menu img{
+  width: 50px;
+}
+
+.icon-menu p {
+  padding: 0.7rem;
+  color: var(--branco);
+  text-transform: uppercase;
+}
+
+.conta a{
+  display: flex;
+  justify-content: center;
+  line-height: 80px;
+  text-decoration: none;
+  color: var(--preto);
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 10px;
+  height: 80px;
+  border: solid 1px var(--preto);
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.conta img,
+.relatorio img,
+.estatisticas img{
+  width: 20px;
+  padding: 0.5rem;
+}
+
+#login{
+  background: var(--preto);
+  color: var(--branco);
+  font-weight: 400;
+}
+
+.somepreto{
+  display: none;
+}
+
+.somepreto{
+  display: block;
+}
+
+.mobile-cadastro{
+  display: block;
+}
+
+.desk-cadastro{
+  display: none;
+}
+
+.clear{
+  padding: 1rem;
+}
+
+.video-explicativo img{
+  width: 100%;
+}
+
+.video-explicativo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video-explicativo iframe{
+  width: 98%;
+  height: 250px;
+}
+
+.video-explicativo h2{
+  text-align: center;
+  padding: 1rem;
+  font-weight: 700;
+}
+
+.map{
+  text-align: center;
+  height: 600px;
+  align-items: center;
+  justify-content: center;
+  height: unset;
+
+}
+.map svg{
+  width: 80%;
+}
+.estado-nome img,
+.nome img,
+.redes-sociais img{
+  width: 40px;
+}
+
+.estado-nome{
+  display: flex;
+  align-items: center;
+}
+
+.estado-nome h2{
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 0.6rem;
+}
+
+.estados select{
+  width: 95%;
+  margin: 0 auto;
+  padding: 1rem;
+  margin-top: 20px;
+  outline: none;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  color: var(--preto);
+  background: var(--amarelo-claro);
+  text-align-last: center;
+  outline: none;
+  border: none;
+}
+
+.estados option{
+  font-size: 16px;
+}
+
+.borderred{
+  width: 100%;
+  height: 5px;
+  background: var(--vermelho);
+}
+
+.footer{
+  background: rgba(0,0,0,0.8);
+}
+
+.nome{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: solid 2px var(--amarelo);
+  color: var(--branco);
+  text-transform: uppercase;
+  font-weight: normal;
+  padding: 0.5rem; /*SACO*/
+  width: 60%;
+  margin: 0 auto;
+}
+
+.nome h3{
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.relatorio a{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--preto);
+  background: var(--amarelo);
+  width: 50%;
+  margin: 0 auto;
+  justify-content: center;
+  padding: 0.8rem;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 0px 0px 25px 25px;
+  margin-bottom: 30px;
+}
+
+#button_relatorio{
+  border-radius: unset;
+}
+
+#button_relatorio span{
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.estatisticas .nome{
+  border-bottom: solid 2px var(--verde);
+}
+
+.estatisticas{
+  height: 400px;
+  margin-top: 20px;
+}
+.sobre,
+.servicos,
+.redes-sociais{
+  padding: 1rem;
+}
+
+.sobre h3,
+.servicos h3,
+.redes-sociais h3{
+  color: var(--branco);
+  font-size: 18px;
+  text-align: center;
+}
+
+.sobre ul,
+.servicos ul{
+  list-style: none;
+}
+
+.sobre li,
+.servicos li{
+  padding: 0.5rem;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.sobre a,
+.servicos a{
+  text-decoration: none;
+  color: var(--branco);
+}
+
+.redes-sociais{
+  text-align: center;
+}
+
+.redes-sociais img{
+  margin-top: 20px;
+}
+
+.menu-footer .borderred{
+  height: 1px;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.lista_option_estados{
+  display: block;
+}
+
+#lista_estados{
+  display: none;
+}
+
+.copyright{
+  height: 100px;
+  background: var(--preto);
+}
+
+.copyright p{
+  text-align: center;
+  font-size: 16px;
+  line-height: 100px;
+  color: var(--branco);
+}
+.desk-cadastro   a img{
+  width:45px;
+}
+@media screen and (min-width: 768px){
+  .mobile-cadastro{
+    display: none;
+  }
+
+  .desk-cadastro{
+    display: block;
+  }
+
+  .logo img{
+    width: 250px;
+  }
+
+  .logo-publicidade{
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .publicidade{
+    width: 500px;
+  }
+
+  .pesquisa{
+    margin: 0 auto;
+  }
+
+  .pesquisa input[type="text"]{
+    width: 68%;
+  }
+
+  .pesquisa button{
+    width: 160px;
+    font-size: 18px;
+  }
+
+  .menu-bar{
+    margin-top: 0;
+  }
+
+  nav a{
+    border-bottom: none;
+    margin-left: 20px;
+  }
+
+  .nomarginleft{
+    margin: 0;
+  }
+
+  nav ul{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  nav li{
+    padding: 0;
+  }
+
+  .icon-menu{
+    flex-direction: column;
+  }
+
+  .icon-menu img{
+    width: 40px;
+  }
+
+  .menu-conta{
+    display: block;
+  }
+
+  .conta{
+    background: var(--preto);
+  }
+
+  .conta a{
+    border: none;
+    color: var(--amarelo);
+  }
+
+  .conta img{
+    width: 30px;
+  }
+
+  .video-explicativo iframe{
+    height: 600px;
+    width: 90%;
+  }
+
+  .map svg{
+    width: 60%;
+  }
+
+  .footer{
+    justify-content: space-between;
+    display: flex;
+  }
+
+  .estatisticas{
+    margin-top: 0;
+    width: 300px;
+  }
+
+  .relatorio{
+    width: 300px;
+  }
+
+  .menu-footer{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    justify-content: center;
+    width: 300px;
+  }
+
+  .menu-footer .borderred{
+    display: none;
+  }
+
+  .relatorio a{
+    width: 250px;
+  }
+
+  .nome{
+    width: 90%;
+  }
+
+  .overlay .mostra-veiculos{
+    display: none;
+  }
+}
+
+
+@media screen and (min-width: 1224px){
+  .mobile{
+    display: none;
+  }
+  .desktop{
+    display: block;
+  }
+  .none{
+    display: block;
+  }
+  .icon-menu img{
+    width: 25px;
+  }
+
+  .icon-menu p{
+    font-size: 0.9rem;
+  }
+
+  .content{
+    width: 1040px;
+    margin: 0 auto;
+  }
+  .pesquisa{
+    width: 100%;
+  }
+  .pesquisa input[type="text"]{
+    width:48%;
+    padding: 0;
+  }
+
+  .pesquisa button{
+    width: 130px;
+    font-size: 15px;
+    padding: 0.40rem;
+  }
+  .logo-publicidade{
+    justify-content: space-between;
+  }
+
+  nav a{
+    border-bottom: none;
+    margin-left: 5px;
+    position: relative;
+    z-index: 9;
+  }
+  nav li a::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    z-index: -9;
+    background: var(--vermelho_escuro);
+    border-radius: 5px 5px 0 0;
+    transition: height ease-in-out .3s;
+  }
+  nav li:hover a::before{
+    height: 100%;
+  }
+
+  .menu-conta{
+    display: flex;
+  }
+
+  .menu-bar{
+    background-image: -webkit-linear-gradient(150deg, var(--preto) 100px, var(--vermelho) 8%);
+  }
+
+  .conta{
+    justify-content: center;
+    text-align: center;
+    line-height: 40px;
+    display: flex;
+    width: 20%;
+    flex-direction: column;
+  }
+
+  .conta img{
+    width: 40px;
+  }
+
+  .conta p{
+    font-size: 16px;
+  }
+
+  .somebranco{
+    display: block;
+  }
+
+  .somepreto{
+    display: none;
+  }
+
+  .mobile-cadastro{
+    display: none;
+  }
+
+  .video-map{
+    display: flex;
+  }
+
+  .video-explicativo img{
+    width: 450px;
+  }
+
+  .video-explicativo iframe{
+    width: 450px;
+    height: 300px;
+  }
+
+  .map{
+    height: unset;
+    width: 100vw;
+  }
+  .map svg{
+    width: 100%;
+  }
+
+  .lista_option_estados{
+    display: none;
+  }
+
+  #lista_estados li{
+    padding: 0.5rem;
+    font-weight: 700;
+  }
+
+  #lista_estados{
+    list-style: none;
+    margin-top: 10px;
+    width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #lista_estados span{
+    display: none;
+  }
+
+  #lista_estados a{
+    display: block;
+    width: 95%;
+    text-decoration: none;
+    text-align: center;
+    color: var(--preto);
+    transition: background ease-out .2s;
+    padding: .5rem;
+  }
+  #lista_estados a:hover{
+    background: rgba(0,0,0,0.2);
+  }
+
+  footer{
+    background: rgba(0,0,0,0.8);
+  }
+
+  .footer{
+    background: unset;
+  }
+
+  .relatorio{
+    width: 400px;
+  }
+
+  footer .nome h3{
+    font-size: 16px;
+    font-weight: normal;
+
+  }
+
+  .relatorio .nome{
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .relatorio a{
+    width: 180px;
+    font-size: 14px;
+    transition: all ease-out .2s;
+  }
+  .relatorio a:hover{
+    transform: scale(1.1);
+    border-radius: 0;
+    background: var(--amarelo-claro);
+  }
+  #button_relatorio span{
+    font-size: 25px;
+  }
+
+  .relatorio a img{
+    width: 30px;
+  }
+
+  .menu-footer{
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    justify-content: center;
+  }
+
+  footer .borderred{
+    display: none;
+  }
+  .conta img, .relatorio img, .estatisticas img{
+    width: 25px;
+  }
+}
