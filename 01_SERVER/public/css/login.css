@@ -60,6 +60,7 @@ form{
   display: inherit;
 }
 .tab_header{
+  cursor:pointer;
   width:90vw;
   background:var(--branco);
 }
@@ -77,6 +78,7 @@ form{
   justify-content:center;
 }
 .tab_header2 {
+  cursor:pointer;
   align-items:center;
   display:flex;
   justify-content:center;

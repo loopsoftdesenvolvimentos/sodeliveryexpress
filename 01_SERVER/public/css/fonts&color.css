@@ -10,6 +10,7 @@
 }
 
 :root{
+  --cinza-escuro:#2d2d2d;
   --cinza-claro:#ececec;
   --cinza:#212121;
   --vermelho_escuro: #800001;
@@ -59,4 +60,13 @@ button,
 select{
   cursor:pointer;
   border-radius:4px;
+}
+button:hover{
+  opacity:0.8 ;
+}
+input[type='submit']:hover{
+  opacity:0.8 ;
+}
+input[type='button']:hover{
+  opacity:0.8 ;
 }
