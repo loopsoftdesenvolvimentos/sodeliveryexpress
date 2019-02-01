@@ -1,0 +1,357 @@
+header{
+	border-bottom: solid 10px var(--vermelho);
+}
+
+.logo-config{
+	width: 100%;
+	position: relative;
+}
+
+.logo{
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.logo img{
+	width: 200px;
+}
+
+.logo h2{
+	font-size: 1.4rem;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-family: 'Raleway Black', sans-serif;
+}
+
+.config{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 0.5rem;
+	position: absolute;
+	top: 7px;
+	right: 7px;
+	cursor: pointer;
+}
+
+.config img{
+	width: 42px;
+}
+
+.config span{
+	font-size: 0px;
+}
+
+#blank{
+	display: none;
+}
+
+.info-servico,
+.info-conta{
+	padding: 2.5rem;
+	width: 94%;
+	background: var(--amarelo);
+	margin: 10px 10px;
+	border-radius: 10px;
+}
+
+.info-conta{
+	background: var(--azul);
+}
+
+.info-name{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 25px;
+}
+
+.info-name img{
+	width: 40px;
+	margin-left: 10px;
+}
+
+.info-name h3{
+	font-size: 1.5rem;
+}
+
+.info ul{
+	list-style: none;
+}
+
+.info ul li{
+	display: block;
+	width: 98%;
+	padding: 0.3rem;
+}
+.info ul li b{
+	font-family: 'Raleway Bold', sans-serif;
+	font-weight: 800;
+}
+.info ul li span{
+	font-family: 'Roboto', sans-serif;
+}
+.destaque_info{
+	padding: .8rem!important
+}
+.amarelo-forte{
+	background: var(--amareloRGBA_escuro);
+}
+
+.azul-forte{
+	background: rgba(17, 69, 221, 0.7);
+}
+
+.azul-forte a{
+	font-family: 'Raleway Black', sans-serif;
+	text-decoration: none;
+	color: #000;
+	font-weight: 900;
+	margin-left: 10px;
+}
+
+.quadro-avisos{
+	width: 80%;
+	margin: 0 auto;
+	padding: 1rem;
+	border-radius: 5px;
+	-webkit-box-shadow: inset 0px 0px 1px 5px rgba(35,35,35,0.8);
+	-moz-box-shadow: inset 0px 0px 1px 5px rgba(35,35,35,0.8);
+	box-shadow: inset 0px 0px 1px 5px rgba(35,35,35,0.8);;
+}
+
+.quadro-avisos h3{
+	text-align: center;
+	border-bottom: solid 2px var(--vermelho_claro);
+	font-size: 1.3rem;
+	font-weight: 700;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.quadro-avisos{
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.sequencia{
+	padding: 0.5rem;
+	width: 80%;
+}
+
+.sequencia li{
+	margin-bottom: 10px;
+}
+
+.sequencia span{
+	color: var(--vermelho_claro);
+}
+
+.areas{
+	margin-top: 20px;
+}
+
+.area1,
+.area2,
+.area3{
+	width: 98%;
+	margin: 40px auto;
+}
+
+.area1{
+	border: solid 2px var(--vermelho_claro);
+}
+
+.area2{
+	border: solid 2px var(--amarelo_2);
+}
+
+.area3{
+	border: solid 2px var(--azul);
+}
+
+.area-nome{
+	font-family: 'Raleway Bold', sans-serif;
+	padding: 0.5rem;
+	text-align: left;
+	text-transform: uppercase;
+	color: var(--branco-mesmo);
+}
+
+.area1 .area-nome{
+	background: var(--vermelho_claro);
+}
+
+.area2 .area-nome{
+	background: var(--amarelo_2);
+}
+
+.area3 .area-nome{
+	background: var(--azul);
+}
+
+
+.container{
+	padding: 1rem;
+}
+
+.container img{
+	width: 100px;
+	margin-bottom: 10px;
+}
+
+.container a{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	text-decoration: none;
+	color: var(--preto);
+	text-transform: uppercase;
+	font-weight: 700;
+}
+@media screen and (min-width: 728px){
+
+	.logo-config{
+		display: flex;
+		justify-content: space-between;
+		background-image: -webkit-linear-gradient(150deg, var(--preto) 190px, var(--branco-mesmo) 10%);
+	}
+
+	.logo{
+		width: 65vw;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 0;
+	}
+
+	.logo h2{
+		text-align: center;
+		font-size: 2rem;
+	}
+
+	.logo img{
+		width: 180px;
+	}
+
+	.config{
+		position: static;
+		padding: 1rem;
+		background-image: -webkit-linear-gradient(150deg, var(--preto) 190px, var(--branco-mesmo) 20%);
+	}
+
+	.config img {
+		padding: 0.5rem;
+	}
+
+	.config span{
+		font-size: 1rem;
+		color: var(--branco-mesmo);
+	}
+
+	.config img{
+		display: none;
+	}
+
+	#blank{
+		display: block;
+		width: 30px;
+	}
+
+	.informacoes-topo{
+		display: flex;
+	}
+
+	.info-servico,
+	.info-conta{
+		width: 400px;
+	}
+
+	.area1,
+	.area2,
+	.area3{
+		width: 94%;
+	}
+
+	.area-container{
+		display: flex;
+		justify-content: center;
+	}
+
+	#percent{
+		width: 60%;
+		margin: 0 auto;
+		text-align: center;
+	}
+}
+
+@media screen and (min-width: 1224px){
+
+	.logo{
+		width: 60vw;
+	}
+	.logo img{
+		margin-left: 100px;
+	}
+	.logo-config{
+		background-image: -webkit-linear-gradient(150deg, #000 220px, var(--branco-mesmo) 10%);
+	}
+
+	.config{
+		position: sticky;
+		background-image: -webkit-linear-gradient(150deg, #000 220px, var(--branco-mesmo) 20%);
+		top: 5px;
+		right: 35px;
+	}
+	.config #blank{
+		transition: all ease-out .4s;
+	}
+	.config:hover #blank{
+		transform: rotate(45deg);
+	}
+
+	.info-servico,
+	.info-conta{
+		width: 495px;
+	}
+
+	.quadro-areas{
+		display: flex;
+		flex-direction: row-reverse;
+	}
+
+	.quadro-avisos{
+		width: 400px;
+		height: 100%;
+	}
+
+	.sequencia{
+		font-size: 0.9rem;
+	}
+
+	.area1,
+	.area2,
+	.area3{
+		width: 90%;
+		margin: 0;
+		margin-bottom: 40px;
+	}
+
+	.areas{
+		margin-top: 0;
+	}
+
+	.area-nome{
+		font-size: 1.1rem;
+	}
+
+	.container a{
+		font-size: 0.8rem;
+		transition: all ease-in .2s;
+	}
+	.container a:hover{
+		transform: scale(1.02);
+	}
+}
