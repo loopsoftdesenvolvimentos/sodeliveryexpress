@@ -24,8 +24,5 @@
 	background:var(--vermelho);
 	border:none;
 	padding:0.7rem;
-}
-.content-estatica-veiculos-button button a{
-	text-decoration:none;
 	color:var(--branco_2);
 }

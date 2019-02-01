@@ -10,7 +10,8 @@
 }
 
 :root{
-
+  --cinza-claro:#ececec;
+  --cinza:#212121;
   --vermelho_escuro: #800001;
   --vermelho_logo: #FF0001;
   --vermelho_claro: #FF3334;
@@ -56,5 +57,6 @@ input[type='submit'],
 input[type='button'],
 button,
 select{
+  cursor:pointer;
   border-radius:4px;
 }

@@ -6,7 +6,7 @@
 
 }
 .container-empresa-filtro{
-	border-top:1px solid #212121;
+	border-top:1px solid var(--cinza-claro);
 	margin-bottom:20px;
 	margin-top:20px;
 }
@@ -14,6 +14,14 @@
 .container-empresa-titulo,
 .container-empresa-titulo-2{
 	padding: 8px 12px;
+	border-radius:4px;
+}
+.container-empresa-filtro button{
+	background:var(--cinza);
+	border:none;
+	width:100%;
+	padding:0.6rem;
+	color:var(--branco_2);
 }
 .container-empresa-filtro-espaco,
 .container-empresa-titulo,
@@ -24,8 +32,10 @@
 	background:var(--branco_2);
 	padding:20px 20px;
 	width:100vw;
+	height:100%;
 	margin-right:20px;
 	margin-top:2rem;
+	border: 1px solid var(--vermelho);
 
 }
 .container-empresa-titulo{
