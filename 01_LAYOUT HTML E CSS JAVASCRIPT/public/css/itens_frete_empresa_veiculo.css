@@ -173,6 +173,7 @@ select{
 .img-empresa{
 	display:flex;
 	align-items:center;
+	flex-direction:column;
 	justify-content:center;
 }
 .img-empresa img{
@@ -181,6 +182,7 @@ select{
 .informações-item ul{
 	list-style:none;
 	padding-left:20px;
+	padding:10px 10px;
 }
 .img_titulo{
 	padding:10px 10px;
@@ -223,6 +225,12 @@ select{
 		overflow-y: hidden;
 		width:30vw;
 		padding-right:20px;
+	}
+
+	.item-frete-empresa-veiculo,
+	.informações-item,
+	.img-empresa{
+		flex-direction:row;
 	}
 }
 @media screen and (min-width: 1200px){

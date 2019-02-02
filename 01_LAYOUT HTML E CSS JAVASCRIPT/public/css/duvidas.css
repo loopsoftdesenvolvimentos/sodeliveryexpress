@@ -25,23 +25,12 @@ transition: var(--transition3);
 }
 
 .container-discussao{
-	padding: 1rem;
+	padding: 1rem 1rem;
 	border: solid 1px rgba(0,0,0,0.12);
 	position: relative;
-	box-shadow: 0px 3px 30px rgba(0,0,0,0.25);
+	box-shadow: 1px 1px 1px 1px #fefefe;
 }
 
-.botoes-right{
-	position: absolute;
-	right: 20px;
-}
-
-.botoes-right a{
-	text-decoration: none;
-	background: var(--vermelho);
-	color: var(--branco_rgba);
-	padding: 0.5rem;
-}
 
 .botoes-right .dark{
 	background: var(--preto);
@@ -101,7 +90,7 @@ transition: var(--transition3);
 .contador-duvidas,
 .container-midia{
 	padding-bottom: 10px;
-	box-shadow: 0px 3px 30px rgba(0,0,0,0.18);
+	box-shadow: 0px 1px 1px rgba(0,0,0,0.18);
 }
 
 .contador-duvidas h4,
@@ -263,11 +252,11 @@ transition: var(--transition3);
 	}
 
 	.forum{
-		width: 78%;
+		width: 90%;
 	}
 
 	.listagem-lateral{
-		width: 22%;
+		width: 30%;
 		display: block;
 	}
 
