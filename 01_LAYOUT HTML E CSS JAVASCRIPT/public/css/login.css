@@ -50,10 +50,10 @@ form{
 }
 .container-input-button input[type='submit']{
   border:none;
-  background:var(--azul);
-  padding:0.4rem;
+  background:var(--vermelho);
+  padding:0.7rem;
   color:var(--branco_2);
-  width:100px;
+  width:120px;
 }
 .column{
   display: flex;

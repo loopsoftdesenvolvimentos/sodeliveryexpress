@@ -9,14 +9,14 @@
 	margin-bottom:15px;
 }
 .container-cadastro-titulo{
-	padding:0px 10px;
+	padding:0px 0px;
 }
 .container-cadastro-titulo h1{
 	font-family: 'Raleway Bold', sans-serif;
 	font-weight: 900;
 	font-size:1em;
-	line-height:2.5rem;
-	border-bottom: solid 2px var(--cinza);
+	padding:10px 15px;
+	background:var(--branco_1);
 	font-weight:inherit;
 }
 .container-cadastro-input{
@@ -53,8 +53,8 @@ input,select{
 .container-cadastro-input-button input[type='submit']{
   border:none;
 	margin-top: 30px;
-  background:var(--azul);
-  padding:1rem;
+  background:var(--vermelho);
+  padding:0.8rem;
   color:var(--branco_2);
   width:150px;
 }
