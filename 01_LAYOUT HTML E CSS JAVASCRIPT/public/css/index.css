@@ -240,7 +240,7 @@ nav a{
 }
 
 .footer{
-  background: rgba(0,0,0,0.8);
+  background: rgba(0,0,0,0.92);
 }
 
 .nome{
@@ -332,6 +332,12 @@ nav a{
 
 .redes-sociais img{
   margin-top: 20px;
+  width: 30px;
+  margin-left: 20px;
+}
+
+.redes-sociais a{
+  text-decoration: none;
 }
 
 .menu-footer .borderred{
@@ -648,7 +654,7 @@ nav a{
   }
 
   footer{
-    background: rgba(0,0,0,0.8);
+    background: rgba(0,0,0,0.92);
   }
 
   .footer{
