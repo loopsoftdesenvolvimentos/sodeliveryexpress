@@ -11,11 +11,12 @@
 
 .container-cadastro-titulo{
 	padding:0px 10px;
-	background:var(--branco);
+	background:var(--branco_1);
 }
 .container-cadastro-titulo h1{
 	font-size:1em;
 	line-height:2.5rem;
+	font-weight:inherit;
 }
 .container-cadastro-input{
 	display:flex;

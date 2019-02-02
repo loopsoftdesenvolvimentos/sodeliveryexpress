@@ -36,7 +36,7 @@ form{
   justify-content:center;
   width:90vw;
   height:38vh;
-  background:var(--branco);
+  background:var(--branco_3);
   padding:25px 25px;
 }
 .container-input-button,
@@ -62,7 +62,7 @@ form{
 .tab_header{
   cursor:pointer;
   width:90vw;
-  background:var(--branco);
+  background:var(--branco_3);
 }
 .tab_header ul{
   display:flex;

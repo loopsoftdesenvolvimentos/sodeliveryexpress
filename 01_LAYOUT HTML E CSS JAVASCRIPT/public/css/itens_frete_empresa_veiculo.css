@@ -17,6 +17,7 @@
 	flex-direction:column;
 	justify-content:center;
 	position: relative;
+	padding:10px 10px;
 }
 .container-empresa-filtro{
 	border-bottom: 1px solid var(--cinza-claro);
@@ -62,7 +63,7 @@
 	height:100%;
 	margin-right:20px;
 	margin-top:2rem;
-	border: 3px solid var(--vermelho);
+	border: 1px solid var(--vermelho);
 	border-radius: 10px;
 }
 .container-menu::-webkit-scrollbar{
@@ -213,6 +214,7 @@ select{
 @media screen and (min-width:690px){
 	.container-empresa{
 		flex-direction:row;
+		padding: inherit;
 	}
 	.container-content-fretes-empresas-veiculos{
 		width:70vw;

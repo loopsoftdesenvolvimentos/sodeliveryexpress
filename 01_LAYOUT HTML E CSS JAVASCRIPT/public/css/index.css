@@ -88,13 +88,12 @@ nav ul{
   list-style: none;
   margin-top: 10px;
 }
-
 nav li{
-  padding: 0.25rem;
+  padding: 0.25rem 0.25rem;
 }
 
 nav a{
-  border-bottom: solid 2px rgba(255, 255, 95,0.7);
+  border-bottom: solid 1px rgba(255, 255, 95,0.7);
   width: 95%;
   margin: 0 auto;
   text-decoration: none;
@@ -112,7 +111,7 @@ nav a{
 }
 
 .icon-menu img{
-  width: 50px;
+  width: 30px;
 }
 
 .icon-menu p {
