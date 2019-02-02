@@ -11,6 +11,7 @@ html, body {
   height: 100%;
   background-image: url("../img/login.jpg");
   background-size: cover;
+  background-position: right center;
   color: var(--branco);
   font-family: "Raleway", sans-serif;
   align-items:center;
@@ -28,30 +29,34 @@ label{
 }
 input{
   padding:0.5rem;
-  /*border:none;*/
 }
 form{
+  border-radius: 0 0 10px 10px;
   display:flex;
   flex-direction:column;
   justify-content:center;
   width:90vw;
-  height:38vh;
+  height:55vh;
   background:var(--branco);
   padding:25px 25px;
 }
 .container-input-button,
 .container-cadastre{
-  margin-top:20px;
+  margin-top: 20px;
 }
 .container-cadastre p{
   color:var(--preto)
 }
 .container-input-button input[type='submit']{
   border:none;
-  background:var(--vermelho_logo);
+  background:var(--azul);
   padding:0.4rem;
   color:var(--branco_2);
   width:100px;
+}
+.column{
+  display: flex;
+  flex-direction: column;
 }
 .tirar_display{
   display: none;
@@ -59,7 +64,18 @@ form{
 .trocar_display{
   display: inherit;
 }
+.icon-display{
+  background: var(--branco);
+  width: 100%;
+  padding-top: 2rem;
+}
+.icon-display img{
+  display: block;
+  margin: auto;
+  width: 80px;
+}
 .tab_header{
+  border-radius: 10px 10px 0  0;
   cursor:pointer;
   width:90vw;
   background:var(--branco);
@@ -67,9 +83,10 @@ form{
 .tab_header ul{
   display:flex;
   list-style:none;
-
 }
 .tab_header ul li{
+  font-family: 'Raleway Bold', sans-serif;
+  font-weight: 600;
   width:100%;
   line-height:2.5rem;
   color:var(--preto);
@@ -78,24 +95,32 @@ form{
   justify-content:center;
 }
 .tab_header2 {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   cursor:pointer;
   align-items:center;
   display:flex;
   justify-content:center;
   background:var(--branco_2);
   color:inherit;
-  
+}
+.tab_header2.active{
+  border-bottom: solid 2px var(--vermelho);
+  transition: all ease-in .2s
 }
 a{
   text-decoration:none;
   color:var(--preto);
 }
 @media screen and (min-width:640px){
+  .container{
+    background-position: center;
+  }
   form{
-    width:28vw;
-    height:38vh;
+    width:35vw;
+    height:50vh;
   }
   .tab_header{
-    width:28vw;
+    width:35vw;
   }
 }

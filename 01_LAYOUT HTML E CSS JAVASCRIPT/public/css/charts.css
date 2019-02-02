@@ -32,6 +32,37 @@ main{
 .chart_bar .charts_barra{
   width: 200vw;
 }
+/* chart - footer  */
+.pieChart_footer{
+  position: relative;
+  margin-top: 20px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+}
+.chart-footer{
+  height: 200px;
+}
+.title-chart_footer{
+  position: absolute;
+  top: 0px;
+}
+.title-chart_footer img{
+  width: 150px!important;
+}
+.btn_link{
+  width: 150px;
+  display: block;
+  margin: 0 auto;
+  text-decoration: none;
+  padding: 1rem;
+  background: var(--verde);
+  color: var(--preto);
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 5px 5px 0px 0;
+}
 @media screen and (min-width: 748px) {
   .title-estatistica img{
     width: 450px;
@@ -49,5 +80,11 @@ main{
   }
   .chart_row .title-chart{
     margin-left: 50px;
+  }
+  .btn_link{
+    transition: all ease .2s;
+  }
+  .btn_link:hover{
+    opacity: .8
   }
 }

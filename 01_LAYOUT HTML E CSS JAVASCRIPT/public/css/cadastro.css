@@ -1,21 +1,23 @@
 .container-cadastro{
-	padding:0px 20px;
+	padding: 0 20px;
+	margin-top: 30px;
+	margin-bottom: 50px;
 }
-
 .container-cadastro-input-button,
-.container-cadastro-titulo,
-.container-cadastro{
+.container-cadastro-titulo{
 	margin-top:15px;
 	margin-bottom:15px;
 }
-
 .container-cadastro-titulo{
 	padding:0px 10px;
 	background:var(--branco);
 }
 .container-cadastro-titulo h1{
+	font-family: 'Raleway Bold', sans-serif;
+	font-weight: 900;
 	font-size:1em;
 	line-height:2.5rem;
+	border-bottom: solid 2px var(--cinza);
 }
 .container-cadastro-input{
 	display:flex;
@@ -33,21 +35,22 @@ input,select{
 .container-cadastro-input-tripla{
 	display:grid;
 }
-  
+
 .container-cadastro-input-dupla{
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 2rem;
-}  
+}
 .container-cadastro-input-tripla{
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 3rem;
-}  
+}
 .container-cadastro-input-button input[type='submit']{
   border:none;
-  background:var(--vermelho_logo);
-  padding:0.6rem;
+	margin-top: 30px;
+  background:var(--azul);
+  padding:1rem;
   color:var(--branco_2);
-  width:140px;
+  width:150px;
 }
 @media screen and (min-width:640px){
 	.container-cadastro{
