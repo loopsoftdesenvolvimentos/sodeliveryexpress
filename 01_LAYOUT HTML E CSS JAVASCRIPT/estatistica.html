@@ -7,54 +7,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Só Delivery - Estatística</title>
+    <link rel="stylesheet" href="public/css/charts.css">
     <link rel="stylesheet" href="public/css/index.css">
     <link rel="stylesheet" href="public/css/fonts&color.css">
     <link rel="shortcut icon" href="public/img/logo.png" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-
-        var data = google.visualization.arrayToDataTable([
-          ['Usuário Online', 'Usuário Ofline'],
-          ['Usuário Online',     5],
-          ['Usuário Ofline',     5]
-        ]);
-        var options = {
-          title: 'Usuários',
-          colors: ['#9dbbff', '#ff3334'],
-          annotations: {
-            textStyle: {
-              fontName: 'Times-Roman',
-              fontSize: 18,
-              bold: true,
-              italic: true,
-              // The color of the text.
-              color: '#871b47',
-              // The color of the text outline.
-              auraColor: '#d799ae',
-              // The transparency of the text.
-              opacity: 0.8
-            }
-          }
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-
-        chart.draw(data, options);
-
-        console.log(chart);
-      }
-    </script>
-    <style>
-      #piechart.google-title{
-        color: red;
-      }
-    </style>
+    <script type="text/javascript" src="public/js/charts.js"></script>
   </head>
   <body>
     <header>
@@ -77,24 +37,19 @@
             <input type="text" id="pesquisa">
             <button type="submit">Buscar</button>
           </div>
-          <div class="menu-mobile mobile" >
-            <i class="fas fa-bars"></i>
+          <div id="btn-menu" class="menu-mobile mobile" >
+            <img src="public/img/icons/menu.svg" alt="botão de menu">
           </div>
-          <!-- ABRE E FECHA >>> menu  -->
-          <script type="text/javascript">
-            var logic = false;
-            $('.menu-mobile').click(function () {
-              if (logic) {
-                closeNav();
-                return logic = false;
-              }else{
-                openNav();
-                return  logic = true;
-              }
-            })
-          </script>
           <nav class="none">
             <ul>
+              <li class="mobile">
+                <a href="login.html" id="login">
+                  <div class="icon-menu">
+                    <img src="public/img/icons/login.svg" alt="">
+                    <p>Login</p>
+                  </div>
+                </a>
+              </li>
               <li>
                 <a href="index.html" class="nomarginleft">
                   <div class="icon-menu">
@@ -167,13 +122,35 @@
 
     <main>
       <div class="clear"></div>
-      <div class="graph1">
-        <div id="piechart" style="width: 900px; height: 500px;"></div>
+      <div class="title-estatistica">
+        <img src="public/img/letras/estatistica.png" alt="titulo página">
       </div>
-
-      <div class="clear"></div>
-
-
+      <div class="chart_row">
+        <div class="pieChart">
+          <div class="title-chart">
+            <img src="public/img/letras/empresa.png" alt="titulo chart">
+          </div>
+          <div id="estatistica_usuario" class="charts_pie"></div>
+        </div>
+        <div class="pieChart">
+          <div class="title-chart">
+            <img src="public/img/letras/empresa.png" alt="titulo chart">
+          </div>
+          <div id="estatistica_vendas" class="charts_pie"></div>
+        </div>
+      </div>
+      <div class="chart_bar">
+        <div class="title-chart">
+          <img src="public/img/letras/empresa.png" alt="titulo chart">
+        </div>
+        <div id="estatistica_carga" class="charts_barra"></div>
+      </div>
+      <div class="chart_bar">
+        <div class="title-chart">
+          <img src="public/img/letras/empresa.png" alt="titulo chart">
+        </div>
+        <div id="estatistica_veiculo" class="charts_barra"></div>
+      </div>
     </main>
 
 
@@ -201,17 +178,21 @@
             <img src="public/img/icons/download.svg">
             Frete
           </a>
-
-          <!-- <a href="#" id="button_relatorio">
-            <span>+</span>
-            Mostrar mais
-          </a> -->
         </div>
 
         <div class="estatisticas">
           <div class="nome">
             <img src="public/img/icons/Statistics.svg">
             <h3>Estatísticas</h3>
+          </div>
+          <div class="pieChart">
+            <div class="title-chart">
+              <img src="public/img/letras/empresa.png" alt="titulo chart">
+            </div>
+            <div id="footer_estatistica" class="charts_pie"></div>
+            <a href="estatistica.html">
+              Ver Todos
+            </a>
           </div>
         </div>
 

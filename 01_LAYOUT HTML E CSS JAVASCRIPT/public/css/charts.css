@@ -1,0 +1,53 @@
+main{
+  width: 80%;
+  margin: 20px auto;
+}
+.title-estatistica img{
+  display: block;
+  margin: 0 auto;
+  width: 300px;
+}
+.chart_row{
+  display: flex;
+  flex-direction: column;
+}
+.chart_row,
+.chart_bar{
+   margin-top: 50px;
+   margin-bottom: 50px;
+ }
+.chart_row .pieChart{
+  width: 100%;
+}
+.charts_pie{
+  max-width: 600px;
+  height: 300px
+}
+.title-chart img{
+  width: 100px;
+}
+.chart_bar{
+  overflow: scroll;
+}
+.chart_bar .charts_barra{
+  width: 200vw;
+}
+@media screen and (min-width: 748px) {
+  .title-estatistica img{
+    width: 450px;
+  }
+  .chart_row {
+    flex-direction: row;
+  }
+  .chart_bar{
+    width: 100%;
+    overflow: hidden;
+  }
+  .chart_bar .charts_barra{
+    width: 100%;
+    height: 350px
+  }
+  .chart_row .title-chart{
+    margin-left: 50px;
+  }
+}

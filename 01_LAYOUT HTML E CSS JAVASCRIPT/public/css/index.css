@@ -48,14 +48,12 @@ header{
 }
 .menu-mobile {
   position: absolute;
-  top: 18px;
-  right: 0%;
-}
-.menu-mobile i{
-  font-size: 2.5rem;
-  padding-right: 2rem;
-  height: 0;
+  top: 15px;
+  right: 25px;
   cursor: pointer;
+}
+.menu-mobile img{
+  width: 50px;
 }
 .pesquisa{
   width: 80%;
@@ -156,10 +154,6 @@ nav a{
 }
 
 .somepreto{
-  display: block;
-}
-
-.mobile-cadastro{
   display: block;
 }
 

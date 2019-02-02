@@ -1,6 +1,21 @@
 #mapa{
 	height:100vh;
 }
+.menu-estatisticas{
+	z-index: 99999;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background: var(--cinza-escuro);
+	position: fixed;
+	bottom: 50px;
+	right: 25px;
+}
+.menu-estatisticas img{
+	width: 50px;
+	margin: 50%;
+	transform: translate(-50%, -50%);
+}
 .estatistica_veiculos{
 	position:absolute;
 	z-index:999;
@@ -25,4 +40,9 @@
 	border:none;
 	padding:0.7rem;
 	color:var(--branco_2);
+}
+@media screen and (min-width:1200px){
+	.none{
+		display: absolute;
+	}
 }
