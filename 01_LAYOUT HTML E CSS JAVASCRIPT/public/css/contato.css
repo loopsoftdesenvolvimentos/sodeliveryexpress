@@ -1,0 +1,33 @@
+.row{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.infors{
+  display: flex;
+  flex-direction: column;
+  padding-right: 5rem;
+  line-height: 2;
+  width: 50%;
+}
+.infors img{
+  margin:0 auto;
+  margin-bottom: 20px;
+  width: 200px;
+  height: 100px;
+}
+.infors h2{
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+}
+.form-contato{
+  width: 50%;
+}
+.container-cadastro-espacos{
+  width: 100%;
+}
+.container-midia a img{
+  margin-top: 20px; 
+}

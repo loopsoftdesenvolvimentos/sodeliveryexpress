@@ -36,13 +36,9 @@ form{
   flex-direction:column;
   justify-content:center;
   width:90vw;
-<<<<<<< HEAD
   height:55vh;
   background:var(--branco);
-=======
-  height:38vh;
-  background:var(--branco_3);
->>>>>>> d78feae56f643e05f8fc552c6a0e049c4dc3bc38
+  background:var(--branco_2);
   padding:25px 25px;
 }
 .container-input-button,
@@ -62,6 +58,21 @@ form{
 .column{
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+.icon-home{
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  width: 45px;
+  height: 45px;
+  background: var(--preto);
+  border-radius: 50%;
+}
+.icon-home img{
+  display: block;
+  margin: 8px auto;
+  width: 25px;
 }
 .tirar_display{
   display: none;
@@ -83,7 +94,7 @@ form{
   border-radius: 10px 10px 0  0;
   cursor:pointer;
   width:90vw;
-  background:var(--branco_3);
+  background:var(--branco_2);
 }
 .tab_header ul{
   display:flex;
@@ -127,5 +138,11 @@ a{
   }
   .tab_header{
     width:35vw;
+  }
+  .icon-home{
+    transition: all ease-in .3s;
+  }
+  .icon-home:hover{
+    opacity: .9
   }
 }

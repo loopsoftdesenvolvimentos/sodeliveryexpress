@@ -239,8 +239,8 @@ nav a{
   background: var(--vermelho);
 }
 
-.footer{
-  background: rgba(0,0,0,0.92);
+footer{
+  background: rgba(0,0,0,0.97);
 }
 
 .nome{
@@ -654,11 +654,6 @@ nav a{
   #lista_estados a:hover{
     background: rgba(0,0,0,0.2);
   }
-
-  footer{
-    background: rgba(0,0,0,0.92);
-  }
-
   .footer{
     background: unset;
   }

@@ -10,7 +10,6 @@
 }
 .container-cadastro-titulo{
 	padding:0px 10px;
-	background:var(--branco_1);
 }
 .container-cadastro-titulo h1{
 	font-family: 'Raleway Bold', sans-serif;
@@ -31,6 +30,12 @@ input,select{
 	border:1px solid #dcdcdd;
 	padding:0.5rem;
 	border-radius:3px;
+}
+.container-cadastro-input textarea{
+	max-width: 100%;
+	max-height: 150px;
+	min-height: 100px;
+	padding: 10px
 }
 .container-cadastro-input-dupla,
 .container-cadastro-input-tripla{

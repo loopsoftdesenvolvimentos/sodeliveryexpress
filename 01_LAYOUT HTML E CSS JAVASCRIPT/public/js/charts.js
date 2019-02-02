@@ -204,6 +204,7 @@ google.charts.setOnLoadCallback(drawChart55);
      ['Usuário Ofline',     5]
    ]);
    let options = {
+     legend: 'none',
      colors: ['#f2f238', '#ff3334'],
      backgroundColor: 'transparent',
      annotations: {

@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SóDelivery - Empresas</title>
+    <link rel="stylesheet" href="public/css/charts.css">
     <link rel="stylesheet" href="public/css/index.css">
     <link rel="stylesheet" href="public/css/fonts&color.css">
     <link rel="stylesheet" href="public/css/frete_e_veiculo.css">
     <link rel="stylesheet" type="text/css" href="public/css/itens_frete_empresa_veiculo.css">
     <link rel="shortcut icon" href="public/img/logo.png" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="public/js/charts.js"></script>
   </head>
   <body>
     <header>
@@ -304,6 +307,8 @@
               </section>
             </section>
     </main>
+    <div class="clear"></div>
+    <div class="borderred"></div>
 
 
     <footer>
@@ -330,17 +335,23 @@
             <img src="public/img/icons/download.svg">
             Frete
           </a>
-
-          <!-- <a href="#" id="button_relatorio">
-            <span>+</span>
-            Mostrar mais
-          </a> -->
         </div>
 
         <div class="estatisticas">
           <div class="nome">
             <img src="public/img/icons/Statistics.svg">
             <h3>Estatísticas</h3>
+          </div>
+          <div class="pieChart pieChart_footer">
+            <div id="footer_estatistica" class="charts_pie chart-footer"></div>
+            <div class="title-chart_footer title-chart">
+              <img src="public/img/letras/vendas_footer.svg" alt="titulo chart">
+            </div>
+            <div class="pieChart-btn">
+              <a class="btn_link" href="estatistica.html">
+                <p>Ver Todos</p>
+              </a>
+            </div>
           </div>
         </div>
 
@@ -361,7 +372,7 @@
             <ul>
               <li><a href="veiculo.html">Veículos</a></li>
               <li><a href="frete.html">Fretes</a></li>
-              <li><a href="#">Relatórios</a></li>
+              
             </ul>
           </div>
 

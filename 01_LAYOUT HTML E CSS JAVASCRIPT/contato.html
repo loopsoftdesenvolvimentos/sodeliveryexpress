@@ -3,14 +3,15 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SóDelivery - Veiculos</title>
+    <title>Só Delivery</title>
+    <link rel="stylesheet" href="public/css/contato.css">
+    <link rel="stylesheet" href="public/css/duvidas.css">
     <link rel="stylesheet" href="public/css/charts.css">
     <link rel="stylesheet" href="public/css/index.css">
-    <link rel="stylesheet" href="public/css/fonts&color.css">
-    <link rel="stylesheet" type="text/css" href="public/css/mapa&veiculos.css">
+    <link rel="stylesheet" href="public/css/cadastro.css">
+		<link rel="stylesheet" href="public/css/fonts&color.css">
     <link rel="shortcut icon" href="public/img/logo.png" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-    <script type="text/javascript" src="public/js/map&veiculos.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript" src="public/js/charts.js"></script>
   </head>
@@ -96,10 +97,18 @@
                   </div>
                 </a>
               </li>
+
             </ul>
           </nav>
         </div>
+
         <div class="conta">
+          <div class="mobile-cadastro none">
+            <a href="login.html" id="login">
+                <img src="public/img/icons/login.svg" alt="">
+              login
+            </a>
+          </div>
           <div class="desk-cadastro">
             <a href="login.html">
                 <img src="public/img/icons/login.svg" alt="">
@@ -109,30 +118,61 @@
         </div>
       </div>
     </header>
+
     <main>
-      <div id="btn-estatistica_veiculos" class="menu-estatisticas mobile">
-        <img src="public/img/icons/dados-veiculos.svg" alt="botão de ver estatisticas">
-      </div>
-       <div id="estatistica_veiculos" class="estatistica_veiculos none">
-            <div class="content-estatica-veiculos">
-                <p> <b>27.228</b> veículos estão com check-in ativo</p>
-            </div>
+      <div class="container-cadastro content row">
+        <div class="infors">
+          <img src="public/img/logo.png" alt="">
+          <h2><b>Sede:</b> Jundiaí, São Paulo</h2>
+          <h2><b>Fundada em:</b> 14 de setembro de 2013</h2>
+          <h2><b>Especializações:</b> Transportes, Cargas, Fretes, MotoBoys e franquias</h2>
+          <div class="container-midia">
+            <h4>Nos encontre</h4>
+            <div class="container-redes">
+              <a href="https://www.facebook.com/sodeliveryExpress/" target="_blank" class="midia facebook">
+                <img src="public/img/icons/facebook-white.png">
+              </a>
 
-            <div class="content-estatica-veiculos">
-                <p> <b>272.284</b> veículos cadastrados</p>
-            </div>
+              <a href="https://www.youtube.com/channel/UCb93S1zCUAToY4Da6zLF6_w" target="_blank" class="midia youtube">
+                <img src="public/img/icons/youtube.png">
+              </a>
 
-            <div class="content-estatica-veiculos">
-                <p> <b>Check-in é gratuito</b>  e uma maneira fácil de conseguir cargas</p>
-                <div class="content-estatica-veiculos-button">
-                 <a href="veiculo_cadastro_verificar.html"><button> Cadastre seu veiculo</button></a>
-                </div>
+              <a href="https://www.instagram.com/sodeliveryexpress" target="_blank" class="midia instagram">
+                <img src="public/img/icons/instagram.png">
+              </a>
+
+              <a href="https://www.linkedin.com/company/sodeliveryexpress" target="_blank" class="midia facebook">
+                <img src="public/img/icons/linkedin.png">
+              </a>
             </div>
+          </div>
         </div>
-        <div id="mapa"> </div>
+        <form class="form-contato" action="" method="post">
+          <div class="container-cadastro-espacos">
+            <div class="container-cadastro-titulo">
+                <h1>Fale Conosco</h1>
+            </div>
+              <div class="container-cadastro-input">
+                  <label for="nome_completo">Nome Completo</label>
+                  <input type="text" name="nome_completo">
+              </div>
+              <div class="container-cadastro-input">
+                  <label for="email">Email</label>
+                  <input type="text" name="email">
+              </div>
+              <div class="container-cadastro-input">
+                  <label for="mensagem">Mensagem:</label>
+                  <textarea name="mensagem" rows="8" cols="20"></textarea>
+              </div>
+           </div>
+        </form>
+      </div>
     </main>
     <div class="clear"></div>
     <div class="borderred"></div>
+
+
+
     <footer>
       <div class="content footer">
         <div class="relatorio">
@@ -157,6 +197,11 @@
             <img src="public/img/icons/download.svg">
             Frete
           </a>
+
+          <!-- <a href="#" id="button_relatorio">
+            <span>+</span>
+            Mostrar mais
+          </a> -->
         </div>
 
         <div class="estatisticas">
@@ -194,7 +239,6 @@
             <ul>
               <li><a href="veiculo.html">Veículos</a></li>
               <li><a href="frete.html">Fretes</a></li>
-              
             </ul>
           </div>
 
@@ -202,7 +246,6 @@
 
           <div class="redes-sociais">
             <h3>Redes Sociais</h3>
-
             <div class="container-sociais">
               <a href="https://www.facebook.com/sodeliveryExpress/" target="_blank">
                 <img src="public/img/icons/facebook.svg">
@@ -224,13 +267,10 @@
         </div>
       </div>
       <div class="copyright">
-        <p>&copy; <b>Loop Soft</b> Internet Serviços LTDA</p>
+        <p>&copy; <b>Loop Soft</b> Internet Serviços LTDA.</p>
       </div>
     </footer>
-
+  </body>
   <!-- SCRIPTS -->
   <script type="text/javascript" src="public/js/menu_mobile.js"></script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAF8QP6R3rJFZLZJcEsee3B3a1wz6Pul8E&callback=mapa"
-  type="text/javascript"></script>
-  </body>
 </html>
