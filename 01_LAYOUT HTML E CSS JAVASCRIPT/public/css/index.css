@@ -239,8 +239,8 @@ nav a{
   background: var(--vermelho);
 }
 
-.footer{
-  background: rgba(0,0,0,0.92);
+footer{
+  background: rgba(0,0,0,0.97);
 }
 
 .nome{
@@ -276,6 +276,9 @@ nav a{
   border-radius: 0px 0px 25px 25px;
   margin-bottom: 30px;
 }
+.relatorio a img{
+  width: 30px;
+}
 
 #button_relatorio{
   border-radius: unset;
@@ -289,7 +292,6 @@ nav a{
 .estatisticas .nome{
   border-bottom: solid 2px var(--verde);
 }
-
 .estatisticas{
   height: 400px;
   margin-top: 20px;
@@ -355,17 +357,17 @@ nav a{
 }
 
 .copyright{
-  height: 100px;
+  height: 50px;
   background: var(--preto);
 }
 
 .copyright p{
   text-align: center;
-  font-size: 16px;
-  line-height: 100px;
+  font-size: 1rem;
   color: var(--branco);
+  padding-top: 20px;
 }
-.desk-cadastro   a img{
+.desk-cadastro a img{
   width:45px;
 }
 @media screen and (min-width: 768px){
@@ -652,11 +654,6 @@ nav a{
   #lista_estados a:hover{
     background: rgba(0,0,0,0.2);
   }
-
-  footer{
-    background: rgba(0,0,0,0.92);
-  }
-
   .footer{
     background: unset;
   }
@@ -704,7 +701,11 @@ nav a{
   footer .borderred{
     display: none;
   }
-  .conta img, .relatorio img, .estatisticas img{
+  .conta img, .relatorio img{
     width: 25px;
+  }
+  .estatisticas .nome img,
+  .relatorio .nome img{
+    width: 40px;
   }
 }

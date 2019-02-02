@@ -172,17 +172,32 @@ select{
 .informações-item,
 .img-empresa{
 	display:flex;
+	flex-wrap: wrap;
 	align-items:center;
 	flex-direction:column;
 	justify-content:center;
+}
+.informações-item div ul li:first-child{
+	margin: 1rem;
+	border-bottom: solid 2px var(--preto);
+}
+.informações-item div{
+	margin: 20px 0
 }
 .img-empresa img{
 	max-width:9rem;
 }
 .informações-item ul{
 	list-style:none;
-	padding-left:20px;
-	padding:10px 10px;
+	padding-left: 20px;
+	line-height: 1.5rem;
+}
+.informações-item ul li:not(:first-child){
+	max-width: 500px;
+	padding-left: 20px;
+}
+.secondary-item ul li:last-child{
+	color: rgba(0,0,0, .6)
 }
 .img_titulo{
 	padding:10px 10px;

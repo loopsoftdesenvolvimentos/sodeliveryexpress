@@ -212,11 +212,10 @@ header{
 	font-weight: 700;
 }
 @media screen and (min-width: 728px){
-
 	.logo-config{
 		display: flex;
 		justify-content: space-between;
-		background-image: -webkit-linear-gradient(150deg, var(--preto) 190px, var(--branco-mesmo) 10%);
+		background-image: -webkit-linear-gradient(150deg, var(--preto) 190px, var(--branco_2) 10%);
 	}
 
 	.logo{
@@ -239,16 +238,11 @@ header{
 	.config{
 		position: static;
 		padding: 1rem;
-		background-image: -webkit-linear-gradient(150deg, var(--preto) 190px, var(--branco-mesmo) 20%);
+		background-image: -webkit-linear-gradient(150deg, var(--preto) 190px, var(--branco_2) 20%);
 	}
-
-	.config img {
-		padding: 0.5rem;
-	}
-
 	.config span{
 		font-size: 1rem;
-		color: var(--branco-mesmo);
+		color: var(--branco_2);
 	}
 
 	.config img{
@@ -258,6 +252,7 @@ header{
 	#blank{
 		display: block;
 		width: 30px;
+		margin-bottom: 10px
 	}
 
 	.informacoes-topo{
@@ -294,9 +289,6 @@ header{
 	}
 	.logo img{
 		margin-left: 100px;
-	}
-	.logo-config{
-		background-image: -webkit-linear-gradient(150deg, #000 220px, var(--branco-mesmo) 10%);
 	}
 
 	.config{

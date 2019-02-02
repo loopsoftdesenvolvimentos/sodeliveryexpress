@@ -1,6 +1,6 @@
      $(document).ready(function(){
 
-        
+
     $('ul li').click(function(){
     var tab_id = $(this).attr('data-tab');
 
@@ -10,7 +10,8 @@
 
       $(this).addClass('trocar_display');
       $("#"+tab_id).addClass('trocar_display');
-       $(this).addClass('tab_header2');
+      $(this).addClass('tab_header2');
+      $(this).addClass('active');
     })
 
   })

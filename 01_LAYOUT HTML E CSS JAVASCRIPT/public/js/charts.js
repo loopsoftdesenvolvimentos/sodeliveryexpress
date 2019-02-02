@@ -204,7 +204,9 @@ google.charts.setOnLoadCallback(drawChart55);
      ['Usuário Ofline',     5]
    ]);
    let options = {
-     colors: ['#9dbbff', '#ff3334'],
+     legend: 'none',
+     colors: ['#f2f238', '#ff3334'],
+     backgroundColor: 'transparent',
      annotations: {
        textStyle: {
          fontName: 'Raleway',
