@@ -26,6 +26,8 @@ class Media_screen{
    }
  })
 
+
+
 let icon = document.querySelector('.menu-mobile');
 
 function openNav() {

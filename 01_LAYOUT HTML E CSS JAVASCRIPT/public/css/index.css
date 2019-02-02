@@ -48,8 +48,8 @@ header{
 }
 .menu-mobile {
   position: absolute;
-  top: 15px;
-  right: 25px;
+  top: 13px;
+  right: 15px;
   cursor: pointer;
 }
 .menu-mobile img{
@@ -79,7 +79,7 @@ header{
   font-weight: 700;
   text-transform: uppercase;
   border-radius: 0px 6px 6px 0px;
-  width: 25%;
+  width: 30%;
   font-size: 16px;
   cursor: pointer;
 }
@@ -88,13 +88,12 @@ nav ul{
   list-style: none;
   margin-top: 10px;
 }
-
 nav li{
-  padding: 0.25rem;
+  padding: 0.25rem 0.25rem;
 }
 
 nav a{
-  border-bottom: solid 2px rgba(255, 255, 95,0.7);
+  border-bottom: solid 1px rgba(255, 255, 95,0.7);
   width: 95%;
   margin: 0 auto;
   text-decoration: none;
@@ -112,7 +111,7 @@ nav a{
 }
 
 .icon-menu img{
-  width: 50px;
+  width: 30px;
 }
 
 .icon-menu p {
@@ -139,7 +138,7 @@ nav a{
 .conta img,
 .relatorio img,
 .estatisticas img{
-  width: 20px;
+  width: 35px;
   padding: 0.5rem;
 }
 
@@ -241,7 +240,7 @@ nav a{
 }
 
 .footer{
-  background: rgba(0,0,0,0.8);
+  background: rgba(0,0,0,0.92);
 }
 
 .nome{
@@ -335,6 +334,12 @@ nav a{
 
 .redes-sociais img{
   margin-top: 20px;
+  width: 30px;
+  margin-left: 10px;
+}
+
+.redes-sociais a{
+  text-decoration: none;
 }
 
 .menu-footer .borderred{
@@ -651,7 +656,7 @@ nav a{
   }
 
   footer{
-    background: rgba(0,0,0,0.8);
+    background: rgba(0,0,0,0.92);
   }
 
   .footer{

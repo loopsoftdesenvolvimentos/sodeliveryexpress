@@ -36,8 +36,13 @@ form{
   flex-direction:column;
   justify-content:center;
   width:90vw;
+<<<<<<< HEAD
   height:55vh;
   background:var(--branco);
+=======
+  height:38vh;
+  background:var(--branco_3);
+>>>>>>> d78feae56f643e05f8fc552c6a0e049c4dc3bc38
   padding:25px 25px;
 }
 .container-input-button,
@@ -78,7 +83,7 @@ form{
   border-radius: 10px 10px 0  0;
   cursor:pointer;
   width:90vw;
-  background:var(--branco);
+  background:var(--branco_3);
 }
 .tab_header ul{
   display:flex;
