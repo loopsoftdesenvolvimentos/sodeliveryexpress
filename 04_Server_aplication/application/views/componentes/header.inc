@@ -1,5 +1,45 @@
 
 <header>
+  <div class="acima-header">
+        <div class="info-contato">
+          <a href="mailto:comercial@sodeliveryexpress.co.br">
+            <div class="icone-top">
+              <img src="<?php echo base_url()?>public/img/icons/email.svg">
+              <span>comercial@sodeliveryexpress.com.br</span>
+            </div>
+          </a>
+
+          <div class="icone-top">
+            <img src="<?php echo base_url()?>public/img/icons/telefone.svg">
+            <span>11 4216 8169</span>
+          </div>
+
+          <a href="https://api.whatsapp.com/send?phone=5511997239032">
+            <div class="icone-top">
+              <img src="<?php echo base_url()?>public/img/icons/whatsapp.svg">
+              <span>11 99723 9032</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="icone-top-midia">
+          <a href="https://www.facebook.com/sodeliveryExpress/" target="_blank">
+            <img src="<?php echo base_url()?>public/img/icons/facebook-dark.svg">
+          </a>
+
+          <a href="https://www.instagram.com/sodeliveryexpress" target="_blank">
+            <img src="<?php echo base_url()?>public/img/icons/instagram-dark.svg">
+          </a>
+
+          <a href="https://www.linkedin.com/company/sodeliveryexpress" target="_blank">
+            <img src="<?php echo base_url()?>public/img/icons/linkedin-dark.svg">
+          </a>
+
+          <a href="https://www.youtube.com/channel/UCb93S1zCUAToY4Da6zLF6_w"  id="border_lateral" target="_blank">
+            <img src="<?php echo base_url()?>public/img/icons/youtube-dark.svg">
+          </a>
+        </div>
+      </div>
       <div class="logo-publicidade content">
         <div class="logo">
           <a href="index.php">
