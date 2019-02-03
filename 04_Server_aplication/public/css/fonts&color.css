@@ -1,0 +1,77 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+  outline:none;
+  text-decoration:none;
+  list-style:none;
+}
+
+:root{
+  --cinza-claro_1:#f3f3f3;
+  --cinza-escuro:#2d2d2d;
+  --cinza-claro:#ececec;
+  --cinza:#212121;
+  --vermelho_escuro: #800001;
+  --vermelho_logo: #FF0001;
+  --vermelho_claro: #FF3334;
+  --amarelo: #f7f733;
+  --amarelo-fraco: #ffff8f;
+  --amarelo-forte: #f2f238;
+
+  --preto: #232323;
+  --branco: #fefeff;
+  --branco_1: #efefef;
+  --branco_2:#ffffff;
+  --branco_3:rgba(255,255,255,0.7);
+
+  --vermelho: #FF0001;
+  --amarelo: #FFFF5F;
+  --amarelo-claro: #FFFF9F;
+  --amarelo_escuro: #e9db5c;
+  --amareloRGBA_escuro: rgba(233, 219, 92, 0.82);
+  --amarelo_2: #f7ce28;
+
+  --azul: #4f7bff;
+  --azul_escuro: #4f7bff;
+  --roxo: #6D17E5;
+  --verde: #59FF7C;
+
+
+  --preto: #000;
+  --branco_rgba: rgba(250, 249, 255, 0.8);
+  --transition3: 0.3s;
+}
+
+@font-face{
+  font-family: 'Raleway';
+  src: url('../fonts/Raleway/Raleway-Regular.ttf');
+}
+@font-face{
+  font-family: 'Raleway Black';
+  src: url('../fonts/Raleway/Raleway-Black.ttf');
+}
+@font-face{
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto/Roboto-Regular.ttf');
+}
+input[type='submit'],
+input[type='button'],
+button,
+select{
+  cursor:pointer;
+  border-radius:4px;
+}
+button:hover{
+  opacity:0.8 ;
+}
+input[type='submit']:hover{
+  opacity:0.8 ;
+}
+input[type='button']:hover{
+  opacity:0.8 ;
+}

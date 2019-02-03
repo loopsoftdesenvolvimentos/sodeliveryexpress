@@ -1,0 +1,59 @@
+.logo-cadastro-veiculo{
+	background:var(--vermelho);
+	padding:0.2rem;	
+}
+.logo{
+	padding:10px 0px;
+
+}
+.logo h1{
+	font-size:1.6rem;
+}
+.logo-titulo-span{
+	padding-left:80px;
+}
+.logo-titulo-span span{
+	font-size:0.8rem;
+	font-weight: bold;
+}
+.cadastro-veiculo-titulo{
+	padding:10px 10px;
+	border-bottom:1px solid var(--cinza-claro);
+}
+.cadastro-veiculo-titulo h1{
+	font-weight:inherit;
+	font-size:1rem;
+}
+.content{
+	width:100%;
+	margin:auto;
+	padding:10px 10px;
+}
+.container-cadastro-input-submit input[type='submit']{
+	width:100%;
+	margin-top:20px;
+	background:var(--vermelho);
+	color:var(--branco_2);
+	border:none;
+	padding:0.8rem;
+}
+.container-cadastro-input-button-acesso{
+	margin-top:10px;
+}
+.container-cadastro-input-button-acesso button{
+	background:var(--vermelho);
+	width:100%;
+	border:none;
+	padding:0.9rem;
+	color:var(--branco_2);
+}
+.button-second button{
+	background:var(--cinza-escuro);
+}
+
+@media screen and (min-width:640px){
+	.content{
+		width:1040px;
+		margin:auto;
+	}
+}
