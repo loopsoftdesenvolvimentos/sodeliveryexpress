@@ -27,7 +27,7 @@
 
           <div class="container-discussao">
             <div class="discussao">
-              <img src="public/img/pessoa.jpg">
+              <img src="<?php echo base_url()?>public/img/pessoa.jpg">
               <div class="item-discussao">
                 <h3>Título da discussão</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -41,17 +41,17 @@
 
             <div class="end-discussao">
               <div class="icon-item">
-                <img src="public/img/icons/done.svg">
+                <img src="<?php echo base_url()?>public/img/icons/done.svg">
                 <span>Salvo</span>
               </div>
 
               <div class="icon-item">
-                <img src="public/img/icons/comentario.svg">
+                <img src="<?php echo base_url()?>public/img/icons/comentario.svg">
                 <p><span>3 </span>comentários</p>
               </div>
 
               <div class="icon-item">
-                <img src="public/img/icons/pessoa.svg">
+                <img src="<?php echo base_url()?>public/img/icons/pessoa.svg">
                 <p><span>300 </span>visualizações</p>
               </div>
 
@@ -67,15 +67,15 @@
 
             <h4>Estatísticas</h4>
             <div class="container-contador">
-              <img src="public/img/icons/question.svg">
+              <img src="<?php echo base_url()?>public/img/icons/question.svg">
               <a href="#">Questões <span>( 25 )</span></a>
             </div>
             <div class="container-contador">
-              <img src="public/img/icons/comentario.svg">
+              <img src="<?php echo base_url()?>public/img/icons/comentario.svg">
               <a href="#">Respostas <span>( 23 )</span></a>
             </div>
             <div class="container-contador">
-              <img src="public/img/icons/pessoa.svg">
+              <img src="<?php echo base_url()?>public/img/icons/pessoa.svg">
               <a href="#">Usuários <span>( 40 )</span></a>
             </div>
           </div>
@@ -88,19 +88,19 @@
             <h4>Nos encontre</h4>
             <div class="container-redes">
               <a href="https://www.facebook.com/sodeliveryExpress/" target="_blank" class="midia facebook">
-                <img src="public/img/icons/facebook-white.png">
+                <img src="<?php echo base_url()?>public/img/icons/facebook-white.png">
               </a>
 
               <a href="https://www.youtube.com/channel/UCb93S1zCUAToY4Da6zLF6_w" target="_blank" class="midia youtube">
-                <img src="public/img/icons/youtube.png">
+                <img src="<?php echo base_url()?>public/img/icons/youtube.png">
               </a>
 
               <a href="https://www.instagram.com/sodeliveryexpress" target="_blank" class="midia instagram">
-                <img src="public/img/icons/instagram.png">
+                <img src="<?php echo base_url()?>public/img/icons/instagram.png">
               </a>
 
               <a href="https://www.linkedin.com/company/sodeliveryexpress" target="_blank" class="midia facebook">
-                <img src="public/img/icons/linkedin.png">
+                <img src="<?php echo base_url()?>public/img/icons/linkedin.png">
               </a>
             </div>
           </div>

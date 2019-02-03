@@ -6,31 +6,31 @@
     <main>
       <div class="clear"></div>
       <div class="title-estatistica">
-        <img src="public/img/letras/estatistica.svg" alt="titulo página">
+        <img src="<?php echo base_url()?>public/img/letras/estatistica.svg" alt="titulo página">
       </div>
       <div class="chart_row">
         <div class="pieChart">
           <div class="title-chart">
-            <img src="public/img/letras/usuario.svg" alt="titulo chart">
+            <img src="<?php echo base_url()?>public/img/letras/usuario.svg" alt="titulo chart">
           </div>
           <div id="estatistica_usuario" class="charts_pie"></div>
         </div>
         <div class="pieChart">
           <div class="title-chart">
-            <img src="public/img/letras/vendas.svg" alt="titulo chart">
+            <img src="<?php echo base_url()?>public/img/letras/vendas.svg" alt="titulo chart">
           </div>
           <div id="estatistica_vendas" class="charts_pie"></div>
         </div>
       </div>
       <div class="chart_bar">
         <div class="title-chart">
-          <img src="public/img/letras/carga.svg" alt="titulo chart">
+          <img src="<?php echo base_url()?>public/img/letras/carga.svg" alt="titulo chart">
         </div>
         <div id="estatistica_carga" class="charts_barra"></div>
       </div>
       <div class="chart_bar">
         <div class="title-chart">
-          <img src="public/img/letras/veiculos.svg" alt="titulo chart">
+          <img src="<?php echo base_url()?>public/img/letras/veiculos.svg" alt="titulo chart">
         </div>
         <div id="estatistica_veiculo" class="charts_barra"></div>
       </div>

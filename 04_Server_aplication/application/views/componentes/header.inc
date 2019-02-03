@@ -65,7 +65,7 @@
                 </a>
               </li>
               <li>
-                <a href="<?php echo base_url()?>pages/estatistica">
+                <a href="<?php echo base_url()?>pages/estatisticas">
                   <div class="icon-menu">
                     <img src="<?php echo base_url()?>public/img/icons/Statistics.svg" alt="icone de frete">
                     <p>Estatística</p>
