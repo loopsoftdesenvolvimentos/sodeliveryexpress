@@ -2,7 +2,7 @@
 <header>
       <div class="logo-publicidade content">
         <div class="logo">
-          <a href="index.html">
+          <a href="index.php">
             <img src="public/img/logo.png" alt="logo Só Delivery">
           </a>
         </div>
@@ -25,7 +25,7 @@
           <nav class="none">
             <ul>
               <li class="mobile">
-                <a href="login.html" id="login">
+                <a href="login.php" id="login">
                   <div class="icon-menu">
                     <img src="public/img/icons/login.svg" alt="">
                     <p>Login</p>
@@ -33,7 +33,7 @@
                 </a>
               </li>
               <li>
-                <a href="index.html" class="nomarginleft">
+                <a href="index.php" class="nomarginleft">
                   <div class="icon-menu">
                     <img src="public/img/icons/home.svg" alt="icone de frete">
                     <p>Home</p>
@@ -41,7 +41,7 @@
                 </a>
               </li>
               <li>
-                <a href="frete.html">
+                <a href="frete.php">
                   <div class="icon-menu">
                     <img src="public/img/icons/frete.svg" alt="icone de frete">
                     <p>Frete</p>
@@ -49,7 +49,7 @@
                 </a>
               </li>
               <li>
-                <a href="veiculo.html">
+                <a href="veiculo.php">
                   <div class="icon-menu">
                     <img src="public/img/icons/truck-front.svg" alt="icone de frete">
                     <p>Veículo</p>
@@ -57,7 +57,7 @@
                 </a>
               </li>
               <li>
-                <a href="empresas.html">
+                <a href="empresas.php">
                   <div class="icon-menu">
                     <img src="public/img/icons/empresa.svg" alt="icone de frete">
                     <p>Empresa</p>
@@ -65,7 +65,7 @@
                 </a>
               </li>
               <li>
-                <a href="estatistica.html">
+                <a href="estatistica.php">
                   <div class="icon-menu">
                     <img src="public/img/icons/Statistics.svg" alt="icone de frete">
                     <p>Estatística</p>
@@ -73,7 +73,7 @@
                 </a>
               </li>
               <li>
-                <a href="duvidas.html" id="noborderbottom">
+                <a href="duvidas.php" id="noborderbottom">
                   <div class="icon-menu">
                     <img src="public/img/icons/DUVIDAS.svg" alt="icone de frete">
                     <p>Dúvidas</p>
@@ -87,13 +87,13 @@
 
         <div class="conta">
           <div class="mobile-cadastro none">
-            <a href="login.html" id="login">
+            <a href="login.php" id="login">
                 <img src="public/img/icons/login.svg" alt="">
               login
             </a>
           </div>
           <div class="desk-cadastro">
-            <a href="login.html">
+            <a href="login.php">
                 <img src="public/img/icons/login.svg" alt="">
                 <p>Entre ou cadastre-se</p>
             </a>
