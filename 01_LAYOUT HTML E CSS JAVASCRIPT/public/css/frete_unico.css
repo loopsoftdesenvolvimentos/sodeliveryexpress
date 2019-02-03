@@ -1,0 +1,138 @@
+.container-frete-unico{
+	padding:20px 20px;
+}
+.container-informaçõs-gerais,
+.container-itens,
+.container-titulo,
+.container-frete-unico{
+	margin-top:10px;
+	margin-bottom:10px;
+}
+.container-informaçõs-gerais,
+.container-itens,
+.container-titulo{
+	background:var(--cinza-claro_1);
+}
+.container-informações-empresa-itens,
+.container-informaçõs-gerais ul,
+.container-titulo ul,
+.container-itens,
+.container-itens div ul{
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+}
+.container-informaçõs-gerais data,
+.container-itens b{
+	color:var(--vermelho);
+}
+.container-informaçõs-gerais-extras dt,
+.container-informaçõs-gerais-extras dd,
+.container-informaçõs-gerais-varios ul li,
+.container-itens div ul,
+.container-button,
+.container-titulo ul{
+	padding:0.4rem 1rem;
+	line-height:2rem;
+}
+.container-informaçõs-gerais{
+	line-height:2rem;
+	padding-left:1rem;
+}
+.container-informaçõs-gerais ul li:nth-child(2){
+	background:#e3e3e3;
+	padding:.4rem 1rem;
+}
+.container-itens li{
+	padding-right:20px;
+}
+button{
+  border:none;
+  background:var(--vermelho);
+  padding:0.8rem ;
+  color:var(--branco_2);
+  width:150px;
+}
+.container-frete-unico-titulo{
+	padding:20px 0px;
+}
+.container-frete-unico-titulo h1{
+	font-weight:inherit;
+	font-size:1.2rem;
+}
+.container-informaçõs-gerais-varios {
+	flex-direction:column; 
+}
+
+.container-informaçõs-gerais-varios ul li{
+	margin-top:10px;
+	background:var(--cinza-claro_1);
+}
+.container-informaçõs-gerais-extras dd{
+	margin-bottom:10px;
+	background:var(--cinza-claro_1);
+}
+.container-informaçõs-gerais-extras dt{
+	background:var(--cinza-claro_1);
+	width:200px;
+}
+.container-itens{
+	flex-direction:column;
+	padding:10px 10px;
+}
+b,
+li,
+dd,
+dt{
+	font-size:0.8rem;
+}
+.titulo_vermelho{
+	color:var(--vermelho);
+}
+.container-informações-empresa{
+	display:flex;
+	padding:20px 20px;
+
+}
+.container-informações-empresa img{
+	max-width:10rem;
+}
+.container-informações-empresa-itens{
+	width:100%;
+}
+.container-informações-empresa-itens div{
+	padding-left:20px;
+}
+.container-informações-empresa-itens div ul{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+}
+.logo-empresa{
+	height:100%;
+	padding-right:2rem;
+	border-right: 1px  solid var(--cinza-claro);
+}
+.container-informações-empresa button{
+	background:var(--cinza-escuro);
+}
+.form_contato{
+	margin-top:20px;
+	background:var(--cinza-claro_1);
+	padding:20px 20px;
+}
+@media screen and (min-width:620px){
+	.container-frete-unico{
+		padding:inherit;
+	}
+	b,
+	li,
+	dd,
+	dt{
+		font-size:1rem;
+	}
+	.container-itens{
+		flex-direction:row;
+		padding:inherit;
+	}
+}

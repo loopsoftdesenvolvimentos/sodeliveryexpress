@@ -1,3 +1,4 @@
+
 .mobile-menu{
 	width: 80px;
 	height: 80px;
@@ -164,7 +165,7 @@ select{
 .item-frete-empresa-veiculo{
 	box-shadow: 1px 1px 1px 1px #ededed;
 	background:var(--branco_2);
-	padding:40px 20px;
+	padding:20px 20px;
 	width:100%;
 	margin-bottom:20px;
 }
@@ -179,7 +180,7 @@ select{
 }
 .informações-item div ul li:first-child{
 	margin: 1rem;
-	border-bottom: solid 2px var(--preto);
+	border-bottom: solid 1px var(--preto);
 }
 .informações-item div{
 	margin: 20px 0
@@ -198,6 +199,14 @@ select{
 }
 .secondary-item ul li:last-child{
 	color: rgba(0,0,0, .6)
+}
+.informações-item ul li a{
+	color:var(--preto);
+}
+.info-extra{
+	background:#fdfdfd;
+	width:100%;
+	padding:.7rem;
 }
 .img_titulo{
 	padding:10px 10px;

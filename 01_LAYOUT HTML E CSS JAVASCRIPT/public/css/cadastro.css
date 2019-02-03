@@ -3,13 +3,12 @@
 	margin-top: 30px;
 	margin-bottom: 50px;
 }
-.container-cadastro-input-button,
-.container-cadastro-titulo{
-	margin-top:15px;
+.container-cadastro-input-button{
 	margin-bottom:15px;
 }
 .container-cadastro-titulo{
 	padding:0px 0px;
+	margin-top:15px;
 }
 .container-cadastro-titulo h1{
 	font-family: 'Raleway Bold', sans-serif;
@@ -44,7 +43,7 @@ input,select{
 
 .container-cadastro-input-dupla{
   grid-template-columns: 1fr 1fr;
-  grid-column-gap: 2rem;
+  grid-column-gap: 2rem;	
 }
 .container-cadastro-input-tripla{
   grid-template-columns: 1fr 1fr 1fr;

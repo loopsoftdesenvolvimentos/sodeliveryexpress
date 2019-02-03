@@ -4,14 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Só Delivery</title>
-    <link rel="stylesheet" href="public/css/contato.css">
-    <link rel="stylesheet" href="public/css/duvidas.css">
     <link rel="stylesheet" href="public/css/charts.css">
     <link rel="stylesheet" href="public/css/index.css">
     <link rel="stylesheet" href="public/css/cadastro.css">
-		<link rel="stylesheet" href="public/css/fonts&color.css">
+  	<link rel="stylesheet" href="public/css/fonts&color.css">
+    <link rel="stylesheet" type="text/css" href="public/css/frete_unico.css">
     <link rel="shortcut icon" href="public/img/logo.png" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript" src="public/js/charts.js"></script>
   </head>
@@ -41,14 +39,6 @@
           </div>
           <nav class="none">
             <ul>
-              <li class="mobile">
-                <a href="login.html" id="login">
-                  <div class="icon-menu">
-                    <img src="public/img/icons/login.svg" alt="">
-                    <p>Login</p>
-                  </div>
-                </a>
-              </li>
               <li>
                 <a href="index.html" class="nomarginleft">
                   <div class="icon-menu">
@@ -120,66 +110,127 @@
     </header>
 
     <main>
-      <div class="container-cadastro content row">
-        <div class="infors">
-          <img src="public/img/logo.png" alt="">
-          <h2><b>Sede:</b> Jundiaí, São Paulo</h2>
-          <h2><b>Fundada em:</b> 14 de setembro de 2013</h2>
-          <h2><b>Especializações:</b> Transportes, Cargas, Fretes, MotoBoys e franquias</h2>
-          <div class="container-midia">
-            <h4>Nos encontre</h4>
-            <div class="container-redes">
-              <a href="https://www.facebook.com/sodeliveryExpress/" target="_blank" class="midia facebook">
-                <img src="public/img/icons/facebook-white.png">
-              </a>
-
-              <a href="https://www.youtube.com/channel/UCb93S1zCUAToY4Da6zLF6_w" target="_blank" class="midia youtube">
-                <img src="public/img/icons/youtube.png">
-              </a>
-
-              <a href="https://www.instagram.com/sodeliveryexpress" target="_blank" class="midia instagram">
-                <img src="public/img/icons/instagram.png">
-              </a>
-
-              <a href="https://www.linkedin.com/company/sodeliveryexpress" target="_blank" class="midia facebook">
-                <img src="public/img/icons/linkedin.png">
-              </a>
+      <section class="content container-frete-unico">
+        <div class="container-frete-unico-titulo">
+          <h1>Informações Frete</h1>
+        </div>
+          <div class="container-titulo">
+            <ul>
+              <li>Detalhes</li>
+              <li>Visualizações <b>0</b></li>
+            </ul>
+          </div>
+          <div class="container-itens">
+            <div>
+              <ul>
+                <li>Origem: <b>Diamantino/MT</b></li>
+                <li>Destino: <b>Diamantino/MT</b></li>
+              </ul>
+            </div>
+            <div>
+              <div class="container-button">
+                <button>Ver Rota</button>
+              </div>
             </div>
           </div>
-        </div>
-        <form class="form-contato" action="" method="post">
-          <div class="container-cadastro-espacos">
-            <div class="container-cadastro-titulo">
-                <h1>Fale Conosco</h1>
+           <div class="container-frete-unico-titulo">
+              <h1>Produto</h1>
+          </div>
+          <div class="container-informaçõs-gerais">
+            <ul>
+              <li><b>Produtos: </b>SOJA EM GRÃOS / <b>Preço:</b> A Combinar</li>
+              <li><span>Data:</span><DATA>02/02/2019</DATA></li>
+            </ul>
+          </div>
+          <div class="container-frete-unico-titulo">
+              <h1>Veiculo</h1>
+          </div>
+          <div class="container-informaçõs-gerais-varios">
+            <ul>
+              <li><b>Veiculos </b>Rodotrem,Vanderleia,Bitrem,Carretas LS</li>
+              <li><b>Carroceria</b> Caçamba,Graneleiro</li>
+              <li><b>KM</b> 715</li>
+              <li><b>Espécie</b>Granel</li>
+              <li><b>Complemento </b>Não</li>
+              <li><b>Rastreamento </b>Não</li>
+              <li><b>Agenciamento </b>Não</li>
+              <li><b>Obs:</b>Carga perigosa</li>
+            </ul>
+          </div>
+          <div class="container-frete-unico-titulo">
+              <h1>Contato</h1>
+          </div>
+          <div class="container-informaçõs-gerais-extras">
+              <dl>
+                <dt>Telefone</dt>
+                <dd>(00)4567-9865 (Matriz)</dd>
+                <dd>(00)4567-9865 (Dourados)</dd>
+              </dl>
+              <dl>
+                <dt>Celular</dt>
+                <dd>(00)4567-9865 - TIM (Marcos)</dd>
+              </dl>
+              <dl>
+                <dt>Responsável</dt>
+                <dd>Marcos Lopes</dd>
+              </dl>
+          </div>
+          <div class="container-frete-unico-titulo">
+              <h1>Empresa</h1>
+          </div>
+           <div class="container-titulo">
+            <ul>
+              <li><b>Empresa:  <b class="titulo_vermelho">Fulano Transportes</b></b></li>
+            </ul>
+          </div>
+          <div>
+             <div class="container-informações-empresa">
+              <div class="logo-empresa">
+                 <img src="public/img/logo.png" alt="logo Só Delivery">
+              </div>
+              <div class="container-informações-empresa-itens">
+            <div>
+              <ul>
+                <li><b>Cidade </b>Campo-Grande / MS</li>
+                <li><b>Site </b>  www.algumacoisa.com.br</li>
+              </ul>
             </div>
-              <div class="container-cadastro-input">
-                  <label for="nome_completo">Nome Completo</label>
-                  <input type="text" name="nome_completo">
+            <div>
+              <div class="container-button">
+                <button>Veja nossa empresa</button>
               </div>
-              <div class="container-cadastro-input">
-                  <label for="email">Email</label>
-                  <input type="text" name="email">
+            </div>
+          </div>
+            </div>
+            <div class="container-frete-unico-titulo">
+              <h1>Entre em contato com nosso empresa</h1>
+              <div class="form_contato">
+                <form>
+                   <div class="container-cadastro-input-dupla">
+                    <div class="container-cadastro-input">
+                      <label for="nome">Seu Email:</label>
+                      <input type="text" id="nome" name="nome">
+                    </div>
+                     <div class="container-cadastro-input">
+                      <label for="email">Seu Email:</label>
+                      <input type="text" id="email" name="email">
+                    </div>
+                  </div>
+                  <div class="container-cadastro-input">
+                      <label for="mensagem">Sua Mensagem:</label>
+                      <input type="text" id="mensagem" name="mensagem">
+                  </div>
+                   <div class="container-cadastro-input-button">
+                      <input type="submit"  value="Enviar">
+                  </div>
+                </form>
               </div>
-              <div class="container-cadastro-input">
-                <label for='assunto'>Assunto</label>
-                <input type="text" id="assunto" name="assunto">
-              </div>
-              <div class="container-cadastro-input">
-                  <label for="mensagem">Mensagem:</label>
-                  <textarea name="mensagem" rows="8" cols="20"></textarea>
-              </div>
-              <div class="container-cadastro-input-button">
-                <input type="submit" value="Enviar">
-              </div>
-           </div>
-        </form>
-      </div>
+          </div>
+          </div>
+      </section>
     </main>
     <div class="clear"></div>
     <div class="borderred"></div>
-
-
-
     <footer>
       <div class="content footer">
         <div class="relatorio">
@@ -204,11 +255,6 @@
             <img src="public/img/icons/download.svg">
             Frete
           </a>
-
-          <!-- <a href="#" id="button_relatorio">
-            <span>+</span>
-            Mostrar mais
-          </a> -->
         </div>
 
         <div class="estatisticas">
@@ -246,6 +292,7 @@
             <ul>
               <li><a href="veiculo.html">Veículos</a></li>
               <li><a href="frete.html">Fretes</a></li>
+
             </ul>
           </div>
 
