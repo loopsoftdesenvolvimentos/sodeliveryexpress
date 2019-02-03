@@ -1,0 +1,12 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Só Delivery</title>
+    <link rel="stylesheet" href="public/css/charts.css">
+    <link rel="stylesheet" href="public/css/index.css">
+    <link rel="stylesheet" href="public/css/cadastro.css">
+  	<link rel="stylesheet" href="public/css/fonts&color.css">
+    <link rel="shortcut icon" href="public/img/logo.png" />
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="public/js/charts.js"></script>
+  </head>

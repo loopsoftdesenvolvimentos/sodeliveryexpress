@@ -1,4 +1,4 @@
-
+create database sodelivery;
 
 CREATE TABLE Cidades (
 id_cidade integer PRIMARY KEY auto_increment,
@@ -55,6 +55,7 @@ preco_frete real,
 id_carroceria integer,
 id_forma_pagamento integer,
 id_especie integer,
+visualizações integer,
 id_veiculo_categoria integer,
 FOREIGN KEY(id_carroceria) REFERENCES Carroceria (id_carroceria),
 FOREIGN KEY(id_veiculo_categoria) REFERENCES veiculo_categoria (id_veiculo_categoria)
@@ -126,14 +127,6 @@ site VARCHAR(200),
 skype VARCHAR(100),
 fax VARCHAR(100),
 url_facebook VARCHAR(100),
-id_cidade integer,
-id_ramo integer,
-FOREIGN KEY(id_cidade) REFERENCES Cidades (id_cidade),
-FOREIGN KEY(id_ramo) REFERENCES Ramo (id_ramo)
-);
-
-CREATE TABLE contato (
-id_contato integer PRIMARY KEY auto_increment,
 contato VARCHAR(100),
 telefone_comercial CHAR(11),
 celular CHAR(11),
@@ -143,10 +136,12 @@ celular2 CHAR(11),
 operadora2 VARCHAR(40),
 contato2 VARCHAR(40),
 whatsapp CHAR(30),
-whatsapp2 CHAR(30),
-id_empresa integer,
-FOREIGN KEY(id_empresa) REFERENCES Empresa (id_empresa)
+id_cidade integer,
+id_ramo integer,
+FOREIGN KEY(id_cidade) REFERENCES Cidades (id_cidade),
+FOREIGN KEY(id_ramo) REFERENCES Ramo (id_ramo)
 );
+
 
 CREATE TABLE Marca (
 id_marca integer PRIMARY KEY auto_increment,
