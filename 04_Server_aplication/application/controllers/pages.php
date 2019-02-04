@@ -8,14 +8,56 @@ class pages extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->helper('url');
+		$this->load->model('Model');
 	}
 	public function index()
 	{
-		$this->load->view('index');
+		$data['estados'] = $this->Model->all_estados();
+		$this->load->view('index',$data);
+	}
+	public function filtros($tipo,$pesquisa)
+	{
+
+		session_start();
+
+		 $_SESSION['filter'];
+
+		if($tipo == 'origem'){
+			$_SESSION['filter'] .= 'and frete.cidade_entrega = '.$pesquisa.'';
+		}
+		if($tipo == 'destino'){
+			$_SESSION['filter'] .= 'and frete.Cidade_saida = '.$pesquisa.'';
+		}
+
+		if($tipo == 'Cidade'){
+			$_SESSION['filter'] .= 'and frete.Cidade_saida = '.$pesquisa.'';
+		}
+		if($tipo == 'categoria'){
+			$_SESSION['filter'] .= 'and veiculo_categoria.desc_veiculo_categoria = "'.$pesquisa.'"';
+		}
+		if($tipo == 'complemento'){
+			$_SESSION['filter'] .= 'and frete.complemento = "'.$pesquisa.'"';
+		}
+		if($tipo == 'Raio'){
+			$_SESSION['filter'] .= 'and frete.Raio <= "'.$pesquisa.'"';
+		}
+
+		echo $_SESSION['filter'];
+
+		$data['fretes'] = $this->Model->filter($_SESSION['filter']);
+		$data['carroceria'] = $this->Model->carrocerias();
+		$data['estados'] = $this->Model->all_estados();
+		$data['categoria_veiculos'] = $this->Model->categorias_veiculos();
+		$this->load->view('frete',$data);
+
 	}
 	public function fretes()
 	{
-		$this->load->view('frete');
+		$data['fretes'] = $this->Model->fretes();
+		$data['carroceria'] = $this->Model->carrocerias();
+		$data['estados'] = $this->Model->all_estados();
+		$data['categoria_veiculos'] = $this->Model->categorias_veiculos();
+		$this->load->view('frete',$data);
 	}
 	public function empresas()
 	{
@@ -44,6 +86,10 @@ class pages extends CI_Controller {
 	public function estatisticas()
 	{
 		$this->load->view('estatistica');
+	}
+	public function select_cidades($id)
+	{
+		echo $this->Model->all_cidades($id);
 	}
 
 }

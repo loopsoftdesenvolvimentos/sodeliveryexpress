@@ -13,6 +13,10 @@
 	margin: 50%;
 	transform: translate(-50%, -50%);
 }
+#sumir1,
+#sumir{
+	display:none;
+}
 .container-empresa{
 	display:flex;
 	flex-direction:column;
@@ -87,6 +91,13 @@ label	{
 summary{
 	color:var(--preto);
 	cursor: pointer;
+}
+details ul{
+	padding:3px 3px;
+}
+details ul li{
+	padding:3px 20px;
+	text-decoration: underline;
 }
 input,select{
 	padding:0.4rem;

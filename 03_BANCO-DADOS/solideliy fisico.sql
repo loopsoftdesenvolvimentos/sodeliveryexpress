@@ -1,3 +1,4 @@
+drop database sodelivery;
 create database sodelivery;
 
 CREATE TABLE Cidades (
@@ -12,16 +13,10 @@ nome_estado VARCHAR(100),
 sigla_estads CHAR(2)
 );
 
-CREATE TABLE tipo_carroceria (
-id_tipo_carroceria  integer PRIMARY KEY auto_increment,
-desc_tipo_carroceria VARCHAR(100)
-);
 
 CREATE TABLE Carroceria (
 id_carroceria integer  PRIMARY KEY auto_increment,
-desc_carroceria VARCHAR(100),
-id_tipo_carroceria integer,
-FOREIGN KEY(id_tipo_carroceria) REFERENCES tipo_carroceria (id_tipo_carroceria)
+desc_carroceria VARCHAR(100)
 );
 
 CREATE TABLE categoria (
@@ -57,6 +52,8 @@ id_forma_pagamento integer,
 id_especie integer,
 visualizações integer,
 id_veiculo_categoria integer,
+id_empresa integer,
+data date,
 FOREIGN KEY(id_carroceria) REFERENCES Carroceria (id_carroceria),
 FOREIGN KEY(id_veiculo_categoria) REFERENCES veiculo_categoria (id_veiculo_categoria)
 );
@@ -123,6 +120,7 @@ nome_fantasia VARCHAR(100),
 cartão VARCHAR(100),
 inscricao_estadual VARCHAR(100),
 cep CHAR(8),
+foto_empresa text,
 site VARCHAR(200),
 skype VARCHAR(100),
 fax VARCHAR(100),
@@ -194,3 +192,4 @@ ALTER TABLE gerenciamento_usuarios ADD FOREIGN KEY(id_empresa) REFERENCES Empres
 ALTER TABLE empresa_produto ADD FOREIGN KEY(id_empresa) REFERENCES Empresa (id_empresa);
 ALTER TABLE empresa_produto ADD FOREIGN KEY(id_produto) REFERENCES produtos (id_produto);
 ALTER TABLE checkin ADD FOREIGN KEY(id_veiculo) REFERENCES veiculos (id_veiculo);;
+ALTER TABLE frete ADD FOREIGN KEY(id_empresa) REFERENCES empresa (id_empresa);
