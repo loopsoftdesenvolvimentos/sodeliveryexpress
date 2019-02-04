@@ -6,10 +6,10 @@
             <h3>Sobre Nós</h3>
 
             <ul>
-              <li><a href="contato.html">Contato</a></li>
-              <li><a href="quem-somos">Quem somos</a></li>
-              <li><a href="#">Como funciona</a></li>
-              <li><a href="estatistica.html">Estatísticas</a></li>
+              <li><a href="contato">Contato</a></li>
+              <li><a href="quem_somos">Quem somos</a></li>
+              <li><a href="https://www.youtube.com/watch?v=DPB_IVicb7Y">Como funciona</a></li>
+              <li><a href="estatistica">Estatísticas</a></li>
             </ul>
           </div>
 
@@ -19,7 +19,7 @@
             <h3>Cadastro Empresas</h3>
 
             <ul>
-              <li><a href="contato.html">Transportadoras</a></li>
+              <li><a href="cadastros">Transportadoras</a></li>
               <li><a href="quem-somos">Embarcadoras</a></li>
               <li><a href="#">Agenciadoras</a></li>
               <li><a href="estatistica.html">Distribuidoras</a></li>
