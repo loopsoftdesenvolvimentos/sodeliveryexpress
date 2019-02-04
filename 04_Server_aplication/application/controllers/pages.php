@@ -45,5 +45,10 @@ class pages extends CI_Controller {
 	{
 		$this->load->view('estatistica');
 	}
+	public function quem_somos()
+	{
+		$this->load->view('quem-somos');
+	}
+
 
 }

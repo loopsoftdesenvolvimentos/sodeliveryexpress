@@ -680,6 +680,8 @@ footer{
     display: flex;
     align-items: flex-start;
     justify-content: space-around;
+    width: 1300px;
+    margin: 0 auto;
   }
 
   .end-footer p{

@@ -1,6 +1,6 @@
 
     <footer>
-      <div class="footer">
+      <div class="footer content">
         <div class="container-3">
           <div class="container-footer">
             <h3>Sobre Nós</h3>
