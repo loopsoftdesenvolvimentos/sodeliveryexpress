@@ -2,7 +2,7 @@
 <header>
   <div class="acima-header">
         <div class="info-contato">
-          <a href="mailto:comercial@sodeliveryexpress.co.br">
+          <a href="mailto:comercial@sodeliveryexpress.co.br" target="_blank">
             <div class="icone-top">
               <img src="<?php echo base_url()?>public/img/icons/email.svg">
               <span>comercial@sodeliveryexpress.com.br</span>
@@ -14,7 +14,7 @@
             <span>11 4216 8169</span>
           </div>
 
-          <a href="https://api.whatsapp.com/send?phone=5511997239032">
+          <a href="https://api.whatsapp.com/send?phone=5511997239032" target="_blank">
             <div class="icone-top">
               <img src="<?php echo base_url()?>public/img/icons/whatsapp.svg">
               <span>11 99723 9032</span>
