@@ -13,6 +13,10 @@
 	margin: 50%;
 	transform: translate(-50%, -50%);
 }
+#sumir1,
+#sumir{
+	display:none;
+}
 .container-empresa{
 	display:flex;
 	flex-direction:column;
@@ -87,6 +91,13 @@ label	{
 summary{
 	color:var(--preto);
 	cursor: pointer;
+}
+details ul{
+	padding:3px 3px;
+}
+details ul li{
+	padding:3px 20px;
+	text-decoration: underline;
 }
 input,select{
 	padding:0.4rem;
@@ -236,6 +247,17 @@ select{
 }
 .container-menu li a b{
 	float:right;
+}
+.filtros_selecionados ul li{
+	padding:.4rem;
+	border-bottom: 1px solid var(--cinza-claro);
+}
+.filtros_selecionados ul li a b{
+	float: right;
+	font-size:0.8rem;
+}
+.filtros_selecionados ul li a b:hover{
+	color:var(--vermelho);
 }
 @media screen and (min-width:690px){
 	.container-empresa{
