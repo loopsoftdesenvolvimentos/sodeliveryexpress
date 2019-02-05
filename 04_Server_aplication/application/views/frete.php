@@ -16,6 +16,17 @@
                 <div class="container-empresa-titulo">
                     <h1>Filtros</h1>
                 </div>
+                <div class="filtros_selecionados">
+                  <ul id="lista">
+                    <?php   
+                        if(isset($pesquisas)){
+                          foreach($pesquisas as $key=>$selecionados) {
+                            echo "<li><a href='".base_url()."fretes/remover/".$key."'>".$selecionados['pesquisa']."<b>X</b></a></li>";
+                          }
+                        }
+                     ?> 
+                   </ul>
+                </div>
                 <div class="container-empresa-filtro">
                   <div class="container-empresa-inputs">
                       <label>Origem:</label>
@@ -29,7 +40,7 @@
                   <div class="container-empresa-inputs " id="sumir">
                       <label>Cidades:</label>
                       <select name="cidades">
-                        <option>Selecionar opção</option>
+                        <option selected disabled>Selecionar cidade</option>
                       </select>
                   </div>
                   <div class="container-empresa-inputs">

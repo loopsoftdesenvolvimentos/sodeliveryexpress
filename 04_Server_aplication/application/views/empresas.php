@@ -16,6 +16,17 @@
                 <div class="container-empresa-titulo">
                     <h1>Filtros</h1>
                 </div>
+                <div class="filtros_selecionados">
+                  <ul id="lista">
+                    <?php   
+                        if(isset($pesquisas)){
+                          foreach($pesquisas as $key=>$selecionados) {
+                            echo "<li><a href='".base_url()."fretes/remover/".$key."'>".$selecionados['pesquisa']."<b>X</b></a></li>";
+                          }
+                        }
+                     ?> 
+                   </ul>
+                </div>
                 <div class="container-empresa-filtro">
                   <div class="container-empresa-titulo-2">
                     <h1>Buscar por Nome</h1>
@@ -27,15 +38,16 @@
                 <div class="container-empresa-filtro">
                   <div class="container-empresa-inputs">
                       <label>UF:</label>
-                      <select>
-                        <option>Selecionar opção</option>
+                      <select name="estado_empresa">
+                         <option selected disabled>Selecione estado</option>
+                         <?php foreach ($estados as $estados_item) {
+                          echo'<option value='.$estados_item->id_estado.'>'.$estados_item->sigla_estads.'</option>' ;
+                        } ?>
                       </select>
                   </div>
                   <div class="container-empresa-inputs">
                       <label>Cidade:</label>
-                      <select>
-                        <option>Selecionar opção</option>
-                      </select>
+                      <select name="cidades_empresas"></select>
                   </div>
                 </div>
                 <div class="container-empresa-filtro">
@@ -208,5 +220,6 @@
   <!-- SCRIPTS -->
   <script type="text/javascript" src="public/js/menu_mobile.js"></script>
   <script type="text/javascript" src="public/js/pesquisa.js"></script>
+    <script type="text/javascript" src="<?php echo base_url() ?>public/js/select_populado.js"></script>
   </body>
 </html>

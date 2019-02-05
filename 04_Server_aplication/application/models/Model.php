@@ -13,7 +13,7 @@ class Model extends CI_Model  {
 	}
 	public function all_cidades($id)
 	{
-		$result = $this->db->where("id_estado",$id)->get("cidades")->result();
+		$result = $this->db->query('select*from estados,cidades where cidades.id_estado = estados.id_estado and cidades.id_estado ='.$id.'')->result();
        	return json_encode($result);
 	}
 	public function categorias_veiculos()
@@ -34,9 +34,33 @@ class Model extends CI_Model  {
 	}
 	public function filter($filter)
 	{
-		$sql = 'select*from frete,empresa,carroceria,estados,Cidades,categoria,forma_pagamento,especie,veiculo_categoria where frete.id_carroceria = carroceria.id_carroceria and frete.id_forma_pagamento = forma_pagamento.id_forma_pagamento and frete.id_especie = especie.id_especie and frete.id_veiculo_categoria = veiculo_categoria.id_veiculo_categoria and veiculo_categoria.id_categoria = categoria.id_categoria and frete.id_empresa = empresa.id_empresa and cidades.id_estado = estados.id_estado '.$filter.'';
+
+		$sqls ='';
+
+		if($filter != false){
+			foreach($filter as $key=>$value) {
+			  $sqls .=  $value['select'];
+		   }
+		}
+
+
+		$sql = 'select*from frete,empresa,carroceria,estados,Cidades,categoria,forma_pagamento,especie,veiculo_categoria where frete.id_carroceria = carroceria.id_carroceria and frete.id_forma_pagamento = forma_pagamento.id_forma_pagamento and frete.id_especie = especie.id_especie and frete.id_veiculo_categoria = veiculo_categoria.id_veiculo_categoria and veiculo_categoria.id_categoria = categoria.id_categoria and frete.id_empresa = empresa.id_empresa and cidades.id_estado = estados.id_estado '.$sqls.'';
 
 			return $this->db->query($sql)->result();
 
+	}
+	public function filter_empresa($filter)
+	{
+		$sqls ='';
+
+		if($filter != false){
+			foreach($filter as $key=>$value) {
+			  $sqls .=  $value['select'];
+		   }
+		}
+
+		$sql = 'select*from frete,empresa,carroceria,estados,Cidades,categoria,forma_pagamento,especie,veiculo_categoria where frete.id_carroceria = carroceria.id_carroceria and frete.id_forma_pagamento = forma_pagamento.id_forma_pagamento and frete.id_especie = especie.id_especie and frete.id_veiculo_categoria = veiculo_categoria.id_veiculo_categoria and veiculo_categoria.id_categoria = categoria.id_categoria and frete.id_empresa = empresa.id_empresa and cidades.id_estado = estados.id_estado '.$sqls.'';
+
+			return $this->db->query($sql)->result();
 	}
 }
