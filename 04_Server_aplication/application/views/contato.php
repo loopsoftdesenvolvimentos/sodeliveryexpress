@@ -6,7 +6,7 @@
     <main>
       <div class="container-cadastro content row">
         <div class="infors">
-          <img src="public/img/logo.png" alt="">
+          <img src="<?php echo base_url()?>public/img/logo.png" alt="">
           <h2><b>Sede:</b> Jundiaí, São Paulo</h2>
           <h2><b>Fundada em:</b> 14 de setembro de 2013</h2>
           <h2><b>Especializações:</b> Transportes, Cargas, Fretes, MotoBoys e franquias</h2>
@@ -14,19 +14,19 @@
             <h4>Nos encontre</h4>
             <div class="container-redes">
               <a href="https://www.facebook.com/sodeliveryExpress/" target="_blank" class="midia facebook">
-                <img src="public/img/icons/facebook-white.png">
+                <img src="<?php echo base_url()?>public/img/icons/facebook-white.png">
               </a>
 
               <a href="https://www.youtube.com/channel/UCb93S1zCUAToY4Da6zLF6_w" target="_blank" class="midia youtube">
-                <img src="public/img/icons/youtube.png">
+                <img src="<?php echo base_url()?>public/img/icons/youtube.png">
               </a>
 
               <a href="https://www.instagram.com/sodeliveryexpress" target="_blank" class="midia instagram">
-                <img src="public/img/icons/instagram.png">
+                <img src="<?php echo base_url()?>public/img/icons/instagram.png">
               </a>
 
               <a href="https://www.linkedin.com/company/sodeliveryexpress" target="_blank" class="midia facebook">
-                <img src="public/img/icons/linkedin.png">
+                <img src="<?php echo base_url()?>public/img/icons/linkedin.png">
               </a>
             </div>
           </div>
@@ -38,19 +38,19 @@
             </div>
               <div class="container-cadastro-input">
                   <label for="nome_completo">Nome Completo</label>
-                  <input type="text" name="nome_completo">
+                  <input type="text" name="nome_completo" required>
               </div>
               <div class="container-cadastro-input">
                   <label for="email">Email</label>
-                  <input type="text" name="email">
+                  <input type="text" name="email" required>
               </div>
               <div class="container-cadastro-input">
                 <label for='assunto'>Assunto</label>
-                <input type="text" id="assunto" name="assunto">
+                <input type="text" id="assunto" name="assunto" required>
               </div>
               <div class="container-cadastro-input">
                   <label for="mensagem">Mensagem:</label>
-                  <textarea name="mensagem" rows="8" cols="20"></textarea>
+                  <textarea name="mensagem" rows="8" cols="20" required></textarea>
               </div>
               <div class="container-cadastro-input-button">
                 <input type="submit" value="Enviar">
@@ -64,5 +64,5 @@
      <?php include('componentes/footer.inc') ?>
   </body>
   <!-- SCRIPTS -->
-  <script type="text/javascript" src="public/js/menu_mobile.js"></script>
+  <script type="text/javascript" src="<?php echo base_url()?>public/js/menu_mobile.js"></script>
 </html>

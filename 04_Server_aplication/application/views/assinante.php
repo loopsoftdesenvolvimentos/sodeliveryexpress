@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-	<?php include('componentes/head_duvida.inc'); ?>
+	<?php include('componentes/head_assinante.inc'); ?>
 	<body>
 	   <?php include('componentes/header.inc'); ?>
     <main>
@@ -8,7 +8,7 @@
       <div class="clear"></div>
 
 
-      <h2 align="center">Deixe suas dúvidas conosco!</h2>
+      <h2 align="center">Canal do Assinante</h2>
 
       <div class="clear"></div>
       <section class="all content">
@@ -16,16 +16,29 @@
         <div class="forum">
           <div class="menu-forum">
             <ul id="menu_forum">
-              <li class="menu_active">Perguntas Recentes</li>
-              <li>Maioria das Respostas</li>
-              <li>Recentemente Respondido</li>
-              <li>Sem respostas</li>
+              <li id="btn-central" class="menu_active">Central da Perguntas</li>
+              <li id="btn-queroassinar" >Quero Assinar</li>
             </ul>
           </div>
+          <script type="text/javascript">
+            $('#btn-central').click(function(){
+              $( this ).addClass('menu_active');
+              $('#btn-queroassinar').removeClass('menu_active');
 
+              $('#container-central').show();
+              $('#form-queroassinar').hide();
+            });
+            $('#btn-queroassinar').click(function(){
+              $( this ).addClass('menu_active');
+              $('#btn-central').removeClass('menu_active');
+
+              $('#form-queroassinar').show();
+              $('#container-central').hide();
+            })
+          </script>
           <div class="clear clear"></div>
 
-          <div class="container-discussao">
+          <div id="container-central" class="container-discussao">
             <div class="discussao">
               <img src="<?php echo base_url()?>public/img/pessoa.jpg">
               <div class="item-discussao">
@@ -57,29 +70,41 @@
 
             </div>
           </div>
+          <div id="form-queroassinar" class="container-discussao disp_none">
+            <form class="form" action="" method="post">
+              <div class="container-cadastro-espacos">
+                <div class="container-cadastro-titulo">
+                    <h1>Quero Assinar</h1>
+                </div>
+                  <div class="container-cadastro-input">
+                      <label for="nome">Nome Complemento</label>
+                      <input type="text"name="nome">
+                  </div>
+                  <div class="container-cadastro-input">
+                      <label for="Estados">Estados</label>
+                      <input type="text" id="Estados" name="Estados">
+                  </div>
+                  <div class="container-cadastro-input">
+                      <label for="Cidade">Cidade</label>
+                      <input type="text" id="Cidade" name="Cidade">
+                  </div>
+                  <div class="container-cadastro-input">
+                      <label for="email">Email</label>
+                      <input type="text" name="email">
+                  </div>
+                  <div class="container-cadastro-input-button">
+                      <input type="submit" value="Confirmar cadastro">
+                  </div>
+             </div>
+            </form>
+          </div>
+          </div>
         </div>
 
         <div class="clear clearNone"></div>
 
 
         <div class="listagem-lateral">
-          <div class="contador-duvidas">
-
-            <h4>Estatísticas</h4>
-            <div class="container-contador">
-              <img src="<?php echo base_url()?>public/img/icons/question.svg">
-              <a href="#">Questões <span>( 25 )</span></a>
-            </div>
-            <div class="container-contador">
-              <img src="<?php echo base_url()?>public/img/icons/comentario.svg">
-              <a href="#">Respostas <span>( 23 )</span></a>
-            </div>
-            <div class="container-contador">
-              <img src="<?php echo base_url()?>public/img/icons/pessoa.svg">
-              <a href="#">Usuários <span>( 40 )</span></a>
-            </div>
-          </div>
-
 
           <div class="clear"></div>
 

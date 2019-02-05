@@ -9,7 +9,7 @@
               <li><a href="contato">Contato</a></li>
               <li><a href="quem_somos">Quem somos</a></li>
               <li><a href="https://www.youtube.com/watch?v=DPB_IVicb7Y">Como funciona</a></li>
-              <li><a href="estatistica">Estatísticas</a></li>
+              <li><a href="estatisticas">Estatísticas</a></li>
             </ul>
           </div>
 
@@ -19,12 +19,12 @@
             <h3>Cadastro Empresas</h3>
 
             <ul>
-              <li><a href="cadastros">Transportadoras</a></li>
-              <li><a href="quem-somos">Embarcadoras</a></li>
-              <li><a href="#">Agenciadoras</a></li>
-              <li><a href="estatistica.html">Distribuidoras</a></li>
-              <li><a href="estatistica.html">Comércio Local</a></li>
-              <li><a href="estatistica.html">Indústria</a></li>
+              <li><a href="<?php echo base_url()?>pages/cadastro_empresa?type=transportadoras">Transportadoras</a></li>
+              <li><a href="<?php echo base_url()?>pages/cadastro_empresa?type=embarcadoras">Embarcadoras</a></li>
+              <li><a href="<?php echo base_url()?>pages/cadastro_empresa?type=agenciadoras">Agenciadoras</a></li>
+              <li><a href="<?php echo base_url()?>pages/cadastro_empresa?type=distrubuidoras">Distribuidoras</a></li>
+              <li><a href="<?php echo base_url()?>pages/cadastro_empresa?type=comercio">Comércio Local</a></li>
+              <li><a href="<?php echo base_url()?>pages/cadastro_empresa?type=industria">Indústria</a></li>
             </ul>
           </div>
 
@@ -32,12 +32,11 @@
 
           <div class="container-footer">
             <h3>Cadastro Veículos</h3>
-
             <ul>
-              <li><a href="contato.html">Caminhões, Carretas</a></li>
-              <li><a href="quem-somos">Utilitários</a></li>
-              <li><a href="#">Fiorinos</a></li>
-              <li><a href="estatistica.html">Motos  </a></li>
+              <li><a href="<?php echo base_url()?>pages/cadastro_veiculo?type=caminhesCarretas">Caminhões, Carretas</a></li>
+              <li><a href="<?php echo base_url()?>pages/cadastro_veiculo?type=ultilitarios">Utilitários</a></li>
+              <li><a href="<?php echo base_url()?>pages/cadastro_veiculo?type=fiorinos">Fiorinos</a></li>
+              <li><a href="<?php echo base_url()?>pages/cadastro_veiculo?type=motos">Motos</a></li>
             </ul>
           </div>
         </div>
@@ -49,10 +48,10 @@
             <h3>Assinantes</h3>
 
             <ul>
-              <li><a href="#">Quero ser Assinante</a></li>
-              <li><a href="#">Central do Assinante</a></li>
-              <li><a href="#">Meus Fretes</a></li>
-              <li><a href="#">Minhas Faturas</a></li>
+              <li><a href="<?php echo base_url()?>pages/assinante">Quero ser Assinante</a></li>
+              <li><a href="<?php echo base_url()?>pages/assinante">Central do Assinante</a></li>
+              <li><a href="<?php echo base_url()?>pages/administrativo">Meus Fretes</a></li>
+              <li><a href="<?php echo base_url()?>pages/administrativo">Minhas Faturas</a></li>
             </ul>
           </div>
 

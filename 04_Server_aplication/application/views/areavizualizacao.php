@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-  <?php include('componentes/head_estatistica.inc'); ?>
+  <?php include('componentes/head_administrativo_areavizualizacao.inc'); ?>
   <body>
-    <?php include('componentes/header.inc'); ?>
+    <?php include('componentes/header_administrativo.inc'); ?>
     <main>
       <div class="clear"></div>
       <div class="title-estatistica">
@@ -40,5 +40,5 @@
     <?php include('componentes/footer.inc'); ?>
   </body>
   <!-- SCRIPTS -->
-  <script type="text/javascript" src="<?php echo base_url()?>public/js/menu_mobile.js"></script>
+  <script type="text/javascript" src="public/js/menu_mobile.js"></script>
 </html>

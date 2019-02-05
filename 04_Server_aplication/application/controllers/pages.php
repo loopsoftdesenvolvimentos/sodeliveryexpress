@@ -47,8 +47,38 @@ class pages extends CI_Controller {
 	}
 	public function quem_somos()
 	{
-		$this->load->view('quem-somos');
+		$this->load->view('quem_somos');
 	}
-
-
+	public function administrativo()
+	{
+		$this->load->view('administrativo');
+	}
+	public function acesso_veiculo()
+	{
+		$this->load->view('acesso_veiculo_index');
+	}
+	public function cadastro_empresa()
+	{
+		$this->load->view('cadastros');
+	}
+	public function cadastro_veiculo()
+	{
+		$this->load->view('veiculo_cadastro_verificar');
+	}
+	public function assinante()
+	{
+		$this->load->view('assinante');
+	}
+	public function areacadastro()
+	{
+		$this->load->view('areacadastro');
+	}
+	public function areavizualizacao()
+	{
+		$this->load->view('areavizualizacao');
+	}
+	public function areaadministrativa()
+	{
+		$this->load->view('areaadministrativa');
+	}
 }

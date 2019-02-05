@@ -1,13 +1,12 @@
 .logo-cadastro-veiculo{
 	background:var(--vermelho);
-	padding:0.2rem;	
+	padding:0.2rem;
 }
 .logo{
 	padding:10px 0px;
-
 }
-.logo h1{
-	font-size:1.6rem;
+.logo img{
+	width: 100px;
 }
 .logo-titulo-span{
 	padding-left:80px;

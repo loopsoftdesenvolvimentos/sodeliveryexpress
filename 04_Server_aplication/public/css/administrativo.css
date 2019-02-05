@@ -211,6 +211,9 @@ header{
 	text-transform: uppercase;
 	font-weight: 700;
 }
+.area-container .container a{
+	text-align: center;
+}
 @media screen and (min-width: 728px){
 	.logo-config{
 		display: flex;
@@ -274,7 +277,6 @@ header{
 		display: flex;
 		justify-content: center;
 	}
-
 	#percent{
 		width: 60%;
 		margin: 0 auto;

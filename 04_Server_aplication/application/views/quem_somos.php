@@ -13,7 +13,7 @@
           <p>A Só Delivery surgiu do desafio de entrega Rápidas na região de jundiaí/SP, tornando-se referência em entrega de impressos. Atualmente oferecemos serviços de logística para empresas que necessitam de frequência, agilidade e pontualidade para as suas encomendas. Com centro de distribuição a Só Delivery realiza entregas simultâneas, em toda a região de jundiaí/sp. Contamos com uma extensa malha de distribuição e um excelente atendimento, além de profissionais especializados em entregas porta a porta. Ideal para empresas que realizam comércio eletrônico e vendas diretas através de catálogos. Também para veículos de comunicação e editoras. Somos o melhor caminho para entregas, conectando sua empresa aos seus clientes.</p>
 
           <div class="imagem-quem-somos">
-            <img src="public/img/logo.png">
+            <img src="<?php echo base_url()?>public/img/logo.png">
           </div>
 
           <p>Tem como meta a excelência em serviço, sempre apresentando segurança e qualidade, criando consequentemente uma perfeita parceria de desenvolvimento, reconhecimento e confiança.</p>
@@ -24,7 +24,7 @@
         <div class="container-triforce">
           <div class="triforce">
             <div class="nome-triforce">
-              <img src="public/img/icons/mission.png">
+              <img src="<?php echo base_url()?>public/img/icons/mission.png">
               <h3>Missão</h3>
             </div>
 
@@ -33,7 +33,7 @@
 
           <div class="triforce">
             <div class="nome-triforce">
-              <img src="public/img/icons/vision.png">
+              <img src="<?php echo base_url()?>public/img/icons/vision.png">
               <h3>Visão</h3>
             </div>
 
@@ -42,7 +42,7 @@
 
           <div class="triforce">
             <div class="nome-triforce">
-              <img src="public/img/icons/values.png">
+              <img src="<?php echo base_url()?>public/img/icons/values.png">
               <h3>Valores</h3>
             </div>
 
@@ -55,6 +55,6 @@
       <div class="borderred"></div>
     </main>
     <?php include('componentes/footer.inc'); ?>
-  <script type="text/javascript" src="public/js/menu_mobile.js"></script>
+  <script type="text/javascript" src="<?php echo base_url()?>public/js/menu_mobile.js"></script>
 	</body>
 </html>

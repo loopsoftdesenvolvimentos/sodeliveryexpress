@@ -33,7 +33,22 @@
                 <div class="container-cadastro-input">
                     <label>*Ramo da Empresa:</label>
                     <select name="ramo_empresa">
-                      <option>Selecione ramo</option>
+                      <option selected disabled>Selecione ramo</option>
+                      <?php
+                        $list = array(
+                          "transportadoras" => "<option value='Transportadoras'>Transportadoras</option>",
+                          "embarcadoras" => "<option value='Embarcadoras' >Embarcadoras</option>",
+                          "agendiadoras" => "<option value='agenciadoras' >Agenciadoras</option>",
+                          "distrubuidoras" => "<option value='Distribuidoras' >Distribuidoras</option>",
+                          "comercio" => "<option value='Comércio Local' >Comércio Local</option>",
+                          "industria" => "<option value='Indústria' >Indústria</option>"
+                       );
+                       $ramo = $_GET['type'];
+                       foreach ($list as $value) {
+                         // array_splice($ramo,  "<option value='" . $ramo . "' selected>" .$ramo. "</option>");
+                         echo $value;
+                       }
+                       ?>
                     </select>
                 </div>
             </div>

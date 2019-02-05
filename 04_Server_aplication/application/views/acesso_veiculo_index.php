@@ -20,11 +20,11 @@
                     <a href=""><button>Sair</button></a>
                 </div>
             </div>
-               
+
         </form>
        </div>
-     
+
     </main>
-  <script type="text/javascript" src="public/js/menu_mobile.js"></script>
+  <script type="text/javascript" src="<?php echo base_url()?>public/js/menu_mobile.js"></script>
   </body>
 </html>

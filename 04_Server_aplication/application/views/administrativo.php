@@ -1,31 +1,8 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SóDelivery - Painel administrativo</title>
-    <link rel="stylesheet" href="public/css/index.css">
-    <link rel="stylesheet" href="public/css/administrativo.css">
-    <link rel="stylesheet" href="public/css/fonts&color.css">
-    <link rel="shortcut icon" href="public/img/logo.png" />
-  </head>
+  <?php include('componentes/head_administrativo.inc');?>
   <body>
-    <header>
-      <div class="logo-config">
-        <div class="logo">
-          <a href="index.html">
-            <img src="public/img/logo.png" alt="logo Só delivery">
-          </a>
-          <h2>Painel Administrativo</h2>
-        </div>
-
-        <div class="config">
-          <img id="blank" src="public/img/icons/settings-work-tool.svg">
-          <img src="public/img/icons/settings-work-tool-dark.svg">
-          <span>Configurações</span>
-        </div>
-      </div>
-    </header>
+    <?php include('componentes/header_administrativo.inc'); ?>
 
     <main>
 
@@ -35,7 +12,7 @@
         <div class="info-servico">
           <div class="info-name">
             <h3>Informações Serviço</h3>
-            <img src="public/img/icons/service.svg">
+            <img src="<?php echo base_url()?>public/img/icons/service.svg">
           </div>
 
           <div class="info">
@@ -50,7 +27,7 @@
         <div class="info-conta">
           <div class="info-name">
             <h3>Informações Conta</h3>
-            <img src="public/img/icons/accoun.svg">
+            <img src="<?php echo base_url()?>public/img/icons/accoun.svg">
           </div>
 
           <div class="info">
@@ -89,16 +66,16 @@
             <div class="area-container">
               <div class="container">
 
-                <a href="areacadastro.html#cadastramentoVeiculos">
-                  <img src="public/img/icons/veiculosADM.png">
+                <a href="<?php echo base_url()?>pages/areacadastro/#cadastramentoVeiculo">
+                  <img src="<?php echo base_url()?>public/img/icons/veiculosADM.png">
                   Cadastrar veículos
                 </a>
               </div>
 
               <div class="container">
 
-                <a href="areacadastro.html#cadastramentoFretes">
-                  <img src="public/img/icons/freteADM.png">
+                <a href="<?php echo base_url()?>pages/areacadastro/#cadastramentoFretes">
+                  <img src="<?php echo base_url()?>public/img/icons/freteADM.png">
                   Cadastrar Fretes
                 </a>
               </div>
@@ -113,24 +90,24 @@
             <div class="area-container">
               <div class="container">
 
-                <a href="areavizualizacao.html#verEstatisticas">
-                  <img src="public/img/icons/verEstatisticasADM.png">
-                  Ver estatísticas empresariais
+                <a href="areavizualizacao">
+                  <img src="<?php echo base_url()?>public/img/icons/verEstatisticasADM.png">
+                  Ver estatísticas <br> empresariais
                 </a>
               </div>
 
               <div class="container">
 
-                <a href="areavizualizacao.html#verVeiculos">
-                  <img src="public/img/icons/verVeiculosADM.png">
+                <a href="<?php echo base_url()?>pages/areacadastro/#verVeiculos">
+                  <img src="<?php echo base_url()?>public/img/icons/verVeiculosADM.png">
                   Ver meus veículos
                 </a>
               </div>
 
               <div class="container">
 
-                <a href="areavizualizacao.html#verFretes">
-                  <img src="public/img/icons/verFretesADM.png">
+                <a href="<?php echo base_url()?>pages/areacadastro/#verFretes">
+                  <img src="<?php echo base_url()?>public/img/icons/verFretesADM.png">
                   Ver meus fretes
                 </a>
               </div>
@@ -145,22 +122,16 @@
             <div class="area-container">
               <div class="container">
 
-                <a id="percent" href="areaadministrativa.html#editarEmpresa">
-                  <img src="public/img/icons/editarEmpresaADM.png">
+                <a id="percent" href="<?php echo base_url()?>pages/areaadministrativa/#editarEmpresa">
+                  <img src="<?php echo base_url()?>public/img/icons/editarEmpresaADM.png">
                   Editar empresa
                 </a>
               </div>
 
               <div class="container">
-                <a href="areaadministrativa.html#verEditaVeiculos">
-                  <img src="public/img/icons/verEditarPagamentoADM.png">
+                <a href="<?php echo base_url()?>pages/areaadministrativa/#verEditaPagamento">
+                  <img src="<?php echo base_url()?>public/img/icons/verEditarPagamentoADM.png">
                   Ver/Editar pagamento
-                </a>
-              </div>
-              <div class="container">
-                <a href="areaadministrativa.html#verEditaVeiculos">
-                  <img src="public/img/icons/verEditarPagamentoADM.png">
-                   pagamento
                 </a>
               </div>
             </div>
