@@ -202,9 +202,17 @@ class pages extends CI_Controller {
 	{
 		$this->load->view('estatistica');
 	}
+<<<<<<< HEAD
 	public function select_cidades($id)
 	{		
 		echo $this->Model->all_cidades($id);
 	}
+=======
+	public function quem_somos()
+	{
+		$this->load->view('quem-somos');
+	}
+
+>>>>>>> adc674b62df6009fd1db2abbca6ead3f48ecb648
 
 }
