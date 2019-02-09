@@ -18,13 +18,13 @@
                 </div>
                 <div class="filtros_selecionados">
                   <ul id="lista">
-                    <?php   
+                    <?php
                         if(isset($pesquisas)){
                           foreach($pesquisas as $key=>$selecionados) {
                             echo "<li><a href='".base_url()."fretes/remover/".$key."'>".$selecionados['pesquisa']."<b>X</b></a></li>";
                           }
                         }
-                     ?> 
+                     ?>
                    </ul>
                 </div>
                 <div class="container-empresa-filtro">
@@ -218,13 +218,8 @@
     <div class="borderred"></div>
     <?php include('componentes/footer.inc') ?>
   <!-- SCRIPTS -->
-<<<<<<< HEAD
   <script type="text/javascript" src="<?php echo base_url()?>public/js/menu_mobile.js"></script>
   <script type="text/javascript" src="<?php echo base_url()?>public/js/pesquisa.js"></script>
-=======
-  <script type="text/javascript" src="public/js/menu_mobile.js"></script>
-  <script type="text/javascript" src="public/js/pesquisa.js"></script>
-    <script type="text/javascript" src="<?php echo base_url() ?>public/js/select_populado.js"></script>
->>>>>>> 9dc2bb0206db5732b27c8fedeffeef04ba8c6e0f
+  <script type="text/javascript" src="<?php echo base_url() ?>public/js/select_populado.js"></script>
   </body>
 </html>

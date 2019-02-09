@@ -13,7 +13,7 @@ class pages extends CI_Controller {
 		session_start();
 
 		if(!isset($_SESSION['lista']) || !isset($_SESSION['lista_empresa'])){
-			$_SESSION['lista'] = [];	
+			$_SESSION['lista'] = [];
 			$_SESSION['lista_empresa'] = [];
 		}else{
 			 $_SESSION['lista'];
@@ -31,7 +31,7 @@ class pages extends CI_Controller {
 
 		if ($tipo == 'remover') {
 		     unset($_SESSION['lista'][$pesquisa]);
-		}	
+		}
 		if($tipo == 'origem'){
 			foreach ($_SESSION['lista'] as $key => $lista) {
 				if($lista['pesquisa'] == $pesquisa){
@@ -73,7 +73,7 @@ class pages extends CI_Controller {
 			if($_SESSION['cont'] == 0){
 				array_push($_SESSION['lista'],['tipo'=>$tipo,'select'=>'and veiculo_categoria.desc_veiculo_categoria = "'.$pesquisa.'"','pesquisa'=>$pesquisa]);
 			}
-			
+
 		}
 		if($tipo == 'complemento'){
 			foreach ($_SESSION['lista'] as $key => $lista) {
@@ -204,7 +204,7 @@ class pages extends CI_Controller {
 	}
 
 	public function select_cidades($id)
-	{		
+	{
 		echo $this->Model->all_cidades($id);
 	}
 	public function quem_somos()
@@ -243,8 +243,4 @@ class pages extends CI_Controller {
 	{
 		$this->load->view('areaadministrativa');
 	}
-<<<<<<< HEAD
-=======
-
->>>>>>> 9dc2bb0206db5732b27c8fedeffeef04ba8c6e0f
 }
