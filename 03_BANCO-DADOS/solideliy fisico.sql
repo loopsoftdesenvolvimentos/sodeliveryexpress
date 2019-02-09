@@ -1,7 +1,7 @@
 drop database sodelivery;
 create database sodelivery;
 
-CREATE TABLE Cidades (
+CREATE TABLE cidades (
 id_cidade integer PRIMARY KEY auto_increment,
 nome_cidade VARCHAR(100),
 id_estado integer
@@ -41,12 +41,16 @@ FOREIGN KEY(id_categoria) REFERENCES categoria (id_categoria)
 
 CREATE TABLE Frete (
 id_frete integer PRIMARY KEY auto_increment,
-Cidade_saida VARCHAR(100),
+cidade_saida VARCHAR(100),
 cidade_entrega VARCHAR(100),
+uf_saida CHAR(2),
+uf_entrega CHAR(2),
+km_total text,
 nome_produto VARCHAR(100),
 complemento CHAR(3),
 informacoes_frete text,
 preco_frete real,
+pedagio real,
 id_carroceria integer,
 id_forma_pagamento integer,
 id_especie integer,
@@ -79,7 +83,7 @@ observacao text,
 id_cidade integer,
 id_veiculo_categoria integer,
 id_carroceria integer,
-FOREIGN KEY(id_cidade) REFERENCES Cidades (id_cidade),
+FOREIGN KEY(id_cidade) REFERENCES cidades (id_cidade),
 FOREIGN KEY(id_veiculo_categoria) REFERENCES veiculo_categoria (id_veiculo_categoria),
 FOREIGN KEY(id_carroceria) REFERENCES Carroceria (id_carroceria)
 );
@@ -113,30 +117,37 @@ CREATE TABLE Empresa (
 id_empresa integer PRIMARY KEY auto_increment,
 razao_social VARCHAR(80),
 cnpj VARCHAR(40),
+email VARCHAR(40),
+data_engresso_empresa date,
 endereco VARCHAR(80),
 bairro VARCHAR(100),
 complemento VARCHAR(50),
 nome_fantasia VARCHAR(100),
-cartão VARCHAR(100),
 inscricao_estadual VARCHAR(100),
+url_facebook_empresa text,
 cep CHAR(8),
 foto_empresa text,
 site VARCHAR(200),
 skype VARCHAR(100),
+nextel VARCHAR(100),
 fax VARCHAR(100),
 url_facebook VARCHAR(100),
 contato VARCHAR(100),
+url_facebook2 VARCHAR(100),
+contato2 VARCHAR(100),
+url_facebook3 VARCHAR(100),
+contato3 VARCHAR(100),
 telefone_comercial CHAR(11),
+contato_comercial VARCHAR(100),
 celular CHAR(11),
 operadora VARCHAR(40),
 contato1 VARCHAR(40),
-celular2 CHAR(11),
-operadora2 VARCHAR(40),
-contato2 VARCHAR(40),
 whatsapp CHAR(30),
+E_mail_autenticacao VARCHAR(80),
+senha_autenticacao CHAR(8),
 id_cidade integer,
 id_ramo integer,
-FOREIGN KEY(id_cidade) REFERENCES Cidades (id_cidade),
+FOREIGN KEY(id_cidade) REFERENCES cidades (id_cidade),
 FOREIGN KEY(id_ramo) REFERENCES Ramo (id_ramo)
 );
 
@@ -171,7 +182,7 @@ id_cidade integer,
 id_carroceria integer,
 id_veiculo_categoria integer,
 FOREIGN KEY(id_marca) REFERENCES Marca (id_marca),
-FOREIGN KEY(id_cidade) REFERENCES Cidades (id_cidade),
+FOREIGN KEY(id_cidade) REFERENCES cidades (id_cidade),
 FOREIGN KEY(id_carroceria) REFERENCES Carroceria (id_carroceria),
 FOREIGN KEY(id_veiculo_categoria) REFERENCES veiculo_categoria (id_veiculo_categoria)
 );
@@ -184,7 +195,7 @@ id_veiculo integer,
 FOREIGN KEY(id_veiculo) REFERENCES veiculos (id_veiculo)
 );
 
-ALTER TABLE Cidades ADD FOREIGN KEY(id_estado) REFERENCES Estados (id_estado);
+ALTER TABLE cidades ADD FOREIGN KEY(id_estado) REFERENCES Estados (id_estado);
 ALTER TABLE complemento_carga ADD FOREIGN KEY(id_frete) REFERENCES Frete (id_frete);
 ALTER TABLE Frete ADD FOREIGN KEY(id_forma_pagamento) REFERENCES forma_pagamento (id_forma_pagamento);
 ALTER TABLE Frete ADD FOREIGN KEY(id_especie) REFERENCES Especie (id_especie);
