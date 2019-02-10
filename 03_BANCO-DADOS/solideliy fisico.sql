@@ -202,5 +202,5 @@ ALTER TABLE Frete ADD FOREIGN KEY(id_especie) REFERENCES Especie (id_especie);
 ALTER TABLE gerenciamento_usuarios ADD FOREIGN KEY(id_empresa) REFERENCES Empresa (id_empresa);
 ALTER TABLE empresa_produto ADD FOREIGN KEY(id_empresa) REFERENCES Empresa (id_empresa);
 ALTER TABLE empresa_produto ADD FOREIGN KEY(id_produto) REFERENCES produtos (id_produto);
-ALTER TABLE checkin ADD FOREIGN KEY(id_veiculo) REFERENCES veiculos (id_veiculo);;
-ALTER TABLE frete ADD FOREIGN KEY(id_empresa) REFERENCES empresa (id_empresa);
+ALTER TABLE checkin ADD FOREIGN KEY(id_veiculo) REFERENCES veiculos (id_veiculo);
+ALTER TABLE Frete ADD FOREIGN KEY(id_empresa) REFERENCES Empresa (id_empresa);

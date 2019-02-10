@@ -4,7 +4,7 @@
 -- REFERENCE: https://www.ricardoarrigoni.com.br/cidades-brasil-lista-de-cidades-brasileiras-em-sql/
 
 -- ESTADOS
-INSERT INTO estados  VALUES
+INSERT INTO Estados  VALUES
   (1, 'Acre', 'AC'),
   (2, 'Alagoas', 'AL'),
   (3, 'Amazonas', 'AM'),
@@ -2064,7 +2064,7 @@ INSERT INTO cidades  VALUES
   (2026, 'Mário Campos', 11);
 
 -- CONTINUAÇÃO CIDADES
-INSERT INTO cidade  VALUES
+INSERT INTO cidades  VALUES
   (2027, 'Maripá de Minas', 11),
   (2028, 'Marliéria', 11),
   (2029, 'Marmelópolis', 11),
