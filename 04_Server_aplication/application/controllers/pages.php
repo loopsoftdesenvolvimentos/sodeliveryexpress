@@ -243,8 +243,4 @@ class pages extends CI_Controller {
 	{
 		$this->load->view('areaadministrativa');
 	}
-<<<<<<< HEAD
-=======
-
->>>>>>> 9dc2bb0206db5732b27c8fedeffeef04ba8c6e0f
 }
