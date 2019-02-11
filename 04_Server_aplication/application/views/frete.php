@@ -196,20 +196,20 @@
                       </section>';
                     foreach ($fretes as $container_fretes) {
                       echo'<section class="item-frete-empresa-veiculo">
-                       <div class="img-empresa">
+                       <a href="'.base_url().'pages/frete/'.$container_fretes->id_frete.'"><div class="img-empresa">
                         <img src="'.base_url().''.$container_fretes->foto_empresa.'">
-                        </div>
+                        </div></a>
                         <div class="informações-item">
                           <div >
                             <ul>
-                              <li><a href="frete_unico.html">Origem: <b>'.$container_fretes->cidade_saida.'</b></a></li>
+                              <li><a href="'.base_url().'pages/frete/'.$container_fretes->id_frete.'">Origem: <b>'.$container_fretes->cidade_saida.'</b></a></li>
                               <li>Preço: '.$container_fretes->preco_frete.'</li>
                               <li>Veiculo: '.$container_fretes->desc_veiculo_categoria.'</li>
                             </ul>
                           </div>
                           <div class="secondary-item">
                             <ul>
-                              <li><a href="frete_unico.html">Destino: <b>'.$container_fretes->cidade_entrega.'</b></a></li>
+                              <li><a href="'.base_url().'pages/frete/'.$container_fretes->id_frete.'">Destino: <b>'.$container_fretes->cidade_entrega.'</b></a></li>
                               <li>Produtos:'.$container_fretes->nome_produto.'</li>
                                <li>Espécie em: '.$container_fretes->desc_especie.'</li>
                             </ul>

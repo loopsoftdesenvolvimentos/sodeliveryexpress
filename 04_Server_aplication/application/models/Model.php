@@ -213,4 +213,29 @@ class Model extends CI_Model  {
 	{
 		return $this->db->query("select carroceria.desc_carroceria, count(carroceria.id_carroceria) as qtd_carroceria from frete,carroceria WHERE frete.id_carroceria = carroceria.id_carroceria group by carroceria.id_carroceria")->result();
 	}
+	public function frete_unico($id_frete)
+	{
+		 $query = $this->db->select('*')
+	               ->from('frete')
+                  ->from('veiculo_categoria')
+                  ->from('categoria')
+                  ->from('carroceria')
+                  ->from('forma_pagamento')
+                  ->from('especie')
+                  ->from('empresa')
+                  ->from('cidades')
+                  ->from('estados')
+                  ->where('frete.id_carroceria= carroceria.id_carroceria ')
+                  ->where('frete.id_forma_pagamento = forma_pagamento.id_forma_pagamento')
+                   ->where('frete.id_especie = especie.id_especie')
+                   ->where('frete.id_veiculo_categoria = veiculo_categoria.id_veiculo_categoria')
+                   ->where('frete.id_empresa = empresa.id_empresa ')
+                   ->where('veiculo_categoria.id_categoria= categoria.id_categoria')
+                   ->where('empresa.id_cidade= cidades.id_cidade')
+                   ->where('cidades.id_estado= estados.id_estado')
+                   ->where('frete.id_frete= '.$id_frete.'')
+                  ->get();
+
+	        return $query->result();
+	}
 }

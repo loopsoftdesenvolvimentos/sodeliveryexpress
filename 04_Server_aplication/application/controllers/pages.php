@@ -11,8 +11,7 @@ class pages extends CI_Controller {
 		$this->load->model('Model');
 		$this->load->library('pagination');
 		$this->load->library('form_validation');
-
-		
+		$this->load->library('email');		
 
 		session_start();
 
@@ -335,5 +334,34 @@ class pages extends CI_Controller {
 	public function areaadministrativa()
 	{
 		$this->load->view('areaadministrativa');
+	}
+	public function frete($id_frete)
+	{
+		$data['dados_frete'] = $this->Model->frete_unico($id_frete);
+		$this->load->view('frete_unico',$data);
+	}
+	public function email()
+	{
+         $this->load->library('email'); 
+         $this->email->initialize(array(
+		  'protocol' => 'smtp',
+		  'smtp_host' => 'localhost',
+		  'smtp_user' => 'root',
+		  'smtp_pass' => '',
+		  'smtp_port' => 21,
+		  'crlf' => "\r\n",
+		  'newline' => "\r\n"
+		));
+   
+         $this->email->from($this->input->post('email_empresa'),$this->input->post('empresa')); 
+         $this->email->to($this->input->post('email'));
+         $this->email->subject('Contato empresarial por '. $this->input->post('Nome')); 
+         $this->email->message($this->input->post('mensagem')); 
+   
+         if($this->email->send()) {
+         	redirect($_SERVER["REQUEST_URI"],'refresh');
+         }else{ 
+ 		
+     	}
 	}
 }
