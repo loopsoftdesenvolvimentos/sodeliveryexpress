@@ -37,6 +37,9 @@ class Model extends CI_Model  {
 	{
 		return $this->db->query("SELECT * FROM 	Frete,veiculo_categoria,categoria,Carroceria,forma_pagamento,Especie,Empresa where Frete.id_carroceria=Carroceria.id_carroceria and Frete.id_forma_pagamento = forma_pagamento.id_forma_pagamento and Frete.id_especie = Especie.id_especie and Frete.id_veiculo_categoria = veiculo_categoria.id_veiculo_categoria and Frete.id_empresa = Empresa.id_empresa and veiculo_categoria.id_categoria= categoria.id_categoria")->result();
 	}
+	public function frestesEstado($q){
+		return $this->db->query("SELECT * FROM 	Frete,veiculo_categoria,categoria,Carroceria,forma_pagamento,Especie,Empresa, cidades, Estados where Frete.id_carroceria=Carroceria.id_carroceria and Frete.id_forma_pagamento = forma_pagamento.id_forma_pagamento and Frete.id_especie = Especie.id_especie and Frete.id_veiculo_categoria = veiculo_categoria.id_veiculo_categoria and Frete.id_empresa = Empresa.id_empresa and veiculo_categoria.id_categoria= categoria.id_categoria and Empresa.id_cidade = cidades.id_cidade and cidades.id_estado = Estados.id_estado and Estados.sigla_estads = '".$q."'")->result();
+	}
 	public function all_empresas($qtd,$inicio)
 	{
 			$this->db->limit($qtd, $inicio);

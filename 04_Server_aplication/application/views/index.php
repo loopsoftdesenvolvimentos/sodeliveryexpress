@@ -15,7 +15,7 @@
         <!-- SCRIPT -->
         <script type="text/javascript">
           $('#mapBrasil g').click(function(){
-            location.href = 'fretes?q='+$(this)[0].id
+            location.href = 'frestesEstado/'+$(this)[0].id
           })
         </script>
       </div>
@@ -36,7 +36,7 @@
         <!-- SCRIPT -->
         <script type="text/javascript">
           $('.lista_option_estados').change(function() {
-            location.href = 'fretes?q=' + $(this).val()
+            location.href = 'frestesEstado/' + $(this).val()
           })
         </script>
         <ul id="lista_estados">

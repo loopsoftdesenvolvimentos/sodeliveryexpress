@@ -133,6 +133,15 @@ class pages extends CI_Controller {
 		$data['categoria_veiculos'] = $this->Model->categorias_veiculos();
 		$this->load->view('frete',$data);
 	}
+	public function frestesEstado($q)
+	{
+		$data['pesquisas'] = $_SESSION['lista'];
+		$data['fretes'] = $this->Model->frestesEstado($q);
+		$data['carroceria'] = $this->Model->carrocerias();
+		$data['estados'] = $this->Model->all_estados();
+		$data['categoria_veiculos'] = $this->Model->categorias_veiculos();
+		$this->load->view('frete',$data);
+	}
 	public function empresas()
 	{
 		$data['pesquisas'] = $_SESSION['lista_empresa'];

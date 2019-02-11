@@ -18,13 +18,13 @@
                 </div>
                 <div class="filtros_selecionados">
                   <ul id="lista">
-                    <?php   
+                    <?php
                         if(isset($pesquisas)){
                           foreach($pesquisas as $key=>$selecionados) {
                             echo "<li><a href='".base_url()."fretes/remover/".$key."'>".$selecionados['pesquisa']."<b>X</b></a></li>";
                           }
                         }
-                     ?> 
+                     ?>
                    </ul>
                 </div>
                 <div class="container-empresa-filtro">
@@ -77,11 +77,11 @@
                     <details>
                       <summary>Pesados</summary>
                       <ul>
-                        <?php 
+                        <?php
                         foreach ($categoria_veiculos as $categorias) {
                           if ($categorias->desc_categoria == 'Pesados') {
                             echo "<li><a href='".base_url()."fretes/categoria/".$categorias->desc_veiculo_categoria."'>".$categorias->desc_veiculo_categoria."</a></li>";
-                          } 
+                          }
                         }
                      ?>
                       </ul>
@@ -89,11 +89,11 @@
                     <details>
                       <summary>Médios</summary>
                       <ul>
-                        <?php 
+                        <?php
                         foreach ($categoria_veiculos as $categorias) {
                           if ($categorias->desc_categoria == 'Medios') {
                             echo "<li><a href='".base_url()."fretes/categoria/".$categorias->desc_veiculo_categoria."'>".$categorias->desc_veiculo_categoria."</a></li>";
-                          } 
+                          }
                         }
                      ?>
                       </ul>
@@ -101,11 +101,11 @@
                     <details>
                       <summary>Leves</summary>
                       <ul>
-                        <?php 
+                        <?php
                         foreach ($categoria_veiculos as $categorias) {
                           if ($categorias->desc_categoria == 'Leves') {
                             echo "<li><a href=''>".$categorias->desc_veiculo_categoria."</a></li>";
-                          } 
+                          }
                         }
                      ?>
                       </ul>
@@ -152,7 +152,7 @@
                   </div>
                   <div class="container-empresa-filtro-espaco">
                     <ul>
-                      <?php 
+                      <?php
 
                           foreach ($carroceria as $carroceria_item) {
                             echo '<li><a href=""> '.$carroceria_item->desc_carroceria.' <b>0</b></a></li>';
@@ -191,8 +191,8 @@
                 <section class="img_titulo">
                     <img src="<?php echo base_url()?>public/img/letras/fretes.svg">
                 </section>
-                
-                <?php 
+
+                <?php
                   if(count($fretes) > 0){
                     foreach ($fretes as $container_fretes) {
                       echo'<section class="item-frete-empresa-veiculo">
@@ -223,7 +223,7 @@
                   }else{
                     echo'Não há frete cadastrados';
                   }
-                 ?>   
+                 ?>
              </section>
             </section>
             <div class="clear"></div>
