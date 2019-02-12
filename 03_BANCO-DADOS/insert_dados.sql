@@ -1,6 +1,6 @@
 -- PARA VEICULO
 -- CARROCERIA
-INSERT INTO Carroceria VALUES
+INSERT INTO carroceria VALUES
   (0, 'Baú'),
   (0, 'Baú Frigorífico'),
   (0, 'Sider'),
@@ -9,10 +9,10 @@ INSERT INTO Carroceria VALUES
   (0, 'Tanque'),
 (0, 'Cegonheiro');
 -- ESPECIE
-INSERT INTO Especie VALUES
+INSERT INTO especie VALUES
   (0, 'ESPECIE');
 -- MARCA
-INSERT INTO Marca VALUES
+INSERT INTO marca VALUES
  (0, 'MARCA 01');
  -- CATEGORIA
  INSERT INTO categoria VALUES
@@ -36,14 +36,15 @@ INSERT INTO veiculos VALUES
 
 -- PARA EMPRESA  --> FRETES
 -- RAMO
-INSERT INTO Ramo VALUES
+INSERT INTO ramo VALUES
   (0, 'TRANSPORTE');
 -- EMPRESA
-INSERT INTO Empresa VALUES
+INSERT INTO empresa VALUES
   (0, 'RAZAO', 'CNPJ', 'EMAIL', now(), 'endereco', 'bairro', 'complemento', 'nome fantasia', 'inscricao_estadual', 'url_facebook_empresa', 'CEP', 'foto', 'site', 'skype', 'nextel', 'fax', 'url_facebook', 'contato', 'url_facebook2', 'contato2', 'url_facebook3', 'contato3', 'telefone_comercial', 'contato_comercial', 'celular', 'operadora', 'contato1', 'whatsapp', 'E_mail_autenticacao', 'senha_autenticacao', 1,1);
 -- PARA FRETES
  -- FRETES
- INSERT INTO Frete VALUES (0, 'CIDADE_SAIDA', 'CIDADA_ENTREGA', 'UF_SAIDA', 'UF_ENTREGA', '0 KM', 'PRODUTO', '', 'informações frete', '00', '00', 1, 1, 1, 0, 1,1, now());
+
+ INSERT INTO frete VALUES (0, 'CIDADE_SAIDA', 'CIDADA_ENTREGA', 'UF_SAIDA', 'UF_ENTREGA', '0 KM', 'PRODUTO', '', '', 'informações frete', '00', '00', 1, 1, 1, 0, 1,1, now());
 
  -- COMPLEMENTO
  INSERT INTO complemento_carga VALUES (0, 'qtd', 'peso', 'volume', 1);

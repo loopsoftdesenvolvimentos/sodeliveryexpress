@@ -4,7 +4,7 @@
 -- REFERENCE: https://www.ricardoarrigoni.com.br/cidades-brasil-lista-de-cidades-brasileiras-em-sql/
 
 -- ESTADOS
-INSERT INTO Estados  VALUES
+INSERT INTO estados  VALUES
   (1, 'Acre', 'AC'),
   (2, 'Alagoas', 'AL'),
   (3, 'Amazonas', 'AM'),

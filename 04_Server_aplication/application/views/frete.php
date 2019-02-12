@@ -180,8 +180,8 @@
                         <input type="checkbox" value='Acima 5000'>
                         <span class="checkmark"></span>
                       </label>
-                    </div
->                  </div>
+                    </div>
+                  </div>
                   </div>
               </section>
               <section class="container-content-fretes-empresas-veiculos">

@@ -8,7 +8,7 @@ class Model extends CI_Model  {
      }
 	public function all_estados()
 	{
-		$query = $this->db->get('Estados');
+		$query = $this->db->get('estados');
 		return $query->result();
 	}
 	public function all_ramos()
@@ -18,7 +18,7 @@ class Model extends CI_Model  {
 	}
 	public function all_cidades($id)
 	{
-		$result = $this->db->query('select*from Estados,cidades where cidades.id_estado = Estados.id_estado and cidades.id_estado ='.$id.'')->result();
+		$result = $this->db->query('select*from estados,cidades where cidades.id_estado = estados.id_estado and cidades.id_estado ='.$id.'')->result();
        	return json_encode($result);
 	}
 	public function categorias_veiculos()
@@ -31,18 +31,16 @@ class Model extends CI_Model  {
 	}
 	public function carrocerias()
 	{
-		return $this->db->get('Carroceria')->result();
+		return $this->db->get('carroceria')->result();
 	}
 	public function fretes($qtd, $inicio)
 	{
-<<<<<<< HEAD
-		return $this->db->query("SELECT * FROM 	Frete,veiculo_categoria,categoria,Carroceria,forma_pagamento,Especie,Empresa where Frete.id_carroceria=Carroceria.id_carroceria and Frete.id_forma_pagamento = forma_pagamento.id_forma_pagamento and Frete.id_especie = Especie.id_especie and Frete.id_veiculo_categoria = veiculo_categoria.id_veiculo_categoria and Frete.id_empresa = Empresa.id_empresa and veiculo_categoria.id_categoria= categoria.id_categoria")->result();
+		return $this->db->query("SELECT * FROM 	frete,veiculo_categoria,categoria,carroceria,forma_pagamento,especie,empresa where frete.id_carroceria=carroceria.id_carroceria and frete.id_forma_pagamento = forma_pagamento.id_forma_pagamento and frete.id_especie = especie.id_especie and frete.id_veiculo_categoria = veiculo_categoria.id_veiculo_categoria and frete.id_empresa = empresa.id_empresa and veiculo_categoria.id_categoria= categoria.id_categoria")->result();
 	}
 	public function frestesEstado($q){
-		return $this->db->query("SELECT * FROM 	Frete,veiculo_categoria,categoria,Carroceria,forma_pagamento,Especie,Empresa, cidades, Estados where Frete.id_carroceria=Carroceria.id_carroceria and Frete.id_forma_pagamento = forma_pagamento.id_forma_pagamento and Frete.id_especie = Especie.id_especie and Frete.id_veiculo_categoria = veiculo_categoria.id_veiculo_categoria and Frete.id_empresa = Empresa.id_empresa and veiculo_categoria.id_categoria= categoria.id_categoria and Empresa.id_cidade = cidades.id_cidade and cidades.id_estado = Estados.id_estado and Estados.sigla_estads = '".$q."'")->result();
-=======
+		return $this->db->query("SELECT * FROM 	frete,veiculo_categoria,categoria,carroceria,forma_pagamento,especie,empresa, cidades, estados where frete.id_carroceria=carroceria.id_carroceria and frete.id_forma_pagamento = forma_pagamento.id_forma_pagamento and frete.id_especie = especie.id_especie and frete.id_veiculo_categoria = veiculo_categoria.id_veiculo_categoria and frete.id_empresa = empresa.id_empresa and veiculo_categoria.id_categoria= categoria.id_categoria and empresa.id_cidade = cidades.id_cidade and cidades.id_estado = estados.id_estado and estados.sigla_estads = '".$q."'")->result();
 		$this->db->limit($qtd, $inicio);
- 
+
 	    $query = $this->db->select('*')
                   ->from('frete')
                   ->from('veiculo_categoria')
@@ -58,26 +56,25 @@ class Model extends CI_Model  {
                   ->where('frete.id_empresa = empresa.id_empresa ')
                   ->where('veiculo_categoria.id_categoria= categoria.id_categoria')
                   ->get();
-	 
+
 	       if ($query->num_rows() > 0) {
-	 
+
 	           foreach ($query->result() as $row) {
 	               $data[] = $row;
-	 
+
 	           }
 	           return $data;
 	       }
 	       return false;
->>>>>>> 0909cd33b6b4f6a4596976858c1897be3bc11d49
 	}
 	public function all_empresas($qtd,$inicio)
 	{
 			$this->db->limit($qtd, $inicio);
 
 	       $query = $this->db->select('*')
-                  ->from('Empresa')
+                  ->from('empresa')
                   ->from('cidades')
-                  ->from('Estados')
+                  ->from('estados')
                   ->from('ramo')
                   ->where('empresa.id_ramo =  ramo.id_ramo')
                   ->where('empresa.id_cidade = cidades.id_cidade')
@@ -96,7 +93,7 @@ class Model extends CI_Model  {
 	}
 	public function all_empresas_rows()
 	{
-			return $this->db->count_all("Empresa");
+			return $this->db->count_all("empresa");
 	}
 	public function all_fretes_rows()
 	{
@@ -113,7 +110,7 @@ class Model extends CI_Model  {
                   ->where('empresa.id_cidade = cidades.id_cidade')
                    ->where('cidades.id_estado = estados.id_estado')
                   ->get();
-                  
+
 			return $query->num_rows();
 	}
 	public function all_fretes_total(){
@@ -133,7 +130,6 @@ class Model extends CI_Model  {
                    ->where('veiculo_categoria.id_categoria= categoria.id_categoria')
                   ->get();
 
-<<<<<<< HEAD
 		$sqls ='';
 
 		if($filter != false){
@@ -143,13 +139,11 @@ class Model extends CI_Model  {
 		}
 
 
-		$sql = 'SELECT * FROM `Frete`,veiculo_categoria,categoria,carroceria,forma_pagamento,especie,Empresa where frete.id_carroceria= carroceria.id_carroceria and frete.id_forma_pagamento = forma_pagamento.id_forma_pagamento and frete.id_especie = especie.id_especie and frete.id_veiculo_categoria = veiculo_categoria.id_veiculo_categoria and frete.id_empresa = empresa.id_empresa and veiculo_categoria.id_categoria= categoria.id_categoria'.$sqls.'';
+		$sql = 'SELECT * FROM `frete`,veiculo_categoria,categoria,carroceria,forma_pagamento,especie,empresa where frete.id_carroceria= carroceria.id_carroceria and frete.id_forma_pagamento = forma_pagamento.id_forma_pagamento and frete.id_especie = especie.id_especie and frete.id_veiculo_categoria = veiculo_categoria.id_veiculo_categoria and frete.id_empresa = empresa.id_empresa and veiculo_categoria.id_categoria= categoria.id_categoria'.$sqls.'';
 
 			return $this->db->query($sql)->result();
 
-=======
                   return $query->num_rows();
->>>>>>> 0909cd33b6b4f6a4596976858c1897be3bc11d49
 	}
 	public function filter_empresa($qtd,$inicio,$filter)
 	{
@@ -161,9 +155,9 @@ class Model extends CI_Model  {
 		foreach($filter as $key=>$value) {
 
 	       $query = $this->db->select('*')
-                  ->from('Empresa')
+                  ->from('empresa')
                   ->from('cidades')
-                  ->from('Estados')
+                  ->from('estados')
                   ->from('ramo')
                   ->where('empresa.id_ramo =  ramo.id_ramo')
                   ->where('empresa.id_cidade = cidades.id_cidade')
@@ -186,9 +180,9 @@ class Model extends CI_Model  {
 		$this->db->limit($qtd, $inicio);
 
 		if($filter != false){
-	
+
 		foreach($filter as $key=>$value) {
- 
+
 	       $query = $this->db->select('*')
 	               ->from('frete')
                   ->from('veiculo_categoria')
@@ -206,7 +200,7 @@ class Model extends CI_Model  {
                    ->where($value['select'])
                   ->get();
 	         }
-	
+
 		 if ($query->num_rows() > 0) {
 	           foreach ($query->result() as $row) {
 	               $data[] = $row;
@@ -216,16 +210,13 @@ class Model extends CI_Model  {
 	   }
 	}
 	public function cadastrar_empresa($data){
-		$this->db->insert('Empresa', $data);
+		$this->db->insert('empresa', $data);
 	}
 	public function ramo()
 	{
 		return $this->db->query("select ramo.desc_ramo ,
 		count(empresa.id_ramo) as qtd_ramo from empresa,ramo where empresa.id_ramo = ramo.id_ramo group by ramo.desc_ramo")->result();
 	}
-<<<<<<< HEAD
-}
-=======
 	public function Complemento_group_by()
 	{
 		return $this->db->query("select frete.complemento ,count(frete.id_frete) as qtd_complemento from frete group by frete.complemento")->result();
@@ -265,4 +256,3 @@ class Model extends CI_Model  {
 	        return $query->result();
 	}
 }
->>>>>>> 0909cd33b6b4f6a4596976858c1897be3bc11d49
