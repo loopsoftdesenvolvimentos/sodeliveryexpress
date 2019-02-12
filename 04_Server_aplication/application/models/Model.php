@@ -145,7 +145,7 @@ class Model extends CI_Model  {
 
                   return $query->num_rows();
 	}
-	public function filter_empresa($qtd,$inicio,$filter)
+	public function filter_empresa($qtd,$inicio)
 	{
 
 		$this->db->limit($qtd, $inicio);
@@ -174,7 +174,7 @@ class Model extends CI_Model  {
 	       }
 	   }
 	}
-	public function fretes_filter($qtd,$inicio,$filter)
+	public function fretes_filter($qtd,$inicio)
 	{
 
 		$this->db->limit($qtd, $inicio);

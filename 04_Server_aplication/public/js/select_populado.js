@@ -1,4 +1,4 @@
-var url_app = 'http://localhost/sub/sodeliveryexpress/04_Server_aplication/'; 
+var url_app = 'http://sodeliveryexpress.empresarial.ws/'; 
 
 function select_populado(select_1,select_2,id,url,url2) {
      $(document).ready(function() {
@@ -9,7 +9,7 @@ function select_populado(select_1,select_2,id,url,url2) {
                     $(id).css('display','flex'); 
                 }             
                 $.ajax({
-                    url: 'http://localhost/sub/sodeliveryexpress/04_Server_aplication/estados/cidades/'+Origem,
+                    url: url_app+'estados/cidades/'+Origem,
                     type: "GET",
                     dataType: "json",
                     success:function(data) {
@@ -42,7 +42,7 @@ function select_populado_simples(select_1,select_2) {
             var Origem = $(this).val();
             if(Origem) {          
                 $.ajax({
-                    url: 'http://localhost/sub/sodeliveryexpress/04_Server_aplication/estados/cidades/'+Origem,
+                    url: url_app+'estados/cidades/'+Origem,
                     type: "GET",
                     dataType: "json",
                     success:function(data) {
@@ -76,7 +76,7 @@ function filtrar_input(input,id) {
         $(input).blur(function() {
             $(id).css('display','none'); 
         });
-    });
+    });*
 }
 
 function check(){
