@@ -12,6 +12,12 @@
         </div>
         <div class="clear"></div>
         <?php include('componentes/mapa.inc') ?>
+        <!-- SCRIPT -->
+        <script type="text/javascript">
+          $('#mapBrasil g').click(function(){
+            location.href = "<?php echo base_url('pages/')?>fretesEstado/"+$(this)[0].id
+          })
+        </script>
       </div>
       <div class="clear"></div>
 
@@ -24,13 +30,18 @@
         <select class="lista_option_estados">
 					<option selected disabled>Selecione o Estado</option>
            <?php foreach ($estados as $estados_item) {
-            echo'<option>'.$estados_item->nome_estado.'</option>' ;
+            echo'<option value="'.$estados_item->nome_estado.'"> '.$estados_item->nome_estado.'</option>' ;
           } ?>
         </select>
-
+        <!-- SCRIPT -->
+        <script type="text/javascript">
+          $('.lista_option_estados').change(function() {
+            location.href = "<?php echo base_url('pages/')?>fretesEstado/" + $(this).val()
+          })
+        </script>
         <ul id="lista_estados">
           <?php foreach ($estados as $estados_item) {
-            echo'<li><a href="">'.$estados_item->sigla_estads.'</a></li>' ;
+            echo '<li><a href="'.base_url('pages/').'fretesEstado/'.$estados_item->sigla_estads.'">'.$estados_item->sigla_estads.'</a></li>' ;
           } ?>
         </ul>
       </div>

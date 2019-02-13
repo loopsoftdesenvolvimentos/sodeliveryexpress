@@ -7,9 +7,9 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
+	'hostname' => 'sodelivery.mysql.dbaas.com.br',
+	'username' => 'sodelivery',
+	'password' => 'vhwjJZhKd3jpnI',
 	'database' => 'sodelivery',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',

@@ -6,7 +6,7 @@
     <main>
         <div class="fundo"></div>
         <section class="container-empresa content">
-          <div id="btn-filter" class="mobile-menu mobile">
+          <div id="btn-filter" class="mobile-menu mobileShow">
             <img src="<?php echo base_url()?>public/img/icons/filter.svg" alt="filtro de buscas para mobile">
           </div>
             <section id="filtro" class="container-menu none">
@@ -18,19 +18,19 @@
                 </div>
                 <div class="filtros_selecionados">
                   <ul id="lista">
-                    <?php   
+                    <?php
                         if(isset($pesquisas)){
                           foreach($pesquisas as $key=>$selecionados) {
-                            echo "<li><a href='".base_url()."fretes/remover/".$key."'>".$selecionados['pesquisa']."<b>X</b></a></li>";
+                            echo "<li><a href='".base_url()."pages/frete_filter/remover/".$key."'>".$selecionados['pesquisa']."<b>X</b></a></li>";
                           }
                         }
-                     ?> 
+                     ?>
                    </ul>
                 </div>
                 <div class="container-empresa-filtro">
                   <div class="container-empresa-inputs">
                       <label>Origem:</label>
-                      <select name="Origem">
+                      <select name="Origem_frete_estado">
                         <option selected disabled>Selecione o Estado</option>
                          <?php foreach ($estados as $estados_item) {
                           echo'<option value='.$estados_item->id_estado.'>'.$estados_item->sigla_estads.'</option>' ;
@@ -39,32 +39,22 @@
                   </div>
                   <div class="container-empresa-inputs " id="sumir">
                       <label>Cidades:</label>
-                      <select name="cidades">
+                      <select name="Origem_frete_cidade">
                         <option selected disabled>Selecionar cidade</option>
                       </select>
                   </div>
                   <div class="container-empresa-inputs">
                       <label>Destino:</label>
-
-                      <select name="Destino">
-                        <optgroup label="Região">
-                        <option value="Sudeste">Sudeste</option>
-                        <option value="Sul">Sul</option>
-                        <option value="Centro-oeste">Centro-oeste</option>
-                        <option value="Nordeste">Nordeste</option>
-                        <option value="Norte">Norte</option>
-                      </optgroup>
-                      <optgroup label="Estados">
+                      <select name="Destino_frete_estado">
                         <option selected disabled>Selecione o Estado</option>
                          <?php foreach ($estados as $estados_item) {
                           echo'<option value='.$estados_item->id_estado.'>'.$estados_item->sigla_estads.'</option>' ;
                         } ?>
                       </select>
-                    </optgroup>
                   </div>
                   <div class="container-empresa-inputs " id="sumir1">
                       <label>Destino cidade:</label>
-                      <select name="Destino_cidades">
+                      <select name="Destino_frete_cidade">
                         <option>Selecionar opção</option>
                       </select>
                   </div>
@@ -77,11 +67,11 @@
                     <details>
                       <summary>Pesados</summary>
                       <ul>
-                        <?php 
+                        <?php
                         foreach ($categoria_veiculos as $categorias) {
                           if ($categorias->desc_categoria == 'Pesados') {
-                            echo "<li><a href='".base_url()."fretes/categoria/".$categorias->desc_veiculo_categoria."'>".$categorias->desc_veiculo_categoria."</a></li>";
-                          } 
+                            echo "<li><a href='".base_url()."pages/frete_filter/categoria/".$categorias->desc_veiculo_categoria."'>".$categorias->desc_veiculo_categoria."</a></li>";
+                          }
                         }
                      ?>
                       </ul>
@@ -89,11 +79,11 @@
                     <details>
                       <summary>Médios</summary>
                       <ul>
-                        <?php 
+                        <?php
                         foreach ($categoria_veiculos as $categorias) {
                           if ($categorias->desc_categoria == 'Medios') {
-                            echo "<li><a href='".base_url()."fretes/categoria/".$categorias->desc_veiculo_categoria."'>".$categorias->desc_veiculo_categoria."</a></li>";
-                          } 
+                            echo "<li><a href='".base_url()."pages/frete_filter/categoria/".$categorias->desc_veiculo_categoria."'>".$categorias->desc_veiculo_categoria."</a></li>";
+                          }
                         }
                      ?>
                       </ul>
@@ -101,11 +91,11 @@
                     <details>
                       <summary>Leves</summary>
                       <ul>
-                        <?php 
+                        <?php
                         foreach ($categoria_veiculos as $categorias) {
                           if ($categorias->desc_categoria == 'Leves') {
-                            echo "<li><a href=''>".$categorias->desc_veiculo_categoria."</a></li>";
-                          } 
+                            echo "<li><a  href='".base_url()."pages/frete_filter/categoria/".$categorias->desc_veiculo_categoria."'>".$categorias->desc_veiculo_categoria."</a></li>";
+                          }
                         }
                      ?>
                       </ul>
@@ -118,12 +108,15 @@
                   </div>
                   <div class="container-empresa-filtro-espaco">
                      <ul>
-                      <li><a href=""> Sim <b>1000</b></a></li>
-                       <li><a href="">Não <b>876</b></a></li>
+                      <?php
+                          foreach ($complemento as $complemento_item) {
+                            echo '<li><a  href="'.base_url().'pages/frete_filter/complemento/'.$complemento_item->complemento.'"> '.$complemento_item->complemento.' <b>'.$complemento_item->qtd_complemento.'</b></a></li>';
+                          }
+                       ?>
                     </ul>
                   </div>
                 </div>
-                 <div class="container-empresa-filtro">
+                <!--  <div class="container-empresa-filtro">
                   <div class="container-empresa-titulo-2">
                     <h1>Raio (Distancia)</h1>
                   </div>
@@ -134,15 +127,19 @@
                        <li><a href="">200KM</a></li>
                     </ul>
                   </div>
-                </div>
+                </div> -->
                 <div class="container-empresa-filtro">
                   <div class="container-empresa-titulo-2">
                     <h1>Rastreador</h1>
                   </div>
                   <div class="container-empresa-filtro-espaco">
                     <ul>
-                      <li><a href=""> Sim <b>1000</b></a></li>
-                       <li><a href="">Não <b>876</b></a></li>
+                      <?php
+
+                          foreach ($rastreador as $rastreador_item) {
+                            echo '<li><a href="'.base_url().'pages/frete_filter/rastreador/'.$rastreador_item->rastreador.'"> '.$rastreador_item->rastreador.' <b>'.$rastreador_item->qtd_rastreador.'</b></a></li>';
+                          }
+                       ?>
                     </ul>
                   </div>
                 </div>
@@ -152,10 +149,10 @@
                   </div>
                   <div class="container-empresa-filtro-espaco">
                     <ul>
-                      <?php 
+                      <?php
 
                           foreach ($carroceria as $carroceria_item) {
-                            echo '<li><a href=""> '.$carroceria_item->desc_carroceria.' <b>0</b></a></li>';
+                            echo '<li><a  href="'.base_url().'pages/frete_filter/carroceria/'.$carroceria_item->desc_carroceria.'"> '.$carroceria_item->desc_carroceria.' <b>'.$carroceria_item->qtd_carroceria.'</b></a></li>';
                           }
                        ?>
                     </ul>
@@ -172,15 +169,15 @@
                         <span class="checkmark"></span>
                       </label>
                       <label class="container-checkbox">Até R$ 2500
-                        <input type="checkbox" value='2500'>
+                        <input type="checkbox" value='Até 2500'>
                         <span class="checkmark"></span>
                       </label>
                       <label class="container-checkbox">R$ 2500 a R$5000
-                        <input type="checkbox" value='5000'>
+                        <input type="checkbox" value='2500 a 5000'>
                         <span class="checkmark"></span>
                       </label>
                       <label class="container-checkbox">acima de R$ 5000
-                        <input type="checkbox" value='5000'>
+                        <input type="checkbox" value='Acima 5000'>
                         <span class="checkmark"></span>
                       </label>
                     </div>
@@ -191,39 +188,63 @@
                 <section class="img_titulo">
                     <img src="<?php echo base_url()?>public/img/letras/fretes.svg">
                 </section>
-                
-                <?php 
+
+                <?php
                   if(count($fretes) > 0){
+                     echo '<section  class="continer-total-item">
+                      <h1>'.count($total).' Fretes encontradas</h1>
+                      </section>';
                     foreach ($fretes as $container_fretes) {
-                      echo'<section class="item-frete-empresa-veiculo">
-                       <div class="img-empresa">
-                        <img src="<?php echo base_url()?>public/img/empresas/'.$container_fretes->foto_empresa.'">
-                        </div>
-                        <div class="informações-item">
-                          <div >
+                      echo'<section class="item-frete-empresa-veiculo ">
+                       <a href="'.base_url().'pages/frete/'.$container_fretes->id_frete.'">
+                         <div class="img-empresa">
+                            <img src="'.base_url().''.$container_fretes->foto_empresa.'">
+                          </div>
+                        </a>
+                        <div class="informações-item desktopImportant">
+                          <div>
                             <ul>
-                              <li><a href="frete_unico.html">Origem: <b>'.$container_fretes->Cidade_saida.'</b></a></li>
+                              <li><a href="'.base_url().'pages/frete/'.$container_fretes->id_frete.'">Origem: <b>'.$container_fretes->cidade_saida.'</b></a></li>
                               <li>Preço: '.$container_fretes->preco_frete.'</li>
                               <li>Veiculo: '.$container_fretes->desc_veiculo_categoria.'</li>
-                              <li>Espécie em: '.$container_fretes->desc_especie.'</li>
                             </ul>
                           </div>
                           <div class="secondary-item">
                             <ul>
-                              <li><a href="frete_unico.html">Destino: <b>'.$container_fretes->cidade_entrega.'</b></a></li>
-                              <li>Produtos:'.$container_fretes->nome_produto.'</li>
+                              <li><a href="'.base_url().'pages/frete/'.$container_fretes->id_frete.'">Destino: <b>'.$container_fretes->cidade_entrega.'</b></a></li>
+                              <li>Produto:'.$container_fretes->nome_produto.'</li>
+                               <li>Espécie em: '.$container_fretes->desc_especie.'</li>
                             </ul>
                           </div>
                         </div>
-                            <div class="info-extra">
-                                <p>KM: 197 - Obs: '.$container_fretes->informacoes_frete.'</p>
-                            </div>
+                        <div class="informações-item mobile">
+                          <div>
+                            <ul>
+                              <li><a href="'.base_url().'pages/frete/'.$container_fretes->id_frete.'">Origem: <b>'.$container_fretes->cidade_saida.'</b></a></li>
+                              <li><a href="'.base_url().'pages/frete/'.$container_fretes->id_frete.'">Destino: <b>'.$container_fretes->cidade_entrega.'</b></a></li>
+                              <li>Produto:'.$container_fretes->nome_produto.'</li>
+                              <li>Preço: '.$container_fretes->preco_frete.'</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="info-extra">
+                            <p>KM: 197 - Obs: '.$container_fretes->informacoes_frete.'</p>
+                        </div>
                       </section>';
                     }
                   }else{
-                    echo'Não há frete cadastrados';
+                     echo '<section  class="continer-total-item">
+                      <h1>0 Fretes encontradas</h1>
+                      </section>';
                   }
-                 ?>   
+                 ?>
+                    <section class="paginação">
+                  <?php
+                    if(count($fretes) > 0){
+                      echo $link;
+                    }
+                   ?>
+              </section>
              </section>
             </section>
             <div class="clear"></div>

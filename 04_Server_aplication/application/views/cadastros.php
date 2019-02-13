@@ -5,7 +5,7 @@
    <?php include('componentes/header.inc'); ?>
     <main>
       <div class="container-cadastro content">
-        <form action="" method="post">
+        <form action="<?php echo base_url()?>crud/cadastrar_empresa" method="post">
             <div class="container-cadastro-espacos">
               <div class="container-cadastro-titulo">
                   <h1>Empresa</h1>
@@ -16,7 +16,7 @@
                 </div>
                 <div class="container-cadastro-input">
                     <label for="nome_fantasia">Nome Fantasia</label>
-                    <input type="text" id="razao_social" name="nome_fantasia">
+                    <input type="text" id="nome_fantasia" name="nome_fantasia">
                 </div>
 
                 <div class="container-cadastro-input">
@@ -35,20 +35,10 @@
                     <select name="ramo_empresa">
                       <option selected disabled>Selecione ramo</option>
                       <?php
-                        $list = array(
-                          "transportadoras" => "<option value='Transportadoras'>Transportadoras</option>",
-                          "embarcadoras" => "<option value='Embarcadoras' >Embarcadoras</option>",
-                          "agendiadoras" => "<option value='agenciadoras' >Agenciadoras</option>",
-                          "distrubuidoras" => "<option value='Distribuidoras' >Distribuidoras</option>",
-                          "comercio" => "<option value='Comércio Local' >Comércio Local</option>",
-                          "industria" => "<option value='Indústria' >Indústria</option>"
-                       );
-                       $ramo = $_GET['type'];
-                       foreach ($list as $value) {
-                         // array_splice($ramo,  "<option value='" . $ramo . "' selected>" .$ramo. "</option>");
-                         echo $value;
-                       }
-                       ?>
+                        foreach ($ramo as $ramos) {
+                          echo "<option value=".$ramos->id_ramo.">".$ramos->desc_ramo."</option>";
+                        }
+                      ?>
                     </select>
                 </div>
             </div>
@@ -58,15 +48,22 @@
               </div>
                 <div class="container-cadastro-input">
                     <label for="Paises">Paises</label>
-                    <input type="text" id="Paises" name="Paises">
+                    <input type="text" id="Paises" name="Paises" value="Brasil">
                 </div>
                 <div class="container-cadastro-input">
                     <label for="Estados">Estados</label>
-                    <input type="text" id="Estados" name="Estados">
+                    <select name="Estados">
+                      <option selected>Selecione estado</option>
+                      <?php
+                        foreach ($estados as $estado) {
+                          echo "<option value=".$estado->id_estado.">".$estado->nome_estado."</option>";
+                        }
+                      ?>
+                    </select>
                 </div>
                 <div class="container-cadastro-input">
                     <label for="Cidade">Cidade</label>
-                    <input type="text" id="Cidade" name="Cidade">
+                    <select id="Cidade" name="Cidade"></select>
                 </div>
                 <div class="container-cadastro-input">
                     <label for="CEP">CEP</label>
@@ -101,8 +98,8 @@
                     <input type="text" id="Telefone_comercial" name="Telefone_comercial">
                   </div>
                    <div class="container-cadastro-input">
-                    <label for="Contato">Contato</label>
-                    <input type="text" id="Contato" name="Contato">
+                    <label for="contato_comercial">Contato comercial</label>
+                    <input type="text" id="contato_comercial" name="contato_comercial">
                   </div>
               </div>
                <div class="container-cadastro-input-tripla">
@@ -112,7 +109,7 @@
                   </div>
                    <div class="container-cadastro-input">
                     <label for="Operadora">Operadora:</label>
-                    <select>
+                    <select name="Operadora">
                         <option></option>
                         <option>Claro</option>
                         <option>Vivo</option>
@@ -129,16 +126,6 @@
               <div class="container-cadastro-input">
                   <label for="Whatsapp">Whatsapp</label>
                   <input type="text" name="Whatsapp" id="Whatsapp">
-              </div>
-               <div class="container-cadastro-input-dupla">
-                  <div class="container-cadastro-input">
-                    <label for="Telefone_empresarial">*Telefone empresarial</label>
-                    <input type="text" id="Telefone_empresarial" name="Telefone_empresarial">
-                  </div>
-                   <div class="container-cadastro-input">
-                    <label for="Contatoempresarial">Contato</label>
-                    <input type="text" id="Contatoempresarial" name="Contatoempresarial">
-                  </div>
               </div>
               <div class="container-cadastro-input-dupla">
                   <div class="container-cadastro-input">
@@ -190,7 +177,7 @@
                <div class="container-cadastro-input-dupla">
                   <div class="container-cadastro-input">
                     <label for="nome_contato3">Nome contato</label>
-                    <input type="text" id="nome_contato2" name="nome_contato3">
+                    <input type="text" id="nome_contato3" name="nome_contato3">
                   </div>
                    <div class="container-cadastro-input">
                     <label for="url_facebook3">URL do facebook</label>
@@ -203,8 +190,8 @@
                   <h1>Logotipo empresa</h1>
             </div>
             <div class="container-cadastro-input">
-              <label for="imagem">Inserir imagem</label>
-              <input type="file" name="imagem" id="imagem">
+              <label for="client_name">Inserir imagem</label>
+              <input type="file" name="client_name" id="client_name">
             </div>
           </div>
            <div class="container-cadastro-espacos">
@@ -230,13 +217,19 @@
               <input type="submit" value="Confirmar cadastro">
           </div>
         </form>
+        <div class="mensagem">
+            <?php   echo validation_errors('<div class="alert">','</div>'); ?>
+        </div>
       </div>
 
     </main>
     <div class="clear"></div>
     <div class="borderred"></div>
     <?php include('componentes/footer.inc'); ?>
-  </body>
+    
   <!-- SCRIPTS -->
-  <script type="text/javascript" src="public/js/menu_mobile.js"></script>
+  <script type="text/javascript" src="<?php echo base_url()?>public/js/menu_mobile.js"></script>
+  <script type="text/javascript" src="<?php echo base_url()?>public/js/cep.js"></script>
+  <script type="text/javascript" src="<?php echo base_url()?>public/js/select_populado.js"></script>
+  </body>
 </html>

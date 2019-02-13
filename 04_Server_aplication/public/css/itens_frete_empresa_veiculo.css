@@ -1,4 +1,9 @@
-
+.desktopImportant{
+	display: none!important
+}
+.mobile{
+	display: flex;
+}
 .mobile-menu{
 	width: 80px;
 	height: 80px;
@@ -37,6 +42,16 @@
 .container-empresa-titulo-2{
 	padding: 8px 12px;
 	border-radius:4px;
+}
+.container-empresa-titulo-2{
+	padding:8px 0px;
+}
+.container-empresa-inputs input[type='submit']{
+	background:var(--cinza-escuro);
+	border:none;
+	margin-top:10px;
+	color:var(--branco);
+	padding:0.5rem;
 }
 .container-empresa-titulo h1{
 	text-align: center;
@@ -100,7 +115,7 @@ details ul li{
 	text-decoration: underline;
 }
 input,select{
-	padding:0.4rem;
+	padding:0.5rem;
 }
 select{
 	background:var(--amarelo-fraco);
@@ -181,7 +196,6 @@ select{
 	margin-bottom:20px;
 }
 .item-frete-empresa-veiculo,
-.informações-item,
 .img-empresa{
 	display:flex;
 	flex-wrap: wrap;
@@ -189,31 +203,33 @@ select{
 	flex-direction:column;
 	justify-content:center;
 }
-.informações-item div ul li:first-child{
-	margin: 1rem;
-	border-bottom: solid 1px var(--preto);
+.informações-item{
+	display:flex;
+	flex-wrap: wrap;
+	align-items:center;
+	flex-direction:column;
+	justify-content:flex-start;
 }
 .informações-item div{
-	margin: 20px 0
+	margin-left:10px;
+	padding:10px 10px;
+}
+.informações-item ul{
+	align-items:center;
+	display:flex;
+	flex-direction:column;
+}
+.informações-item ul li{
+	margin-bottom:5px;
+}
+.informações-item ul li a{
+	color: var(--preto);
+	font-weight: 800;
 }
 .img-empresa img{
 	max-width:9rem;
 }
-.informações-item ul{
-	list-style:none;
-	padding-left: 20px;
-	line-height: 1.5rem;
-}
-.informações-item ul li:not(:first-child){
-	max-width: 500px;
-	padding-left: 20px;
-}
-.secondary-item ul li:last-child{
-	color: rgba(0,0,0, .6)
-}
-.informações-item ul li a{
-	color:var(--preto);
-}
+
 .info-extra{
 	background:#fdfdfd;
 	width:100%;
@@ -259,7 +275,41 @@ select{
 .filtros_selecionados ul li a b:hover{
 	color:var(--vermelho);
 }
+.paginação{
+	margin-top:10px;
+	margin-bottom:10px;
+}
+.paginação  a {
+	background: var(--vermelho);
+	color:var(--branco);
+	padding:.4rem .5rem;
+}
+.paginação  a:hover{
+	opacity:0.7;
+}
+.paginação strong{
+	padding:.4rem .5rem;
+	background:var(--amarelo);
+}
+.continer-total-item{
+	background:var(--cinza-claro);
+	padding:0.6rem 1rem;
+	margin-bottom:10px;
+	margin-top:10px;
+}
+.continer-total-item h1{
+	font-weight:inherit;
+}
 @media screen and (min-width:690px){
+	.desktopImportant{
+		display: flex!important;
+	}
+	.mobile{
+		display: none;
+	}
+	.mobileShow{
+		display: none;
+	}
 	.container-empresa{
 		flex-direction:row;
 		padding: inherit;

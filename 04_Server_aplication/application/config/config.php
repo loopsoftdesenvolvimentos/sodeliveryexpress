@@ -2,6 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 $config['base_url'] = 'http://localhost/sodeliveryexpress/04_Server_aplication';
+// $config['base_url'] = 'http://sodeliveryexpress.empresarial.ws/';
 
 
 $config['index_page'] = 'index.php';
