@@ -188,14 +188,26 @@ class pages extends CI_Controller {
 		$data['categoria_veiculos'] = $this->Model->categorias_veiculos();
 		$this->load->view('frete',$data);
 	}
-	public function frestesEstado($q)
+	public function fretesEstado($q)
 	{
-		$data['pesquisas'] = $_SESSION['lista'];
-		$data['fretes'] = $this->Model->frestesEstado($q);
-		$data['carroceria'] = $this->Model->carrocerias();
-		$data['estados'] = $this->Model->all_estados();
-		$data['categoria_veiculos'] = $this->Model->categorias_veiculos();
-		$this->load->view('frete',$data);
+
+		$config["base_url"] = base_url() . "/pages/fretes";
+			$config["total_rows"] = $this->Model->all_fretes_rows();
+			$config["per_page"] = 4;
+			$config["uri_segment"] = 3;
+			 $this->pagination->initialize($config);
+			$page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+
+			 $data['total'] = $this->Model->all_fretes_total();
+			 $data['link'] = $this->pagination->create_links();
+	 $data['pesquisas'] = $_SESSION['lista'];
+	 $data['fretes'] = $this->Model->fretesEstado($q);
+	 $data['carroceria'] = $this->Model->carroceria_group_by();
+	 $data['complemento'] = $this->Model->Complemento_group_by();
+	 $data['rastreador'] = $this->Model->rastreador_group_by();
+	 $data['estados'] = $this->Model->all_estados();
+	 $data['categoria_veiculos'] = $this->Model->categorias_veiculos();
+	 $this->load->view('frete',$data);
 	}
 	public function empresas()
 	{

@@ -6,7 +6,7 @@
     <main>
         <div class="fundo"></div>
         <section class="container-empresa content">
-          <div id="btn-filter" class="mobile-menu mobile">
+          <div id="btn-filter" class="mobile-menu mobileShow">
             <img src="<?php echo base_url()?>public/img/icons/filter.svg" alt="filtro de buscas para mobile">
           </div>
             <section id="filtro" class="container-menu none">
@@ -192,15 +192,17 @@
                 <?php
                   if(count($fretes) > 0){
                      echo '<section  class="continer-total-item">
-                      <h1>'.$total.' Fretes encontradas</h1>
+                      <h1>'.count($total).' Fretes encontradas</h1>
                       </section>';
                     foreach ($fretes as $container_fretes) {
-                      echo'<section class="item-frete-empresa-veiculo">
-                       <a href="'.base_url().'pages/frete/'.$container_fretes->id_frete.'"><div class="img-empresa">
-                        <img src="'.base_url().''.$container_fretes->foto_empresa.'">
-                        </div></a>
-                        <div class="informações-item">
-                          <div >
+                      echo'<section class="item-frete-empresa-veiculo ">
+                       <a href="'.base_url().'pages/frete/'.$container_fretes->id_frete.'">
+                         <div class="img-empresa">
+                            <img src="'.base_url().''.$container_fretes->foto_empresa.'">
+                          </div>
+                        </a>
+                        <div class="informações-item desktopImportant">
+                          <div>
                             <ul>
                               <li><a href="'.base_url().'pages/frete/'.$container_fretes->id_frete.'">Origem: <b>'.$container_fretes->cidade_saida.'</b></a></li>
                               <li>Preço: '.$container_fretes->preco_frete.'</li>
@@ -210,14 +212,24 @@
                           <div class="secondary-item">
                             <ul>
                               <li><a href="'.base_url().'pages/frete/'.$container_fretes->id_frete.'">Destino: <b>'.$container_fretes->cidade_entrega.'</b></a></li>
-                              <li>Produtos:'.$container_fretes->nome_produto.'</li>
+                              <li>Produto:'.$container_fretes->nome_produto.'</li>
                                <li>Espécie em: '.$container_fretes->desc_especie.'</li>
                             </ul>
                           </div>
                         </div>
-                            <div class="info-extra">
-                                <p>KM: 197 - Obs: '.$container_fretes->informacoes_frete.'</p>
-                            </div>
+                        <div class="informações-item mobile">
+                          <div>
+                            <ul>
+                              <li><a href="'.base_url().'pages/frete/'.$container_fretes->id_frete.'">Origem: <b>'.$container_fretes->cidade_saida.'</b></a></li>
+                              <li><a href="'.base_url().'pages/frete/'.$container_fretes->id_frete.'">Destino: <b>'.$container_fretes->cidade_entrega.'</b></a></li>
+                              <li>Produto:'.$container_fretes->nome_produto.'</li>
+                              <li>Preço: '.$container_fretes->preco_frete.'</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="info-extra">
+                            <p>KM: 197 - Obs: '.$container_fretes->informacoes_frete.'</p>
+                        </div>
                       </section>';
                     }
                   }else{
