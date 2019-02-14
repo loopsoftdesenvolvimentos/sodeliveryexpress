@@ -5,7 +5,6 @@
     <?php include('componentes/header_administrativo.inc'); ?>
 
     <main>
-
       <div class="clear"></div>
 
       <div class="informacoes-topo content">
@@ -90,7 +89,7 @@
             <div class="area-container">
               <div class="container">
 
-                <a href="areavizualizacao">
+                <a href="<?php echo base_url()?>pages/areamonitoramento/#estatisticas">
                   <img src="<?php echo base_url()?>public/img/icons/verEstatisticasADM.png">
                   Ver estatísticas <br> empresariais
                 </a>
@@ -98,17 +97,17 @@
 
               <div class="container">
 
-                <a href="<?php echo base_url()?>pages/areacadastro/#verVeiculos">
+                <a href="<?php echo base_url()?>pages/areamonitoramento/#listaVeiculos">
                   <img src="<?php echo base_url()?>public/img/icons/verVeiculosADM.png">
-                  Ver meus veículos
+                  Listar Veículos
                 </a>
               </div>
 
               <div class="container">
 
-                <a href="<?php echo base_url()?>pages/areacadastro/#verFretes">
+                <a href="<?php echo base_url()?>pages/areamonitoramento/#listarFretes">
                   <img src="<?php echo base_url()?>public/img/icons/verFretesADM.png">
-                  Ver meus fretes
+                  Listar fretes
                 </a>
               </div>
             </div>
@@ -131,21 +130,16 @@
               <div class="container">
                 <a href="<?php echo base_url()?>pages/areaadministrativa/#verEditaPagamento">
                   <img src="<?php echo base_url()?>public/img/icons/verEditarPagamentoADM.png">
-                  Ver/Editar pagamento
+                  Central <br> pagamento
                 </a>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="clear"></div>
-      <div class="borderred"></div>
     </main>
-
-    <footer>
-      <div class="copyright">
-        <p>&copy; <b>Loop Soft</b> Internet Serviços LTDA</p>
-      </div>
-    </footer>
+    <div class="clear"></div>
+    <div class="borderred"></div>
+    <?php include('componentes/footer.inc'); ?>
   </body>
 </html>

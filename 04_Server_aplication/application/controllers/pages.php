@@ -348,7 +348,7 @@ class pages extends CI_Controller {
 	{
 		$this->load->view('areacadastro');
 	}
-	public function areavizualizacao()
+	public function areamonitoramento()
 	{
 		$this->load->view('areavizualizacao');
 	}
