@@ -77,11 +77,27 @@
                    </div>
                    <div class="container-cadastro-input">
                      <label for="complemento">Tem Complemento?</label>
-                     <select name="complemento">
+                     <select id="select_complemento" name="complemento">
                        <option disabled selected>Selecione uma opção abaixo</option>
                        <option value="não">Não</option>
                        <option value="sim">Sim</option>
                      </select>
+                   </div>
+                 </div>
+               </div>
+               <div id="complemento" class="container-cadastro-input none">
+                 <div class="row">
+                   <div class="container-cadastro-input">
+                     <label for="qtd_volume">Quantidade de Volume</label>
+                     <input type="text" name="qtd_volume" >
+                   </div>
+                   <div class="container-cadastro-input">
+                     <label for="peso_complemento">Peso em KG</label>
+                     <input type="text" name="peso_complemento" >
+                   </div>
+                   <div class="container-cadastro-input">
+                     <label for="volume">Volume m³</label>
+                     <input type="text" name="volume" >
                    </div>
                  </div>
                </div>
@@ -364,6 +380,7 @@
     <div class="clear"></div>
     <div class="borderred"></div>
     <?php include('componentes/footer.inc'); ?>
+    <script type="text/javascript" src="<?php echo base_url()?>public/js/actionComplemento.js"></script>
     <script type="text/javascript" src="public/js/menu_mobile.js"></script>
   </body>
 </html>
