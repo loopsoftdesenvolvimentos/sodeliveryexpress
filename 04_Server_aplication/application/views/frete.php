@@ -163,25 +163,25 @@
                       <h1>Faixa de  Preço</h1>
                     </div>
                     <div class="container-empresa-inputs">
-                    <div>
-                      <label class="container-checkbox">A Combinar
-                        <input type="checkbox" value='A Combinar'>
-                        <span class="checkmark"></span>
-                      </label>
-                      <label class="container-checkbox">Até R$ 2500
-                        <input type="checkbox" value='Até 2500'>
-                        <span class="checkmark"></span>
-                      </label>
-                      <label class="container-checkbox">R$ 2500 a R$5000
-                        <input type="checkbox" value='2500 a 5000'>
-                        <span class="checkmark"></span>
-                      </label>
-                      <label class="container-checkbox">acima de R$ 5000
-                        <input type="checkbox" value='Acima 5000'>
-                        <span class="checkmark"></span>
-                      </label>
+                      <div>
+                        <label class="container-checkbox">A Combinar
+                          <input type="checkbox" value='A Combinar'>
+                          <span class="checkmark"></span>
+                        </label>
+                        <label class="container-checkbox">Até R$ 2500
+                          <input type="checkbox" value='Até 2500'>
+                          <span class="checkmark"></span>
+                        </label>
+                        <label class="container-checkbox">R$ 2500 a R$5000
+                          <input type="checkbox" value='2500 a 5000'>
+                          <span class="checkmark"></span>
+                        </label>
+                        <label class="container-checkbox">acima de R$ 5000
+                          <input type="checkbox" value='Acima 5000'>
+                          <span class="checkmark"></span>
+                        </label>
+                      </div>
                     </div>
-                  </div>
                   </div>
               </section>
               <section class="container-content-fretes-empresas-veiculos">

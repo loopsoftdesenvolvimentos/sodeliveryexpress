@@ -1,0 +1,9 @@
+header{
+  border-color: var(--vermelho_claro)!important
+}
+.content{
+  margin-top: 50px!important;
+}
+#complemento{
+  display: none;
+}

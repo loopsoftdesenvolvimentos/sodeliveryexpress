@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-  <?php include('componentes/head_administrativo_adm.inc'); ?>
+  <?php include('componentes/head_administrativo_areaadministrativa.inc'); ?>
   <body>
-    <?php include('componentes/header_administrativo.inc'); ?>
+    <?php include('componentes/header_administrativo_areaadministrativa.inc'); ?>
     <main>
       <div class="clear"></div>
       <div id="editarEmpresa" class="cadastro-veiculo-form content">

@@ -2,7 +2,7 @@
 <html>
   <?php include('componentes/head_administrativo_areavizualizacao.inc'); ?>
   <body>
-    <?php include('componentes/header_administrativo.inc'); ?>
+    <?php include('componentes/header_administrativo_areavizualizacao.inc'); ?>
     <main>
       <div class="clear"></div>
       <div class="title-estatistica">
