@@ -1,5 +1,8 @@
-header{
-  border-color: var(--vermelho_claro)!important
+.titulo-primario_area h1{
+  font-weight: 900;
+  font-size: 2rem!important;
+  border-bottom: solid 3px var(--vermelho_claro)!important;
+  text-align: center;
 }
 .content{
   margin-top: 50px!important;

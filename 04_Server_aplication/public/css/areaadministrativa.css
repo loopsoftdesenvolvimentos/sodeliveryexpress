@@ -1,3 +1,31 @@
-header{
-  border-color: var(--azul)!important
+.titulo-primario_area h1{
+  font-weight: 900;
+  font-size: 2rem!important;
+  border-bottom: solid 3px  var(--azul)!important;
+  text-align: center;
+}
+.area3{
+  width: 80%!important;
+  margin: auto!important;
+  border-radius: 10px;
+  /* background: var(--cinza-claro) */
+}
+.area-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.area-container .container{
+  margin: 0 30px;
+}
+.area-container .container p{
+  line-height: 1.5
+}
+.area-container .container .infors-pagamento{
+  display: flex;
+  justify-content: center;align-items: center;
+}
+.area-container .container .infors-pagamento img{
+  width: 35px!important;
+  margin-right: 25px
 }

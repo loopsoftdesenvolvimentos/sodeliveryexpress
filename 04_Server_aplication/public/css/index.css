@@ -44,6 +44,7 @@ header{
 }
 .menu-bar{
   width: 100%;
+  height: 75px;
   padding-top: 1rem;
   padding-bottom: 1rem;
   background: var(--vermelho);
@@ -59,38 +60,10 @@ header{
 .menu-mobile img{
   width: 50px;
 }
-.pesquisa{
-  width: 80%;
-  display: flex;
-  justify-content: center;
-}
-.pesquisa input[type="text"]{
-  padding: 0.35rem;
-  border-radius: 6px 0px 0px 6px;
-  width: 65%;
-  outline: unset;
-  border: none;
-  font-size: 16px;
-  text-indent: 10px;
-}
-
-.pesquisa button{
-  border: none;
-  background: var(--amarelo);
-  outline: unset;
-  padding: 0.75rem;
-  color: var(--vermelho);
-  font-weight: 700;
-  text-transform: uppercase;
-  border-radius: 0px 6px 6px 0px;
-  width: 30%;
-  font-size: 16px;
-  cursor: pointer;
-}
-
 nav ul{
   list-style: none;
-  margin-top: 10px;
+  margin-top: 50px;
+  background: var(--vermelho)
 }
 nav li{
   padding: 0.25rem 0.25rem;
@@ -303,7 +276,7 @@ footer{
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  align-items: center;  
+  align-items: center;
 }
 
 .social-midias{
@@ -583,12 +556,15 @@ footer{
   nav li:hover a::before{
     height: 100%;
   }
-
+  nav ul{
+    background: none;
+  }
   .menu-conta{
     display: flex;
   }
 
   .menu-bar{
+    height: 100%;
     background-image: -webkit-linear-gradient(150deg, var(--preto) 100px, var(--vermelho) 8%);
   }
 

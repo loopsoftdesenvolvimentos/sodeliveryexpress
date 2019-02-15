@@ -4,6 +4,8 @@
   <title>SóDelivery - Painel Administrativo</title>
   <link rel="stylesheet" href="<?php echo base_url()?>public/css/areavizualizacao.css">
   <link rel="stylesheet" href="<?php echo base_url()?>public/css/index.css">
+  <link rel="stylesheet" href="<?php echo base_url()?>public/css/frete_e_veiculo.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>public/css/itens_frete_empresa_veiculo.css">
   <link rel="stylesheet" href="<?php echo base_url()?>public/css/charts.css">
   <link rel="stylesheet" href="<?php echo base_url()?>public/css/estatisticas.css">
   <link rel="stylesheet" href="<?php echo base_url()?>public/css/administrativo.css">

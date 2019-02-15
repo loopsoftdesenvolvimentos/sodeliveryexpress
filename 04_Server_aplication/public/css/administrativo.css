@@ -1,7 +1,9 @@
-header{
-	border-bottom: solid 10px var(--vermelho);
+.icon-menu p{
+	text-align: center;
 }
-
+.icon-menu img{
+	width: 40px;
+}
 .logo-config{
 	width: 100%;
 	position: relative;
@@ -24,21 +26,20 @@ header{
 }
 
 .config{
+	z-index: 999999;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	padding: 0.5rem;
-	position: absolute;
 	top: 7px;
 	right: 7px;
 	cursor: pointer;
 }
 
 .config img{
-	width: 42px;
+	width: 100px;
 }
-
 .config span{
 	font-size: 0px;
 }
@@ -59,7 +60,12 @@ header{
 .info-conta{
 	background: var(--azul);
 }
-
+.img_titulo{
+	padding:10px 10px;
+}
+.img_titulo img{
+	width:350px;
+}
 .info-name{
 	display: flex;
 	align-items: center;
@@ -292,15 +298,21 @@ header{
 	.logo img{
 		margin-left: 100px;
 	}
-
+	.conta{
+		position: relative;
+	}
 	.config{
-		position: sticky;
+		position: absolute;
 		background-image: -webkit-linear-gradient(150deg, #000 220px, var(--branco-mesmo) 20%);
-		top: 5px;
+		top: 1px;
 		right: 35px;
+	}
+	.config img{
+		width: 50px!important;
 	}
 	.config #blank{
 		transition: all ease-out .4s;
+		margin-bottom: -25px;
 	}
 	.config:hover #blank{
 		transform: rotate(45deg);

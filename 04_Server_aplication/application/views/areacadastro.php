@@ -2,9 +2,12 @@
 <html>
     <?php include('componentes/head_administrativo_areacadastramento.inc');?>
   <body>
-    <?php include('componentes/header_administrativo_areacadastramento.inc'); ?>
+    <?php include('componentes/header_administrativo_areas.inc'); ?>
     <main>
       <div id="cadastramentoFretes" class="cadastro-veiculo-form content">
+        <div class="container-cadastro-titulo titulo-primario titulo-primario_area">
+          <h1>Área de Cadastramento</h1>
+        </div>
          <form action="" method="post">
            <div class="container-cadastro-espacos">
              <div class="container-cadastro-titulo titulo-primario">
@@ -105,6 +108,14 @@
                  <div class="row">
                    <div class="container-cadastro-input fretes-checkbox">
                      <label for="leve">Leve</label>
+                     <label class="container-checkbox">HR
+                       <input type="checkbox" value='hr'>
+                       <span class="checkmark"></span>
+                     </label>
+                     <label class="container-checkbox">Master
+                       <input type="checkbox" value='master'>
+                       <span class="checkmark"></span>
+                     </label>
                      <label class="container-checkbox">Toco
                        <input type="checkbox" value='toco'>
                        <span class="checkmark"></span>
@@ -119,18 +130,6 @@
                      </label>
                      <label class="container-checkbox">Moto
                        <input type="checkbox" value='moto'>
-                       <span class="checkmark"></span>
-                     </label>
-                     <label class="container-checkbox">Fiorino
-                       <input type="checkbox" value='fiorino'>
-                       <span class="checkmark"></span>
-                     </label>
-                     <label class="container-checkbox">HR
-                       <input type="checkbox" value='hr'>
-                       <span class="checkmark"></span>
-                     </label>
-                     <label class="container-checkbox">Master
-                       <input type="checkbox" value='master'>
                        <span class="checkmark"></span>
                      </label>
                    </div>
@@ -260,6 +259,7 @@
                      <select name="complemento">
                        <option disabled selected>Selecione uma opção abaixo</option>
                        <option value="porTonelada">Por Tonelada</option>
+                       <option value="cheio">Cheio</option>
                        <option value="A combinar">A Combinar</option>
                        <option value="A combinar">Km/R$</option>
                      </select>
@@ -381,6 +381,6 @@
     <div class="borderred"></div>
     <?php include('componentes/footer.inc'); ?>
     <script type="text/javascript" src="<?php echo base_url()?>public/js/actionComplemento.js"></script>
-    <script type="text/javascript" src="public/js/menu_mobile.js"></script>
+    <script type="text/javascript" src="<?php echo base_url()?>public/js/menu_mobile.js"></script>
   </body>
 </html>

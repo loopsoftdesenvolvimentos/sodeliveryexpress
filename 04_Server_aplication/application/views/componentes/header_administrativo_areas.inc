@@ -55,89 +55,86 @@
 
       <div class="menu-conta">
         <div class="menu-bar">
-          <!-- <div class="pesquisa">
-            <input type="text" id="pesquisa">
-            <button type="submit">Buscar</button>
-          </div> -->
           <div id="btn-menu" class="menu-mobile mobile" >
             <img src="<?php echo base_url()?>public/img/icons/menu.svg" alt="botão de menu">
           </div>
           <nav class="none">
             <ul>
-              <li class="mobile">
-                <a href="<?php echo base_url()?>pages/login" id="login">
+              <li>
+                <a href="<?php echo base_url()?>pages/administrativo" class="nomarginleft">
                   <div class="icon-menu">
-                    <img src="<?php echo base_url()?>public/img/icons/login.svg" alt="">
-                    <p>Login</p>
+                    <img src="<?php echo base_url()?>public/img/icons/voltar.svg" alt="icone">
+                    <p>Voltar</p>
                   </div>
                 </a>
               </li>
               <li>
-                <a href="<?php echo base_url()?>pages/index" class="nomarginleft">
+                <a href="<?php echo base_url()?>pages/areacadastro/#cadastramentoVeiculo">
                   <div class="icon-menu">
-                    <img src="<?php echo base_url()?>public/img/icons/home.svg" alt="icone de frete">
-                    <p>Home</p>
+                    <img src="<?php echo base_url()?>public/img/icons/freteADM.png" alt="icone de frete">
+                    <p>Cadastrar <br> Fretes</p>
                   </div>
                 </a>
               </li>
               <li>
-                <a href="<?php echo base_url()?>pages/fretes">
+                <a href="<?php echo base_url()?>pages/areacadastro/#cadastramentoVeiculo">
                   <div class="icon-menu">
-                    <img src="<?php echo base_url()?>public/img/icons/frete.svg" alt="icone de frete">
-                    <p>Frete</p>
+                    <img src="<?php echo base_url()?>public/img/icons/veiculosADM.png" alt="icone de frete">
+                    <p>Cadastrar <br> Veículo</p>
                   </div>
                 </a>
               </li>
               <li>
-                <a href="<?php echo base_url()?>pages/veiculos">
+                <a href="<?php echo base_url()?>pages/areamonitoramento/#estatisticas">
                   <div class="icon-menu">
-                    <img src="<?php echo base_url()?>public/img/icons/truck-front.svg" alt="icone de frete">
-                    <p>Veículo</p>
+                    <img src="<?php echo base_url()?>public/img/icons/verEstatisticasADM.png" alt="icone de estatisticas">
+                    <p>Ver <br> Estatística</p>
                   </div>
                 </a>
               </li>
               <li>
-                <a href="<?php echo base_url()?>pages/empresas">
+                <a href="<?php echo base_url()?>pages/areamonitoramento/#listaVeiculos">
                   <div class="icon-menu">
-                    <img src="<?php echo base_url()?>public/img/icons/empresa.svg" alt="icone de frete">
-                    <p>Empresa</p>
+                    <img src="<?php echo base_url()?>public/img/icons/verVeiculosADM.png" alt="icone de frete">
+                    <p>Listar <br> Veículos</p>
                   </div>
                 </a>
               </li>
               <li>
-                <a href="<?php echo base_url()?>pages/estatisticas">
+                <a href="<?php echo base_url()?>pages/areamonitoramento/#listarFretes" >
                   <div class="icon-menu">
-                    <img src="<?php echo base_url()?>public/img/icons/Statistics.svg" alt="icone de frete">
-                    <p>Estatística</p>
+                    <img src="<?php echo base_url()?>public/img/icons/verFretesADM.png" alt="icone de frete">
+                    <p>Listar <br> Fretes</p>
                   </div>
                 </a>
               </li>
               <li>
-                <a href="<?php echo base_url()?>pages/duvidas" id="noborderbottom">
+                <a href="<?php echo base_url()?>pages/areaadministrativa/#editarEmpresa" >
                   <div class="icon-menu">
-                    <img src="<?php echo base_url()?>public/img/icons/DUVIDAS.svg" alt="icone de frete">
-                    <p>Dúvidas</p>
+                    <img src="<?php echo base_url()?>public/img/icons/editarEmpresaADM.png" alt="icone de frete">
+                    <p>Editar <br> Empresa</p>
                   </div>
                 </a>
               </li>
-
+              <li>
+                <a href="<?php echo base_url()?>pages/areaadministrativa/#verEditaPagamento" >
+                  <div class="icon-menu">
+                    <img src="<?php echo base_url()?>public/img/icons/verEditarPagamentoADM.png" alt="icone de frete">
+                    <p>Central <br> pagamento</p>
+                  </div>
+                </a>
+              </li>
             </ul>
           </nav>
         </div>
-
         <div class="conta">
-          <div class="mobile-cadastro none">
-            <a href="<?php echo base_url()?>pages/login" id="login">
-                <img src="<?php echo base_url()?>public/img/icons/login.svg" alt="">
-              login
-            </a>
-          </div>
-          <div class="desk-cadastro">
-            <a href="<?php echo base_url()?>pages/login">
-                <img src="<?php echo base_url()?>public/img/icons/login.svg" alt="">
-                <p>Entre ou cadastre-se</p>
-            </a>
-          </div>
+          <a href="<?php echo base_url()?>pages/areaadministrativa/#editarEmpresa">
+            <div class="config">
+              <img id="blank" src="<?php echo base_url()?>public/img/icons/settings-work-tool.svg">
+              <img src="<?php echo base_url()?>public/img/icons/settings-work-tool-dark.svg">
+              <span>Configurações</span>
+            </div>
+          </a>
         </div>
       </div>
     </header>

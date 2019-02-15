@@ -63,6 +63,9 @@ class Model extends CI_Model  {
 	       }
 	       return false;
 	}
+	public function fretesEstado($q){
+		return $this->db->query("SELECT * FROM frete,veiculo_categoria,categoria,carroceria,forma_pagamento,especie,empresa where frete.id_carroceria=carroceria.id_carroceria and frete.id_forma_pagamento = forma_pagamento.id_forma_pagamento and frete.id_especie = especie.id_especie and frete.id_veiculo_categoria = veiculo_categoria.id_veiculo_categoria and frete.id_empresa = empresa.id_empresa and veiculo_categoria.id_categoria= categoria.id_categoria and uf_saida = '".$q."'")->result();
+	}
 	public function all_empresas($qtd,$inicio)
 	{
 			$this->db->limit($qtd, $inicio);
