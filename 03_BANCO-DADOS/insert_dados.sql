@@ -31,8 +31,13 @@ INSERT INTO forma_pagamento VALUES
   (0, 'Boleto');
 
   -- VEICULOS
- INSERT INTO veiculos VALUES
-   (0, 'PROPRIETARIO', 'placa' ,'ENDERECO', now(), 'email', 'NAO', 'MODELO', 2000, 'RNTRC', 'NAO', 'CNH', 'contato', 'tipo', 'telefone', 'NAO', 'senha', 1, 1, 1, 1);
+
+ -- INSERT INTO veiculos VALUES
+ --   (0, 'PROPRIETARIO', 'placa' ,'ENDERECO', now(), 'email', 'NAO', 'MODELO', 2000, 'RNTRC', 'NAO', 'CNH', 'contato', 'tipo', 'telefone', 'NAO', 'senha', 1, 1, 1, 1);
+  
+  INSERT INTO veiculos VALUES
+   (0, 'PROPRIETARIO' ,'ENDERECO', now(), 'email', 'NAO', 'MODELO', 2000, 'RNTRC', 'NAO', 'CNH','NAO', 1, 1, 1, 1);
+
 
 
  -- PARA EMPRESA  --> FRETES

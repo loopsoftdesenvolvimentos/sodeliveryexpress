@@ -62,8 +62,9 @@ header{
 }
 nav ul{
   list-style: none;
-  margin-top: 50px;
-  background: var(--vermelho)
+  margin-top: 10px;
+  background: var(--vermelho);
+
 }
 nav li{
   padding: 0.25rem 0.25rem;
@@ -422,7 +423,7 @@ footer{
   }
 
   nav ul{
-    margin-top: 20px;
+    padding: 1rem;
     display: flex;
     justify-content: center;
   }
