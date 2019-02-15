@@ -320,7 +320,7 @@ class pages extends CI_Controller {
 	}
 	public function quem_somos()
 	{
-		$this->load->view('quem_somos');
+		$this->load->view('quem-somos');
 	}
 	public function administrativo()
 	{

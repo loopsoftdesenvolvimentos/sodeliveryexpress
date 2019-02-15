@@ -6,49 +6,113 @@
     <main>
       <div class="clear"></div>
 
-      <section class="quem-somos content">
-        <h2>Quem somos</h2>
+      <section class="quem-somos">
+        <div class="divisao"></div>
+        
+        <div class="box-central">
+          <div class="itens-flex">
+            
+            <div class="menu-lateral">
+              <h3>Quem Somos</h3>
 
-        <div class="container-textos">
-          <p>A Só Delivery surgiu do desafio de entrega Rápidas na região de jundiaí/SP, tornando-se referência em entrega de impressos. Atualmente oferecemos serviços de logística para empresas que necessitam de frequência, agilidade e pontualidade para as suas encomendas. Com centro de distribuição a Só Delivery realiza entregas simultâneas, em toda a região de jundiaí/sp. Contamos com uma extensa malha de distribuição e um excelente atendimento, além de profissionais especializados em entregas porta a porta. Ideal para empresas que realizam comércio eletrônico e vendas diretas através de catálogos. Também para veículos de comunicação e editoras. Somos o melhor caminho para entregas, conectando sua empresa aos seus clientes.</p>
+              <div class="lista-lateral">
+                <ul>
+                  <li class="selecionado"><a href="#">Nossa História</a></li>
+                  <li><a href="#">Missão</a></li>
+                  <li><a href="#">Visão</a></li>
+                  <li><a href="#">Valores</a></li>
+                  <li><a href="#">Sobre a só Delivery Express</a></li>
+                </ul>
+              </div>
+            </div>
 
-          <div class="imagem-quem-somos">
-            <img src="public/img/logo.png">
+            <div class="clear"></div>
+
+            <div class="carousel">
+              
+              <h3>Nossa história</h3>
+
+              <div class="container-carousel">
+                <a href="#" class="left"> < </a>
+                
+                <img src="<?php echo base_url()?>public/img/logo.png">
+
+                <div class="texto">
+                  <span>2013</span>
+
+                  <p>Comunismo - Modelo de sociedade que prevê a eliminação completa de toda a forma de propriedade privada.
+                    Tratava-se de proposta antiga.Para alguns especialistas, está presente desde a Antiguidade, em obras como
+                    a de Platãokqwoekqwop ekqwpekqwp okpkeopqwkqo pkeqopwkeqopw ekqpekopek qpwek</p>
+                </div>
+
+                <a href="#" class="right"> > </a>
+              </div>
+
+              <div class="clear"></div>
+
+              <div class="linha-tempo">
+                <div class="linha-entre-tempo"></div>
+
+                <div class="bolinha-tempo nomarginleft">
+                  <div class="bolinha clicado"></div>
+                  <span class="span_selecionado">2013</span>
+                </div>
+
+                <div class="bolinha-tempo">
+                  <div class="bolinha"></div>
+                  <span>2014</span>
+                </div>
+
+                <div class="bolinha-tempo">
+                  <div class="bolinha"></div>
+                  <span>2015</span>
+                </div>
+
+                <div class="bolinha-tempo">
+                  <div class="bolinha"></div>
+                  <span>2016</span>
+                </div>
+
+                <div class="bolinha-tempo">
+                  <div class="bolinha"></div>
+                  <span>2017</span>
+                </div>
+
+                <div class="bolinha-tempo">
+                  <div class="bolinha"></div>
+                  <span>2018</span>
+                </div>
+
+                <div class="bolinha-tempo">
+                  <div class="bolinha"></div>
+                  <span>2019</span>
+                </div>
+
+                <div class="bolinha-tempo">
+                  <div class="bolinha"></div>
+                  <span>2020</span>
+                </div>
+
+                <div class="bolinha-tempo">
+                  <div class="bolinha"></div>
+                  <span>2021</span>
+                </div>
+
+                <div class="bolinha-tempo">
+                  <div class="bolinha"></div>
+                  <span>2022</span>
+                </div>
+
+                <div class="bolinha-tempo">
+                  <div class="bolinha"></div>
+                  <span>2023</span>
+                </div>
+              </div>
+
+            </div>
           </div>
-
-          <p>Tem como meta a excelência em serviço, sempre apresentando segurança e qualidade, criando consequentemente uma perfeita parceria de desenvolvimento, reconhecimento e confiança.</p>
-
-          <p>Investimos na busca permanente de novos desafios para oferecer ao mercado de transporte de cargas e entrega porta a porta, serviços ágeis adequados às necessidades específicas de cada cliente.</p>
         </div>
-
-        <div class="container-triforce">
-          <div class="triforce">
-            <div class="nome-triforce">
-              <img src="public/img/icons/mission.png">
-              <h3>Missão</h3>
-            </div>
-
-            <p>A missão fala muito do que é a empresa e dos motivos pelo qual ela foi criada. Representa, basicamente, o propósito da organização existir, sua razão de ser e papel na sociedade. Ao definir a missão de sua empresa, você mostrará aos seus clientes e parceiros quem é e o que pretende fazer durante a sua jornada.</p>
-          </div>
-
-          <div class="triforce">
-            <div class="nome-triforce">
-              <img src="public/img/icons/vision.png">
-              <h3>Visão</h3>
-            </div>
-
-            <p>A visão organizacional é a situação em que empresa deseja estar em um período de tempo definido.  Representa, portanto, aonde ela quer chegar, seu objetivo principal e o que deseja alcançar em um futuro próximo.</p>
-          </div>
-
-          <div class="triforce">
-            <div class="nome-triforce">
-              <img src="public/img/icons/values.png">
-              <h3>Valores</h3>
-            </div>
-
-            <p>Os valores dizem respeito aos princípios que orientam todas as posturas da empresa e de sua equipe. Uma vez definidos, todos devem trabalhar para coloca-los em prática em todos os relacionamentos com clientes, fornecedores e parceiros. Nesse sentido, tratam-se dos alicerces da organização, pois representam tudo aquilo que ela acredita e quais são seus princípios e convicções.</p>
-          </div>
-        </div>
+        
       </section>
 
       <div class="clear"></div>
