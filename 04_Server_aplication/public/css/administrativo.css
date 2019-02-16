@@ -1,9 +1,7 @@
-.icon-menu p{
-	text-align: center;
+header{
+	border-bottom: solid 10px var(--vermelho);
 }
-.icon-menu img{
-	width: 40px;
-}
+
 .logo-config{
 	width: 100%;
 	position: relative;
@@ -27,33 +25,22 @@
 
 .config{
 	display: flex;
-	width: 100%;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	padding: 0.5rem;
+	position: absolute;
+	top: 7px;
+	right: 7px;
 	cursor: pointer;
 }
 
-.menu-bar{
-	position: relative;
-}
-
-.conta{
-	position: absolute;
-	top: 118px;
-}
-
 .config img{
-	width: 50px;
+	width: 42px;
 }
 
 .config span{
-	font-size: 1rem;
-	color: var(--branco_2);
-}
-
-.conta a{
-	border: unset;
+	font-size: 0px;
 }
 
 #blank{
@@ -65,19 +52,14 @@
 	padding: 2.5rem;
 	width: 94%;
 	background: var(--amarelo);
-	margin: 10px auto;
+	margin: 10px 10px;
 	border-radius: 10px;
 }
 
 .info-conta{
 	background: var(--azul);
 }
-.img_titulo{
-	padding:10px 10px;
-}
-.img_titulo img{
-	width:350px;
-}
+
 .info-name{
 	display: flex;
 	align-items: center;
@@ -130,7 +112,7 @@
 }
 
 .quadro-avisos{
-	width: 95%;
+	width: 80%;
 	margin: 0 auto;
 	padding: 1rem;
 	border-radius: 5px;
@@ -194,7 +176,6 @@
 	font-family: 'Raleway Bold', sans-serif;
 	padding: 0.5rem;
 	text-align: left;
-	font-size: 0.9rem;
 	text-transform: uppercase;
 	color: var(--branco-mesmo);
 }
@@ -217,7 +198,7 @@
 }
 
 .container img{
-	width: 60px;
+	width: 100px;
 	margin-bottom: 10px;
 }
 
@@ -232,12 +213,16 @@
 }
 .area-container .container a{
 	text-align: center;
-	font-size: 0.9rem;
 }
 @media screen and (min-width: 728px){
+	.logo-config{
+		display: flex;
+		justify-content: space-between;
+		background-image: -webkit-linear-gradient(150deg, var(--preto) 190px, var(--branco_2) 10%);
+	}
 
 	.logo{
-		width: 100vw;
+		width: 65vw;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -250,32 +235,13 @@
 	}
 
 	.logo img{
-		width: 250px;
-	}
-
-	nav ul{
-		flex-direction: column !important;
-	}
-
-	nav a{
-		margin-left: 0 !important;
-	}
-
-	.icon-menu{
-		display: flex !important;
-		flex-direction: row !important;
-		padding: 0.5rem !important;
-		border-bottom: solid 1px var(--amarelo);
-	}
-
-	.icon-menu p{
-		text-align: unset;
+		width: 180px;
 	}
 
 	.config{
-		width: unset;
 		position: static;
 		padding: 1rem;
+		background-image: -webkit-linear-gradient(150deg, var(--preto) 190px, var(--branco_2) 20%);
 	}
 	.config span{
 		font-size: 1rem;
@@ -286,13 +252,10 @@
 		display: none;
 	}
 
-	.conta{
-		position: static;
-	}
-
 	#blank{
 		display: block;
-		width: 50px;
+		width: 30px;
+		margin-bottom: 10px
 	}
 
 	.informacoes-topo{
@@ -302,12 +265,6 @@
 	.info-servico,
 	.info-conta{
 		width: 400px;
-	}
-
-	.sequencia{
-		display: flex;
-		flex-direction: column;
-		align-items: center;
 	}
 
 	.area1,
@@ -330,59 +287,18 @@
 @media screen and (min-width: 1224px){
 
 	.logo{
-		width: 40vw;
+		width: 60vw;
 	}
 	.logo img{
 		margin-left: 100px;
 	}
-	.conta{
-		position: relative;
-	}
+
 	.config{
-		position: absolute;
+		position: sticky;
 		background-image: -webkit-linear-gradient(150deg, #000 220px, var(--branco-mesmo) 20%);
-		top: 1px;
+		top: 5px;
 		right: 35px;
 	}
-	.config img{
-		width: 50px!important;
-	}
-nav ul{
-		flex-direction: row !important;
-		padding: 1rem !important;
-		margin-top: 0px !important;
-	}
-
-	nav a{ 
-		margin-left: 0px !important;
-	}
-
-	.icon-menu{
-		display: flex !important;
-		flex-direction: column !important;
-		justify-content: center !important;	
-		align-items: center !important;
-		padding: 0rem !important;;
-		border-bottom: none !important;
-		
-	}
-
-	.icon-menu p{
-		text-align: center !important;
-		padding: 0;
-	}
-
-	.config{
-		position: static;
-		align-items: center;
-		display: flex;
-	}
-
-	.conta{
-		position: static;
-	}
-
-
 	.config #blank{
 		transition: all ease-out .4s;
 	}

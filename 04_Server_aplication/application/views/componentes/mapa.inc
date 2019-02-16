@@ -505,4 +505,10 @@
               <text transform="matrix(1 0 0 1 111.7568 153.4995)" class="st5 st3 st4">RO</text>
             </g>
           </svg>
+          <script type="text/javascript">
+            $('svg g').click(function(){
+              console.log( $(this)[0].id );
+            })
+          </script>
         </div>
+     

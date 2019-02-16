@@ -167,6 +167,5 @@ class Auth_veiculo extends CI_Controller {
          if($this->Model->Checkin_efetuar($data) != true){
               redirect('Auth_veiculo/acesso_veiculo','location');  
         }
-
     }
 }

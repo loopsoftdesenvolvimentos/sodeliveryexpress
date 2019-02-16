@@ -5,6 +5,7 @@
     <?php include('componentes/header_administrativo.inc'); ?>
 
     <main>
+
       <div class="clear"></div>
 
       <div class="informacoes-topo content">
@@ -89,7 +90,7 @@
             <div class="area-container">
               <div class="container">
 
-                <a href="<?php echo base_url()?>pages/areamonitoramento/#estatisticas">
+                <a href="areavizualizacao">
                   <img src="<?php echo base_url()?>public/img/icons/verEstatisticasADM.png">
                   Ver estatísticas <br> empresariais
                 </a>
@@ -97,17 +98,17 @@
 
               <div class="container">
 
-                <a href="<?php echo base_url()?>pages/areamonitoramento/#listaVeiculos">
+                <a href="<?php echo base_url()?>pages/areacadastro/#verVeiculos">
                   <img src="<?php echo base_url()?>public/img/icons/verVeiculosADM.png">
-                  Listar Veículos
+                  Ver meus veículos
                 </a>
               </div>
 
               <div class="container">
 
-                <a href="<?php echo base_url()?>pages/areamonitoramento/#listarFretes">
+                <a href="<?php echo base_url()?>pages/areacadastro/#verFretes">
                   <img src="<?php echo base_url()?>public/img/icons/verFretesADM.png">
-                  Listar fretes
+                  Ver meus fretes
                 </a>
               </div>
             </div>
@@ -130,17 +131,21 @@
               <div class="container">
                 <a href="<?php echo base_url()?>pages/areaadministrativa/#verEditaPagamento">
                   <img src="<?php echo base_url()?>public/img/icons/verEditarPagamentoADM.png">
-                  Central <br> pagamento
+                  Ver/Editar pagamento
                 </a>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <div class="clear"></div>
+      <div class="borderred"></div>
     </main>
-    <div class="clear"></div>
-    <div class="borderred"></div>
-    <?php include('componentes/footer.inc'); ?>
+
+    <footer>
+      <div class="copyright">
+        <p>&copy; <b>Loop Soft</b> Internet Serviços LTDA</p>
+      </div>
+    </footer>
   </body>
-  <script type="text/javascript" src="<?php echo base_url()?>public/js/menu_mobile.js"></script>
 </html>

@@ -9,17 +9,17 @@
       </div>
        <div id="estatistica_veiculos" class="estatistica_veiculos none">
             <div class="content-estatica-veiculos">
-                <p> <b>27.228</b> veículos estão com check-in ativo</p>
+                <p> <b><?php echo $check_in_ativo; ?></b> veículos estão com check-in ativo</p>
             </div>
 
             <div class="content-estatica-veiculos">
-                <p> <b>272.284</b> veículos cadastrados</p>
+                <p> <b><?php echo $veiculos_cadastrados; ?></b> veículos cadastrados</p>
             </div>
 
             <div class="content-estatica-veiculos">
                 <p> <b>Check-in é gratuito</b>  e uma maneira fácil de conseguir cargas</p>
                 <div class="content-estatica-veiculos-button">
-                 <a href="<?php echo base_url()?>cadastro_veiculo"><button> Cadastre seu veiculo</button></a>
+                 <a href="<?php echo base_url() ?>/Auth_veiculo/cadastro_veiculo"><button> Cadastre seu veiculo</button></a>
                 </div>
             </div>
         </div>

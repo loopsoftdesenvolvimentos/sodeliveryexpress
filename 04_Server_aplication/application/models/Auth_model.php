@@ -48,6 +48,27 @@ class Auth_model extends CI_Model  {
                               ->get()
                               ->result();
      }
-}
+     public function check_in_ativo()
+     {
+          return $this->db->count_all('checkin'); 
+
+      }
+       public function veiculos_cadastrados()
+     {
+          return $this->db->count_all('veiculos'); 
+
+      }
+        public function check_in_ativo_maps()
+     {
+          return $this->db->select('*')
+                         ->from('checkin')
+                         ->from('estados')
+                         ->where('checkin.estado = estados.id_estado')
+                         ->where('checkin.destino = estados.id_estado')
+                         ->get()
+                         ->result();
+
+      }
+ }
 
 ?>

@@ -1,7 +1,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SóDelivery</title>
+    <title>Só Delivery</title>
     <link rel="stylesheet" href="<?php echo base_url()?>public/css/contato.css">
     <link rel="stylesheet" href="<?php echo base_url()?>public/css/duvidas.css">
     <link rel="stylesheet" href="<?php echo base_url()?>public/css/charts.css">

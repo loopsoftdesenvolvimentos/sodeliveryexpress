@@ -1,9 +1,4 @@
-.desktopImportant{
-	display: none!important
-}
-.mobile{
-	display: flex;
-}
+
 .mobile-menu{
 	width: 80px;
 	height: 80px;
@@ -196,6 +191,7 @@ select{
 	margin-bottom:20px;
 }
 .item-frete-empresa-veiculo,
+.informações-item,
 .img-empresa{
 	display:flex;
 	flex-wrap: wrap;
@@ -203,13 +199,7 @@ select{
 	flex-direction:column;
 	justify-content:center;
 }
-.informações-item{
-	display:flex;
-	flex-wrap: wrap;
-	align-items:center;
-	flex-direction:column;
-	justify-content:flex-start;
-}
+
 .informações-item div{
 	margin-left:10px;
 	padding:10px 10px;
@@ -221,10 +211,6 @@ select{
 }
 .informações-item ul li{
 	margin-bottom:5px;
-}
-.informações-item ul li a{
-	color: var(--preto);
-	font-weight: 800;
 }
 .img-empresa img{
 	max-width:9rem;
@@ -301,15 +287,6 @@ select{
 	font-weight:inherit;
 }
 @media screen and (min-width:690px){
-	.desktopImportant{
-		display: flex!important;
-	}
-	.mobile{
-		display: none;
-	}
-	.mobileShow{
-		display: none;
-	}
 	.container-empresa{
 		flex-direction:row;
 		padding: inherit;
