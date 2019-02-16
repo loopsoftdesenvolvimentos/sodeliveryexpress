@@ -13,8 +13,6 @@ class pages extends CI_Controller {
 		$this->load->library('pagination');
 		$this->load->library('form_validation');
 		$this->load->library('email');		
-	
-
 
 		session_start();
 

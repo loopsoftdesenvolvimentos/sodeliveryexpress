@@ -1,4 +1,4 @@
-var url_app = 'http://localhost/sub/sodeliveryexpress/04_Server_aplication/'; 
+var url_app = 'http://localhost/sodeliveryexpress/04_Server_aplication/'; 
 
 function select_populado(select_1,select_2,id,url,url2) {
      $(document).ready(function() {
