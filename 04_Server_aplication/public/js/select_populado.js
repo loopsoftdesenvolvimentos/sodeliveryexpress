@@ -1,4 +1,4 @@
-var url_app = 'http://sodeliveryexpress.empresarial.ws/'; 
+var url_app = 'http://localhost/sub/sodeliveryexpress/04_Server_aplication/'; 
 
 function select_populado(select_1,select_2,id,url,url2) {
      $(document).ready(function() {
@@ -73,10 +73,7 @@ function filtrar_input(input,id) {
                 }
             });
         });
-        $(input).blur(function() {
-            $(id).css('display','none'); 
-        });
-    });*
+    });
 }
 
 function check(){
@@ -88,13 +85,62 @@ function check(){
         }); 
     });   
 }
-check();
-filtrar_input('input[name="search"]','#sumir');
-select_populado('select[name="Origem"]','select[name="cidades"]','#sumir','/pages/empresas_filter/cidade/','/pages/empresas_filter/estados/');
-select_populado('select[name="Destino"]','select[name="Destino_cidades"]','#sumir1','/pages/empresas_filter/cidade/','/pages/empresas_filter/estados/');
-select_populado('select[name="estado_empresa"]','select[name="cidades_empresas"]','','/pages/empresas_filter/cidade/','/pages/empresas_filter/estados/');
-select_populado_simples('select[name="Estados"]','select[name="Cidade"]');
-select_populado('select[name="Origem_frete_estado"]','select[name="Origem_frete_cidade"]','#sumir','pages/frete_filter/cidade_origem/','pages/frete_filter/estado_origem/');
-select_populado('select[name="Destino_frete_estado"]','select[name="Destino_frete_cidade"]','#sumir1','pages/frete_filter/cidade_saida/','pages/frete_filter/estado_saida/');
+function pesquisar_placa(button,id_btn_block){
+    $(button).click(function() { 
+        var pesquisa = $('#placa_veiculo').val().toUpperCase();
+        if(pesquisa != ''){ 
+            if(pesquisa.length == 7){
+            $.ajax({
+                    url: url_app+'pages/pesquisar_placa/' + pesquisa,
+                    type: "GET",
+                    dataType: "json",
+                    success:function(data) {
+                        if(data.length < 1){
+                            $('#placa_veiculo').prop('readonly', true);
+                            $(button).css('display','none');
+                            $('#sumir').css('display','block');
+                        }else{
+                            $('#mensagem').css('display','block');
+                            $('#mensagem p').html('Veiculo já cadastro !!!');     
+                        }
+                    }
+                });
+            }else{
+               $('#mensagem').css('display','block');
+               $('#mensagem p').html('Formatação de placa não conhecida, exemplo XXX1235');  
+            }
+        }else{
+             $('#mensagem').css('display','block');
+             $('#mensagem p').html('Digite a placa do veiculo !!');
+        }
+        setTimeout(function(){  
+            $('#mensagem').css('display','none');
+            $('#mensagem p').html();
+        }, 3000);
+    });
+}   
 
-
+function executar_forms(url,id_execucao,url_route,id_form){
+     $(id_execucao).click(function(e){
+        e.preventDefault();
+        $.ajax({
+            url: url,
+            type:'POST',
+            dataType: "json",
+            data:  $(id_form).serialize(),
+            success: function(data) {
+                 if($.isEmptyObject(data.error)){
+                    $('#mensagem').css('display','block');
+                    $(id_form+'input').val("");
+                    $('#mensagem').html(data.sucess);
+                     setTimeout(function(){ 
+                        window.location.href=url_app + url_route;
+                      }, 3000);
+                }else{
+                    $('#mensagem').css('display','block');
+                    $('#mensagem').html(data.error);
+                }
+            }
+        });
+    }); 
+}   

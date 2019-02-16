@@ -48,7 +48,7 @@ form{
 .container-cadastre p{
   color:var(--preto)
 }
-.container-input-button input[type='submit']{
+.container-input-button input[type='submit'],input[type='button']{
   border:none;
   background:var(--vermelho);
   padding:0.7rem;
@@ -127,6 +127,16 @@ form{
 a{
   text-decoration:none;
   color:var(--preto);
+}
+.mensagem{
+  display:none;
+  padding:.7rem .4rem;
+  margin-top:10px;
+  background:var(--vermelho);
+}
+.mensagem p{
+  padding-left:10px;
+  color:var(--branco_2);
 }
 @media screen and (min-width:640px){
   .container{

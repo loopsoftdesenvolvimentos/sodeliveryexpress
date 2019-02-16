@@ -280,10 +280,6 @@ class pages extends CI_Controller {
 	{
 		$this->load->view('contato');
 	}
-	public function checkin()
-	{
-		$this->load->view('checkin');
-	}
 	public function duvidas()
 	{
 		$this->load->view('duvidas');
@@ -305,27 +301,16 @@ class pages extends CI_Controller {
 	{
 		$this->load->view('administrativo');
 	}
-	public function acesso_veiculo()
-	{
-		$this->load->view('acesso_veiculo_index');
-	}
+	
 	public function cadastro_empresa()
 	{
 		$data['estados']= $this->Model->all_estados();
 		$data['ramo'] = $this->Model->all_ramos();
 		$this->load->view('cadastros',$data);
 	}
-	public function cadastro_veiculo()
-	{
-		$this->load->view('veiculo_cadastro_verificar');
-	}
 	public function assinante()
 	{
 		$this->load->view('assinante');
-	}
-	public function areacadastro()
-	{
-		$this->load->view('areacadastro');
 	}
 	public function areavizualizacao()
 	{
@@ -363,5 +348,9 @@ class pages extends CI_Controller {
          }else{ 
  		
      	}
+	}
+	public function pesquisar_placa($pesquisa)
+	{
+		echo $this->Model->pesquisar_placa($pesquisa);
 	}
 }

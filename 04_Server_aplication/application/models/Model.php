@@ -128,7 +128,7 @@ class Model extends CI_Model  {
 
                   return $query->num_rows();
 	}
-	public function filter_empresa($qtd,$inicio)
+	public function filter_empresa($qtd,$inicio,$filter)
 	{
 
 		$this->db->limit($qtd, $inicio);
@@ -157,7 +157,7 @@ class Model extends CI_Model  {
 	       }
 	   }
 	}
-	public function fretes_filter($qtd,$inicio)
+	public function fretes_filter($qtd,$inicio,$filter)
 	{
 
 		$this->db->limit($qtd, $inicio);
@@ -194,6 +194,19 @@ class Model extends CI_Model  {
 	}
 	public function cadastrar_empresa($data){
 		$this->db->insert('empresa', $data);
+	}
+	public function cadastrar_veiculo($data)
+	{
+		$this->db->insert('veiculos', $data);
+	}
+	public function editar_dados_veiculo($data)
+	{
+		$this->db->where('placa_veiculo', $data['placa_veiculo']);
+		$this->db->update('veiculos', $data);
+	}
+	public function Checkin_efetuar($data)
+	{
+		$this->db->insert('checkin', $data);
 	}
 	public function ramo()
 	{
@@ -237,5 +250,14 @@ class Model extends CI_Model  {
                   ->get();
 
 	        return $query->result();
+	}
+	public function pesquisar_placa($pesquisa)
+	{
+		$query =  $this->db->select('*')->from('veiculos')->where('placa_veiculo = "'.$pesquisa.'"')->get()->result();
+		return json_encode($query);
+	}
+	public function Marcas()
+	{
+		return $this->db->select('*')->from('marca')->get()->result();
 	}
 }

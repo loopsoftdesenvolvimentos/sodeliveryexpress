@@ -49,7 +49,7 @@ input,select{
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 3rem;
 }
-.container-cadastro-input-button input[type='submit']{
+.container-cadastro-input-button input[type='submit'], input[type='button']{
   border:none;
 	margin-top: 30px;
   background:var(--vermelho);
@@ -57,11 +57,12 @@ input,select{
   color:var(--branco_2);
   width:150px;
 }
-.mensagem .alert{
+#mensagem{
+	padding:.7rem .4rem;
+	margin-top:5px;
 	background:var(--vermelho);
-	margin-bottom:10px;
-	padding:0.6rem;
-	color:var(--branco);
+	padding-left:10px;
+	color:var(--branco_2);
 }
 @media screen and (min-width:640px){
 	.container-cadastro{

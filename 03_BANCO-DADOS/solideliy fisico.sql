@@ -97,7 +97,7 @@ tipo_usuario VARCHAR(100),
 Ultim_acesso datetime,
 id_empresa integer
 );
-
+-
 CREATE TABLE empresa_produto (
 id_empresa_produto integer PRIMARY KEY auto_increment,
 id_empresa integer,
@@ -168,7 +168,8 @@ id_veiculo integer
 CREATE TABLE veiculos (
 id_veiculo integer PRIMARY KEY auto_increment,
 nome_proprietario VARCHAR(100),
-endereço VARCHAR(100),
+placa_veiculo VARCHAR(60),
+endereco VARCHAR(100),
 data_nascimento date,
 email VARCHAR(50),
 rastreador CHAR(3),
@@ -177,7 +178,11 @@ ano integer,
 rntrc VARCHAR(60),
 seguro CHAR(3),
 cnh VARCHAR(20),
+contato VARCHAR(100),
+tipo VARCHAR(60),
+telefone VARCHAR(100),
 permissionado CHAR(3),
+senha VARCHAR(12),
 id_marca integer,
 id_cidade integer,
 id_carroceria integer,
@@ -188,13 +193,6 @@ FOREIGN KEY(id_carroceria) REFERENCES Carroceria (id_carroceria),
 FOREIGN KEY(id_veiculo_categoria) REFERENCES veiculo_categoria (id_veiculo_categoria)
 );
 
-CREATE TABLE telefone (
-id_telefone integer PRIMARY KEY auto_increment,
-telefone CHAR(11),
-tipo VARCHAR(60),
-id_veiculo integer,
-FOREIGN KEY(id_veiculo) REFERENCES veiculos (id_veiculo)
-);
 
 ALTER TABLE cidades ADD FOREIGN KEY(id_estado) REFERENCES Estados (id_estado);
 ALTER TABLE complemento_carga ADD FOREIGN KEY(id_frete) REFERENCES Frete (id_frete);

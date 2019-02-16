@@ -11,13 +11,13 @@
                   <h1>Painel administrativo veiculo</h1>
               </div>
                <div class="container-cadastro-input-button-acesso">
-                    <a href="checkin.html"><button>Fazer Checkin</button></a>
+                    <a href="<?php echo base_url()?>Auth_veiculo/checkin"><button>Fazer Checkin</button></a>
                 </div>
               <div class="container-cadastro-input-button-acesso button-second">
-                    <a href="veiculo_cadastro_verificar.html"><button>Editar Cadastro</button></a>
+                    <a href="<?php echo base_url()?>Auth_veiculo/editar_dados"><button>Editar Cadastro</button></a>
                 </div>
                 <div class="container-cadastro-input-button-acesso button-second">
-                    <a href=""><button>Sair</button></a>
+                    <a href="<?php echo base_url()?>/Auth_veiculo/logout"><button>Sair</button></a>
                 </div>
             </div>
 

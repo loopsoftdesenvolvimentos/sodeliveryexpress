@@ -240,7 +240,11 @@
     </main>
     <?php include('componentes/footer.inc') ?>
   <script type="text/javascript" src="<?php echo base_url() ?>public/js/menu_mobile.js"></script>
-  <script type="text/javascript" src="<?php echo base_url() ?>public/js/pesquisa.js"></script>
   <script type="text/javascript" src="<?php echo base_url() ?>public/js/select_populado.js"></script>
+  <script type="text/javascript">
+    check();
+    select_populado('select[name="Origem_frete_estado"]','select[name="Origem_frete_cidade"]','#sumir','pages/frete_filter/cidade_origem/','pages/frete_filter/estado_origem/');
+    select_populado('select[name="Destino_frete_estado"]','select[name="Destino_frete_cidade"]','#sumir1','pages/frete_filter/cidade_saida/','pages/frete_filter/estado_saida/');
+  </script>
   </body>
 </html>
