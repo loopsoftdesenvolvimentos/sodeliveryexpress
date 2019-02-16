@@ -81,6 +81,7 @@
                     <img src="<?php echo base_url()?>public/img/letras/empresa.svg">
                 </section>
                 <?php 
+                if( !empty($empresas) ) {
                   if(count($empresas) > 0){
                       echo '<section  class="continer-total-item">
                       <h1>'.$total.' empresas encontradas</h1>
@@ -114,6 +115,11 @@
                     echo '<section  class="continer-total-item">
                             <h1> 0 empresas encontradas</h1>
                           </section>';
+                  }
+                  }else{
+                   echo '<section  class="continer-total-item">
+                            <h1> 0 empresas encontradas</h1>
+                          </section>'; 
                   }
                  ?>
                  <section class="paginação">
