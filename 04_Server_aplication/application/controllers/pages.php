@@ -374,12 +374,8 @@ class pages extends CI_Controller {
 
      	}
 	}
-<<<<<<< HEAD
-}
-=======
 	public function pesquisar_placa($pesquisa)
 	{
 		echo $this->Model->pesquisar_placa($pesquisa);
 	}
 }
->>>>>>> c068c42d380f22dfc803447925d4d2ae7741a37d
