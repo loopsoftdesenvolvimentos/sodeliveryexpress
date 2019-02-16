@@ -3,7 +3,9 @@
   background-size: cover;
   height: 50vh;
 }
-
+.btns_carrousel{
+  cursor: pointer;
+}
 .box-central{
   box-shadow: 0px 3px 30px rgba(0, 0, 0, 0.45);
   width: 95%;
@@ -128,7 +130,7 @@
 		align-items: center;
 	}
 	.texto{
-		width: 80%;	
+		width: 80%;
 	}
 }
 
@@ -148,7 +150,7 @@
 
 	.box-central{
 		width: 1038px;
-		height: 60vh;
+		height: 70vh;
 	}
 
 	.container-carousel img{
@@ -162,6 +164,10 @@
 	.texto{
 		width: 50%;
 	}
+  .texto span {
+    font-size: 2.8rem;
+    font-weight: 900;
+  }
 
 	.left{
 		left: 5px;
@@ -186,8 +192,8 @@
 		flex-direction: column;
 		align-items: center;
 		margin-left: 30px;
+    cursor: pointer;
 	}
-
 	.bolinha{
 		width: 20px;
 		height: 20px;
@@ -195,14 +201,17 @@
 		border: solid 2px var(--preto);
 		border-radius: 200px;
 		z-index: 1;
+    transition: all ease-in .2s;
 	}
-
+  .bolinha-tempo:hover .bolinha{
+    background: var(--vermelho);
+  }
 	.nomarginleft{
 		margin-left: 0px;
 	}
 
 	.clicado{
-		border: solid 4px var(--vermelho);
+    border: solid 4px var(--vermelho);
 	}
 
 	.span_selecionado{
@@ -213,8 +222,8 @@
 	.linha-entre-tempo{
 		background: var(--preto);
 		height: 1px;
-		width: 88%;
-		right: 75px;
+		width: 100%;
+		right: 0px;
 		top: 18px;
 		position: absolute;
 		z-index: 0;
