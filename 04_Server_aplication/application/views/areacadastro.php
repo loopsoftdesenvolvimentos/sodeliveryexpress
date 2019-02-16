@@ -106,67 +106,83 @@
                </div>
                <div class="container-cadastro-input">
                  <div class="row">
+
+                  <div class="clear"></div>
+
+                  <div class="container-all-itens">
                    <div class="container-cadastro-input fretes-checkbox">
                      <label for="leve">Leve</label>
-                     <label class="container-checkbox">HR
-                       <input type="checkbox" value='hr'>
-                       <span class="checkmark"></span>
-                     </label>
-                     <label class="container-checkbox">Master
-                       <input type="checkbox" value='master'>
-                       <span class="checkmark"></span>
-                     </label>
-                     <label class="container-checkbox">Toco
-                       <input type="checkbox" value='toco'>
-                       <span class="checkmark"></span>
-                     </label>
-                     <label class="container-checkbox">VLC
-                       <input type="checkbox" value='vlc'>
-                       <span class="checkmark"></span>
-                     </label>
-                     <label class="container-checkbox">3/4
-                       <input type="checkbox" value='3/4'>
-                       <span class="checkmark"></span>
-                     </label>
-                     <label class="container-checkbox">Moto
-                       <input type="checkbox" value='moto'>
-                       <span class="checkmark"></span>
-                     </label>
+
+                     <div class="container-opicoes">
+                       <label class="container-checkbox">HR
+                         <input type="checkbox" value='hr'>
+                         <span class="checkmark"></span>
+                       </label>
+                       <label class="container-checkbox">Master
+                         <input type="checkbox" value='master'>
+                         <span class="checkmark"></span>
+                       </label>
+                       <label class="container-checkbox">Toco
+                         <input type="checkbox" value='toco'>
+                         <span class="checkmark"></span>
+                       </label>
+                       <label class="container-checkbox">VLC
+                         <input type="checkbox" value='vlc'>
+                         <span class="checkmark"></span>
+                       </label>
+                       <label class="container-checkbox">3/4
+                         <input type="checkbox" value='3/4'>
+                         <span class="checkmark"></span>
+                       </label>
+                       <label class="container-checkbox">Moto
+                         <input type="checkbox" value='moto'>
+                         <span class="checkmark"></span>
+                       </label>
+                      </div>
                    </div>
+                   <div class="clear"></div>
                    <div class="container-cadastro-input fretes-checkbox">
                      <label for="medio">Médio</label>
-                     <label class="container-checkbox">Truck
-                       <input type="checkbox" value='truck'>
-                       <span class="checkmark"></span>
-                     </label>
-                     <label class="container-checkbox">Bitruck
-                       <input type="checkbox" value='Bitruck'>
-                       <span class="checkmark"></span>
-                     </label>
+
+                     <div class="container-opicoes">
+                       <label class="container-checkbox">Truck
+                         <input type="checkbox" value='truck'>
+                         <span class="checkmark"></span>
+                       </label>
+                       <label class="container-checkbox">Bitruck
+                         <input type="checkbox" value='Bitruck'>
+                         <span class="checkmark"></span>
+                       </label>
+                      </div>
                    </div>
+
+                   <div class="clear"></div>
                    <div class="container-cadastro-input fretes-checkbox">
                      <label for="pesado">Pesado</label>
-                     <label class="container-checkbox">Rodotrem
-                       <input type="checkbox" value='rodotrem'>
-                       <span class="checkmark"></span>
-                     </label>
-                     <label class="container-checkbox">Vanderléria
-                       <input type="checkbox" value='vanderléria'>
-                       <span class="checkmark"></span>
-                     </label>
-                     <label class="container-checkbox">Bitrem
-                       <input type="checkbox" value='bitrem'>
-                       <span class="checkmark"></span>
-                     </label>
-                     <label class="container-checkbox">Carreta LS
-                       <input type="checkbox" value='carreta_ls'>
-                       <span class="checkmark"></span>
-                     </label>
-                     <label class="container-checkbox">Carreta
-                       <input type="checkbox" value='carreta'>
-                       <span class="checkmark"></span>
-                     </label>
+                     <div class="container-opicoes">
+                       <label class="container-checkbox">Rodotrem
+                         <input type="checkbox" value='rodotrem'>
+                         <span class="checkmark"></span>
+                       </label>
+                       <label class="container-checkbox">Vanderléria
+                         <input type="checkbox" value='vanderléria'>
+                         <span class="checkmark"></span>
+                       </label>
+                       <label class="container-checkbox">Bitrem
+                         <input type="checkbox" value='bitrem'>
+                         <span class="checkmark"></span>
+                       </label>
+                       <label class="container-checkbox">Carreta LS
+                         <input type="checkbox" value='carreta_ls'>
+                         <span class="checkmark"></span>
+                       </label>
+                       <label class="container-checkbox">Carreta
+                         <input type="checkbox" value='carreta'>
+                         <span class="checkmark"></span>
+                       </label>
+                      </div>
                    </div>
+                  </div>
                  </div>
                </div>
                <div class="container-cadastro-titulo">
@@ -174,75 +190,91 @@
                </div>
                <div class="container-cadastro-input">
                  <div class="row">
+
+                  <div class="container-all-itens">
                    <div class="container-cadastro-input fretes-checkbox">
                      <label for="leve">Fechada</label>
-                     <label class="container-checkbox">Baú
-                       <input type="checkbox" value='baú'>
-                       <span class="checkmark"></span>
-                     </label>
-                     <label class="container-checkbox">Baú Frigorífico
-                       <input type="checkbox" value='baú Frigorífico'>
-                       <span class="checkmark"></span>
-                     </label>
-                     <label class="container-checkbox">slider
-                       <input type="checkbox" value='slider'>
-                       <span class="checkmark"></span>
-                     </label>
-                     <label class="container-checkbox">Mochila(Moto)
-                       <input type="checkbox" value='Mochila(moto)'>
-                       <span class="checkmark"></span>
-                     </label>
+
+                     <div class="container-opicoes">
+                       <label class="container-checkbox">Baú
+                         <input type="checkbox" value='baú'>
+                         <span class="checkmark"></span>
+                       </label>
+                       <label class="container-checkbox">Baú Frigorífico
+                         <input type="checkbox" value='baú Frigorífico'>
+                         <span class="checkmark"></span>
+                       </label>
+                       <label class="container-checkbox">slider
+                         <input type="checkbox" value='slider'>
+                         <span class="checkmark"></span>
+                       </label>
+                       <label class="container-checkbox">Mochila(Moto)
+                         <input type="checkbox" value='Mochila(moto)'>
+                         <span class="checkmark"></span>
+                       </label>
+                      </div>
                    </div>
+
+                   <div class="clear"></div>
                    <div class="container-cadastro-input fretes-checkbox">
                      <label for="medio">Aberta</label>
-                     <label class="container-checkbox">Caçamba
-                       <input type="checkbox" value='Caçamba'>
-                       <span class="checkmark"></span>
-                     </label>
-                     <label class="container-checkbox">Grande Baixa
-                       <input type="checkbox" value='Grande Baixa'>
-                       <span class="checkmark"></span>
-                     </label>
-                     <label class="container-checkbox">Graneleiro
-                       <input type="checkbox" value='Graneleiro'>
-                       <span class="checkmark"></span>
-                     </label>
-                     <label class="container-checkbox">Prancha
-                       <input type="checkbox" value='Prancha'>
-                       <span class="checkmark"></span>
-                     </label>
+                     
+                     <div class="container-opicoes">
+                       <label class="container-checkbox">Caçamba
+                         <input type="checkbox" value='Caçamba'>
+                         <span class="checkmark"></span>
+                       </label>
+                       <label class="container-checkbox">Grande Baixa
+                         <input type="checkbox" value='Grande Baixa'>
+                         <span class="checkmark"></span>
+                       </label>
+                       <label class="container-checkbox">Graneleiro
+                         <input type="checkbox" value='Graneleiro'>
+                         <span class="checkmark"></span>
+                       </label>
+                       <label class="container-checkbox">Prancha
+                         <input type="checkbox" value='Prancha'>
+                         <span class="checkmark"></span>
+                       </label>
+                      </div>
                    </div>
+
+                   <div class="clear"></div>
                    <div class="container-cadastro-input fretes-checkbox">
                      <label for="pesado">Especial</label>
-                     <label class="container-checkbox">Bug Porta Container
-                       <input type="checkbox" value='Bug Porta Container'>
-                       <span class="checkmark"></span>
-                     </label>
-                     <label class="container-checkbox">Munk
-                       <input type="checkbox" value='Munk'>
-                       <span class="checkmark"></span>
-                     </label>
-                     <label class="container-checkbox">Silo
-                       <input type="checkbox" value='Silo'>
-                       <span class="checkmark"></span>
-                     </label>
-                     <label class="container-checkbox">Tanque
-                       <input type="checkbox" value='Tanque'>
-                       <span class="checkmark"></span>
-                     </label>
-                     <label class="container-checkbox">Gaiola
-                       <input type="checkbox" value='Gaiola'>
-                       <span class="checkmark"></span>
-                     </label>
-                     <label class="container-checkbox">Cegonheiro
-                       <input type="checkbox" value='Cegonheiro'>
-                       <span class="checkmark"></span>
-                     </label>
-                     <label class="container-checkbox">Apenas Cavalo
-                       <input type="checkbox" value='Apenas Cavalo'>
-                       <span class="checkmark"></span>
-                     </label>
+
+                     <div class="container-opicoes">
+                       <label class="container-checkbox">Bug Porta Container
+                         <input type="checkbox" value='Bug Porta Container'>
+                         <span class="checkmark"></span>
+                       </label>
+                       <label class="container-checkbox">Munk
+                         <input type="checkbox" value='Munk'>
+                         <span class="checkmark"></span>
+                       </label>
+                       <label class="container-checkbox">Silo
+                         <input type="checkbox" value='Silo'>
+                         <span class="checkmark"></span>
+                       </label>
+                       <label class="container-checkbox">Tanque
+                         <input type="checkbox" value='Tanque'>
+                         <span class="checkmark"></span>
+                       </label>
+                       <label class="container-checkbox">Gaiola
+                         <input type="checkbox" value='Gaiola'>
+                         <span class="checkmark"></span>
+                       </label>
+                       <label class="container-checkbox">Cegonheiro
+                         <input type="checkbox" value='Cegonheiro'>
+                         <span class="checkmark"></span>
+                       </label>
+                       <label class="container-checkbox">Apenas Cavalo
+                         <input type="checkbox" value='Apenas Cavalo'>
+                         <span class="checkmark"></span>
+                       </label>
+                      </div>
                    </div>
+                  </div>
                  </div>
                </div>
                <div class="container-cadastro-titulo">
