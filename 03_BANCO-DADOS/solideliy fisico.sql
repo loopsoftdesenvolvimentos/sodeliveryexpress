@@ -1,6 +1,6 @@
 drop database sodelivery;
 create database sodelivery;
-
+use  sodelivery;
 CREATE TABLE cidades (
 id_cidade integer PRIMARY KEY auto_increment,
 nome_cidade VARCHAR(100),
@@ -97,7 +97,7 @@ tipo_usuario VARCHAR(100),
 Ultim_acesso datetime,
 id_empresa integer
 );
--
+
 CREATE TABLE empresa_produto (
 id_empresa_produto integer PRIMARY KEY auto_increment,
 id_empresa integer,

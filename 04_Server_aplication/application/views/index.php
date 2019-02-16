@@ -18,7 +18,7 @@
       <div class="estados content">
         <div class="estado-nome">
           <img src="<?php echo base_url()?>public/img/icons/package.svg" alt="icone de pacote">
-          <h2>Escolhe seu Estado:</h2>
+          <h2>Escolha seu Estado:</h2>
         </div>
 
         <select class="lista_option_estados">
