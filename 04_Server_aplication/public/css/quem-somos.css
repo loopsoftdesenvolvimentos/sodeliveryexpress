@@ -6,6 +6,12 @@
 .btns_carrousel{
   cursor: pointer;
 }
+.btns{
+  cursor: pointer;
+}
+.hide{
+  display: none;
+}
 .box-central{
   box-shadow: 0px 3px 30px rgba(0, 0, 0, 0.45);
   width: 95%;
@@ -53,7 +59,6 @@
 }
 
 .container-carousel {
-	border-top: solid 2px var(--vermelho);
 	margin-top: 2px;
 	padding: 1rem;
 	position: relative;
@@ -78,7 +83,7 @@
 }
 
 .texto{
-	width: 90%;
+	width: 40%;
 	margin-left: 20px;
 }
 
@@ -126,7 +131,6 @@
 	.container-carousel{
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
 		align-items: center;
 	}
 	.texto{
@@ -162,7 +166,8 @@
 	}
 
 	.texto{
-		width: 50%;
+    width: 330px;
+    text-align: justify;
 	}
   .texto span {
     font-size: 2.8rem;

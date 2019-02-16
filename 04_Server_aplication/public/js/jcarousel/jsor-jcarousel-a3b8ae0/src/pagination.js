@@ -10,9 +10,12 @@
 
     $.jCarousel.plugin('jcarouselPagination', {
         _options: {
-            perPage: null,
+            perPage: '2013',
             item: function(page) {
-                return '<a href="#' + page + '">' + page + '</a>';
+                return '<a href="#' + page + '" class="bolinha-tempo nomarginleft">'+
+                  '<div class="bolinha clicado"></div>'+
+                  '<span class="span_selecionado">'+page+'</span>'+
+                 '</a>';
             },
             event:  'click',
             method: 'scroll'

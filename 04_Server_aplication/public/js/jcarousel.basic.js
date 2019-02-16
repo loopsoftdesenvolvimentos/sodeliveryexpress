@@ -25,11 +25,13 @@
             });
 
         $('.jcarousel-pagination')
-            .on('jcarouselpagination:active', 'a', function() {
-                $(this).addClass('active');
+            .on('jcarouselpagination:active', function() {
+              $(this).addClass('active');
+              $('.bolinha').addClass('clicado');
             })
-            .on('jcarouselpagination:inactive', 'a', function() {
-                $(this).removeClass('active');
+            .on('jcarouselpagination:inactive', function() {
+              $(this).removeClass('active');
+              $('.bolinha').removeClass('clicado');
             })
             .jcarouselPagination();
     });
