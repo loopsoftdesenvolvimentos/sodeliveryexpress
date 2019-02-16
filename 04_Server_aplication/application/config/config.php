@@ -1,8 +1,10 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+
 $config['base_url'] = 'http://localhost/sodeliveryexpress/04_Server_aplication';
 // $config['base_url'] = 'http://sodeliveryexpress.empresarial.ws/';
+// $config['base_url'] = 'http://localhost/sub/sodeliveryexpress/04_Server_aplication/';
 
 
 $config['index_page'] = 'index.php';
@@ -16,8 +18,9 @@ $config['uri_protocol']	= 'REQUEST_URI';
 $config['url_suffix'] = '';
 
 
-$config['language']	= 'english';
+$config['language']	= 'portuguese-brazilian';
 
+$config['sess_encrypt_cookie']	= TRUE;
 
 $config['charset'] = 'UTF-8';
 

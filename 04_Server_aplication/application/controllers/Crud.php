@@ -10,8 +10,7 @@ class Crud extends CI_Controller {
 		$this->load->helper('url');
 		$this->load->model('Model');
 		$this->load->library('form_validation');
-		$this->load->helper(array('form', 'url'));
-	}
+		$this->load->helper(array('form', 'url'));	}
 	public function cadastrar_empresa()
 	{
 
@@ -39,21 +38,16 @@ class Crud extends CI_Controller {
 		$this->form_validation->set_rules('Whatsapp','Whatsapp','required');
 		$this->form_validation->set_rules('email_autentificação','E-mail de autentificação','required');
 		$this->form_validation->set_rules('senha','Senha autentificação','required');
-
 		if ($this->form_validation->run() == TRUE) {
-
                 $config['upload_path']    = 'public/uploads/';
                 $config['allowed_types']  = 'jpg|png|jpeg';
                 $config['max_size']       = 10000;
                 $config['max_width']      = 10240;
                 $config['max_height']     = 76800;
-
                 $this->load->library('upload', $config);
-
-                if (!$this->upload->do_upload('imagem'))
+                if (!$this->upload->do_upload('client_name'))
                 {
                         $error = array('error' => $this->upload->display_errors());
-                        print_r($error);
                 }
                 else
                 {
@@ -96,7 +90,10 @@ class Crud extends CI_Controller {
 			         }
           }
 		}else{
-			$this->load->view('cadastros');
+			$data['estados']= $this->Model->all_estados();
+			$data['ramo'] = $this->Model->all_ramos();
+			$this->load->view('cadastros',$data);
 		}
 	}
+	
 }

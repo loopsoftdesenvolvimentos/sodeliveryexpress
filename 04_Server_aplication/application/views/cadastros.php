@@ -5,7 +5,7 @@
    <?php include('componentes/header.inc'); ?>
     <main>
       <div class="container-cadastro content">
-        <form action="<?php echo base_url()?>crud/cadastrar_empresa" method="post">
+        <?php echo form_open_multipart('crud/cadastrar_empresa');?>
             <div class="container-cadastro-espacos">
               <div class="container-cadastro-titulo">
                   <h1>Empresa</h1>
@@ -217,11 +217,10 @@
               <input type="submit" value="Confirmar cadastro">
           </div>
         </form>
-        <div class="mensagem">
-            <?php   echo validation_errors('<div class="alert">','</div>'); ?>
-        </div>
+         <?php 
+           echo validation_errors('<div id="mensagem">','</div>');
+          ?>
       </div>
-
     </main>
     <div class="clear"></div>
     <div class="borderred"></div>
@@ -231,5 +230,8 @@
   <script type="text/javascript" src="<?php echo base_url()?>public/js/menu_mobile.js"></script>
   <script type="text/javascript" src="<?php echo base_url()?>public/js/cep.js"></script>
   <script type="text/javascript" src="<?php echo base_url()?>public/js/select_populado.js"></script>
+  <script type="text/javascript">
+    select_populado_simples('select[name="Estados"]','select[name="Cidade"]');
+  </script>
   </body>
 </html>

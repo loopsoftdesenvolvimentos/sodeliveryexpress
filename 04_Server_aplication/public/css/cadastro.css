@@ -72,7 +72,7 @@ input,select{
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 3rem;
 }
-.container-cadastro-input-button input[type='submit']{
+.container-cadastro-input-button input[type='submit'], input[type='button']{
   border:none;
 	margin-top: 30px;
   background:var(--vermelho);
@@ -93,9 +93,8 @@ input,select{
 }
 .mensagem .alert{
 	background:var(--vermelho);
-	margin-bottom:10px;
-	padding:0.6rem;
-	color:var(--branco);
+	padding-left:10px;
+	color:var(--branco_2);
 }
 .info-extra{
 	background:#fdfdfd;

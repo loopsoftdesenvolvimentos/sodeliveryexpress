@@ -133,6 +133,15 @@
 
   <script type="text/javascript" src="<?php echo base_url()?>public/js/menu_mobile.js"></script>
   <script type="text/javascript" src="<?php echo base_url() ?>public/js/select_populado.js"></script>
+  <script type="text/javascript">
+      filtrar_input('input[name="search"]','#sumir');
+      //
+      select_populado('select[name="Destino"]','select[name="Destino_cidades"]','#sumir1','/pages/empresas_filter/cidade/','/pages/empresas_filter/estados/');
+      //
+      select_populado('select[name="estado_empresa"]','select[name="cidades_empresas"]','','/pages/empresas_filter/cidade/','/pages/empresas_filter/estados/');
+      //
+      select_populado('select[name="Origem"]','select[name="cidades"]','#sumir','/pages/empresas_filter/cidade/','/pages/empresas_filter/estados/');
 
+  </script>
   </body>
 </html>
