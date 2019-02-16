@@ -6,10 +6,10 @@ $active_group = 'default';
 $query_builder = TRUE;
 
 $db['default'] = array(
-	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
+	'dsn'	=> '186.202.152.36',
+	'hostname' => 'sodelivery.mysql.dbaas.com.br',
+	'username' => 'sodelivery',
+	'password' => 'Marc9951',
 	'database' => 'sodelivery',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
