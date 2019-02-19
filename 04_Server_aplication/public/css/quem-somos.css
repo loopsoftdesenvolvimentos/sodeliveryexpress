@@ -1,93 +1,240 @@
+.divisao{
+  background: url(../img/truck-sodelivery.jpg) no-repeat center center;
+  background-size: cover;
+  height: 50vh;
+}
+.btns_carrousel{
+  cursor: pointer;
+}
+.btns{
+  cursor: pointer;
+}
+.hide{
+  display: none;
+}
+.box-central{
+  box-shadow: 0px 3px 30px rgba(0, 0, 0, 0.45);
+  width: 95%;
+  margin: 0 auto;
+  padding: 1rem;
+  background: #fff;
+  margin-top: 30px;
+}
 
-.quem-somos h2{
-	/*background: var(--vermelho);*/
-	/*color: #fff;*/
-	border-bottom: solid 1px var(--vermelho);
-	width: 85%;
-	margin: 0 auto;
-	font-family: 'roboto';
-	font-weight: bold;
+.menu-lateral{
+  width: 100%;
+}
+
+.menu-lateral h3,
+.carousel h3{
+	padding: 0.4rem;
+	text-align: left;
 	text-transform: uppercase;
-	padding: 1rem;
-	text-align: center;
+	font-weight: 700;
+	color: var(--vermelho);
 }
 
-.container-textos{
-	width: 95%;
-	margin: 0 auto;
-	padding: 1rem;
-}
-
-.container-textos p{
-	font-size: 16px;
-	margin-bottom: 20px;
-	text-align: justify;
-}
-
-.container-triforce{
-	background: rgba(0,0,0,0.07);
-}
-
-.triforce{
-	padding: 1rem;
-}
-
-.triforce p{
-	width: 95%;
-	text-align: justify;
-	margin: 0 auto;
+.lista-lateral a{
 	font-size: 0.9rem;
+	color: var(--preto);
 }
 
-.imagem-quem-somos{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+
+.lista-lateral .selecionado{
+	font-weight: 700;
+	background: var(--vermelho_claro);
+}
+
+.lista-lateral li{
+	padding: 0.3rem;
+	margin-bottom: 10px;
+}
+
+.container-carousel img{
+  width: 200px;
+}
+
+.carousel h3{
+	border-bottom: solid 1px var(--vermelho);
+}
+
+.container-carousel {
+	margin-top: 2px;
 	padding: 1rem;
+	position: relative;
 }
 
-
-.imagem-quem-somos img{
-	width: 95%;
+.left,
+.right{
+	font-size: 3rem;
+	font-size: 700;
+	color: var(--preto);
+	position: absolute;
 }
 
-.nome-triforce{
-	padding: 0.5rem;
+.left{
+	left: 0px;
+	top: 150px;
 }
 
-.nome-triforce img{
-	width: 55px;
-	padding: 0.5rem;
+.right{
+	right: 0px;
+	top: 150px;
 }
 
-.nome-triforce h3{
-	font-size: 1.3rem;
-	font-weight: bold;
+.texto{
+	width: 40%;
+	margin-left: 20px;
 }
 
-@media screen and (min-width: 768px){
-	.quem-somos h2{
-		padding: 0.5rem;
-		width: 25%;
+.texto p{
+	margin-top: 10px;
+}
+
+.texto span{
+	font-weight: 700;
+	font-size: 1.4rem;
+	color: var(--vermelho);
+}
+
+.linha-tempo{
+	display: none;
+}
+
+.linha-tempo{
+	display: none;
+}
+
+@media screen and (min-width: 764px){
+	.quem-somos{
+		position: relative;
+		height: 100vh;
+		z-index: 0;
 	}
 
-	.imagem-quem-somos{
-		align-items: unset;
-		float: left;
+	.box-central{
+		position: absolute;
+		z-index: 1;
+  	top: 20%;
+ 		left: 0;
+  	right: 0;
 	}
 
-	.imagem-quem-somos img{
-		width: 300px;
+	.left{
+		top: 130px;
+	}
+
+	.right{
+		top: 130px;
+	}
+
+	.container-carousel{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.texto{
+		width: 80%;
 	}
 }
 
 @media screen and (min-width: 1224px){
-
-	.container-triforce{
-		display: flex;
+	.divisao{
+		height: 45vh;
 	}
-	.triforce{
-		width: 40%;
+
+	.itens-flex{
+		display: flex;
+		align-items: flex-start;
+	}
+
+	.menu-lateral{
+		width: 80%;
+	}
+
+	.box-central{
+		width: 1038px;
+		height: 70vh;
+	}
+
+	.container-carousel img{
+		width: 230px;
+	}
+
+	.container-carousel{
+		flex-direction: row;
+	}
+
+	.texto{
+    width: 330px;
+    text-align: justify;
+	}
+  .texto span {
+    font-size: 2.8rem;
+    font-weight: 900;
+  }
+
+	.left{
+		left: 5px;
+		top: 80px;
+	}
+
+	.right{
+		right: 5px;
+		top: 80px;
+	}
+
+	.linha-tempo{
+		display: flex;
+		align-items: center;
+		padding: 0.5rem;
+		position: relative;
+		top: 50px;
+	}
+
+	.bolinha-tempo{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-left: 30px;
+    cursor: pointer;
+	}
+	.bolinha{
+		width: 20px;
+		height: 20px;
+		background: var(--branco);
+		border: solid 2px var(--preto);
+		border-radius: 200px;
+		z-index: 1;
+    transition: all ease-in .2s;
+	}
+  .bolinha-tempo:hover .bolinha{
+    background: var(--vermelho);
+  }
+	.nomarginleft{
+		margin-left: 0px;
+	}
+
+	.clicado{
+    border: solid 4px var(--vermelho);
+	}
+
+	.span_selecionado{
+		color: var(--vermelho);
+		font-weight: 700;
+	}
+
+	.linha-entre-tempo{
+		background: var(--preto);
+		height: 1px;
+		width: 100%;
+		right: 0px;
+		top: 18px;
+		position: absolute;
+		z-index: 0;
+	}
+
+	.carousel{
+		height: 50vh;
 	}
 }
-

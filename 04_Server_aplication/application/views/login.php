@@ -11,7 +11,7 @@
       </div>
       <section id="Assinantecontent" class="tirar_display trocar_display column">
         <div class="icon-home">
-          <a href="index.html">
+          <a href="index">
             <img src="<?php echo base_url() ?>public/img/icons/home.svg" alt="icons">
           </a>
         </div>
@@ -37,7 +37,7 @@
     </section>
     <section id="Veiculocontent" class="tirar_display column">
       <div class="icon-home">
-        <a href="index.html">
+        <a href="index">
           <img src="<?php echo base_url() ?>public/img/icons/home.svg" alt="icons">
         </a>
       </div>

@@ -147,5 +147,8 @@
         <p>&copy; <b>Loop Soft</b> Internet Serviços LTDA</p>
       </div>
     </footer>
+
+    
+  <script type="text/javascript" src="<?php echo base_url()?>public/js/menu_mobile.js"></script>
   </body>
 </html>

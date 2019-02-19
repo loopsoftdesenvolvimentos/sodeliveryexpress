@@ -45,14 +45,14 @@ header{
 .menu-bar{
   width: 100%;
   padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-bottom: 3rem;
   background: var(--vermelho);
   margin-top: 10px;
   position: relative;
 }
 .menu-mobile {
   position: absolute;
-  top: 13px;
+  top: 8px;
   right: 15px;
   cursor: pointer;
 }
@@ -90,7 +90,7 @@ header{
 
 nav ul{
   list-style: none;
-  margin-top: 10px;
+  margin-top: 50px;
 }
 nav li{
   padding: 0.25rem 0.25rem;
@@ -433,33 +433,7 @@ footer{
   }
 
   .menu-mobile img{
-    width: 70px;
-  }
-
-  .mobile{
-    margin-right: 20px;
-  }
-  nav a{
-    border-bottom: none;
-    margin-left: 20px;
-  }
-
-  .nomarginleft{
-    margin: 0;
-  }
-
-  nav ul{
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-  }
-
-  nav li{
-    padding: 0;
-  }
-
-  .icon-menu{
-    flex-direction: column;
+    width: 55px;
   }
 
   .icon-menu img{
@@ -524,6 +498,9 @@ footer{
 
 
 @media screen and (min-width: 1224px){
+  .nomarginleft{
+    margin: 0;
+  }
   .mobile{
     display: none;
   }
@@ -562,6 +539,17 @@ footer{
     justify-content: space-between;
   }
 
+  nav ul{
+   display: flex;
+   margin-top: 10px;
+   align-items: center;
+   justify-content: center;
+  }
+
+  .icon-menu{
+    flex-direction: column;
+  }
+
   nav a{
     border-bottom: none;
     margin-left: 5px;
@@ -590,6 +578,7 @@ footer{
 
   .menu-bar{
     background-image: -webkit-linear-gradient(150deg, var(--preto) 100px, var(--vermelho) 8%);
+    padding-bottom: 1rem;
   }
 
   .conta{
@@ -680,7 +669,7 @@ footer{
     display: flex;
     align-items: flex-start;
     justify-content: space-around;
-    width: 1300px;
+    width: 1250px;
     margin: 0 auto;
   }
 
