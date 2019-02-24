@@ -36,15 +36,20 @@
 
 .menu-bar{
 	position: relative;
+	padding-bottom: 3rem;
+}
+
+nav ul{
+	margin-top: 50px;
 }
 
 .conta{
 	position: absolute;
-	top: 118px;
+	top: 114px;
 }
 
 .config img{
-	width: 50px;
+	width: 45px;
 }
 
 .config span{
@@ -234,7 +239,11 @@
 	text-align: center;
 	font-size: 0.9rem;
 }
-@media screen and (min-width: 728px){
+@media screen and (min-width: 768px){
+
+	.menu-mobile img{
+		width: 55px;
+	}
 
 	.logo{
 		width: 100vw;
@@ -254,11 +263,13 @@
 	}
 
 	nav ul{
-		flex-direction: column !important;
+		flex-direction: column;
+		margin-top: 30px;
 	}
 
 	nav a{
-		margin-left: 0 !important;
+		margin-left: 0;
+		border: none;
 	}
 
 	.icon-menu{
@@ -329,11 +340,16 @@
 
 @media screen and (min-width: 1224px){
 
+	.menu-bar{
+		padding-bottom: 1rem;
+	}
+
 	.logo{
 		width: 40vw;
 	}
-	.logo img{
-		margin-left: 100px;
+
+	.conta{
+		position: relative;
 	}
 	.conta{
 		position: relative;
@@ -423,10 +439,6 @@ nav ul{
 
 	.areas{
 		margin-top: 0;
-	}
-
-	.area-nome{
-		font-size: 1.1rem;
 	}
 
 	.container a{

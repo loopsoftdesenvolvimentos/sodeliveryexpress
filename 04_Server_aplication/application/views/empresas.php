@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
   <?php include('componentes/head_empresa.inc') ?>
@@ -43,7 +42,7 @@
                       <select name="estado_empresa">
                          <option selected disabled>Selecione estado</option>
                          <?php foreach ($estados as $estados_item) {
-                          echo'<option value='.$estados_item->id_estado.'>'.$estados_item->sigla_estads.'</option>' ;
+                          echo'<option value="'.$estados_item->id_estado.'">'.$estados_item->sigla_estads.'</option>' ;
                         } ?>
                       </select>
                   </div>
@@ -82,6 +81,7 @@
                     <img src="<?php echo base_url()?>public/img/letras/empresa.svg">
                 </section>
                 <?php 
+                if( !empty($empresas) ) {
                   if(count($empresas) > 0){
                       echo '<section  class="continer-total-item">
                       <h1>'.$total.' empresas encontradas</h1>
@@ -115,6 +115,11 @@
                     echo '<section  class="continer-total-item">
                             <h1> 0 empresas encontradas</h1>
                           </section>';
+                  }
+                  }else{
+                   echo '<section  class="continer-total-item">
+                            <h1> 0 empresas encontradas</h1>
+                          </section>'; 
                   }
                  ?>
                  <section class="paginação">

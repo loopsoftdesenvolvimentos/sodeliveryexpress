@@ -42,7 +42,7 @@
       </div>
       <div class="logo-publicidade content">
         <div class="logo">
-          <a href="index.php">
+          <a href="<?php echo base_url()?>">
             <img src="<?php echo base_url()?>public/img/logo.png" alt="logo Só Delivery">
           </a>
         </div>
@@ -55,7 +55,7 @@
 
       <div class="menu-conta">
         <div class="menu-bar">
-          <!-- <div class="pesquisa">
+          <div class="pesquisa" style="display: none;">
             <input type="text" id="pesquisa">
             <button type="submit">Buscar</button>
           </div> -->
@@ -73,7 +73,7 @@
                 </a>
               </li>
               <li>
-                <a href="<?php echo base_url()?>pages/index" class="nomarginleft">
+                <a href="<?php echo base_url()?>" class="nomarginleft">
                   <div class="icon-menu">
                     <img src="<?php echo base_url()?>public/img/icons/home.svg" alt="icone de frete">
                     <p>Home</p>

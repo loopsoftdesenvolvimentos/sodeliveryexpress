@@ -6,10 +6,10 @@
             <h3>Sobre Nós</h3>
 
             <ul>
-              <li><a href="contato">Contato</a></li>
-              <li><a href="quem_somos">Quem somos</a></li>
+              <li><a href="<?php echo base_url()?>pages/contato">Contato</a></li>
+              <li><a href="<?php echo base_url()?>pages/quem-somos">Quem somos</a></li>
               <li><a href="https://www.youtube.com/watch?v=DPB_IVicb7Y">Como funciona</a></li>
-              <li><a href="estatisticas">Estatísticas</a></li>
+              <li><a href="<?php echo base_url()?>pages/estatisticas">Estatísticas</a></li>
             </ul>
           </div>
 

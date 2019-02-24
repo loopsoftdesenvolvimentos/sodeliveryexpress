@@ -46,14 +46,14 @@ header{
   width: 100%;
   height: 75px;
   padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-bottom: 3rem;
   background: var(--vermelho);
   margin-top: 10px;
   position: relative;
 }
 .menu-mobile {
   position: absolute;
-  top: 13px;
+  top: 8px;
   right: 15px;
   cursor: pointer;
 }
@@ -498,6 +498,9 @@ footer{
 
 
 @media screen and (min-width: 1224px){
+  .nomarginleft{
+    margin: 0;
+  }
   .mobile{
     display: none;
   }
@@ -536,6 +539,17 @@ footer{
     justify-content: space-between;
   }
 
+  nav ul{
+   display: flex;
+   margin-top: 10px;
+   align-items: center;
+   justify-content: center;
+  }
+
+  .icon-menu{
+    flex-direction: column;
+  }
+
   nav a{
     border-bottom: none;
     margin-left: 5px;
@@ -567,6 +581,7 @@ footer{
   .menu-bar{
     height: 100%;
     background-image: -webkit-linear-gradient(150deg, var(--preto) 100px, var(--vermelho) 8%);
+    padding-bottom: 1rem;
   }
 
   .conta{

@@ -190,6 +190,7 @@
                 </section>
                 
                 <?php 
+                 if( !empty($empresas) ) {
                   if(count($fretes) > 0){
                      echo '<section  class="continer-total-item">
                       <h1>'.$total.' Fretes encontradas</h1>
@@ -225,6 +226,11 @@
                       <h1>0 Fretes encontradas</h1>
                       </section>';
                   }
+                }else{
+                  echo '<section  class="continer-total-item">
+                      <h1>0 Fretes encontradas</h1>
+                      </section>';
+                }
                  ?>   
                     <section class="paginação">
                   <?php 

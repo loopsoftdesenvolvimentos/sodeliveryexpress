@@ -14,8 +14,6 @@ class pages extends CI_Controller {
 		$this->load->library('form_validation');
 		$this->load->library('email');
 
-
-
 		session_start();
 
 		if(!isset($_SESSION['lista']) || !isset($_SESSION['lista_empresa'])){
@@ -45,8 +43,9 @@ class pages extends CI_Controller {
 					$_SESSION['cont'] +=1;
 				}
 			}
+			$url = urldecode($pesquisa);
 			if($_SESSION['cont'] == 0){
-				array_push($_SESSION['lista'],['tipo'=>$tipo,'select'=>'veiculo_categoria.desc_veiculo_categoria = "'.$pesquisa.'"','pesquisa'=>$pesquisa]);
+				array_push($_SESSION['lista'],['tipo'=>$tipo,'select'=>'veiculo_categoria.desc_veiculo_categoria = "'.$url.'"','pesquisa'=>$url]);
 			}
 
 		}
@@ -57,8 +56,9 @@ class pages extends CI_Controller {
 					$_SESSION['cont'] +=1;
 				}
 			}
+			$url = urldecode($pesquisa);
 			if($_SESSION['cont'] == 0){
-				array_push($_SESSION['lista'],['tipo'=>$tipo,'select'=>' frete.cidade_saida = "'.$pesquisa.'"','pesquisa'=>$pesquisa]);
+				array_push($_SESSION['lista'],['tipo'=>$tipo,'select'=>' frete.cidade_saida = "'.$url.'"','pesquisa'=>$url]);
 			}
 
 		}
@@ -69,8 +69,9 @@ class pages extends CI_Controller {
 					$_SESSION['cont'] +=1;
 				}
 			}
+			$url = urldecode($pesquisa);
 			if($_SESSION['cont'] == 0){
-				array_push($_SESSION['lista'],['tipo'=>$tipo,'select'=>' frete.uf_saida = "'.$pesquisa.'"','pesquisa'=>$pesquisa]);
+				array_push($_SESSION['lista'],['tipo'=>$tipo,'select'=>' frete.uf_saida = "'.$url.'"','pesquisa'=>$url]);
 			}
 
 		}
@@ -82,8 +83,9 @@ class pages extends CI_Controller {
 					$_SESSION['cont'] +=1;
 				}
 			}
+			$url = urldecode($pesquisa);
 			if($_SESSION['cont'] == 0){
-				array_push($_SESSION['lista'],['tipo'=>$tipo,'select'=>' frete.cidade_entrega = "'.$pesquisa.'"','pesquisa'=>$pesquisa]);
+				array_push($_SESSION['lista'],['tipo'=>$tipo,'select'=>' frete.cidade_entrega = "'.$url.'"','pesquisa'=>$url]);
 			}
 
 		}
@@ -94,8 +96,9 @@ class pages extends CI_Controller {
 					$_SESSION['cont'] +=1;
 				}
 			}
+			$url = urldecode($pesquisa);
 			if($_SESSION['cont'] == 0){
-				array_push($_SESSION['lista'],['tipo'=>$tipo,'select'=>' frete.uf_entrega = "'.$pesquisa.'"','pesquisa'=>$pesquisa]);
+				array_push($_SESSION['lista'],['tipo'=>$tipo,'select'=>' frete.uf_entrega = "'.$url.'"','pesquisa'=>$url]);
 			}
 
 		}
@@ -243,8 +246,9 @@ class pages extends CI_Controller {
 					$_SESSION['cont'] +=1;
 				}
 			}
+			$url = urldecode($pesquisa);
 			if($_SESSION['cont'] == 0){
-				array_push($_SESSION['lista_empresa'],['tipo'=>$tipo,'select'=>'empresa.nome_fantasia like "%'.$pesquisa.'%"','pesquisa'=>$pesquisa]);
+				array_push($_SESSION['lista_empresa'],['tipo'=>$tipo,'select'=>'empresa.nome_fantasia like "%'.$url.'%"','pesquisa'=>$url]);
 			}
 		}
 		if($tipo == 'cidade'){
@@ -253,8 +257,9 @@ class pages extends CI_Controller {
 					$_SESSION['cont'] +=1;
 				}
 			}
+			$url = urldecode($pesquisa);
 			if($_SESSION['cont'] == 0){
-				array_push($_SESSION['lista_empresa'],['tipo'=>$tipo,'select'=>' cidades.nome_cidade = "'.$pesquisa.'"','pesquisa'=>$pesquisa]);
+				array_push($_SESSION['lista_empresa'],['tipo'=>$tipo,'select'=>' cidades.nome_cidade = "'.$url.'"','pesquisa'=>$url]);
 			}
 		}
 		if($tipo == 'estados'){
@@ -263,8 +268,9 @@ class pages extends CI_Controller {
 					$_SESSION['cont'] +=1;
 				}
 			}
+			$url = urldecode($pesquisa);
 			if($_SESSION['cont'] == 0){
-				array_push($_SESSION['lista_empresa'],['tipo'=>$tipo,'select'=>' estados.sigla_estads = "'.$pesquisa.'"','pesquisa'=>$pesquisa]);
+				array_push($_SESSION['lista_empresa'],['tipo'=>$tipo,'select'=>' estados.sigla_estads = "'.$url.'"','pesquisa'=>$url]);
 			}
 		}
 		if($tipo == 'ramo'){
@@ -273,8 +279,9 @@ class pages extends CI_Controller {
 					$_SESSION['cont'] +=1;
 				}
 			}
+			$url = urldecode($pesquisa);
 			if($_SESSION['cont'] == 0){
-				array_push($_SESSION['lista_empresa'],['tipo'=>$tipo,'select'=>'ramo.desc_ramo = "'.$pesquisa.'"','pesquisa'=>$pesquisa]);
+				array_push($_SESSION['lista_empresa'],['tipo'=>$tipo,'select'=>'ramo.desc_ramo = "'.$url.'"','pesquisa'=>$url]);
 			}
 		}
        $config["base_url"] = base_url() . "/pages/empresas";
