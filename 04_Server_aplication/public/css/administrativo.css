@@ -1,7 +1,9 @@
-header{
-	border-bottom: solid 10px var(--vermelho);
+.icon-menu p{
+	text-align: center;
 }
-
+.icon-menu img{
+	width: 40px;
+}
 .logo-config{
 	width: 100%;
 	position: relative;
@@ -25,22 +27,33 @@ header{
 
 .config{
 	display: flex;
-	flex-direction: column;
+	width: 100%;
 	justify-content: center;
 	align-items: center;
 	padding: 0.5rem;
-	position: absolute;
-	top: 7px;
-	right: 7px;
 	cursor: pointer;
 }
 
+.menu-bar{
+	position: relative;
+}
+
+.conta{
+	position: absolute;
+	top: 118px;
+}
+
 .config img{
-	width: 42px;
+	width: 50px;
 }
 
 .config span{
-	font-size: 0px;
+	font-size: 1rem;
+	color: var(--branco_2);
+}
+
+.conta a{
+	border: unset;
 }
 
 #blank{
@@ -52,14 +65,19 @@ header{
 	padding: 2.5rem;
 	width: 94%;
 	background: var(--amarelo);
-	margin: 10px 10px;
+	margin: 10px auto;
 	border-radius: 10px;
 }
 
 .info-conta{
 	background: var(--azul);
 }
-
+.img_titulo{
+	padding:10px 10px;
+}
+.img_titulo img{
+	width:350px;
+}
 .info-name{
 	display: flex;
 	align-items: center;
@@ -112,7 +130,7 @@ header{
 }
 
 .quadro-avisos{
-	width: 80%;
+	width: 95%;
 	margin: 0 auto;
 	padding: 1rem;
 	border-radius: 5px;
@@ -176,6 +194,7 @@ header{
 	font-family: 'Raleway Bold', sans-serif;
 	padding: 0.5rem;
 	text-align: left;
+	font-size: 0.9rem;
 	text-transform: uppercase;
 	color: var(--branco-mesmo);
 }
@@ -198,7 +217,7 @@ header{
 }
 
 .container img{
-	width: 100px;
+	width: 60px;
 	margin-bottom: 10px;
 }
 
@@ -213,16 +232,12 @@ header{
 }
 .area-container .container a{
 	text-align: center;
+	font-size: 0.9rem;
 }
 @media screen and (min-width: 728px){
-	.logo-config{
-		display: flex;
-		justify-content: space-between;
-		background-image: -webkit-linear-gradient(150deg, var(--preto) 190px, var(--branco_2) 10%);
-	}
 
 	.logo{
-		width: 65vw;
+		width: 100vw;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -235,13 +250,32 @@ header{
 	}
 
 	.logo img{
-		width: 180px;
+		width: 250px;
+	}
+
+	nav ul{
+		flex-direction: column !important;
+	}
+
+	nav a{
+		margin-left: 0 !important;
+	}
+
+	.icon-menu{
+		display: flex !important;
+		flex-direction: row !important;
+		padding: 0.5rem !important;
+		border-bottom: solid 1px var(--amarelo);
+	}
+
+	.icon-menu p{
+		text-align: unset;
 	}
 
 	.config{
+		width: unset;
 		position: static;
 		padding: 1rem;
-		background-image: -webkit-linear-gradient(150deg, var(--preto) 190px, var(--branco_2) 20%);
 	}
 	.config span{
 		font-size: 1rem;
@@ -252,10 +286,13 @@ header{
 		display: none;
 	}
 
+	.conta{
+		position: static;
+	}
+
 	#blank{
 		display: block;
-		width: 30px;
-		margin-bottom: 10px
+		width: 50px;
 	}
 
 	.informacoes-topo{
@@ -265,6 +302,12 @@ header{
 	.info-servico,
 	.info-conta{
 		width: 400px;
+	}
+
+	.sequencia{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 
 	.area1,
@@ -287,18 +330,63 @@ header{
 @media screen and (min-width: 1224px){
 
 	.logo{
-		width: 60vw;
+		width: 40vw;
 	}
 	.logo img{
 		margin-left: 100px;
 	}
-
+	.conta{
+		position: relative;
+	}
 	.config{
-		position: sticky;
+		position: absolute;
 		background-image: -webkit-linear-gradient(150deg, #000 220px, var(--branco-mesmo) 20%);
-		top: 5px;
+		top: 1px;
 		right: 35px;
 	}
+	.config img{
+		width: 50px!important;
+	}
+nav{
+	width: 80%;
+	margin: 0 auto;
+}
+nav ul{
+		flex-direction: row !important;
+		padding: 1rem !important;
+		margin-top: 0px !important;
+	}
+
+	nav a{
+		margin-left: 0px !important;
+	}
+
+	.icon-menu{
+		display: flex !important;
+		flex-direction: column !important;
+		justify-content: center !important;
+		align-items: center !important;
+		padding: 0rem !important;;
+		border-bottom: none !important;
+
+	}
+
+	.icon-menu p{
+		text-align: center !important;
+		padding: 0;
+	}
+
+	.config{
+		position: static;
+		align-items: center;
+		display: flex;
+	}
+
+	.conta{
+		position: static;
+	}
+
+
 	.config #blank{
 		transition: all ease-out .4s;
 	}

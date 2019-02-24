@@ -19,7 +19,7 @@
             <div class="content-estatica-veiculos">
                 <p> <b>Check-in é gratuito</b>  e uma maneira fácil de conseguir cargas</p>
                 <div class="content-estatica-veiculos-button">
-                 <a href="<?php echo base_url() ?>/Auth_veiculo/cadastro_veiculo"><button> Cadastre seu veiculo</button></a>
+                 <a href="<?php echo base_url() ?>pages/cadastro_veiculo/#veiculos"><button> Cadastre seu veiculo</button></a>
                 </div>
             </div>
         </div>

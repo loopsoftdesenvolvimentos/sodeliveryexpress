@@ -12,14 +12,14 @@ class pages extends CI_Controller {
 		$this->load->model('Auth_model');
 		$this->load->library('pagination');
 		$this->load->library('form_validation');
-		$this->load->library('email');		
-	
+		$this->load->library('email');
+
 
 
 		session_start();
 
 		if(!isset($_SESSION['lista']) || !isset($_SESSION['lista_empresa'])){
-			$_SESSION['lista'] = [];	
+			$_SESSION['lista'] = [];
 			$_SESSION['lista_empresa'] = [];
 		}else{
 			 $_SESSION['lista'];
@@ -37,7 +37,7 @@ class pages extends CI_Controller {
 
 		if ($tipo == 'remover') {
 		     unset($_SESSION['lista'][$pesquisa]);
-		}	
+		}
 		if($tipo == 'categoria'){
 
 			foreach ($_SESSION['lista'] as $key => $lista) {
@@ -48,7 +48,7 @@ class pages extends CI_Controller {
 			if($_SESSION['cont'] == 0){
 				array_push($_SESSION['lista'],['tipo'=>$tipo,'select'=>'veiculo_categoria.desc_veiculo_categoria = "'.$pesquisa.'"','pesquisa'=>$pesquisa]);
 			}
-			
+
 		}
 		if($tipo == 'cidade_origem'){
 
@@ -60,7 +60,7 @@ class pages extends CI_Controller {
 			if($_SESSION['cont'] == 0){
 				array_push($_SESSION['lista'],['tipo'=>$tipo,'select'=>' frete.cidade_saida = "'.$pesquisa.'"','pesquisa'=>$pesquisa]);
 			}
-			
+
 		}
 		if($tipo == 'estado_origem'){
 
@@ -72,7 +72,7 @@ class pages extends CI_Controller {
 			if($_SESSION['cont'] == 0){
 				array_push($_SESSION['lista'],['tipo'=>$tipo,'select'=>' frete.uf_saida = "'.$pesquisa.'"','pesquisa'=>$pesquisa]);
 			}
-			
+
 		}
 
 		if($tipo == 'cidade_saida'){
@@ -85,7 +85,7 @@ class pages extends CI_Controller {
 			if($_SESSION['cont'] == 0){
 				array_push($_SESSION['lista'],['tipo'=>$tipo,'select'=>' frete.cidade_entrega = "'.$pesquisa.'"','pesquisa'=>$pesquisa]);
 			}
-			
+
 		}
 		if($tipo == 'estado_saida'){
 
@@ -97,7 +97,7 @@ class pages extends CI_Controller {
 			if($_SESSION['cont'] == 0){
 				array_push($_SESSION['lista'],['tipo'=>$tipo,'select'=>' frete.uf_entrega = "'.$pesquisa.'"','pesquisa'=>$pesquisa]);
 			}
-			
+
 		}
 		if($tipo == 'complemento'){
 			foreach ($_SESSION['lista'] as $key => $lista) {
@@ -118,7 +118,7 @@ class pages extends CI_Controller {
 					$_SESSION['cont'] +=1;
 				}
 			}
-		
+
 			if($_SESSION['cont'] == 0){
 				if($url == 'A Combinar'){
 					array_push($_SESSION['lista'],['tipo'=>$tipo,'select'=>'frete.preco_frete = "A Combinar"','pesquisa'=>$url]);
@@ -160,7 +160,7 @@ class pages extends CI_Controller {
         $this->pagination->initialize($config);
        $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
 
-      	$data['total'] = $this->Model->all_fretes_total(); 
+      	$data['total'] = $this->Model->all_fretes_total();
         $data['link'] = $this->pagination->create_links();
 		$data['pesquisas'] = $_SESSION['lista'];
 		$data['fretes'] = $this->Model->fretes_filter($config["per_page"],$page,$_SESSION['lista']);
@@ -180,7 +180,7 @@ class pages extends CI_Controller {
         $this->pagination->initialize($config);
        $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
 
-      	$data['total'] = $this->Model->all_fretes_total(); 
+      	$data['total'] = $this->Model->all_fretes_total();
         $data['link'] = $this->pagination->create_links();
 		$data['pesquisas'] = $_SESSION['lista'];
 		$data['fretes'] = $this->Model->fretes($config["per_page"],$page);
@@ -191,8 +191,29 @@ class pages extends CI_Controller {
 		$data['categoria_veiculos'] = $this->Model->categorias_veiculos();
 		$this->load->view('frete',$data);
 	}
+	public function fretesEstado($q)
+	{
+
+		$config["base_url"] = base_url() . "/pages/fretes";
+			$config["total_rows"] = $this->Model->all_fretes_rows();
+			$config["per_page"] = 4;
+			$config["uri_segment"] = 3;
+			 $this->pagination->initialize($config);
+			$page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+
+			 $data['total'] = $this->Model->all_fretes_total();
+			 $data['link'] = $this->pagination->create_links();
+	 $data['pesquisas'] = $_SESSION['lista'];
+	 $data['fretes'] = $this->Model->fretesEstado($q);
+	 $data['carroceria'] = $this->Model->carroceria_group_by();
+	 $data['complemento'] = $this->Model->Complemento_group_by();
+	 $data['rastreador'] = $this->Model->rastreador_group_by();
+	 $data['estados'] = $this->Model->all_estados();
+	 $data['categoria_veiculos'] = $this->Model->categorias_veiculos();
+	 $this->load->view('frete',$data);
+	}
 	public function empresas()
-	{	
+	{
        $config["base_url"] = base_url() . "/pages/empresas";
        $config["total_rows"] = $this->Model->all_empresas_rows();
        $config["per_page"] = 2;
@@ -200,7 +221,7 @@ class pages extends CI_Controller {
         $this->pagination->initialize($config);
        $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
 
-      	$data['total'] = $this->Model->all_empresas_total(); 
+      	$data['total'] = $this->Model->all_empresas_total();
         $data['link'] = $this->pagination->create_links();
 		$data['pesquisas'] = $_SESSION['lista_empresa'];
 		$data['estados'] = $this->Model->all_estados();
@@ -263,7 +284,7 @@ class pages extends CI_Controller {
        $this->pagination->initialize($config);
        $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
 
-      	$data['total'] = $this->Model->all_empresas_total(); 
+      	$data['total'] = $this->Model->all_empresas_total();
         $data['link'] = $this->pagination->create_links();
 		$data['pesquisas'] = $_SESSION['lista_empresa'];
 		$data['estados'] = $this->Model->all_estados();
@@ -273,7 +294,7 @@ class pages extends CI_Controller {
 	}
 	public function veiculos()
 	{
-		
+
 
      	$data['check_in_ativo'] = $this->Auth_model->check_in_ativo();
      	$data['veiculos_cadastrados'] = $this->Auth_model->veiculos_cadastrados();
@@ -298,29 +319,39 @@ class pages extends CI_Controller {
 	}
 
 	public function select_cidades($id)
-	{		
+	{
 		echo $this->Model->all_cidades($id);
 	}
 	public function quem_somos()
 	{
-		$this->load->view('quem_somos');
+		$this->load->view('quem-somos');
 	}
 	public function administrativo()
 	{
 		$this->load->view('administrativo');
 	}
-	
+
 	public function cadastro_empresa()
 	{
 		$data['estados']= $this->Model->all_estados();
 		$data['ramo'] = $this->Model->all_ramos();
 		$this->load->view('cadastros',$data);
 	}
+	public function cadastro_veiculo(){
+		$this->load->view('cadastros');
+	}
+	public function cadastro_se(){
+		$this->load->view('cadastros');
+	}
 	public function assinante()
 	{
 		$this->load->view('assinante');
 	}
-	public function areavizualizacao()
+	public function areacadastro()
+	{
+		$this->load->view('areacadastro');
+	}
+	public function areamonitoramento()
 	{
 		$this->load->view('areavizualizacao');
 	}
@@ -335,7 +366,7 @@ class pages extends CI_Controller {
 	}
 	public function email()
 	{
-         $this->load->library('email'); 
+         $this->load->library('email');
          $this->email->initialize(array(
 		  'protocol' => 'smtp',
 		  'smtp_host' => 'localhost',
@@ -345,16 +376,16 @@ class pages extends CI_Controller {
 		  'crlf' => "\r\n",
 		  'newline' => "\r\n"
 		));
-   
-         $this->email->from($this->input->post('email_empresa'),$this->input->post('empresa')); 
+
+         $this->email->from($this->input->post('email_empresa'),$this->input->post('empresa'));
          $this->email->to($this->input->post('email'));
-         $this->email->subject('Contato empresarial por '. $this->input->post('Nome')); 
-         $this->email->message($this->input->post('mensagem')); 
-   
+         $this->email->subject('Contato empresarial por '. $this->input->post('Nome'));
+         $this->email->message($this->input->post('mensagem'));
+
          if($this->email->send()) {
          	redirect($_SERVER["REQUEST_URI"],'refresh');
-         }else{ 
- 		
+         }else{
+
      	}
 	}
 	public function pesquisar_placa($pesquisa)

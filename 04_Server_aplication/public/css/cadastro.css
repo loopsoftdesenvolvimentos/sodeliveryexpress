@@ -3,6 +3,10 @@
 	margin-top: 30px;
 	margin-bottom: 50px;
 }
+.content-cadastro{
+	padding: 0 2rem;
+	margin-top: 15px;
+}
 .container-cadastro-input-button{
 	margin-bottom:15px;
 }
@@ -17,10 +21,29 @@
 	padding:10px 15px;
 	background:var(--branco_1);
 	font-weight:inherit;
+	border-radius: 10px 10px 0 0;
+}
+.titulo-primario h1{
+	font-family: 'Raleway Black', sans-serif;
+	font-size: 1.3rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	background: none;
+	border-bottom: solid 3px var(--cinza)
+
 }
 .container-cadastro-input{
 	display:flex;
 	flex-direction:column;
+}
+.container-cadastro-input-radio,
+.row{
+	display:flex;
+	flex-direction:row;
+}
+.row div{
+	width: 100%;
+	margin: 0 20px;
 }
 label{
 	line-height:2.5rem;
@@ -43,7 +66,7 @@ input,select{
 
 .container-cadastro-input-dupla{
   grid-template-columns: 1fr 1fr;
-  grid-column-gap: 2rem;	
+  grid-column-gap: 2rem;
 }
 .container-cadastro-input-tripla{
   grid-template-columns: 1fr 1fr 1fr;
@@ -57,12 +80,90 @@ input,select{
   color:var(--branco_2);
   width:150px;
 }
-#mensagem{
-	padding:.7rem .4rem;
-	margin-top:5px;
+.container-cadastro-input-submit input[type='submit']{
+	display: block;
+	margin: auto;
+	width:50%;
+	margin-top:20px;
+	background:var(--vermelho);
+	color:var(--branco_2);
+	border:none;
+	padding:0.8rem;
+	font-weight: 800;
+}
+.mensagem .alert{
 	background:var(--vermelho);
 	padding-left:10px;
 	color:var(--branco_2);
+}
+.info-extra{
+	background:#fdfdfd;
+	width:100%;
+	padding:.7rem;
+}
+.fretes-checkbox label:first-child{
+	font-weight: bold;
+	margin-top: 15px
+}
+.container-checkbox {
+	display:flex;
+	align-items:center;
+	position: relative;
+	padding-left: 35px;
+	margin-right:10px;
+	margin-bottom: 13px;
+	cursor: pointer;
+	font-size: 1rem;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.container-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+}
+.container-checkbox:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.container-checkbox input:checked ~ .checkmark {
+  background-color:var(--vermelho);
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.container-checkbox input:checked ~ .checkmark:after {
+  display: inline-block;
+}
+.container-checkbox .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.container-content-fretes-empresas-veiculos{
+	display:flex;
+	flex-direction:column;
+	width:100%;
+	margin-top:30rem;
 }
 @media screen and (min-width:640px){
 	.container-cadastro{

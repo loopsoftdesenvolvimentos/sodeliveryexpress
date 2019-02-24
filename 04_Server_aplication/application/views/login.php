@@ -11,7 +11,7 @@
       </div>
       <section id="Assinantecontent" class="tirar_display trocar_display column">
         <div class="icon-home">
-          <a href="index.html">
+          <a href="<?php echo base_url() ?>pages/index">
             <img src="<?php echo base_url() ?>public/img/icons/home.svg" alt="icons">
           </a>
         </div>
@@ -31,7 +31,7 @@
                 <input type="submit" value="Entrar">
             </div>
             <div class="container-cadastre">
-              <p>Não tem uma conta? <strong><a id="btn-cadastrar" href="cadastros.html">Cadastre-se</a></strong></p>
+              <p>Não tem uma conta? <strong><a id="btn-cadastrar" href="<?php echo base_url() ?>pages/cadastro_se">Cadastre-se</a></strong></p>
             </div>
       </form>
     </section>
