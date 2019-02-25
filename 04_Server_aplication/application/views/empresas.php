@@ -124,7 +124,7 @@
                  ?>
                  <section class="paginação">
                   <?php 
-                    if(count($empresas) > 0){
+                    if(isset($empresas)){
                       echo $link;
                     }
                    ?>

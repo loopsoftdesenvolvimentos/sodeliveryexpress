@@ -234,7 +234,7 @@
                  ?>   
                     <section class="paginação">
                   <?php 
-                    if(count($fretes) > 0){
+                    if(isset($fretes)){
                       echo $link;
                     }
                    ?>
