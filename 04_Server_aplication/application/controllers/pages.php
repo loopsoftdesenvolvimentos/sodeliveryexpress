@@ -301,8 +301,6 @@ class pages extends CI_Controller {
 	}
 	public function veiculos()
 	{
-
-
      	$data['check_in_ativo'] = $this->Auth_model->check_in_ativo();
      	$data['veiculos_cadastrados'] = $this->Auth_model->veiculos_cadastrados();
 		$this->load->view('veiculo',$data);
@@ -317,7 +315,8 @@ class pages extends CI_Controller {
 	}
 	public function duvidas()
 	{
-		$this->load->view('duvidas');
+		$data['duvidas'] = $this->Model->all_duvidas();
+		$this->load->view('duvidas',$data);
 	}
 
 	public function estatisticas()

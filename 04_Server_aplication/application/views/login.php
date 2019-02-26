@@ -2,6 +2,12 @@
 <html>
   <?php include('componentes/head_login.inc'); ?>
   <body>
+    <?php
+      if (count($_GET) > 0) {
+        $decode_get =  base64_decode($_GET["6b3c7e24c6afaaaf1c2c61160e25d71b"]);
+        if($_GET["6b3c7e24c6afaaaf1c2c61160e25d71b"] == $decode_get){
+      }
+    ?>
     <div class="container">
       <div class="tab_header">
         <ul class="tabs">
@@ -60,9 +66,35 @@
             <div class="container-cadastre">
               <p>Não tem uma conta? <strong><a id="btn-cadastrar" href="acesso_veiculo_index.html">Cadastre-se</a></strong></p>
             </div>
-          </div>
       </form>
     </section>
+  <?php }else{ ?>
+    <section class="tirar_display column">
+        <div class="icon-home">
+        <a href="index">
+          <img src="<?php echo base_url() ?>public/img/icons/home.svg" alt="icons">
+        </a>
+        </div>
+        <form action="/logar" method="post">
+            <div class="container-input">
+              <label for="email_user">Email</label>
+              <input type="text" name="email_user"  id="login_user" placeholder="Email">
+            </div>
+            <div class="container-input">
+              <label for="Senha_login">Senha</label>
+              <input type="text" name="Senha_login"  id="Senha_login" placeholder="Senha">
+            </div>
+            <div class="container-input-button">
+                <input type="submit" value="Entrar">
+            </div>
+            <div class="container-cadastre">
+              <p>Não tem uma conta? <strong><a id="btn-cadastrar" href="<?php echo base_url() ?>pages/cadastro_se">Cadastre-se</a></strong></p>
+            </div>
+          </form>
+    </section>
+  <?php } ?>
+</div>
+
     <script type="text/javascript" src=""></script>
     <script type="text/javascript" src="<?php echo base_url() ?>public/js/select_populado.js"></script>
     <script type="text/javascript">

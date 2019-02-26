@@ -16,89 +16,91 @@
         <div class="forum">
           <div class="menu-forum">
             <ul id="menu_forum">
-              <li class="menu_active">Perguntas Recentes</li>
-              <li>Maioria das Respostas</li>
-              <li>Recentemente Respondido</li>
-              <li>Sem respostas</li>
+              <li id="btn-duvidas" class="menu_active">Dúvidas</li>
+							<li id="btn-mandeDuvidas">Mande sua dúvida</li>
             </ul>
           </div>
+					<script type="text/javascript">
+            $('#btn-duvidas').click(function(){
+              $( this ).addClass('menu_active');
+              $('#btn-mandeDuvidas').removeClass('menu_active');
 
+              $('#form-mandeDuvidas').hide();
+							$('#container-duvidas').show();
+            });
+            $('#btn-mandeDuvidas').click(function(){
+              $( this ).addClass('menu_active');
+              $('#btn-duvidas').removeClass('menu_active');
+
+							$('#container-duvidas').hide();
+							$('#form-mandeDuvidas').show();
+            })
+          </script>
           <div class="clear clear"></div>
-
-          <div class="container-discussao">
-            <div class="discussao">
-              <img src="<?php echo base_url()?>public/img/pessoa.jpg">
-              <div class="item-discussao">
-                <h3>Título da discussão</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              </div>
-            </div>
-
-            <div class="end-discussao">
-              <div class="icon-item">
-                <img src="<?php echo base_url()?>public/img/icons/done.svg">
-                <span>Salvo</span>
-              </div>
-
-              <div class="icon-item">
-                <img src="<?php echo base_url()?>public/img/icons/comentario.svg">
-                <p><span>3 </span>comentários</p>
-              </div>
-
-              <div class="icon-item">
-                <img src="<?php echo base_url()?>public/img/icons/pessoa.svg">
-                <p><span>300 </span>visualizações</p>
-              </div>
-
-            </div>
+					<div id="container-duvidas">
+						<?php foreach ($duvidas as $duvida) {
+							echo '<div id="duvida'.$duvida->id_duvida.'" class="container-discussao">
+								<div class="discussao">
+									<div class="item-discussao">
+										<h3>' .$duvida->pergunta. '</h3>
+										<p>' .$duvida->resposta.'</p>
+										<p>' .$duvida->extra.'</p>
+									</div>
+								</div>
+								<div class="end-discussao">
+									<div class="icon-item">
+									 <div id="fb-root"></div>
+									 <div class="fb-share-button" data-href="http://localhost/sodeliveryexpress/04_Server_aplication/pages/duvidas" data-layout="button_count" data-size="large" data-mobile-iframe="true">
+										 <a target="_blank" href="http://localhost/sodeliveryexpress/04_Server_aplication/pages/duvidas" class="fb-xfbml-parse-ignore">Compartilhar</a>
+									 </div>
+									</div>
+								</div>
+							</div>';
+						} ?>
+					</div>
+					<div id="form-mandeDuvidas" class="container-discussao none">
+            <form class="form" action="" method="post">
+              <div class="container-cadastro-espacos">
+                <div class="container-cadastro-titulo">
+                    <h1>Mande Suas Dúvidas</h1>
+                </div>
+                  <div class="container-cadastro-input">
+                      <label for="nome">Nome Complemento</label>
+                      <input type="text"name="nome">
+                  </div>
+                  <div class="container-cadastro-input">
+                      <label for="email">Email</label>
+                      <input type="text" name="email">
+                  </div>
+									<div class="container-cadastro-input">
+	                  <label for="obs">Descreva sua dúvida</label>
+	                  <textarea name="name" rows="8" cols="10"></textarea>
+	                </div>
+                  <div class="container-cadastro-input-button">
+                      <input type="submit" value="Enviar Dúvida">
+                  </div>
+             </div>
+            </form>
+          </div>
           </div>
         </div>
 
+        </div>
         <div class="clear clearNone"></div>
-
-
         <div class="listagem-lateral">
-          <div class="contador-duvidas">
-
-            <h4>Estatísticas</h4>
-            <div class="container-contador">
-              <img src="<?php echo base_url()?>public/img/icons/question.svg">
-              <a href="#">Questões <span>( 25 )</span></a>
-            </div>
-            <div class="container-contador">
-              <img src="<?php echo base_url()?>public/img/icons/comentario.svg">
-              <a href="#">Respostas <span>( 23 )</span></a>
-            </div>
-            <div class="container-contador">
-              <img src="<?php echo base_url()?>public/img/icons/pessoa.svg">
-              <a href="#">Usuários <span>( 40 )</span></a>
-            </div>
-          </div>
-
-
           <div class="clear"></div>
-
           <div class="container-midia">
-
             <h4>Nos encontre</h4>
             <div class="container-redes">
               <a href="https://www.facebook.com/sodeliveryExpress/" target="_blank" class="midia facebook">
                 <img src="<?php echo base_url()?>public/img/icons/facebook-white.png">
               </a>
-
               <a href="https://www.youtube.com/channel/UCb93S1zCUAToY4Da6zLF6_w" target="_blank" class="midia youtube">
                 <img src="<?php echo base_url()?>public/img/icons/youtube.png">
               </a>
-
               <a href="https://www.instagram.com/sodeliveryexpress" target="_blank" class="midia instagram">
                 <img src="<?php echo base_url()?>public/img/icons/instagram.png">
               </a>
-
               <a href="https://www.linkedin.com/company/sodeliveryexpress" target="_blank" class="midia facebook">
                 <img src="<?php echo base_url()?>public/img/icons/linkedin.png">
               </a>
@@ -106,11 +108,11 @@
           </div>
         </div>
       </section>
-
       <div class="clear"></div>
       <div class="borderred"></div>
     </main>
     <?php include('componentes/footer.inc'); ?>
+<script async defer src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v3.2"></script>
   <script type="text/javascript" src="<?php echo base_url()?>public/js/menu_mobile.js"></script>
 	</body>
 </html>

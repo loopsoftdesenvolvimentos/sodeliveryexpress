@@ -6,6 +6,12 @@ class Model extends CI_Model  {
      {
         $this->load->database();
      }
+	public function all_duvidas(){
+		$this->db->select('*');
+		$this->db->from('duvidas');
+		$query = $this->db->get();
+		return $query->result();
+	}
 	public function all_estados()
 	{
 		$query = $this->db->get('estados');
@@ -263,4 +269,5 @@ class Model extends CI_Model  {
 	{
 		return $this->db->select('*')->from('marca')->get()->result();
 	}
+
 }

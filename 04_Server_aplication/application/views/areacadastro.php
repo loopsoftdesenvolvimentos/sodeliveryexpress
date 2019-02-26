@@ -54,7 +54,7 @@
                    <option value="Fardos">Fardos</option>
                    <option value="Fracionada">Fracionada</option>
                    <option value="Granel">Granel</option>
-                   <option value="Metro Cubico">Metro Cubico</option>
+                   <option value="Metro Cúbico">Metro Cúbico</option>
                    <option value="Milheiro">Milheiro</option>
                    <option value="Mudanças">Mudanças</option>
                    <option value="Paletes">Paletes</option>
@@ -92,7 +92,7 @@
                  <div class="row">
                    <div class="container-cadastro-input">
                      <label for="qtd_volume">Quantidade de Volume</label>
-                     <input type="text" name="qtd_volume" >
+                     <input type="text" name="qtd_volume_complemento" >
                    </div>
                    <div class="container-cadastro-input">
                      <label for="peso_complemento">Peso em KG</label>
@@ -100,7 +100,7 @@
                    </div>
                    <div class="container-cadastro-input">
                      <label for="volume">Volume m³</label>
-                     <input type="text" name="volume" >
+                     <input type="text" name="volume_complemento" >
                    </div>
                  </div>
                </div>
@@ -108,62 +108,66 @@
                  <div class="row">
                    <div class="container-cadastro-input fretes-checkbox">
                      <label for="leve">Leve</label>
+                     <label class="container-checkbox">Moto
+                       <input type="checkbox" name="veiculo_categoria" value='Moto'>
+                       <span class="checkmark"></span>
+                     </label>
+                     <label class="container-checkbox">Fiorinos
+                       <input type="checkbox" name="veiculo_categoria" value='Fiorinos'>
+                       <span class="checkmark"></span>
+                     </label>
                      <label class="container-checkbox">HR
-                       <input type="checkbox" value='hr'>
+                       <input type="checkbox" name="veiculo_categoria" value='HR'>
                        <span class="checkmark"></span>
                      </label>
                      <label class="container-checkbox">Master
-                       <input type="checkbox" value='master'>
+                       <input type="checkbox" name="veiculo_categoria" value='Master'>
                        <span class="checkmark"></span>
                      </label>
                      <label class="container-checkbox">Toco
-                       <input type="checkbox" value='toco'>
+                       <input type="checkbox" name="veiculo_categoria" value='Toco'>
                        <span class="checkmark"></span>
                      </label>
                      <label class="container-checkbox">VLC
-                       <input type="checkbox" value='vlc'>
+                       <input type="checkbox" name="veiculo_categoria" value='VLC'>
                        <span class="checkmark"></span>
                      </label>
                      <label class="container-checkbox">3/4
-                       <input type="checkbox" value='3/4'>
-                       <span class="checkmark"></span>
-                     </label>
-                     <label class="container-checkbox">Moto
-                       <input type="checkbox" value='moto'>
+                       <input type="checkbox" name="veiculo_categoria" value='3/4'>
                        <span class="checkmark"></span>
                      </label>
                    </div>
                    <div class="container-cadastro-input fretes-checkbox">
                      <label for="medio">Médio</label>
                      <label class="container-checkbox">Truck
-                       <input type="checkbox" value='truck'>
+                       <input type="checkbox" name="veiculo_categoria" value='Truck'>
                        <span class="checkmark"></span>
                      </label>
                      <label class="container-checkbox">Bitruck
-                       <input type="checkbox" value='Bitruck'>
+                       <input type="checkbox" name="veiculo_categoria" value='Bitruck'>
                        <span class="checkmark"></span>
                      </label>
                    </div>
                    <div class="container-cadastro-input fretes-checkbox">
                      <label for="pesado">Pesado</label>
                      <label class="container-checkbox">Rodotrem
-                       <input type="checkbox" value='rodotrem'>
+                       <input type="checkbox" name="veiculo_categoria" value='Rodotrem'>
                        <span class="checkmark"></span>
                      </label>
                      <label class="container-checkbox">Vanderléria
-                       <input type="checkbox" value='vanderléria'>
+                       <input type="checkbox" name="veiculo_categoria" value='Vanderléria'>
                        <span class="checkmark"></span>
                      </label>
                      <label class="container-checkbox">Bitrem
-                       <input type="checkbox" value='bitrem'>
+                       <input type="checkbox" name="veiculo_categoria" value='Bitrem'>
                        <span class="checkmark"></span>
                      </label>
                      <label class="container-checkbox">Carreta LS
-                       <input type="checkbox" value='carreta_ls'>
+                       <input type="checkbox" name="veiculo_categoria" value='Carreta LS'>
                        <span class="checkmark"></span>
                      </label>
                      <label class="container-checkbox">Carreta
-                       <input type="checkbox" value='carreta'>
+                       <input type="checkbox" name="veiculo_categoria" value='Carreta'>
                        <span class="checkmark"></span>
                      </label>
                    </div>
@@ -177,21 +181,27 @@
                    <div class="container-cadastro-input fretes-checkbox">
                      <label for="leve">Fechada</label>
                      <label class="container-checkbox">Baú
-                       <input type="checkbox" name="carroceria" value='baú'>
+                       <input type="checkbox" name="carroceria" value='Baú'>
                        <span class="checkmark"></span>
                      </label>
                      <label class="container-checkbox">Baú Frigorífico
-                       <input type="checkbox" name="carroceria" value='baú Frigorífico'>
+                       <input type="checkbox" name="carroceria" value='Baú Frigorífico'>
                        <span class="checkmark"></span>
                      </label>
-                     <label class="container-checkbox">slider
-                       <input type="checkbox" name="carroceria" value='slider'>
+                     <label class="container-checkbox">Slider
+                       <input type="checkbox" name="carroceria" value='Slider'>
                        <span class="checkmark"></span>
                      </label>
-                     <label class="container-checkbox">Mochila(Moto)
-                       <input type="checkbox" name="carroceria" value='Mochila(moto)'>
-                       <span class="checkmark"></span>
-                     </label>
+                     <div id="content-moto" class="none">
+                       <label class="container-checkbox">Mochila(Moto)
+                         <input type="checkbox" name="carroceria" value='Mochila(moto)'>
+                         <span class="checkmark"></span>
+                       </label>
+                       <label class="container-checkbox">Baú
+                         <input type="checkbox" name="carroceria" value='Baú(moto)'>
+                         <span class="checkmark"></span>
+                       </label>
+                     </div>
                    </div>
                    <div class="container-cadastro-input fretes-checkbox">
                      <label for="medio">Aberta</label>
@@ -264,10 +274,12 @@
                        <option value="A combinar">Km/R$</option>
                      </select>
                    </div>
-                   <label class="container-checkbox">Pedágio
-                     <input type="checkbox" name='pegadio' value='Pedágio'>
-                     <span class="checkmark"></span>
-                   </label>
+                   <div class="container-cadastro-input">
+                     <label class="container-checkbox">Pedágio
+                       <input type="checkbox" name='pegadio' value='Pedágio'>
+                       <span class="checkmark"></span>
+                     </label>
+                   </div>
                  </div>
                </div>
                <div class="container-cadastro-input">

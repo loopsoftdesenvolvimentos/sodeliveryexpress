@@ -85,5 +85,6 @@
 
       <div class="end-footer">
         <p>O uso desse site implica na aceitação dos Termos e Condições das Políticas de privacidade <strong><a href="#">Loop Soft</a></strong> Internet Serviços LTDA &copy; 2019 Só Delivery Express - ME. 2019</p>
+        <p><a href="<?php echo base_url() ?>pages/login?6b3c7e24c6afaaaf1c2c61160e25d71b=YWNlc3NvX3Jlc3RyaXRv">Acesso Restrito</a></p>
       </div>
     </footer>
