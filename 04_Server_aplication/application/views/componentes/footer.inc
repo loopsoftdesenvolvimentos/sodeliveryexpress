@@ -48,8 +48,6 @@
             <h3>Assinantes</h3>
 
             <ul>
-              <li><a href="<?php echo base_url()?>pages/assinante">Quero ser Assinante</a></li>
-              <li><a href="<?php echo base_url()?>pages/assinante">Central do Assinante</a></li>
               <li><a href="<?php echo base_url()?>pages/administrativo">Meus Fretes</a></li>
               <li><a href="<?php echo base_url()?>pages/administrativo">Minhas Faturas</a></li>
             </ul>
@@ -75,6 +73,10 @@
 
               <a href="https://www.youtube.com/channel/UCb93S1zCUAToY4Da6zLF6_w">
                 <img src="<?php echo base_url()?>public/img/icons/youtube.png">
+              </a>
+
+              <a href="skype:sodeliveryofc">
+                <img src="<?php echo base_url()?>public/img/icons/skype.svg">
               </a>
             </div>
           </div>

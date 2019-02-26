@@ -15,8 +15,7 @@
 }
 .mobile-menu img{
 	width: 50px;
-	margin: 50%;
-	transform: translate(-50%, -50%);
+	transform: translate(15px, 0);
 }
 #sumir1,
 #sumir{

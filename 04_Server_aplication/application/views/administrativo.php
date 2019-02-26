@@ -65,14 +65,6 @@
             <div class="area-container">
               <div class="container">
 
-                <a href="<?php echo base_url()?>pages/areacadastro/#cadastramentoVeiculo">
-                  <img src="<?php echo base_url()?>public/img/icons/veiculosADM.png">
-                  Cadastrar veículos
-                </a>
-              </div>
-
-              <div class="container">
-
                 <a href="<?php echo base_url()?>pages/areacadastro/#cadastramentoFretes">
                   <img src="<?php echo base_url()?>public/img/icons/freteADM.png">
                   Cadastrar Fretes

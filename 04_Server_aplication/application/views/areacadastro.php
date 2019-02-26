@@ -177,69 +177,69 @@
                    <div class="container-cadastro-input fretes-checkbox">
                      <label for="leve">Fechada</label>
                      <label class="container-checkbox">Baú
-                       <input type="checkbox" value='baú'>
+                       <input type="checkbox" name="carroceria" value='baú'>
                        <span class="checkmark"></span>
                      </label>
                      <label class="container-checkbox">Baú Frigorífico
-                       <input type="checkbox" value='baú Frigorífico'>
+                       <input type="checkbox" name="carroceria" value='baú Frigorífico'>
                        <span class="checkmark"></span>
                      </label>
                      <label class="container-checkbox">slider
-                       <input type="checkbox" value='slider'>
+                       <input type="checkbox" name="carroceria" value='slider'>
                        <span class="checkmark"></span>
                      </label>
                      <label class="container-checkbox">Mochila(Moto)
-                       <input type="checkbox" value='Mochila(moto)'>
+                       <input type="checkbox" name="carroceria" value='Mochila(moto)'>
                        <span class="checkmark"></span>
                      </label>
                    </div>
                    <div class="container-cadastro-input fretes-checkbox">
                      <label for="medio">Aberta</label>
                      <label class="container-checkbox">Caçamba
-                       <input type="checkbox" value='Caçamba'>
+                       <input type="checkbox" name="carroceria" value='Caçamba'>
                        <span class="checkmark"></span>
                      </label>
                      <label class="container-checkbox">Grande Baixa
-                       <input type="checkbox" value='Grande Baixa'>
+                       <input type="checkbox" name="carroceria" value='Grande Baixa'>
                        <span class="checkmark"></span>
                      </label>
                      <label class="container-checkbox">Graneleiro
-                       <input type="checkbox" value='Graneleiro'>
+                       <input type="checkbox" name="carroceria" value='Graneleiro'>
                        <span class="checkmark"></span>
                      </label>
                      <label class="container-checkbox">Prancha
-                       <input type="checkbox" value='Prancha'>
+                       <input type="checkbox" name="carroceria" value='Prancha'>
                        <span class="checkmark"></span>
                      </label>
                    </div>
                    <div class="container-cadastro-input fretes-checkbox">
                      <label for="pesado">Especial</label>
                      <label class="container-checkbox">Bug Porta Container
-                       <input type="checkbox" value='Bug Porta Container'>
+                       <input type="checkbox" name="carroceria" value='Bug Porta Container'>
                        <span class="checkmark"></span>
                      </label>
                      <label class="container-checkbox">Munk
-                       <input type="checkbox" value='Munk'>
+                       <input type="checkbox" name="carroceria" value='Munk'>
                        <span class="checkmark"></span>
                      </label>
                      <label class="container-checkbox">Silo
-                       <input type="checkbox" value='Silo'>
+                       <input type="checkbox" name="carroceria" value='Silo'>
                        <span class="checkmark"></span>
                      </label>
                      <label class="container-checkbox">Tanque
-                       <input type="checkbox" value='Tanque'>
+                       <input type="checkbox" name="carroceria" value='Tanque'>
                        <span class="checkmark"></span>
                      </label>
                      <label class="container-checkbox">Gaiola
-                       <input type="checkbox" value='Gaiola'>
+                       <input type="checkbox" name="carroceria" value='Gaiola'>
                        <span class="checkmark"></span>
                      </label>
                      <label class="container-checkbox">Cegonheiro
-                       <input type="checkbox" value='Cegonheiro'>
+                       <input type="checkbox" name="carroceria" value='Cegonheiro'>
                        <span class="checkmark"></span>
                      </label>
                      <label class="container-checkbox">Apenas Cavalo
-                       <input type="checkbox" value='Apenas Cavalo'>
+                       <input type="checkbox" name="carroceria" value='Apenas Cavalo'>
                        <span class="checkmark"></span>
                      </label>
                    </div>
@@ -256,7 +256,7 @@
                    </div>
                    <div class="container-cadastro-input">
                      <label for="preco">Tipo pagamento</label>
-                     <select name="complemento">
+                     <select name="tipo_pagamento">
                        <option disabled selected>Selecione uma opção abaixo</option>
                        <option value="porTonelada">Por Tonelada</option>
                        <option value="cheio">Cheio</option>
@@ -264,6 +264,10 @@
                        <option value="A combinar">Km/R$</option>
                      </select>
                    </div>
+                   <label class="container-checkbox">Pedágio
+                     <input type="checkbox" name='pegadio' value='Pedágio'>
+                     <span class="checkmark"></span>
+                   </label>
                  </div>
                </div>
                <div class="container-cadastro-input">
@@ -277,104 +281,6 @@
          </div>
        </form>
       </div>
-      <div id="cadastramentoVeiculo" class="cadastro-veiculo-form content">
-        <form action="" method="post">
-          <div class="container-cadastro-espacos">
-            <div class="container-cadastro-titulo titulo-primario">
-                <h1>Cadastrar Veiculo</h1>
-            </div>
-            <div class="content-cadastro">
-              <div class="container-cadastro-input">
-                <label for="placa_veiculo">Placa</label>
-                <input type="text" id="placa_veiculo" name="placa_veiculo">
-              </div>
-              <div class="container-cadastro-input">
-                <label for="nome_proprietario">Nome Motorista</label>
-                <input type="text" id="nome_proprietario" name="nome_proprietario">
-              </div>
-              <div class="container-cadastro-input">
-                <label for="email">E-mail Motorista</label>
-                <input type="text" id="email" name="email">
-              </div>
-              <div class="container-cadastro-titulo">
-                <h1>Contato</h1>
-              </div>
-              <div class="container-cadastro-input">
-                <label for="telefone1">Telefone</label>
-                <input type="text" id="telefone1" name="telefone1">
-              </div>
-              <div class="container-cadastro-input">
-                <label for="Tipo">Tipo</label>
-                <select id="Tipo" name="Tipo">
-                  <option>Selecionar tipo</option>
-                  <option>Fixo</option>
-                  <option>Celular</option>
-                  <option>WhatsApp</option>
-                </select>
-              </div>
-              <div class="container-cadastro-titulo">
-                <h1>Veiculo</h1>
-              </div>
-              <div class="container-cadastro-input">
-                <label for="Veiculo">Veiculo</label>
-                <select id="Veiculo" name="Veiculo">
-                  <option>Veiculo</option>
-                </select>
-              </div>
-              <div class="container-cadastro-input">
-                <label for="carroceria_veiculo">Carroceria</label>
-                <select id="carroceria_veiculo" name="carroceria_veiculo">
-                  <option>Selecionar carroceria</option>
-                </select>
-              </div>
-              <div class="container-cadastro-input">
-                <label for="Rastreador">Rastreador</label>
-                <select id="Rastreador" name="Rastreador">
-                  <option>Não</option>
-                  <option>Sim</option>
-                </select>
-              </div>
-              <div class="container-cadastro-input">
-                <label for="Marca">Marca</label>
-                <select id="Marca" name="Marca">
-                  <option>Selecionar marca</option>
-                </select>
-              </div>
-
-              <div class="container-cadastro-input">
-                <label for="Ano">Ano</label>
-                <select id="Ano" name="Ano">
-                  <option>Selecionar Ano</option>
-                </select>
-              </div>
-              <div class="container-cadastro-input">
-                <label for="RNTRC">RNTRC</label>
-                <input type="number" id="RNTRC" name="RNTRC ">
-              </div>
-              <div class="container-cadastro-input">
-                <label for="permissao">Permissionado (trafegar no Mercosul)</label>
-                <select id="permissao" name="Rastreador">
-                  <option>Não</option>
-                  <option>Sim</option>
-                </select>
-              </div>
-              <div class="container-cadastro-titulo">
-                <h1>Autentificação</h1>
-              </div>
-              <div class="container-cadastro-input">
-                <label for="senha">Senha</label>
-                <input type="password" id="senha" name="senha">
-              </div>
-              <div class="container-cadastro-input">
-                <label for="confirmar_senha">Confirmar senha</label>
-                <input type="number" id="confirmar_senha" name="confirmar_senha">
-              </div>
-              <div class="container-cadastro-input-submit">
-                <input type="submit" value="Cadastrar Veículo">
-              </div>
-            </div>
-        </div>
-      </form>
      </div>
     </main>
     <div class="clear"></div>

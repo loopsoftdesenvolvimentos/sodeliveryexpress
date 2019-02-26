@@ -20,6 +20,12 @@
               <span>11 99723 9032</span>
             </div>
           </a>
+          <a href="skype:sodeliveryofc">
+            <div class="icone-top">
+              <img src="<?php echo base_url()?>public/img/icons/skype-dark.svg">
+              <span>sodeliveryofc</span>
+            </div>
+          </a>
         </div>
 
         <div class="icone-top-midia">
@@ -55,10 +61,6 @@
 
       <div class="menu-conta">
         <div class="menu-bar">
-          <div class="pesquisa" style="display: none;">
-            <input type="text" id="pesquisa">
-            <button type="submit">Buscar</button>
-          </div> -->
           <div id="btn-menu" class="menu-mobile mobile" >
             <img src="<?php echo base_url()?>public/img/icons/menu.svg" alt="botão de menu">
           </div>
