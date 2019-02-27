@@ -22,6 +22,14 @@ class Model extends CI_Model  {
 		$query = $this->db->get('ramo');
 		return $query->result();
 	}
+
+	public function empresa_login($dados){
+
+		$query = $this->db->select('*')->from('empresa')->where($dados)->get();
+
+	    return ($query->num_rows() > 0) ? true : false;
+	}
+
 	public function all_cidades($id)
 	{
 		$result = $this->db->query('select*from estados,cidades where cidades.id_estado = estados.id_estado and cidades.id_estado ='.$id.'')->result();

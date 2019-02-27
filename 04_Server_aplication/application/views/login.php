@@ -3,10 +3,10 @@
   <?php include('componentes/head_login.inc'); ?>
   <body>
     <?php
-      if (count($_GET) > 0) {
-        $decode_get =  base64_decode($_GET["6b3c7e24c6afaaaf1c2c61160e25d71b"]);
-        if($_GET["6b3c7e24c6afaaaf1c2c61160e25d71b"] == $decode_get){
-      }
+      // if (count($_GET) > 0) {
+      //   $decode_get =  base64_decode($_GET["6b3c7e24c6afaaaf1c2c61160e25d71b"]);
+      //   if($_GET["6b3c7e24c6afaaaf1c2c61160e25d71b"] == $decode_get){
+      // }
     ?>
     <div class="container">
       <div class="tab_header">
@@ -24,7 +24,7 @@
         <div class="icon-display">
           <img src="<?php echo base_url() ?>public/img/icons/login-dark.svg" alt="icons">
         </div>
-        <form action="/logar" method="post">
+        <form action="/crud/logar" method="post">
             <div class="container-input">
               <label for="email_user">Email</label>
               <input type="text" name="email_user"  id="login_user" placeholder="Email">
@@ -51,6 +51,9 @@
         <img src="<?php echo base_url() ?>public/img/icons/truck-front_preto.svg" alt="icons">
       </div>
        <form id='login_motorista'>
+         <?php
+           echo validation_errors('<div id="mensagem">','</div>');
+          ?>
           <div class="mensagem" id="mensagem" ></div>
             <div class="container-input">
               <label for="Placa_placa">Placa</label>
@@ -68,7 +71,7 @@
             </div>
       </form>
     </section>
-  <?php }else{ ?>
+  <?php //}else{ ?>
     <section class="tirar_display column">
         <div class="icon-home">
         <a href="index">
@@ -92,7 +95,7 @@
             </div>
           </form>
     </section>
-  <?php } ?>
+  <?php //} ?>
 </div>
 
     <script type="text/javascript" src=""></script>

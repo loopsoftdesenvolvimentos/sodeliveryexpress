@@ -13,6 +13,34 @@ class Crud extends CI_Controller {
 		$this->load->helper(array('form', 'url'));	
 	}
 
+	public function logar(){
+
+		$this->form_validation->set_rules('email_user','Email','required');	
+		$this->form_validation->set_rules('Senha_login','Senha','required');
+
+		if(!$this->form_validation->run()){
+
+			$this->load->view('login');
+		}else{
+
+			$dados = array(
+				'email' => $this->input->post('email_user'),
+				'senha_autenticacao' => $this->input->post('Senha_login')
+			);
+
+			
+
+			if($this->Model->empresa_login($dados)){
+
+				echo "Logado com sucesso!";
+			}else{
+
+				echo "Email e/ou senha inválido(s)!";
+			}
+		}
+
+	}
+
 	public function cadastrar_empresa()
 	{
 		
