@@ -109,7 +109,7 @@
                    <div class="container-cadastro-input fretes-checkbox">
                      <label for="leve">Leve</label>
                      <label class="container-checkbox">Moto
-                       <input type="checkbox" name="veiculo_categoria" value='Moto'>
+                       <input id="check-moto" type="checkbox" name="veiculo_categoria" value='Moto'>
                        <span class="checkmark"></span>
                      </label>
                      <label class="container-checkbox">Fiorinos
@@ -192,7 +192,7 @@
                        <input type="checkbox" name="carroceria" value='Slider'>
                        <span class="checkmark"></span>
                      </label>
-                     <div id="content-moto" class="none">
+                     <div id="content-moto">
                        <label class="container-checkbox">Mochila(Moto)
                          <input type="checkbox" name="carroceria" value='Mochila(moto)'>
                          <span class="checkmark"></span>
@@ -262,19 +262,19 @@
                  <div class="row">
                    <div class="container-cadastro-input">
                      <label for="preco">Preço R$:</label>
-                    <input type="text" name="preco" value="">
+                    <input type="text" id="input-preco" name="preco" value="">
                    </div>
                    <div class="container-cadastro-input">
                      <label for="preco">Tipo pagamento</label>
-                     <select name="tipo_pagamento">
+                     <select id="select_pagamento" name="tipo_pagamento">
                        <option disabled selected>Selecione uma opção abaixo</option>
                        <option value="porTonelada">Por Tonelada</option>
                        <option value="cheio">Cheio</option>
                        <option value="A combinar">A Combinar</option>
-                       <option value="A combinar">Km/R$</option>
+                       <option value="Km/R$">Km/R$</option>
                      </select>
                    </div>
-                   <div class="container-cadastro-input">
+                   <div class="container-cadastro-input extraCheck">
                      <label class="container-checkbox">Pedágio
                        <input type="checkbox" name='pegadio' value='Pedágio'>
                        <span class="checkmark"></span>

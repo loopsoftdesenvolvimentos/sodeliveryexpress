@@ -20,22 +20,6 @@
 							<li id="btn-mandeDuvidas">Mande sua dúvida</li>
             </ul>
           </div>
-					<script type="text/javascript">
-            $('#btn-duvidas').click(function(){
-              $( this ).addClass('menu_active');
-              $('#btn-mandeDuvidas').removeClass('menu_active');
-
-              $('#form-mandeDuvidas').hide();
-							$('#container-duvidas').show();
-            });
-            $('#btn-mandeDuvidas').click(function(){
-              $( this ).addClass('menu_active');
-              $('#btn-duvidas').removeClass('menu_active');
-
-							$('#container-duvidas').hide();
-							$('#form-mandeDuvidas').show();
-            })
-          </script>
           <div class="clear clear"></div>
 					<div id="container-duvidas">
 						<?php foreach ($duvidas as $duvida) {
@@ -112,7 +96,8 @@
       <div class="borderred"></div>
     </main>
     <?php include('componentes/footer.inc'); ?>
-<script async defer src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v3.2"></script>
-  <script type="text/javascript" src="<?php echo base_url()?>public/js/menu_mobile.js"></script>
+		<script async defer src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v3.2"></script>
+		<script type="text/javascript" src="<?php echo base_url()?>public/js/menu_mobile.js"></script>
+		<script type="text/javascript" src="<?php echo base_url()?>public/js/btn_duvidas.js"></script>
 	</body>
 </html>

@@ -45,13 +45,13 @@
             <img src="<?php echo base_url()?>public/img/icons/youtube-dark.svg">
           </a>
           <a href="skype:sodeliveryofc">
-            <img src="<?php echo base_url()?>public/img/icons/skype.svg">
+            <img src="<?php echo base_url()?>public/img/icons/skype-dark.svg">
           </a>
         </div>
       </div>
       <div class="logo-publicidade content">
         <div class="logo">
-          <a href="index.php">
+          <a href="<?php echo base_url() ?>pages/index">
             <img src="<?php echo base_url()?>public/img/logo.png" alt="logo Só Delivery">
           </a>
         </div>

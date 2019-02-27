@@ -7,6 +7,13 @@
 .content{
   margin-top: 50px!important;
 }
-#complemento{
+#complemento,
+#content-moto{
   display: none;
+}
+.fretes-checkbox #content-moto label:first-child{
+  font-weight: normal;
+}
+.extraCheck label{
+  margin-top: 40px;
 }

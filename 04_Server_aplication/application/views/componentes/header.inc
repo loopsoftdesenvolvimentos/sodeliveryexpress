@@ -44,6 +44,9 @@
           <a href="https://www.youtube.com/channel/UCb93S1zCUAToY4Da6zLF6_w"  id="border_lateral" target="_blank">
             <img src="<?php echo base_url()?>public/img/icons/youtube-dark.svg">
           </a>
+          <a href="skype:sodeliveryofc">
+            <img src="<?php echo base_url()?>public/img/icons/skype-dark.svg">
+          </a>
         </div>
       </div>
       <div class="logo-publicidade content">

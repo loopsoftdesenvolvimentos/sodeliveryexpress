@@ -64,15 +64,15 @@
             </div>
             <div class="container-cadastro-input">
               <label for="skype">Skype</label>
-              <input type="file" name="skype">
+              <input type="text" name="skype">
             </div>
             <div class="container-cadastro-input">
               <label for="nextel">Nextel</label>
-              <input type="file" name="nextel">
+              <input type="text" name="nextel">
             </div>
             <div class="container-cadastro-input">
               <label for="fax">Fax</label>
-              <input type="file" name="fax">
+              <input type="text" name="fax">
             </div>
             <div class="container-cadastro-input">
               <label for="url_facebook_empresa">Url do Facebook Principal</label>
@@ -165,6 +165,10 @@
               <div class="infors-pagamento">
                 <img src="<?php echo base_url()?>public/img/icons/vencimento.svg" alt="icons">
                 <p>Vencimento: 00/00/0000</p>
+              </div>
+              <div class="infors-pagamento">
+                <img src="<?php echo base_url()?>public/img/icons/status.svg" alt="icons">
+                <p>Status: OK</p>
               </div>
             </div>
 

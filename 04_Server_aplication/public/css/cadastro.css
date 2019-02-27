@@ -55,6 +55,7 @@ input,select{
 }
 .container-cadastro-input textarea{
 	max-width: 100%;
+	min-width: 80%;
 	max-height: 150px;
 	min-height: 100px;
 	padding: 10px
