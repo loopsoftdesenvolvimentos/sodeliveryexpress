@@ -8,6 +8,7 @@ class Empresas extends CI_Controller {
         parent::__construct();
 		$this->load->model('Auth_model');
         $this->load->model('Model');
+        $this->load->model('EmpresasDAO', 'empresas');
         $this->load->library('form_validation');
 		$this->load->library('pagination');
     }
@@ -15,18 +16,18 @@ class Empresas extends CI_Controller {
 	public function index(){
 
         $config["base_url"] = site_url('empresas/index');
-        $config["total_rows"] = $this->Model->all_empresas_rows();
+        $config["total_rows"] = $this->empresas->all_empresas_rows();
         $config["per_page"] = 2;
         $config["uri_segment"] = 3;
         $this->pagination->initialize($config);
         $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
 
-      	$data['total'] = $this->Model->all_empresas_total();
+      	$data['total'] = $this->empresas->all_empresas_total();
         $data['link'] = $this->pagination->create_links();
 		$data['pesquisas'] = $this->session->lista_empresa;
 		$data['estados'] = $this->Model->all_estados();
 		$data['ramos'] = $this->Model->ramo();
-		$data['empresas'] = $this->Model->all_empresas($config["per_page"], $page);
+		$data['empresas'] = $this->empresas->all_empresas($config["per_page"], $page);
 
 		$this->load->view('empresas', $data);
 	}
@@ -89,18 +90,18 @@ class Empresas extends CI_Controller {
 		}
 
        $config["base_url"] = base_url() . "/empresas";
-       $config["total_rows"] = $this->Model->all_empresas_rows();
+       $config["total_rows"] = $this->empresas->all_empresas_rows();
        $config["per_page"] = 2;
        $config["uri_segment"] = 3;
        $this->pagination->initialize($config);
        $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
 
-      	$data['total'] = $this->Model->all_empresas_total();
+      	$data['total'] = $this->empresas->all_empresas_total();
         $data['link'] = $this->pagination->create_links();
 		$data['pesquisas'] = $this->session->lista_empresa;
 		$data['estados'] = $this->Model->all_estados();
 		$data['ramos'] = $this->Model->ramo();
-		$data['empresas'] = $this->Model->filter_empresa($config["per_page"], $page,$this->session->lista_empresa);
+		$data['empresas'] = $this->empresas->filter_empresa($config["per_page"], $page,$this->session->lista_empresa);
 
 		$this->load->view('empresas',$data);
 	}
@@ -189,7 +190,7 @@ class Empresas extends CI_Controller {
 					'senha_autenticacao'=>$this->input->post('senha')
 				);
 
-		        if($this->Model->cadastrar_empresa($data) != true){
+		        if($this->empresas->cadastrar_empresa($data) != true){
 		        	redirect('/empresas','refresh');
 		        }
                   

@@ -7,6 +7,7 @@ class Fretes extends CI_Controller {
         parent::__construct();
 		$this->load->model('Auth_model');
         $this->load->model('Model');
+        $this->load->model('FretesDAO', 'fretes');
         $this->load->library('form_validation');
 		$this->load->library('pagination');
     }
@@ -14,17 +15,17 @@ class Fretes extends CI_Controller {
 	public function index(){
 
 	   $config["base_url"] = site_url('/fretes/index');
-       $config["total_rows"] = $this->Model->all_fretes_rows();
+       $config["total_rows"] = $this->fretes->all_fretes_rows();
        $config["per_page"] = 4;
        $config["uri_segment"] = 3;
 
        $this->pagination->initialize($config);
        $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
 
-      	$data['total'] = $this->Model->all_fretes_total();
+      	$data['total'] = $this->fretes->all_fretes_total();
         $data['link'] = $this->pagination->create_links();
 		$data['pesquisas'] = $this->session->lista;
-		$data['fretes'] = $this->Model->fretes($config["per_page"],$page);
+		$data['fretes'] = $this->fretes->fretes($config["per_page"],$page);
 		$data['carroceria'] = $this->Model->carroceria_group_by();
 		$data['complemento'] = $this->Model->Complemento_group_by();
 		$data['rastreador'] = $this->Model->rastreador_group_by();
@@ -36,7 +37,7 @@ class Fretes extends CI_Controller {
 
 	public function frete($id_frete)
 	{
-		$data['dados_frete'] = $this->Model->frete_unico($id_frete);
+		$data['dados_frete'] = $this->fretes->frete_unico($id_frete);
 		$this->load->view('frete_unico',$data);
 	}
 
@@ -45,7 +46,7 @@ class Fretes extends CI_Controller {
 		$this->session->cont = 0;
 
 		if ($tipo == 'remover') {
-		     unset($this->session->lista[$pesquisa]);
+		     unset($_SESSION['lista'][$pesquisa]);
 		}
 		if($tipo == 'categoria'){
 
@@ -168,16 +169,16 @@ class Fretes extends CI_Controller {
 		}
 
 	    $config["base_url"] = base_url() . "/fretes/index";
-        $config["total_rows"] = $this->Model->all_fretes_rows();
+        $config["total_rows"] = $this->fretes->all_fretes_rows();
         $config["per_page"] = 4;
         $config["uri_segment"] = 3;
         $this->pagination->initialize($config);
         $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
 
-      	$data['total'] = $this->Model->all_fretes_total();
+      	$data['total'] = $this->fretes->all_fretes_total();
         $data['link'] = $this->pagination->create_links();
 		$data['pesquisas'] = $_SESSION['lista'];
-		$data['fretes'] = $this->Model->fretes_filter($config["per_page"],$page,$_SESSION['lista']);
+		$data['fretes'] = $this->fretes->fretes_filter($config["per_page"],$page,$_SESSION['lista']);
 		$data['carroceria'] = $this->Model->carroceria_group_by();
 		$data['complemento'] = $this->Model->Complemento_group_by();
 		$data['rastreador'] = $this->Model->rastreador_group_by();
@@ -191,17 +192,17 @@ class Fretes extends CI_Controller {
 	{
 
 		$config["base_url"] = site_url('fretes/index');
-		$config["total_rows"] = $this->Model->all_fretes_rows();
+		$config["total_rows"] = $this->fretes->all_fretes_rows();
 		$config["per_page"] = 4;
 		$config["uri_segment"] = 3;
 
 		$this->pagination->initialize($config);
 		$page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
 
-		$data['total'] = $this->Model->all_fretes_total();
+		$data['total'] = $this->fretes->all_fretes_total();
 		$data['link'] = $this->pagination->create_links();
 	 	$data['pesquisas'] = $this->session->lista;
-		$data['fretes'] = $this->Model->fretesEstado($q);
+		$data['fretes'] = $this->fretes->fretesEstado($q);
 		$data['carroceria'] = $this->Model->carroceria_group_by();
 		$data['complemento'] = $this->Model->Complemento_group_by();
 		$data['rastreador'] = $this->Model->rastreador_group_by();

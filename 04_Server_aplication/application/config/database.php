@@ -8,13 +8,10 @@ $query_builder = TRUE;
 
 // LOCAL
 $db['default'] = array(
-	// 'dsn'	=> '186.202.152.36',
-	// 'hostname' => 'sodelivery.mysql.dbaas.com.br',
-	// 'username' => 'sodelivery',
-	// 'password' => 'Marc9951',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
+	'dsn'	=> '186.202.152.36',
+	'hostname' => 'sodelivery.mysql.dbaas.com.br',
+	'username' => 'sodelivery',
+	'password' => 'Marc9951',
 	'database' => 'sodelivery',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
