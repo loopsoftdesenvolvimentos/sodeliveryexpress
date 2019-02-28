@@ -34,7 +34,7 @@
                 <input type="submit" value="Entrar">
             </div>
             <div class="container-cadastre">
-              <p>Não tem uma conta? <strong><a id="btn-cadastrar" href="<?php echo base_url() ?>pages/cadastro_empresa">Cadastre-se</a></strong></p>
+              <p>Não tem uma conta? <strong><a id="btn-cadastrar" href="<?php echo site_url('empresas/cadastrar') ?>">Cadastre-se</a></strong></p>
             </div>
       </form>
     </section>

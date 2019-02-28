@@ -11,7 +11,7 @@
           </div>
             <section id="filtro" class="container-menu none">
               <div class="container-empresa-filtro">
-                 <a href="<?php echo base_url()?>pages/cadastro_empresa"> <button>Cadastrar Empresa</button></a>
+                 <a href="<?php echo site_url('empresas/cadastrar')?>"> <button>Cadastrar Empresa</button></a>
               </div>
                 <div class="container-empresa-titulo">
                     <h1>Filtros</h1>

@@ -5,7 +5,7 @@
    <?php include('componentes/header.inc'); ?>
     <main>
       <div class="container-cadastro content">
-        <?php echo form_open_multipart('crud/cadastrar_empresa');?>
+        <?php echo form_open_multipart('empresas/cadastrar_empresa');?>
             <div class="container-cadastro-espacos">
               <div class="container-cadastro-titulo titulo-primario">
                 <h1>Cadastro  de Empresa</h1>

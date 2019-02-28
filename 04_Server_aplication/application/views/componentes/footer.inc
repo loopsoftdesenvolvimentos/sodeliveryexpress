@@ -20,12 +20,12 @@
             <h3>Cadastro Empresas</h3>
 
             <ul>
-              <li><a href="<?php echo base_url()?>pages/cadastro_empresa?type=transportadoras">Transportadoras</a></li>
-              <li><a href="<?php echo base_url()?>pages/cadastro_empresa?type=embarcadoras">Embarcadoras</a></li>
-              <li><a href="<?php echo base_url()?>pages/cadastro_empresa?type=agenciadoras">Agenciadoras</a></li>
-              <li><a href="<?php echo base_url()?>pages/cadastro_empresa?type=distrubuidoras">Distribuidoras</a></li>
-              <li><a href="<?php echo base_url()?>pages/cadastro_empresa?type=comercio">Comércio Local</a></li>
-              <li><a href="<?php echo base_url()?>pages/cadastro_empresa?type=industria">Indústria</a></li>
+              <li><a href="<?php echo base_url()?>empresas/cadastrar?type=transportadoras">Transportadoras</a></li>
+              <li><a href="<?php echo base_url()?>empresas/cadastrar?type=embarcadoras">Embarcadoras</a></li>
+              <li><a href="<?php echo base_url()?>empresas/cadastrar?type=agenciadoras">Agenciadoras</a></li>
+              <li><a href="<?php echo base_url()?>empresas/cadastrar?type=distrubuidoras">Distribuidoras</a></li>
+              <li><a href="<?php echo base_url()?>empresas/cadastrar?type=comercio">Comércio Local</a></li>
+              <li><a href="<?php echo base_url()?>empresas/cadastrar?type=industria">Indústria</a></li>
             </ul>
           </div>
 
