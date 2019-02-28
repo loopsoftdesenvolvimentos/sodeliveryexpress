@@ -10,13 +10,13 @@ class Crud extends CI_Controller {
 		$this->load->helper('url');
 		$this->load->model('Model');
 		$this->load->library('form_validation');
-		$this->load->helper(array('form', 'url'));	
+		$this->load->helper(array('form', 'url'));
 	}
 
 	public function logar(){
 
-		$this->form_validation->set_rules('email_user','Email','required');	
-		$this->form_validation->set_rules('Senha_login','Senha','required');
+		$this->form_validation->set_rules('email_user_empresa','Email','required');
+		$this->form_validation->set_rules('senha_user_empresa','Senha','required');
 
 		if(!$this->form_validation->run()){
 
