@@ -49,7 +49,7 @@
               <span class="checkmark"></span>
             </label>
           </div>
-         <a href="'.base_url().'pages/frete/'.$container_fretes->id_frete.'">
+         <a href="'.base_url().'fretes/frete/'.$container_fretes->id_frete.'">
            <div class="img-empresa">
              <img src="<?php echo base_url() ?>public/img/logo.png">
             </div>
@@ -57,8 +57,8 @@
           <div class="informações-item desktopImportant">
             <div>
               <ul>
-                <li><a href="'.base_url().'pages/frete/'.$container_fretes->id_frete.'">Origem: <b>'.$container_fretes->cidade_saida.'</b></a></li>
-                <li><a href="'.base_url().'pages/frete/'.$container_fretes->id_frete.'">Destino: <b>'.$container_fretes->cidade_entrega.'</b></a></li>
+                <li><a href="'.base_url().'fretes/frete/'.$container_fretes->id_frete.'">Origem: <b>'.$container_fretes->cidade_saida.'</b></a></li>
+                <li><a href="'.base_url().'fretes/frete/'.$container_fretes->id_frete.'">Destino: <b>'.$container_fretes->cidade_entrega.'</b></a></li>
                 <li>Preço: '.$container_fretes->preco_frete.'</li>
                 <li>Produto:'.$container_fretes->nome_produto.'</li>
               </ul>
@@ -73,8 +73,8 @@
           <div class="informações-item mobile">
             <div>
               <ul>
-                <li><a href="'.base_url().'pages/frete/'.$container_fretes->id_frete.'">Origem: <b>'.$container_fretes->cidade_saida.'</b></a></li>
-                <li><a href="'.base_url().'pages/frete/'.$container_fretes->id_frete.'">Destino: <b>'.$container_fretes->cidade_entrega.'</b></a></li>
+                <li><a href="'.base_url().'fretes/frete/'.$container_fretes->id_frete.'">Origem: <b>'.$container_fretes->cidade_saida.'</b></a></li>
+                <li><a href="'.base_url().'fretes/frete/'.$container_fretes->id_frete.'">Destino: <b>'.$container_fretes->cidade_entrega.'</b></a></li>
                 <li>Produto:'.$container_fretes->nome_produto.'</li>
                 <li>Preço: '.$container_fretes->preco_frete.'</li>
               </ul>
@@ -101,7 +101,7 @@
               <span class="checkmark"></span>
             </label>
           </div>
-         <a href="'.base_url().'pages/frete/'.$container_fretes->id_frete.'">
+         <a href="'.base_url().'fretes/frete/'.$container_fretes->id_frete.'">
            <div class="img-empresa">
              <img src="<?php echo base_url() ?>public/img/logo.png">
             </div>
@@ -109,8 +109,8 @@
           <div class="informações-item desktopImportant">
             <div>
               <ul>
-                <li><a href="'.base_url().'pages/frete/'.$container_fretes->id_frete.'">Origem: <b>'.$container_fretes->cidade_saida.'</b></a></li>
-                <li><a href="'.base_url().'pages/frete/'.$container_fretes->id_frete.'">Destino: <b>'.$container_fretes->cidade_entrega.'</b></a></li>
+                <li><a href="'.base_url().'fretes/frete/'.$container_fretes->id_frete.'">Origem: <b>'.$container_fretes->cidade_saida.'</b></a></li>
+                <li><a href="'.base_url().'fretes/frete/'.$container_fretes->id_frete.'">Destino: <b>'.$container_fretes->cidade_entrega.'</b></a></li>
                 <li>Preço: '.$container_fretes->preco_frete.'</li>
                 <li>Produto:'.$container_fretes->nome_produto.'</li>
               </ul>
@@ -124,8 +124,8 @@
           <div class="informações-item mobile">
             <div>
               <ul>
-                <li><a href="'.base_url().'pages/frete/'.$container_fretes->id_frete.'">Origem: <b>'.$container_fretes->cidade_saida.'</b></a></li>
-                <li><a href="'.base_url().'pages/frete/'.$container_fretes->id_frete.'">Destino: <b>'.$container_fretes->cidade_entrega.'</b></a></li>
+                <li><a href="'.base_url().'fretes/frete/'.$container_fretes->id_frete.'">Origem: <b>'.$container_fretes->cidade_saida.'</b></a></li>
+                <li><a href="'.base_url().'fretes/frete/'.$container_fretes->id_frete.'">Destino: <b>'.$container_fretes->cidade_entrega.'</b></a></li>
                 <li>Produto:'.$container_fretes->nome_produto.'</li>
                 <li>Preço: '.$container_fretes->preco_frete.'</li>
               </ul>

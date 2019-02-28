@@ -21,7 +21,7 @@
                     <?php
                         if(isset($pesquisas)){
                           foreach($pesquisas as $key=>$selecionados) {
-                            echo "<li><a href='".base_url()."pages/frete_filter/remover/".$key."'>".$selecionados['pesquisa']."<b>X</b></a></li>";
+                            echo "<li><a href='".base_url()."fretes/filtro/remover/".$key."'>".$selecionados['pesquisa']."<b>X</b></a></li>";
                           }
                         }
                      ?>
@@ -70,7 +70,7 @@
                         <?php
                         foreach ($categoria_veiculos as $categorias) {
                           if ($categorias->desc_categoria == 'Pesados') {
-                            echo "<li><a href='".base_url()."pages/frete_filter/categoria/".$categorias->desc_veiculo_categoria."'>".$categorias->desc_veiculo_categoria."</a></li>";
+                            echo "<li><a href='".base_url()."fretes/filtro/categoria/".$categorias->desc_veiculo_categoria."'>".$categorias->desc_veiculo_categoria."</a></li>";
                           }
                         }
                      ?>
@@ -82,7 +82,7 @@
                         <?php
                         foreach ($categoria_veiculos as $categorias) {
                           if ($categorias->desc_categoria == 'Medios') {
-                            echo "<li><a href='".base_url()."pages/frete_filter/categoria/".$categorias->desc_veiculo_categoria."'>".$categorias->desc_veiculo_categoria."</a></li>";
+                            echo "<li><a href='".base_url()."fretes/filtro/categoria/".$categorias->desc_veiculo_categoria."'>".$categorias->desc_veiculo_categoria."</a></li>";
                           }
                         }
                      ?>
@@ -94,7 +94,7 @@
                         <?php
                         foreach ($categoria_veiculos as $categorias) {
                           if ($categorias->desc_categoria == 'Leves') {
-                            echo "<li><a  href='".base_url()."pages/frete_filter/categoria/".$categorias->desc_veiculo_categoria."'>".$categorias->desc_veiculo_categoria."</a></li>";
+                            echo "<li><a  href='".base_url()."fretes/filtro/categoria/".$categorias->desc_veiculo_categoria."'>".$categorias->desc_veiculo_categoria."</a></li>";
                           }
                         }
                      ?>
@@ -110,7 +110,7 @@
                      <ul>
                       <?php
                           foreach ($complemento as $complemento_item) {
-                            echo '<li><a  href="'.base_url().'pages/frete_filter/complemento/'.$complemento_item->complemento.'"> '.$complemento_item->complemento.' <b>'.$complemento_item->qtd_complemento.'</b></a></li>';
+                            echo '<li><a  href="'.base_url().'fretes/filtro/complemento/'.$complemento_item->complemento.'"> '.$complemento_item->complemento.' <b>'.$complemento_item->qtd_complemento.'</b></a></li>';
                           }
                        ?>
                     </ul>
@@ -137,7 +137,7 @@
                       <?php
 
                           foreach ($rastreador as $rastreador_item) {
-                            echo '<li><a href="'.base_url().'pages/frete_filter/rastreador/'.$rastreador_item->rastreador.'"> '.$rastreador_item->rastreador.' <b>'.$rastreador_item->qtd_rastreador.'</b></a></li>';
+                            echo '<li><a href="'.base_url().'fretes/filtro/rastreador/'.$rastreador_item->rastreador.'"> '.$rastreador_item->rastreador.' <b>'.$rastreador_item->qtd_rastreador.'</b></a></li>';
                           }
                        ?>
                     </ul>
@@ -152,7 +152,7 @@
                       <?php
 
                           foreach ($carroceria as $carroceria_item) {
-                            echo '<li><a  href="'.base_url().'pages/frete_filter/carroceria/'.$carroceria_item->desc_carroceria.'"> '.$carroceria_item->desc_carroceria.' <b>'.$carroceria_item->qtd_carroceria.'</b></a></li>';
+                            echo '<li><a  href="'.base_url().'fretes/filtro/carroceria/'.$carroceria_item->desc_carroceria.'"> '.$carroceria_item->desc_carroceria.' <b>'.$carroceria_item->qtd_carroceria.'</b></a></li>';
                           }
                        ?>
                     </ul>
@@ -197,20 +197,20 @@
                       </section>';
                     foreach ($fretes as $container_fretes) {
                       echo'<section class="item-frete-empresa-veiculo">
-                       <a href="'.base_url().'pages/frete/'.$container_fretes->id_frete.'"><div class="img-empresa">
+                       <a href="'.base_url().'fretes/frete/'.$container_fretes->id_frete.'"><div class="img-empresa">
                         <img src="'.base_url().''.$container_fretes->foto_empresa.'">
                         </div></a>
                         <div class="informações-item">
                           <div >
                             <ul>
-                              <li><a href="'.base_url().'pages/frete/'.$container_fretes->id_frete.'">Origem: <b>'.$container_fretes->cidade_saida.'</b></a></li>
+                              <li><a href="'.base_url().'fretes/frete/'.$container_fretes->id_frete.'">Origem: <b>'.$container_fretes->cidade_saida.'</b></a></li>
                               <li>Preço: '.$container_fretes->preco_frete.'</li>
                               <li>Veiculo: '.$container_fretes->desc_veiculo_categoria.'</li>
                             </ul>
                           </div>
                           <div class="secondary-item">
                             <ul>
-                              <li><a href="'.base_url().'pages/frete/'.$container_fretes->id_frete.'">Destino: <b>'.$container_fretes->cidade_entrega.'</b></a></li>
+                              <li><a href="'.base_url().'fretes/frete/'.$container_fretes->id_frete.'">Destino: <b>'.$container_fretes->cidade_entrega.'</b></a></li>
                               <li>Produtos:'.$container_fretes->nome_produto.'</li>
                                <li>Espécie em: '.$container_fretes->desc_especie.'</li>
                             </ul>
@@ -248,8 +248,8 @@
   <script type="text/javascript" src="<?php echo base_url() ?>public/js/select_populado.js"></script>
   <script type="text/javascript">
     check();
-    select_populado('select[name="Origem_frete_estado"]','select[name="Origem_frete_cidade"]','#sumir','pages/frete_filter/cidade_origem/','pages/frete_filter/estado_origem/');
-    select_populado('select[name="Destino_frete_estado"]','select[name="Destino_frete_cidade"]','#sumir1','pages/frete_filter/cidade_saida/','pages/frete_filter/estado_saida/');
+    select_populado('select[name="Origem_frete_estado"]','select[name="Origem_frete_cidade"]','#sumir','fretes/filtro/cidade_origem/','fretes/filtro/estado_origem/');
+    select_populado('select[name="Destino_frete_estado"]','select[name="Destino_frete_cidade"]','#sumir1','fretes/filtro/cidade_saida/','fretes/filtro/estado_saida/');
   </script>
   </body>
 </html>

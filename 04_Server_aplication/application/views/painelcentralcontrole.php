@@ -70,7 +70,7 @@
             <span class="checkmark"></span>
           </label>
         </div>
-       <a href="'.base_url().'pages/frete/'.$container_fretes->id_frete.'">
+       <a href="'.base_url().'fretes/frete/'.$container_fretes->id_frete.'">
          <div class="img-empresa">
            <img src="<?php echo base_url() ?>public/img/logo.png">
           </div>
@@ -128,7 +128,7 @@
             <span class="checkmark"></span>
           </label>
         </div>
-       <a href="'.base_url().'pages/frete/'.$container_fretes->id_frete.'">
+       <a href="'.base_url().'fretes/frete/'.$container_fretes->id_frete.'">
          <div class="img-empresa">
            <img src="<?php echo base_url() ?>public/img/logo.png">
           </div>

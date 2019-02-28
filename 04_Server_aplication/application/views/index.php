@@ -15,7 +15,7 @@
         <!-- SCRIPT -->
         <script type="text/javascript">
           $('#mapBrasil g').click(function(){
-            location.href = "<?php echo base_url('pages/')?>fretesEstado/"+$(this)[0].id
+            location.href = "<?php echo base_url('fretes/')?>estado/"+$(this)[0].id
           })
         </script>
       </div>
@@ -36,12 +36,12 @@
         <!-- SCRIPT -->
         <script type="text/javascript">
           $('.lista_option_estados').change(function() {
-            location.href = "<?php echo base_url('pages/')?>fretesEstado/" + $(this).val()
+            location.href = "<?php echo base_url('fretes/')?>estado/" + $(this).val()
           })
         </script>
         <ul id="lista_estados">
           <?php foreach ($estados as $estados_item) {
-            echo '<li><a href="'.base_url('pages/').'fretesEstado/'.$estados_item->sigla_estads.'">'.$estados_item->sigla_estads.'</a></li>' ;
+            echo '<li><a href="'.base_url('fretes/').'estado/'.$estados_item->sigla_estads.'">'.$estados_item->sigla_estads.'</a></li>' ;
           } ?>
         </ul>
       </div>
