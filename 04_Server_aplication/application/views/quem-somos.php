@@ -40,25 +40,59 @@
 									<div class="jcarousel">
 											<ul>
 													<li class="container-carousel">
-														<img src="<?php echo base_url()?>public/img/logo.png">
-
+														<img src="<?php echo base_url()?>public/img/historia/2013.jpg">
 						                <div class="texto">
 						                  <span>2013</span>
-
-						                  <p>Comunismo - Modelo de sociedade que prevê a eliminação completa de toda a forma de propriedade privada.
-						                    Tratava-se de proposta antiga.Para alguns especialistas, está presente desde a Antiguidade, em obras como
-						                    a de Platão</p>
+						                  <p>Lançada a Só delivery, focada em atender empresas que necessitavam de um parceiro no transporte Rápidos a Só Delivery Nasceu em Jundiai no Dia 14 de Setembro de 2013 ja com sua identidade Visual formada e com o objetivo de ser a maior empresa de transportes rápidos de Jundiaí/SP</p>
+						                </div>
+													</li>
+													<li class="container-carousel">
+														<img src="<?php echo base_url()?>public/img/historia/2013_2.jpg">
+						                <div class="texto">
+						                  <span>2013</span>
+						                  <p>Com Apenas uma Moto Ybr 125cc Iniciou-se os trabalhos, a Só Delivery ainda Tímida começa suas Operações e poucos Clientes, Mais com a ascensão das redes Sócias, anúncio e Parcerias conseguiu se manter durante e se estabilizar durante o ano de 2013.</p>
+						                </div>
+													</li>
+													<li class="container-carousel">
+														<img src="<?php echo base_url()?>public/img/historia/2015.jpg">
+						                <div class="texto">
+						                  <span>2015</span>
+															<p>Em 2015 já com um Forte Nome na cidade a Só Delivery inicia sua Expansão e quadro de Funcionários, buscando seu Objetivo de ser a maior e mais conheçida empresa de Transportes Rápidos em Jundiaí/SP, Se consolida em uma nova Sede e já conta com contratos com Grandes Marcas como Passarela.com sendo responsavel pela distribuição a Mais de 14 Cidades da Região de Jundiaí/SP. </p>
+						                </div>
+													</li>
+													<li class="container-carousel">
+														<img src="<?php echo base_url()?>public/img/historia/2016.jpg">
+						                <div class="texto">
+						                  <span>2016</span>
+															<p>E Assim se manteve no ano de 2016 sempre buscando novos cliente, para isso continuamos investindo em Anúncios na Internet e TV Locais além de Patrocinar Programas Regionais e Eventos</p>
+						                </div>
+													</li>
+													<li class="container-carousel">
+														<img src="<?php echo base_url()?>public/img/historia/2017.jpg">
+						                <div class="texto">
+						                  <span>2017</span>
+															<p>A Só Delivery Também sofreu Com a forte Crise Financeira do País que Afetou Muitas empresas no Brasil e com isso teve que se readaptar as novas soluções e estrategias a serem seguidas durante o ano como diminuir seus custos e quadros de Funcionários Além de visto Grandes Parceiros ‘Quebrar’  e Perder Alguns Contratos.</p>
+						                </div>
+													</li>
+													<li class="container-carousel">
+														<img src="<?php echo base_url()?>public/img/historia/2018.jpg">
+						                <div class="texto">
+						                  <span>2018</span>
+															<p>Um Ano de Muita Luta para empresa Sobreviver e se reinventar, em 4 Anos Foi o Pior Ano, a empresa Mudou sua Identidade e estrategias para conseguir se manter no mercado de entregas rápidas, Oferecendo Franquias do Modelo de Negócio e investindo em Plataformas e App para ainda tentar se diferenciar das demais. </p>
 						                </div>
 													</li>
 													<li class="container-carousel">
 														<img src="<?php echo base_url()?>public/img/logo.png">
-
 						                <div class="texto">
-						                  <span>2014</span>
-
-						                  <p>Comunismo - Modelo de sociedade que prevê a eliminação completa de toda a forma de propriedade privada.
-						                    Tratava-se de proposta antiga.Para alguns especialistas, está presente desde a Antiguidade, em obras como
-						                    a de Platão</p>
+						                  <span>2018</span>
+															<p>Ainda em 2018 a Só Delivery tomou uma decisão que mudaria sua História para sempre, começando mais uma vez pela sua identidade Visual que sempre foi uma prioridade, Passou a se dedicar ao Transportes como um todo desde de Motos a Carretas, Fazendo com que motoristas autônomos, frotistas, transportadoras e embarcadores economizem tempo e dinheiro através das nossa indicações.</p>
+						                </div>
+													</li>
+													<li class="container-carousel">
+														<img src="<?php echo base_url()?>public/img/logo.png">
+						                <div class="texto">
+						                  <span>2019</span>
+															<p>A Só Delivery se Recupera e Lança sua mais nova ferramenta que vai Ajudar Motoristas encontrarem fretes, e transportadoras encontraem motoristas, desde de Leves a Pesados, um site completo e Moderno que vai Integrar, via internet, todos os segmentos do setor de transporte rodoviário de cargas.</p>
 						                </div>
 													</li>
 											</ul>
@@ -69,7 +103,7 @@
 
 
 									<div class="clear"></div>
-		              <div class="linha-tempo" data-jcarouselpagination="true">
+		              <!-- <div class="linha-tempo" data-jcarouselpagination="true">
 		                <div class="linha-entre-tempo"></div>
 
 		                <a  class="bolinha-tempo nomarginleft">
@@ -126,7 +160,7 @@
 		                  <div class="bolinha"></div>
 		                  <span>2023</span>
 		                </a>
-		              </div>
+		              </div> -->
 							</div>
             </div>
 						<div id="missao" class="carousel hide">
@@ -179,7 +213,6 @@
       </section>
 
       <div class="clear"></div>
-      <div class="borderred"></div>
     </main>
     <?php include('componentes/footer.inc'); ?>
 		<script type="text/javascript" src="<?php echo base_url() ?>public/js/menu_slider.js"></script>

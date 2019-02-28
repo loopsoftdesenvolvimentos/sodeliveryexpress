@@ -169,8 +169,9 @@
           </div>
         </form>
        </div>
-
+       <div class="clear"></div>
     </main>
+    <?php include('componentes/footer.inc') ?>
   <script type="text/javascript" src="<?php echo base_url() ?>public/js/menu_mobile.js"></script>
   <script type="text/javascript" src="<?php echo base_url() ?>public/js/select_populado.js"></script>
   <script type="text/javascript">

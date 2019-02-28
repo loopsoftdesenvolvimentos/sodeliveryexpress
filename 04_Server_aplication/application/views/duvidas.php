@@ -7,7 +7,6 @@
 
       <div class="clear"></div>
 
-
       <h2 align="center">Deixe suas dúvidas conosco!</h2>
 
       <div class="clear"></div>
@@ -42,7 +41,7 @@
 							</div>';
 						} ?>
 					</div>
-					<div id="form-mandeDuvidas" class="container-discussao none">
+					<div id="form-mandeDuvidas" class="container-discussao none-discussao">
             <form class="form" action="" method="post">
               <div class="container-cadastro-espacos">
                 <div class="container-cadastro-titulo">
@@ -93,7 +92,6 @@
         </div>
       </section>
       <div class="clear"></div>
-      <div class="borderred"></div>
     </main>
     <?php include('componentes/footer.inc'); ?>
 		<script async defer src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v3.2"></script>

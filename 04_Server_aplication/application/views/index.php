@@ -46,7 +46,6 @@
         </ul>
       </div>
       <div class="clear"></div>
-      <div class="borderred"></div>
     </main>
     <?php include('componentes/footer.inc'); ?>
   </body>

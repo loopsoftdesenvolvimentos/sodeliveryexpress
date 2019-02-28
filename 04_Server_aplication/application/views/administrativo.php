@@ -131,9 +131,7 @@
       </div>
     </main>
     <div class="clear"></div>
-    <div class="borderred"></div>
     <?php include('componentes/footer.inc'); ?>
-
     <footer>
       <div class="copyright">
         <p>&copy; <b>Loop Soft</b> Internet Serviços LTDA</p>

@@ -3,15 +3,15 @@
 <html>
   <?php include('componentes/head_checkin.inc') ?>
   <body>
-    <?php include('componentes/header_veiculo_adm.inc') ?>
+    <?php include('componentes/header.inc') ?>
     <main>
        <div class="cadastro-veiculo-form content">
+         <div class="clear"></div>
           <form action="<?php echo base_url()?>Auth_veiculo/Checkin_efetuar" method="post">
             <div class="container-cadastro-espacos">
-              <div class="container-cadastro-titulo">
-                  <h1>Checkin / Efetuar</h1>
+              <div class="container-cadastro-titulo titulo-primario" wfd-id="177">
+                <h1>Checkin / Efetuar</h1>
               </div>
-              
                 <div class="container-cadastro-input">
                     <label for="Estados">Estados/Pais</label>
                     <select id="Estados" name="Estados">
@@ -42,7 +42,9 @@
           </div>
         </form>
        </div>
-    </main>
+       <div class="clear"></div>
+   </main>
+   <?php include('componentes/footer.inc') ?>
       <script type="text/javascript" src="<?php echo base_url() ?>public/js/menu_mobile.js"></script>
   <script type="text/javascript" src="<?php echo base_url() ?>public/js/select_populado.js"></script>
   <script type="text/javascript">

@@ -1,5 +1,6 @@
 
     <footer>
+      <div class="borderred"></div>
       <div class="footer content">
         <div class="container-3">
           <div class="container-footer">

@@ -135,7 +135,6 @@
       </section>
     </main>
     <div class="clear"></div>
-    <div class="borderred"></div>
     <?php include('componentes/footer.inc'); ?>
   </body>
   <!-- SCRIPTS -->

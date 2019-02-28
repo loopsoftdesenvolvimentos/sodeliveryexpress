@@ -122,6 +122,9 @@
 .t-5{
   margin-top: 5rem;
 }
+.jcarousel-wrapper {
+    margin-left: 0px;
+}
 @media screen and (min-width: 764px){
 	.quem-somos{
 		position: relative;
@@ -166,11 +169,11 @@
 	}
 
 	.menu-lateral{
-		width: 80%;
+		width: 250px;
 	}
 
 	.box-central{
-		width: 1038px;
+		width: 1200px;
 		height: 70vh;
 	}
 

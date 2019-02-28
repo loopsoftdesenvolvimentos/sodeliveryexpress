@@ -1,5 +1,6 @@
 .jcarousel-wrapper {
     margin: 20px auto;
+    margin-left: 100px;
     position: relative;
     -webkit-border-radius: 5px;
        -moz-border-radius: 5px;
@@ -29,7 +30,7 @@
 .jcarousel {
     position: relative;
     overflow: hidden;
-    width: 600px;
+    width: 620px;
     height: 100%;
 }
 
@@ -52,7 +53,7 @@
 }
 
 .jcarousel-control-next {
-    /* right: -50px; */
+    right: -50px;
 }
 
 

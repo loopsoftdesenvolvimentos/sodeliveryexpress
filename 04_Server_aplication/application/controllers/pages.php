@@ -346,9 +346,6 @@ class pages extends CI_Controller {
 	public function cadastro_veiculo(){
 		$this->load->view('cadastros');
 	}
-	public function cadastro_se(){
-		$this->load->view('cadastros');
-	}
 	public function assinante()
 	{
 		$this->load->view('assinante');
@@ -369,6 +366,9 @@ class pages extends CI_Controller {
 	{
 		$data['dados_frete'] = $this->Model->frete_unico($id_frete);
 		$this->load->view('frete_unico',$data);
+	}
+	public function painelcontrole(){
+		$this->load->view('painelcentralcontrole');		
 	}
 	public function email()
 	{

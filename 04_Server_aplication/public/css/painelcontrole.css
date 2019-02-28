@@ -1,0 +1,31 @@
+.pesquisa{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0 ;
+  /* background: var(--amarelo); */
+}
+.pesquisa input[type="text"]{
+  background: var(--cinza-escuro);
+  color:#fff;
+  padding: 0.35rem;
+  border-radius: 6px 0px 0px 6px;
+  width: 65%;
+  outline: unset;
+  border: none;
+  font-size: 16px;
+  text-indent: 10px;
+}
+.pesquisa button{
+  border: none;
+  background: var(--vermelho);
+  color:#fff;
+  outline: unset;
+  padding: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 0px 6px 6px 0px;
+  width: 30%;
+  font-size: 16px;
+  cursor: pointer;
+}

@@ -8,7 +8,7 @@
         <?php echo form_open_multipart('crud/cadastrar_empresa');?>
             <div class="container-cadastro-espacos">
               <div class="container-cadastro-titulo titulo-primario">
-                <h1>Empresa</h1>
+                <h1>Cadastro  de Empresa</h1>
               </div>
                 <div class="container-cadastro-input">
                     <label for="razao_social">Razão social</label>
@@ -306,7 +306,7 @@
               </div>
               <div class="container-cadastro-input">
                 <label for="confirmar_senha">Confirmar senha</label>
-                <input type="number" id="confirmar_senha" name="confirmar_senha">
+                <input type="password" id="confirmar_senha" name="confirmar_senha">
               </div>
               <div class="container-cadastro-input-button">
                   <input type="submit" value="Confirmar cadastro">
@@ -320,7 +320,6 @@
       </div>
     </main>
     <div class="clear"></div>
-    <div class="borderred"></div>
     <?php include('componentes/footer.inc'); ?>
 
   <!-- SCRIPTS -->

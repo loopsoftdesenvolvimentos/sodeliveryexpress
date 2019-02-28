@@ -10,7 +10,7 @@
         </div>
          <form action="" method="post">
            <div class="container-cadastro-espacos">
-             <div class="container-cadastro-titulo titulo-primario">
+             <div class="container-cadastro-titulo">
                  <h1>Cadastrar Frete</h1>
              </div>
              <div class="content-cadastro">
@@ -294,9 +294,8 @@
        </form>
       </div>
      </div>
+     <div class="clear"></div>
     </main>
-    <div class="clear"></div>
-    <div class="borderred"></div>
     <?php include('componentes/footer.inc'); ?>
     <script type="text/javascript" src="<?php echo base_url()?>public/js/actionComplemento.js"></script>
     <script type="text/javascript" src="<?php echo base_url()?>public/js/menu_mobile.js"></script>

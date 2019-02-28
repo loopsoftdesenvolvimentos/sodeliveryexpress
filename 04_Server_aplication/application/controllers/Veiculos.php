@@ -22,14 +22,14 @@ class Veiculos extends CI_Controller {
     public function authenticate_motorista()
     {
 
-        $this->form_validation->set_rules('login_user','Placa veiculo','required');    
-        $this->form_validation->set_rules('Senha_placa','Senha de acesso','required');    
+        $this->form_validation->set_rules('login_user','Placa veiculo','required');
+        $this->form_validation->set_rules('Senha_placa','Senha de acesso','required');
 
 
         if($this->form_validation->run() == TRUE){
             $informacoes = array(
-                'user'=>$this->input->post('login_user'),
-                'password'=>$this->input->post('Senha_placa')
+                'user'=>$this->input->post('email_user_veiculo'),
+                'password'=>$this->input->post('senha_user_veiculo')
             );
             $authenticate = $this->Auth_model->authenticate_motorista($informacoes);
 
@@ -85,7 +85,7 @@ class Veiculos extends CI_Controller {
 
     public function checkin()
     {
-        $this->verificar_session();
+        // $this->verificar_session();
         $data['estados'] = $this->Model->all_estados();
         $this->load->view('checkin',$data);
     }
@@ -111,7 +111,7 @@ class Veiculos extends CI_Controller {
             $errors = validation_errors();
              echo json_encode(['error'=>$errors]);
         }else{
-             
+
 
              $data = array(
                 'nome_proprietario'=>$this->input->post('nome_proprietario'),
@@ -174,7 +174,7 @@ class Veiculos extends CI_Controller {
         );
 
          if($this->Model->Checkin_efetuar($data) != true){
-              redirect('Auth_veiculo/acesso_veiculo','location');  
+              redirect('Auth_veiculo/acesso_veiculo','location');
         }
     }
 }
