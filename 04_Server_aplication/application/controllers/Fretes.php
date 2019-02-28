@@ -4,8 +4,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Empresas extends CI_Controller {
     public function __construct(){
         parent::__construct();
-        $this->load->library('session');
-		$this->load->helper('url');
 		$this->load->model('Auth_model');
         $this->load->model('Model');
         $this->load->library('form_validation');

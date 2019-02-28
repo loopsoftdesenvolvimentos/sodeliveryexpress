@@ -7,7 +7,6 @@ class Crud extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->helper('url');
 		$this->load->model('Model');
 		$this->load->library('form_validation');
 		$this->load->helper(array('form', 'url'));
@@ -116,7 +115,7 @@ class Crud extends CI_Controller {
 				);
 
 		        if($this->Model->cadastrar_empresa($data) != true){
-		        	redirect('/pages/empresas','refresh');
+		        	redirect('/empresas','refresh');
 		        }
 
             }

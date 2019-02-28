@@ -102,7 +102,7 @@
                 </a>
               </li>
               <li>
-                <a href="<?php echo base_url()?>pages/empresas">
+                <a href="<?php echo base_url()?>empresas">
                   <div class="icon-menu">
                     <img src="<?php echo base_url()?>public/img/icons/empresa.svg" alt="icone de frete">
                     <p>Empresa</p>

@@ -2,10 +2,10 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Empresas extends CI_Controller {
+
     public function __construct(){
+
         parent::__construct();
-        $this->load->library('session');
-		$this->load->helper('url');
 		$this->load->model('Auth_model');
         $this->load->model('Model');
         $this->load->library('form_validation');
@@ -14,7 +14,7 @@ class Empresas extends CI_Controller {
 
 	public function index(){
 
-        $config["base_url"] = base_url() . "/pages/empresas";
+        $config["base_url"] = site_url('empresas/index');
         $config["total_rows"] = $this->Model->all_empresas_rows();
         $config["per_page"] = 2;
         $config["uri_segment"] = 3;
@@ -23,65 +23,72 @@ class Empresas extends CI_Controller {
 
       	$data['total'] = $this->Model->all_empresas_total();
         $data['link'] = $this->pagination->create_links();
-		$data['pesquisas'] = $_SESSION['lista_empresa'];
+		$data['pesquisas'] = $this->session->lista_empresa;
 		$data['estados'] = $this->Model->all_estados();
 		$data['ramos'] = $this->Model->ramo();
 		$data['empresas'] = $this->Model->all_empresas($config["per_page"], $page);
-		$this->load->view('empresas',$data);
+
+		$this->load->view('empresas', $data);
 	}
 
-	public function empresas_filter($tipo,$pesquisa){
+	public function filtrar($tipo,$pesquisa){
 
-		$_SESSION['cont'] = 0;
+		$this->session->cont = 0;
 
 		if ($tipo == 'remover') {
-		     unset($_SESSION['lista_empresa'][$pesquisa]);
+
+		     unset($this->session->lista_empresa[$pesquisa]);
 		}
+
 		if($tipo == 'pesquisas'){
-			foreach ($_SESSION['lista_empresa'] as $key => $lista) {
+			foreach ($this->session->lista_empresa as $key => $lista) {
 				if($lista['pesquisa'] == $pesquisa){
-					$_SESSION['cont'] +=1;
+					$this->session->cont += 1;
 				}
 			}
 			$url = urldecode($pesquisa);
-			if($_SESSION['cont'] == 0){
-				array_push($_SESSION['lista_empresa'],['tipo'=>$tipo,'select'=>'empresa.nome_fantasia like "%'.$url.'%"','pesquisa'=>$url]);
+			if($this->session->cont == 0){
+				array_push($this->session->lista_empresa,['tipo'=>$tipo,'select'=>'empresa.nome_fantasia like "%'.$url.'%"','pesquisa'=>$url]);
 			}
 		}
+
 		if($tipo == 'cidade'){
-			foreach ($_SESSION['lista_empresa'] as $key => $lista) {
+			foreach ($this->session->lista_empresa as $key => $lista) {
 				if($lista['pesquisa'] == $pesquisa){
-					$_SESSION['cont'] +=1;
+					$this->session->cont +=1;
 				}
 			}
 			$url = urldecode($pesquisa);
-			if($_SESSION['cont'] == 0){
-				array_push($_SESSION['lista_empresa'],['tipo'=>$tipo,'select'=>' cidades.nome_cidade = "'.$url.'"','pesquisa'=>$url]);
+			if($this->session->cont == 0){
+				array_push($this->session->lista_empresa,['tipo'=>$tipo,'select'=>' cidades.nome_cidade = "'.$url.'"','pesquisa'=>$url]);
 			}
 		}
+
 		if($tipo == 'estados'){
-			foreach ($_SESSION['lista_empresa'] as $key => $lista) {
+			foreach ($this->session->lista_empresa as $key => $lista) {
 				if($lista['pesquisa'] == $pesquisa){
-					$_SESSION['cont'] +=1;
+					$this->session->cont +=1;
 				}
 			}
 			$url = urldecode($pesquisa);
-			if($_SESSION['cont'] == 0){
-				array_push($_SESSION['lista_empresa'],['tipo'=>$tipo,'select'=>' estados.sigla_estads = "'.$url.'"','pesquisa'=>$url]);
+			if($this->session->cont == 0){
+				array_push($this->session->lista_empresa,['tipo'=>$tipo,'select'=>' estados.sigla_estads = "'.$url.'"','pesquisa'=>$url]);
 			}
 		}
+
 		if($tipo == 'ramo'){
-			foreach ($_SESSION['lista_empresa'] as $key => $lista) {
+			foreach ($this->session->lista_empresa as $key => $lista) {
 				if($lista['pesquisa'] == $pesquisa){
-					$_SESSION['cont'] +=1;
+					$this->session->cont +=1;
 				}
 			}
 			$url = urldecode($pesquisa);
-			if($_SESSION['cont'] == 0){
-				array_push($_SESSION['lista_empresa'],['tipo'=>$tipo,'select'=>'ramo.desc_ramo = "'.$url.'"','pesquisa'=>$url]);
+			if($this->session->cont == 0){
+				array_push($this->session->lista_empresa,['tipo'=>$tipo,'select'=>'ramo.desc_ramo = "'.$url.'"','pesquisa'=>$url]);
 			}
 		}
-       $config["base_url"] = base_url() . "/pages/empresas";
+
+       $config["base_url"] = base_url() . "/empresas";
        $config["total_rows"] = $this->Model->all_empresas_rows();
        $config["per_page"] = 2;
        $config["uri_segment"] = 3;
@@ -90,15 +97,16 @@ class Empresas extends CI_Controller {
 
       	$data['total'] = $this->Model->all_empresas_total();
         $data['link'] = $this->pagination->create_links();
-		$data['pesquisas'] = $_SESSION['lista_empresa'];
+		$data['pesquisas'] = $this->session->lista_empresa;
 		$data['estados'] = $this->Model->all_estados();
 		$data['ramos'] = $this->Model->ramo();
-		$data['empresas'] = $this->Model->filter_empresa($config["per_page"], $page,$_SESSION['lista_empresa']);
+		$data['empresas'] = $this->Model->filter_empresa($config["per_page"], $page,$this->session->lista_empresa);
+
 		$this->load->view('empresas',$data);
 	}
 
-	public function cadastro_empresa()
-	{
+	public function cadastrar(){
+
 		$data['estados']= $this->Model->all_estados();
 		$data['ramo'] = $this->Model->all_ramos();
 		$this->load->view('cadastros',$data);
@@ -141,12 +149,11 @@ class Empresas extends CI_Controller {
 
             $this->load->library('upload', $config);
             
-            if (!$this->upload->do_upload('client_name'))
-            {
+            if (!$this->upload->do_upload('client_name')){
+
                     $error = array('error' => $this->upload->display_errors());
-            }
-            else
-            {
+            }else{
+
 		         $data = array(
 					'razao_social'=>$this->input->post('razao_social'),
 					'cnpj'=>$this->input->post('cnpj'),
@@ -183,11 +190,12 @@ class Empresas extends CI_Controller {
 				);
 
 		        if($this->Model->cadastrar_empresa($data) != true){
-		        	redirect('/pages/empresas','refresh');
+		        	redirect('/empresas','refresh');
 		        }
                   
             }
 		}else{
+
 			$data['estados']= $this->Model->all_estados();
 			$data['ramo'] = $this->Model->all_ramos();
 			$this->load->view('cadastros',$data);

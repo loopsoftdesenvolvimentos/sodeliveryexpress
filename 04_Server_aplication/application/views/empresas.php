@@ -21,7 +21,7 @@
                     <?php
                         if(isset($pesquisas)){
                           foreach($pesquisas as $key=>$selecionados) {
-                            echo "<li><a href='".base_url()."pages/empresas_filter/remover/".$key."'>".$selecionados['pesquisa']."<b>X</b></a></li>";
+                            echo "<li><a href='".base_url()."empresas/filtrar/remover/".$key."'>".$selecionados['pesquisa']."<b>X</b></a></li>";
                           }
                         }
                      ?>
@@ -58,7 +58,7 @@
                   <div class="container-empresa-filtro-espaco">
                     <ul>
                         <?php foreach ($ramos as $item_ramos) {
-                          echo'<li><a href="'.base_url().'pages/empresas_filter/ramo/'.$item_ramos->desc_ramo.'">'.$item_ramos->desc_ramo.'<b>'.$item_ramos->qtd_ramo.'</b></a></li>' ;
+                          echo'<li><a href="'.base_url().'empresas/filtrar/ramo/'.$item_ramos->desc_ramo.'">'.$item_ramos->desc_ramo.'<b>'.$item_ramos->qtd_ramo.'</b></a></li>' ;
                         } ?>
                     </ul>
                   </div>
@@ -140,11 +140,11 @@
   <script type="text/javascript">
       filtrar_input('input[name="search"]','#sumir');
       //
-      select_populado('select[name="Destino"]','select[name="Destino_cidades"]','#sumir1','/pages/empresas_filter/cidade/','/pages/empresas_filter/estados/');
+      select_populado('select[name="Destino"]','select[name="Destino_cidades"]','#sumir1','/empresas/filtrar/cidade/','/pages/empresas_filter/estados/');
       //
-      select_populado('select[name="estado_empresa"]','select[name="cidades_empresas"]','','/pages/empresas_filter/cidade/','/pages/empresas_filter/estados/');
+      select_populado('select[name="estado_empresa"]','select[name="cidades_empresas"]','','/empresas/filtrar/cidade/','/pages/empresas_filter/estados/');
       //
-      select_populado('select[name="Origem"]','select[name="cidades"]','#sumir','/pages/empresas_filter/cidade/','/pages/empresas_filter/estados/');
+      select_populado('select[name="Origem"]','select[name="cidades"]','#sumir','/empresas/filtrar/cidade/','/pages/empresas_filter/estados/');
 
   </script>
   </body>
