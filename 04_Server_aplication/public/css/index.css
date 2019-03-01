@@ -60,9 +60,10 @@ header{
 .menu-mobile img{
   width: 50px;
 }
+
 nav ul{
   list-style: none;
-  margin-top: 10px;
+  margin-top: 50px;
   background: var(--vermelho);
 
 }
@@ -414,26 +415,11 @@ footer{
     margin-right: 20px;
   }
   nav a{
-    border-bottom: none;
     margin-left: 20px;
-  }
-
-  .nomarginleft{
-    margin: 0;
   }
 
   nav ul{
     padding: 1rem;
-    display: flex;
-    justify-content: center;
-  }
-
-  nav li{
-    padding: 0;
-  }
-
-  .icon-menu{
-    flex-direction: column;
   }
 
   .icon-menu img{
@@ -449,7 +435,6 @@ footer{
   }
 
   .conta a{
-    border: none;
     color: var(--amarelo);
   }
 

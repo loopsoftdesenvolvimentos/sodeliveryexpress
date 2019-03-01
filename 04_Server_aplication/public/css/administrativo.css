@@ -45,7 +45,8 @@ nav ul{
 
 .conta{
 	position: absolute;
-	top: 114px;
+	top: -10px;
+	right: 0px;
 }
 
 .config img{
@@ -53,8 +54,7 @@ nav ul{
 }
 
 .config span{
-	font-size: 1rem;
-	color: var(--branco_2);
+	display: none;
 }
 
 .conta a{
@@ -289,6 +289,7 @@ nav ul{
 		padding: 1rem;
 	}
 	.config span{
+		display: block;
 		font-size: 1rem;
 		color: var(--branco_2);
 	}
@@ -336,6 +337,8 @@ nav ul{
 		margin: 0 auto;
 		text-align: center;
 	}
+
+	
 }
 
 @media screen and (min-width: 1224px){

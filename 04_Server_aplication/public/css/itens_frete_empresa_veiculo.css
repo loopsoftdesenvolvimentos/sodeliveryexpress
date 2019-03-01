@@ -1,5 +1,10 @@
+.menu-mobile img{
+	width: 50px !important;
+	height: 50px !important;
+}
+
 .desktopImportant{
-	display: none!important
+	display: none!important;
 }
 .mobile{
 	display: flex;
@@ -14,9 +19,10 @@
 	right: 25px;
 }
 .mobile-menu img{
-	width: 50px;
-	margin: 50%;
-	transform: translate(-50%, -50%);
+	width: 40px;
+	position: absolute;
+	top: 20px;
+	left: 20px;
 }
 #sumir1,
 #sumir{
@@ -304,9 +310,7 @@ select{
 	.desktopImportant{
 		display: flex!important;
 	}
-	.mobile{
-		display: none;
-	}
+
 	.mobileShow{
 		display: none;
 	}
@@ -328,6 +332,15 @@ select{
 	.img-empresa{
 		flex-direction:row;
 	}
+
+	.container-menu{
+		display: block;
+		margin-left: 20px;
+	}
+
+	.mobile-menu{
+		display: none;
+	}
 }
 @media screen and (min-width: 1200px){
 	.fundo{
@@ -335,5 +348,9 @@ select{
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
+	}
+
+	.menu-mobile{
+		display: none;
 	}
 }

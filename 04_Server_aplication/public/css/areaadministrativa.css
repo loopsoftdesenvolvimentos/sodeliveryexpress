@@ -13,6 +13,7 @@
 .area-container{
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
 .area-container .container{
@@ -28,4 +29,31 @@
 .area-container .container .infors-pagamento img{
   width: 35px!important;
   margin-right: 25px
+}
+
+.cadastro-veiculo-form{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.row{
+  flex-direction: column !important;
+}
+
+.row div{
+  margin: 0 !important;
+}
+
+@media screen and (min-width: 768px){
+  .row{
+    flex-direction: row !important;
+  }
+
+  .row div{
+    margin-left: 10px !important;
+  }
+
+  .area-container{
+    flex-direction: row;
+  }
 }

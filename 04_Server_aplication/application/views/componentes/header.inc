@@ -58,7 +58,7 @@
           <div class="pesquisa" style="display: none;">
             <input type="text" id="pesquisa">
             <button type="submit">Buscar</button>
-          </div> -->
+          </div>
           <div id="btn-menu" class="menu-mobile mobile" >
             <img src="<?php echo base_url()?>public/img/icons/menu.svg" alt="botão de menu">
           </div>
