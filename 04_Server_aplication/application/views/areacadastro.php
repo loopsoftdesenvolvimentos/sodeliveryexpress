@@ -4,7 +4,7 @@
   <body>
     <?php include('componentes/header_administrativo_areas.inc'); ?>
     <main>
-      <div id="cadastramentoFretes" class="cadastro-veiculo-form content">
+      <div id="cadastramentoFretes" class="container-cadastro content">
         <div class="container-cadastro-titulo titulo-primario titulo-primario_area">
           <h1>Área de Cadastramento</h1>
         </div>

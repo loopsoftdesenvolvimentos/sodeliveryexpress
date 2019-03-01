@@ -5,7 +5,7 @@
     <?php include('componentes/header_administrativo_areas.inc'); ?>
     <main>
       <div class="clear"></div>
-      <div id="editarEmpresa" class="cadastro-veiculo-form content">
+      <div id="editarEmpresa" class="container-cadastro content">
         <div class="container-cadastro-titulo titulo-primario titulo-primario_area">
           <h1>Área Administrativa</h1>
         </div>

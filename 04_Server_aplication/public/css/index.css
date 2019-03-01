@@ -59,10 +59,14 @@ header{
 }
 .menu-mobile img{
   width: 50px;
+  height: 60px
+}
+nav{
+  z-index: 999999;
 }
 nav ul{
   list-style: none;
-  margin-top: 10px;
+  margin-top: 50px;
   background: var(--vermelho);
 
 }

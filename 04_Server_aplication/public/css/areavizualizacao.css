@@ -37,7 +37,7 @@
 }
 .btns_list button,
 .btns_list input{
-  background: var(--vermelho_escuro)!important
+  opacity: .8;
 }
 .btns_actions button,
 .btns_actions input{

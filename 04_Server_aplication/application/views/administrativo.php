@@ -18,7 +18,9 @@
             <ul>
               <li><b>Veículos: </b><span>00</span> Cadastrados</li>
               <li><b>Fretes: </b><span>00</span> Cadastrados</li>
-              <li class="destaque_info amarelo-forte"><b>Valor total dos Fretes: </b>R$: <span>00,00</span></li>
+              <li class="destaque_info amarelo-forte">
+                <b>Valor total dos Fretes: </b>R$: <span>00,00</span>
+              </li>
             </ul>
           </div>
         </div>
@@ -33,7 +35,7 @@
             <ul>
               <li><b>Usuário: </b><span>Nome_usuario</span></li>
               <li><b>Empresa: </b><span>Nome_empresa</span></li>
-              <li class="destaque_info azul-forte"><b>Próxima Fatura: </b><span> 00/00/0000</span> <a href="#">ver extrato</a></li>
+              <li class="destaque_info azul-forte"><b>Próxima Fatura: </b><span> 00/00/0000</span> <a href="<?php echo base_url() ?>pages/areaadministrativa/#verEditaPagamento">ver pagamento</a></li>
             </ul>
           </div>
         </div>

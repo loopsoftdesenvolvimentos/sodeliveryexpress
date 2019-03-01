@@ -12,14 +12,11 @@
       <div class="container-cadastro-titulo titulo-primario">
           <h1>Estatísticas empresarias</h1>
       </div>
-      <div class="chart_bar">
-        <div class="title-chart">
-          <img src="<?php echo base_url()?>public/img/letras/veiculos.svg" alt="titulo chart">
-        </div>
-        <div id="estatistica_veiculo" class="charts_barra"></div>
+      <div id="chart_first" class="chart_bar">
+        <div id="estatisticas_empresariais" class="charts_barra"></div>
       </div>
       <div class="clear"></div>
-      <div class="container-cadastro-titulo titulo-primario">
+      <div id="listarFretes" class="container-cadastro-titulo titulo-primario">
         <h1>Seus Fretes</h1>
         <div class="menu-actions">
           <ul>

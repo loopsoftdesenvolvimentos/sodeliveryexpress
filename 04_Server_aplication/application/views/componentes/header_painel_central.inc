@@ -79,7 +79,7 @@
               <li>
                 <a href="<?php echo base_url()?>pages/areacadastro/#cadastramentoVeiculo">
                   <div class="icon-menu">
-                    <img src="<?php echo base_url()?>public/img/icons/vision.png" alt="icone de frete">
+                    <img src="<?php echo base_url()?>public/img/icons/editar_paginas.svg" alt="icone de frete">
                     <p>Editar Páginas</p>
                   </div>
                 </a>
@@ -87,7 +87,7 @@
               <li>
                 <a href="#estatisticas">
                   <div class="icon-menu">
-                    <img src="<?php echo base_url()?>public/img/icons/verEstatisticasADM.png" alt="icone de estatisticas">
+                    <img src="<?php echo base_url()?>public/img/icons/verEstatisticasADM.svg" alt="icone de estatisticas">
                     <p>Ver Estatística</p>
                   </div>
                 </a>
@@ -95,7 +95,7 @@
               <li>
                 <a href="#listaVeiculos">
                   <div class="icon-menu">
-                    <img src="<?php echo base_url()?>public/img/icons/verVeiculosADM.png" alt="icone de frete">
+                    <img src="<?php echo base_url()?>public/img/icons/verVeiculosADM.svg" alt="icone de frete">
                     <p>Listar Veículos</p>
                   </div>
                 </a>
@@ -103,7 +103,7 @@
               <li>
                 <a href="#listarFretes" >
                   <div class="icon-menu">
-                    <img src="<?php echo base_url()?>public/img/icons/verFretesADM.png" alt="icone de frete">
+                    <img src="<?php echo base_url()?>public/img/icons/verFretesADM.svg" alt="icone de frete">
                     <p>Listar Fretes</p>
                   </div>
                 </a>

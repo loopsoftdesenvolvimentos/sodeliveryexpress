@@ -1,5 +1,6 @@
 #mapa{
 	height:100vh;
+	z-index: -99999;
 }
 .menu-estatisticas{
 	z-index: 99999;

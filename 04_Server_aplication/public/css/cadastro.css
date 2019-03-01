@@ -34,12 +34,13 @@
 }
 .container-cadastro-input{
 	display:flex;
-	flex-direction:column;
+	flex-direction: column;
 }
 .container-cadastro-input-radio,
 .row{
 	display:flex;
 	flex-direction:row;
+	flex-wrap: wrap;
 }
 .row div{
 	width: 100%;
@@ -167,7 +168,8 @@ input,select{
 	margin-top:30rem;
 }
 @media screen and (min-width:640px){
-	.container-cadastro{
-		padding:0px 0px;
+	.container-cadastro-input-radio,
+	.row{
+		flex-wrap: nowrap;
 	}
 }
