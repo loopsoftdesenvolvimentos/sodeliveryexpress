@@ -67,7 +67,7 @@
           <div id="btn-menu" class="menu-mobile mobile" >
             <img src="<?php echo base_url()?>public/img/icons/menu.svg" alt="botão de menu">
           </div>
-          <nav class="none">
+          <nav class="none adm-areas">
             <ul>
               <li>
                 <a href="<?php echo base_url()?>pages/administrativo" class="nomarginleft">

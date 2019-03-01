@@ -172,4 +172,25 @@ input,select{
 	.row{
 		flex-wrap: nowrap;
 	}
+
+	.adm-areas ul a{
+		margin-left: 30px !important;
+	}
+}
+
+@media screen and (min-width: 1224px){
+
+	.container-cadastro-input-submit input[type='submit']{
+		display: block;
+		margin: unset;
+		margin-top: 20px;
+		width: unset;
+	}
+
+	.content-cadastro{
+		padding: 0;
+	}
+
+
+	
 }

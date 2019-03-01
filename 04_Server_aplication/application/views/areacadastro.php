@@ -44,7 +44,7 @@
                <div class="container-cadastro-input">
                  <label for="especie">Espécie</label>
                  <select name="especie">
-                   <optio selected disabled>Selecionar uma espécie</option>
+                   <option selected disabled>Selecionar uma espécie</option>
                    <option value="Animais">Animais</option>
                    <option value="Big Bag">Big Bag</option>
                    <option value="Bobina">Bobina</option>
