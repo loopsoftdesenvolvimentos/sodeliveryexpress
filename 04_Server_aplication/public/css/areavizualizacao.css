@@ -1,3 +1,6 @@
+#container-disabledFretes{
+  display: none;
+}
 .titulo-primario_area h1{
   font-weight: 900;
   font-size: 2rem!important;
@@ -24,7 +27,39 @@
   color:var(--branco_2);
   width:150px;
 }
+.row{
+  display: flex;
+  flex-direction: row!important;
+}
 .column{
   display: flex;
   flex-direction: column!important;
+}
+.btns_list button,
+.btns_list input{
+  opacity: .8;
+}
+.btns_actions button,
+.btns_actions input{
+  opacity: .6;
+}
+.menu-actions ul{
+  margin-top: 25px;
+  display: flex;
+	list-style: none;
+	border-bottom: solid 2px var(--vermelho);
+}
+.menu-actions ul li{
+	display: block;
+	padding: 1rem;
+	cursor: pointer;
+}
+.menu-actions .menu_active{
+  background: var(--vermelho);
+  color: var(--branco_rgba);
+  transition: var(--transition3);
+}
+.fretes_desativados{
+  background: var(--branco_1)!important;
+  opacity: 0.6;
 }

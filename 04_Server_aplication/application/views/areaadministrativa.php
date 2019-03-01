@@ -5,7 +5,7 @@
     <?php include('componentes/header_administrativo_areas.inc'); ?>
     <main>
       <div class="clear"></div>
-      <div id="editarEmpresa" class="cadastro-veiculo-form content">
+      <div id="editarEmpresa" class="container-cadastro content">
         <div class="container-cadastro-titulo titulo-primario titulo-primario_area">
           <h1>Área Administrativa</h1>
         </div>
@@ -64,15 +64,15 @@
             </div>
             <div class="container-cadastro-input">
               <label for="skype">Skype</label>
-              <input type="file" name="skype">
+              <input type="text" name="skype">
             </div>
             <div class="container-cadastro-input">
               <label for="nextel">Nextel</label>
-              <input type="file" name="nextel">
+              <input type="text" name="nextel">
             </div>
             <div class="container-cadastro-input">
               <label for="fax">Fax</label>
-              <input type="file" name="fax">
+              <input type="text" name="fax">
             </div>
             <div class="container-cadastro-input">
               <label for="url_facebook_empresa">Url do Facebook Principal</label>
@@ -166,6 +166,10 @@
                 <img src="<?php echo base_url()?>public/img/icons/vencimento.svg" alt="icons">
                 <p>Vencimento: 00/00/0000</p>
               </div>
+              <div class="infors-pagamento">
+                <img src="<?php echo base_url()?>public/img/icons/status.svg" alt="icons">
+                <p>Status: OK</p>
+              </div>
             </div>
 
             <div class="container">
@@ -179,7 +183,6 @@
       </div>
     </main>
     <div class="clear"></div>
-    <div class="borderred"></div>
     <?php include('componentes/footer.inc'); ?>
   </body>
   <!-- SCRIPTS -->

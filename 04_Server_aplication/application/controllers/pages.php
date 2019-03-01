@@ -7,14 +7,11 @@ class pages extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->helper('url');
 		$this->load->model('Model');
 		$this->load->model('Auth_model');
 		$this->load->library('pagination');
 		$this->load->library('form_validation');
 		$this->load->library('email');
-
-		session_start();
 
 		if(!isset($_SESSION['lista']) || !isset($_SESSION['lista_empresa'])){
 			$_SESSION['lista'] = [];
@@ -217,7 +214,7 @@ class pages extends CI_Controller {
 	}
 	public function empresas()
 	{
-       $config["base_url"] = base_url() . "/pages/empresas";
+       $config["base_url"] = base_url() . "/empresas";
        $config["total_rows"] = $this->Model->all_empresas_rows();
        $config["per_page"] = 2;
        $config["uri_segment"] = 3;
@@ -284,7 +281,7 @@ class pages extends CI_Controller {
 				array_push($_SESSION['lista_empresa'],['tipo'=>$tipo,'select'=>'ramo.desc_ramo = "'.$url.'"','pesquisa'=>$url]);
 			}
 		}
-       $config["base_url"] = base_url() . "/pages/empresas";
+       $config["base_url"] = base_url() . "/empresas";
        $config["total_rows"] = $this->Model->all_empresas_rows();
        $config["per_page"] = 2;
        $config["uri_segment"] = 3;
@@ -301,8 +298,6 @@ class pages extends CI_Controller {
 	}
 	public function veiculos()
 	{
-
-
      	$data['check_in_ativo'] = $this->Auth_model->check_in_ativo();
      	$data['veiculos_cadastrados'] = $this->Auth_model->veiculos_cadastrados();
 		$this->load->view('veiculo',$data);
@@ -317,7 +312,8 @@ class pages extends CI_Controller {
 	}
 	public function duvidas()
 	{
-		$this->load->view('duvidas');
+		$data['duvidas'] = $this->Model->all_duvidas();
+		$this->load->view('duvidas',$data);
 	}
 
 	public function estatisticas()
@@ -347,9 +343,6 @@ class pages extends CI_Controller {
 	public function cadastro_veiculo(){
 		$this->load->view('cadastros');
 	}
-	public function cadastro_se(){
-		$this->load->view('cadastros');
-	}
 	public function assinante()
 	{
 		$this->load->view('assinante');
@@ -370,6 +363,9 @@ class pages extends CI_Controller {
 	{
 		$data['dados_frete'] = $this->Model->frete_unico($id_frete);
 		$this->load->view('frete_unico',$data);
+	}
+	public function painelcontrole(){
+		$this->load->view('painelcentralcontrole');		
 	}
 	public function email()
 	{

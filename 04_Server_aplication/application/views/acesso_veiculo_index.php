@@ -4,7 +4,6 @@
   <body>
     <?php include('componentes/header_veiculo_adm.inc') ?>
     <main>
-
        <div class="cadastro-veiculo-form content">
             <div class="container-cadastro-espacos">
               <div class="container-cadastro-titulo">
@@ -23,8 +22,9 @@
 
         </form>
        </div>
-
+       <div class="clear"></div>
     </main>
+    <?php include('componentes/footer.inc'); ?>
   <script type="text/javascript" src="<?php echo base_url()?>public/js/menu_mobile.js"></script>
   </body>
 </html>

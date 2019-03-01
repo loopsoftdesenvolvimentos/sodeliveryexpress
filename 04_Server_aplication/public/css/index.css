@@ -59,6 +59,10 @@ header{
 }
 .menu-mobile img{
   width: 50px;
+  height: 60px
+}
+nav{
+  z-index: 999999;
 }
 
 nav ul{

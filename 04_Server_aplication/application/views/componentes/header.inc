@@ -20,6 +20,12 @@
               <span>11 99723 9032</span>
             </div>
           </a>
+          <a href="skype:sodeliveryofc">
+            <div class="icone-top">
+              <img src="<?php echo base_url()?>public/img/icons/skype-dark.svg">
+              <span>sodeliveryofc</span>
+            </div>
+          </a>
         </div>
 
         <div class="icone-top-midia">
@@ -38,6 +44,9 @@
           <a href="https://www.youtube.com/channel/UCb93S1zCUAToY4Da6zLF6_w"  id="border_lateral" target="_blank">
             <img src="<?php echo base_url()?>public/img/icons/youtube-dark.svg">
           </a>
+          <a href="skype:sodeliveryofc">
+            <img src="<?php echo base_url()?>public/img/icons/skype-dark.svg">
+          </a>
         </div>
       </div>
       <div class="logo-publicidade content">
@@ -55,10 +64,6 @@
 
       <div class="menu-conta">
         <div class="menu-bar">
-          <div class="pesquisa" style="display: none;">
-            <input type="text" id="pesquisa">
-            <button type="submit">Buscar</button>
-          </div>
           <div id="btn-menu" class="menu-mobile mobile" >
             <img src="<?php echo base_url()?>public/img/icons/menu.svg" alt="botão de menu">
           </div>
@@ -81,7 +86,7 @@
                 </a>
               </li>
               <li>
-                <a href="<?php echo base_url()?>pages/fretes">
+                <a href="<?php echo base_url()?>fretes">
                   <div class="icon-menu">
                     <img src="<?php echo base_url()?>public/img/icons/frete.svg" alt="icone de frete">
                     <p>Frete</p>
@@ -97,7 +102,7 @@
                 </a>
               </li>
               <li>
-                <a href="<?php echo base_url()?>pages/empresas">
+                <a href="<?php echo base_url()?>empresas">
                   <div class="icon-menu">
                     <img src="<?php echo base_url()?>public/img/icons/empresa.svg" alt="icone de frete">
                     <p>Empresa</p>

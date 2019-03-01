@@ -16,9 +16,11 @@ class Media_screen{
  var logic = false;
  $('#btn-menu').click(function () {
    if (logic) {
+		 openCharts();
      closeNav();
      return logic = false;
    }else{
+		 closeCharts();
 		 closeEstVeiculos();
 		 closeFilter();
      openNav();
@@ -87,4 +89,20 @@ function closeEstVeiculos() {
 	$('#estatistica_veiculos').animate({
 		width: 'hide'
 	}, 100)
+}
+function openCharts() {
+		let obj = document.getElementById('chart_first');
+		if (obj != null) {
+			obj.style.visibility = 'visible'
+		}else{
+			return;
+		}
+}
+function closeCharts() {
+	let obj = document.getElementById('chart_first');
+	if (obj != null) {
+		obj.style.visibility = 'hidden'
+	}else{
+		return;
+	}
 }

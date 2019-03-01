@@ -25,7 +25,6 @@
         </div>
         <div id="mapa"> </div>
     </main>
-    <div class="borderred"></div>
    <?php include('componentes/footer.inc'); ?>
   <script type="text/javascript" src="<?php echo base_url()?>public/js/menu_mobile.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAF8QP6R3rJFZLZJcEsee3B3a1wz6Pul8E&callback=mapa"

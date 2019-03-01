@@ -1,5 +1,5 @@
 .divisao{
-  background: url(../img/truck-sodelivery.jpg) no-repeat center center;
+  background: url(../img/veiculos.jpg) no-repeat center 90%;
   background-size: cover;
   height: 50vh;
 }
@@ -38,8 +38,6 @@
 	font-size: 0.9rem;
 	color: var(--preto);
 }
-
-
 .lista-lateral .selecionado{
 	font-weight: 700;
 	background: var(--vermelho_claro);
@@ -105,6 +103,28 @@
 	display: none;
 }
 
+.row{
+  display: flex;
+	flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.content-informations{
+  width: 700px
+}
+.content-informations img{
+  width: 200px;
+  margin-right: 3rem;
+}
+.content-informations ul li{
+  list-style:  square;
+}
+.t-5{
+  margin-top: 5rem;
+}
+.jcarousel-wrapper {
+    margin-left: 0px;
+}
 @media screen and (min-width: 764px){
 	.quem-somos{
 		position: relative;
@@ -149,11 +169,11 @@
 	}
 
 	.menu-lateral{
-		width: 80%;
+		width: 250px;
 	}
 
 	.box-central{
-		width: 1038px;
+		width: 1200px;
 		height: 70vh;
 	}
 
@@ -162,6 +182,7 @@
 	}
 
 	.container-carousel{
+    display: flex;
 		flex-direction: row;
 	}
 

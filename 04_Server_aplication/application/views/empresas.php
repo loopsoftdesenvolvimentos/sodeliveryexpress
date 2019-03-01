@@ -11,20 +11,20 @@
           </div>
             <section id="filtro" class="container-menu none">
               <div class="container-empresa-filtro">
-                 <a href="<?php echo base_url()?>pages/cadastro_empresa"> <button>Cadastrar Empresa</button></a>
+                 <a href="<?php echo site_url('empresas/cadastrar')?>"> <button>Cadastrar Empresa</button></a>
               </div>
                 <div class="container-empresa-titulo">
                     <h1>Filtros</h1>
                 </div>
                  <div class="filtros_selecionados">
                   <ul id="lista">
-                    <?php   
+                    <?php
                         if(isset($pesquisas)){
                           foreach($pesquisas as $key=>$selecionados) {
-                            echo "<li><a href='".base_url()."pages/empresas_filter/remover/".$key."'>".$selecionados['pesquisa']."<b>X</b></a></li>";
+                            echo "<li><a href='".base_url()."empresas/filtrar/remover/".$key."'>".$selecionados['pesquisa']."<b>X</b></a></li>";
                           }
                         }
-                     ?> 
+                     ?>
                    </ul>
                 </div>
                 <div class="container-empresa-filtro">
@@ -58,7 +58,7 @@
                   <div class="container-empresa-filtro-espaco">
                     <ul>
                         <?php foreach ($ramos as $item_ramos) {
-                          echo'<li><a href="'.base_url().'pages/empresas_filter/ramo/'.$item_ramos->desc_ramo.'">'.$item_ramos->desc_ramo.'<b>'.$item_ramos->qtd_ramo.'</b></a></li>' ;
+                          echo'<li><a href="'.base_url().'empresas/filtrar/ramo/'.$item_ramos->desc_ramo.'">'.$item_ramos->desc_ramo.'<b>'.$item_ramos->qtd_ramo.'</b></a></li>' ;
                         } ?>
                     </ul>
                   </div>
@@ -80,7 +80,7 @@
                 <section class="img_titulo">
                     <img src="<?php echo base_url()?>public/img/letras/empresa.svg">
                 </section>
-                <?php 
+                <?php
                 if( !empty($empresas) ) {
                   if(count($empresas) > 0){
                       echo '<section  class="continer-total-item">
@@ -119,11 +119,11 @@
                   }else{
                    echo '<section  class="continer-total-item">
                             <h1> 0 empresas encontradas</h1>
-                          </section>'; 
+                          </section>';
                   }
                  ?>
                  <section class="paginação">
-                  <?php 
+                  <?php
                     if(isset($empresas)){
                       echo $link;
                     }
@@ -133,7 +133,6 @@
       </section>
     </main>
     <div class="clear"></div>
-    <div class="borderred"></div>
     <?php include('componentes/footer.inc') ?>
 
   <script type="text/javascript" src="<?php echo base_url()?>public/js/menu_mobile.js"></script>
@@ -141,11 +140,11 @@
   <script type="text/javascript">
       filtrar_input('input[name="search"]','#sumir');
       //
-      select_populado('select[name="Destino"]','select[name="Destino_cidades"]','#sumir1','/pages/empresas_filter/cidade/','/pages/empresas_filter/estados/');
+      select_populado('select[name="Destino"]','select[name="Destino_cidades"]','#sumir1','/empresas/filtrar/cidade/','/pages/empresas_filter/estados/');
       //
-      select_populado('select[name="estado_empresa"]','select[name="cidades_empresas"]','','/pages/empresas_filter/cidade/','/pages/empresas_filter/estados/');
+      select_populado('select[name="estado_empresa"]','select[name="cidades_empresas"]','','/empresas/filtrar/cidade/','/pages/empresas_filter/estados/');
       //
-      select_populado('select[name="Origem"]','select[name="cidades"]','#sumir','/pages/empresas_filter/cidade/','/pages/empresas_filter/estados/');
+      select_populado('select[name="Origem"]','select[name="cidades"]','#sumir','/empresas/filtrar/cidade/','/pages/empresas_filter/estados/');
 
   </script>
   </body>

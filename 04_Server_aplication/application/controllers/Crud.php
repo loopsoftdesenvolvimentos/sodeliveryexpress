@@ -1,4 +1,4 @@
-<?php 
+<?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 
@@ -7,16 +7,39 @@ class Crud extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->helper('url');
 		$this->load->model('Model');
 		$this->load->library('form_validation');
-		$this->load->helper(array('form', 'url'));	
+		$this->load->helper(array('form', 'url'));
 	}
 
+	public function logar(){
+
+		$this->form_validation->set_rules('email_user_empresa','Email','required');
+		$this->form_validation->set_rules('senha_user_empresa','Senha','required');
+
+		if(!$this->form_validation->run()){
+
+			$this->load->view('login');
+		}else{
+
+			$dados = array(
+				'email' => $this->input->post('email_user_empresa'),
+				'senha_autenticacao' => $this->input->post('senha_user_empresa')
+			);
+
+			if($this->Model->login($dados)){
+
+				echo "Logado com sucesso!";
+			}else{
+
+				echo "Email e/ou senha inválido(s)!";
+			}
+		}
+	}
 	public function cadastrar_empresa()
 	{
-		
-		$this->form_validation->set_rules('razao_social','Razão social','required');	
+
+		$this->form_validation->set_rules('razao_social','Razão social','required');
 		$this->form_validation->set_rules('CEP','CEP','required');
 		$this->form_validation->set_rules('Nextel','Nextel','required');
 		$this->form_validation->set_rules('cnpj','CNPJ','required');
@@ -28,14 +51,14 @@ class Crud extends CI_Controller {
 		$this->form_validation->set_rules('Inscriao_Estadual','Inscrição estadual','required');
 		$this->form_validation->set_rules('Site','Site','required');
 		$this->form_validation->set_rules('Fax','Fax','required');
-		$this->form_validation->set_rules('url_facebook1','Url facebook','required');	
+		$this->form_validation->set_rules('url_facebook1','Url facebook','required');
 		$this->form_validation->set_rules('url_facebook2','Url facebook','required');
-		$this->form_validation->set_rules('URL','Url facebook empresa','required');	
+		$this->form_validation->set_rules('URL','Url facebook empresa','required');
 		$this->form_validation->set_rules('url_facebook3','Url facebook','required');
-		$this->form_validation->set_rules('nome_contato1','Contato','required');	
+		$this->form_validation->set_rules('nome_contato1','Contato','required');
 		$this->form_validation->set_rules('nome_contato2','Contato','required');
 		$this->form_validation->set_rules('nome_contato3','Contato','required');
-		$this->form_validation->set_rules('Celular','Celular','required');	
+		$this->form_validation->set_rules('Celular','Celular','required');
 		$this->form_validation->set_rules('Contato1','Contato celular','required');
 		$this->form_validation->set_rules('Whatsapp','Whatsapp','required');
 		$this->form_validation->set_rules('email_autentificação','E-mail de autentificação','required');
@@ -49,7 +72,7 @@ class Crud extends CI_Controller {
             $config['max_width']      = 10240;
             $config['max_height']     = 76800;
             $this->load->library('upload', $config);
-            
+
             if (!$this->upload->do_upload('client_name'))
             {
                     $error = array('error' => $this->upload->display_errors());
@@ -92,9 +115,9 @@ class Crud extends CI_Controller {
 				);
 
 		        if($this->Model->cadastrar_empresa($data) != true){
-		        	redirect('/pages/empresas','refresh');
+		        	redirect('/empresas','refresh');
 		        }
-                  
+
             }
 		}else{
 			$data['estados']= $this->Model->all_estados();
@@ -102,6 +125,5 @@ class Crud extends CI_Controller {
 			$this->load->view('cadastros',$data);
 		}
 	}
-	
-}
 
+}

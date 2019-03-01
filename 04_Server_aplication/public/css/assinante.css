@@ -1,8 +1,0 @@
-.disp_none{
-  display: none;
-}
-.menu_active{
-  background: var(--vermelho);
-  color: var(--branco_rgba);
-  transition: var(--transition3);
-}

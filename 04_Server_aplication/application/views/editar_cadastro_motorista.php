@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
     <?php include('componentes/head_checkin.inc') ?>
@@ -8,7 +7,7 @@
        <div class="cadastro-veiculo-form content">
         <form id="cadastro">
            <div class="mensagem" id="mensagem">
-                 <p></p> 
+                 <p></p>
             </div>
             <div class="container-cadastro-espacos">
               <div class="container-cadastro-titulo">
@@ -46,7 +45,7 @@
                     <label for="Endereço">Endereço</label>
                     <input type="text" id="Endereço" name="Endereço" value="<?php echo $motorista[0]->endereco ?>">
                 </div>
-                <?php 
+                <?php
                     if($motorista[0]->data_nascimento == null){
                       echo '<div class="container-cadastro-input">
                                 <label for="nascimento">Data nascimento:</label>
@@ -59,7 +58,7 @@
                              </div>';
                     }
                  ?>
-                
+
                   <div class="container-cadastro-titulo">
                     <h1>Contato</h1>
                  </div>
@@ -87,7 +86,7 @@
                     <label for="Veiculo">Veiculo</label>
                     <select id="Veiculo" name="Veiculo">
                        <option value="<?php echo $motorista[0]->id_veiculo_categoria ?>" checked><?php echo $motorista[0]->desc_veiculo_categoria ?></option>
-                       <?php 
+                       <?php
                          foreach ($categoria_veiculos as $value) {
                         echo '<option value='.$value->id_veiculo_categoria.'>'.$value->desc_veiculo_categoria.'</option>';
                         }
@@ -98,7 +97,7 @@
                     <label for="carroceria_veiculo">Carroceria</label>
                     <select id="carroceria_veiculo" name="carroceria_veiculo">
                        <option value="<?php echo $motorista[0]->id_carroceria ?>" checked><?php echo $motorista[0]->desc_carroceria ?></option>
-                       <?php 
+                       <?php
                       foreach ($carrocerias as $value) {
                         echo '<option value='.$value->id_carroceria.'>'.$value->desc_carroceria.'</option>';
                       }
@@ -117,7 +116,7 @@
                     <label for="Marca">Marca</label>
                     <select id="Marca" name="Marca">
                        <option value="<?php echo $motorista[0]->id_marca ?>" checked><?php echo $motorista[0]->desc_marca ?></option>
-                        <?php 
+                        <?php
                       foreach ($marcas as $value) {
                         echo '<option value='.$value->id_marca.'>'.$value->desc_marca.'</option>';
                       }
@@ -129,9 +128,9 @@
                     <label for="Ano">Ano</label>
                     <select id="Ano" name="Ano">
                        <option value="<?php echo $motorista[0]->ano ?>" checked><?php echo $motorista[0]->ano ?></option>
-                       <?php 
+                       <?php
                         $ano = date('o');
-                        for ($i=1990; $i <=$ano ; $i++) { 
+                        for ($i=1990; $i <=$ano ; $i++) {
                           echo '<option value='.$i.'>'.$i.'</option>';
                         }
 
@@ -170,8 +169,9 @@
           </div>
         </form>
        </div>
-
+       <div class="clear"></div>
     </main>
+    <?php include('componentes/footer.inc') ?>
   <script type="text/javascript" src="<?php echo base_url() ?>public/js/menu_mobile.js"></script>
   <script type="text/javascript" src="<?php echo base_url() ?>public/js/select_populado.js"></script>
   <script type="text/javascript">

@@ -1,12 +1,12 @@
-.titulo-primario_area h1{
-  font-weight: 900;
-  font-size: 2rem!important;
-  border-bottom: solid 3px var(--vermelho_claro)!important;
-  text-align: center;
-}
-
-#complemento{
+#complemento,
+#content-moto{
   display: none;
+}
+.fretes-checkbox #content-moto label:first-child{
+  font-weight: normal;
+}
+.extraCheck label{
+  margin-top: 40px;
 }
 
 .row{

@@ -1,5 +1,6 @@
 
     <footer>
+      <div class="borderred"></div>
       <div class="footer content">
         <div class="container-3">
           <div class="container-footer">
@@ -19,12 +20,12 @@
             <h3>Cadastro Empresas</h3>
 
             <ul>
-              <li><a href="<?php echo base_url()?>pages/cadastro_empresa?type=transportadoras">Transportadoras</a></li>
-              <li><a href="<?php echo base_url()?>pages/cadastro_empresa?type=embarcadoras">Embarcadoras</a></li>
-              <li><a href="<?php echo base_url()?>pages/cadastro_empresa?type=agenciadoras">Agenciadoras</a></li>
-              <li><a href="<?php echo base_url()?>pages/cadastro_empresa?type=distrubuidoras">Distribuidoras</a></li>
-              <li><a href="<?php echo base_url()?>pages/cadastro_empresa?type=comercio">Comércio Local</a></li>
-              <li><a href="<?php echo base_url()?>pages/cadastro_empresa?type=industria">Indústria</a></li>
+              <li><a href="<?php echo base_url()?>empresas/cadastrar?type=transportadoras">Transportadoras</a></li>
+              <li><a href="<?php echo base_url()?>empresas/cadastrar?type=embarcadoras">Embarcadoras</a></li>
+              <li><a href="<?php echo base_url()?>empresas/cadastrar?type=agenciadoras">Agenciadoras</a></li>
+              <li><a href="<?php echo base_url()?>empresas/cadastrar?type=distrubuidoras">Distribuidoras</a></li>
+              <li><a href="<?php echo base_url()?>empresas/cadastrar?type=comercio">Comércio Local</a></li>
+              <li><a href="<?php echo base_url()?>empresas/cadastrar?type=industria">Indústria</a></li>
             </ul>
           </div>
 
@@ -48,8 +49,6 @@
             <h3>Assinantes</h3>
 
             <ul>
-              <li><a href="<?php echo base_url()?>pages/assinante">Quero ser Assinante</a></li>
-              <li><a href="<?php echo base_url()?>pages/assinante">Central do Assinante</a></li>
               <li><a href="<?php echo base_url()?>pages/administrativo">Meus Fretes</a></li>
               <li><a href="<?php echo base_url()?>pages/administrativo">Minhas Faturas</a></li>
             </ul>
@@ -76,6 +75,10 @@
               <a href="https://www.youtube.com/channel/UCb93S1zCUAToY4Da6zLF6_w">
                 <img src="<?php echo base_url()?>public/img/icons/youtube.png">
               </a>
+
+              <a href="skype:sodeliveryofc">
+                <img src="<?php echo base_url()?>public/img/icons/skype.svg">
+              </a>
             </div>
           </div>
         </div>
@@ -83,5 +86,6 @@
 
       <div class="end-footer">
         <p>O uso desse site implica na aceitação dos Termos e Condições das Políticas de privacidade <strong><a href="#">Loop Soft</a></strong> Internet Serviços LTDA &copy; 2019 Só Delivery Express - ME. 2019</p>
+        <p><a href="<?php echo base_url() ?>pages/login?6b3c7e24c6afaaaf1c2c61160e25d71b=YWNlc3NvX3Jlc3RyaXRv">Acesso Restrito</a></p>
       </div>
     </footer>

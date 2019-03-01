@@ -4,7 +4,7 @@
   <body>
    <?php include('componentes/header.inc'); ?>
     <main>
-      <?php 
+      <?php
 
         foreach ($dados_frete as $dados) {
           echo ' <section class="content container-frete-unico">
@@ -139,7 +139,6 @@
        ?>
     </main>
     <div class="clear"></div>
-    <div class="borderred"></div>
     <?php include('componentes/footer.inc'); ?>
   </body>
   <script type="text/javascript" src="public/js/menu_mobile.js"></script>
