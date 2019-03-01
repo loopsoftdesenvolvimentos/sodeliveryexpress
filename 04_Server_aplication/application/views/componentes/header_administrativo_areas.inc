@@ -81,7 +81,7 @@
                 <a href="<?php echo base_url()?>pages/areacadastro/#cadastramentoVeiculo">
                   <div class="icon-menu">
                     <img src="<?php echo base_url()?>public/img/icons/freteADM.svg" alt="icone de frete">
-                    <p>Cadastrar <br> Fretes</p>
+                    <p>Cadastrar Fretes</p>
                   </div>
                 </a>
               </li>
@@ -89,7 +89,7 @@
                 <a href="<?php echo base_url()?>pages/areamonitoramento/#estatisticas">
                   <div class="icon-menu">
                     <img src="<?php echo base_url()?>public/img/icons/verEstatisticasADM.svg" alt="icone de estatisticas">
-                    <p>Ver <br> Estatística</p>
+                    <p>Ver Estatística</p>
                   </div>
                 </a>
               </li>
@@ -97,7 +97,7 @@
                 <a href="<?php echo base_url()?>pages/areamonitoramento/#listarFretes" >
                   <div class="icon-menu">
                     <img src="<?php echo base_url()?>public/img/icons/verFretesADM.svg" alt="icone de frete">
-                    <p>Listar <br> Fretes</p>
+                    <p>Listar Fretes</p>
                   </div>
                 </a>
               </li>
@@ -105,7 +105,7 @@
                 <a href="<?php echo base_url()?>pages/areaadministrativa/#editarEmpresa" >
                   <div class="icon-menu">
                     <img src="<?php echo base_url()?>public/img/icons/editarEmpresaADM.svg" alt="icone de frete">
-                    <p>Editar <br> Empresa</p>
+                    <p>Editar Empresa</p>
                   </div>
                 </a>
               </li>
@@ -113,7 +113,7 @@
                 <a href="<?php echo base_url()?>pages/areaadministrativa/#verEditaPagamento" >
                   <div class="icon-menu">
                     <img src="<?php echo base_url()?>public/img/icons/verEditarPagamentoADM.svg " alt="icone de frete">
-                    <p>Central <br> pagamento</p>
+                    <p>Central pagamento</p>
                   </div>
                 </a>
               </li>

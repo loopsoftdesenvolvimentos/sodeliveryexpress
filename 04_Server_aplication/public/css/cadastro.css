@@ -172,10 +172,6 @@ input,select{
 	.row{
 		flex-wrap: nowrap;
 	}
-
-	.adm-areas ul a{
-		margin-left: 30px !important;
-	}
 }
 
 @media screen and (min-width: 1224px){
@@ -185,6 +181,15 @@ input,select{
 		margin: unset;
 		margin-top: 20px;
 		width: unset;
+	}
+
+	.adm-areas ul a{
+		margin-left: 10px !important;
+	}
+
+	.adm-areas .icon-menu p{
+		width: 90%;
+		margin: 0 auto;
 	}
 
 	.content-cadastro{
