@@ -64,7 +64,7 @@
                 <input type="button" id="Entrar_motorista" value="Entrar">
             </div>
             <div class="container-cadastre">
-              <p>Não tem uma conta? <strong><a id="btn-cadastrar" href="<?php echo base_url() ?>pages/cadastro_veiculo/#veiculos">Cadastre-se</a></strong></p>
+              <p>Não tem uma conta? <strong><a id="btn-cadastrar" href="<?<?= site_url('Veiculos/cadastrar') ?>#veiculos">Cadastre-se</a></strong></p>
             </div>
       </form>
     </section>
@@ -73,7 +73,7 @@
     <script type="text/javascript" src=""></script>
     <script type="text/javascript" src="<?php echo base_url() ?>public/js/select_populado.js"></script>
     <script type="text/javascript">
-      executar_forms(url_app+'Auth_veiculo/authenticate_motorista','#Entrar_motorista','Auth_veiculo/acesso_veiculo','#login_motorista')
+      executar_forms(url_app+'Veiculos/authenticate_motorista','#Entrar_motorista','Veiculos/acessar_veiculo','#login_motorista');
     </script>
   </body>
 </html>

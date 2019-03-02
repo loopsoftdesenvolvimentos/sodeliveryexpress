@@ -34,10 +34,10 @@
           <div class="container-footer">
             <h3>Cadastro Veículos</h3>
             <ul>
-              <li><a href="<?php echo base_url()?>pages/cadastro_veiculo?type=caminhesCarretas/#veiculos">Caminhões, Carretas</a></li>
-              <li><a href="<?php echo base_url()?>pages/cadastro_veiculo?type=ultilitarios/#veiculos">Utilitários</a></li>
-              <li><a href="<?php echo base_url()?>pages/cadastro_veiculo?type=fiorinos/#veiculos">Fiorinos</a></li>
-              <li><a href="<?php echo base_url()?>pages/cadastro_veiculo?type=motos/#veiculos">Motos</a></li>
+              <li><a href="<?= site_url('Veiculos/cadastrar') ?>?type=caminhesCarretas/#veiculos">Caminhões, Carretas</a></li>
+              <li><a href="<?= site_url('Veiculos/cadastrar') ?>?type=ultilitarios#veiculos">Utilitários</a></li>
+              <li><a href="<?= site_url('Veiculos/cadastrar') ?>?type=fiorinos#veiculos">Fiorinos</a></li>
+              <li><a href="<?= site_url('Veiculos/cadastrar') ?>?type=motos#veiculos">Motos</a></li>
             </ul>
           </div>
         </div>

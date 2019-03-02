@@ -22,6 +22,8 @@ class Fretes extends CI_Controller {
        $this->pagination->initialize($config);
        $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
 
+        $this->load->model('VeiculosDAO', 'veiculos');
+
       	$data['total'] = $this->fretes->all_fretes_total();
         $data['link'] = $this->pagination->create_links();
 		$data['pesquisas'] = $this->session->lista;
@@ -30,7 +32,7 @@ class Fretes extends CI_Controller {
 		$data['complemento'] = $this->Model->Complemento_group_by();
 		$data['rastreador'] = $this->Model->rastreador_group_by();
 		$data['estados'] = $this->Model->all_estados();
-		$data['categoria_veiculos'] = $this->Model->categorias_veiculos();
+		$data['categoria_veiculos'] = $this->veiculos->categorias_veiculos();
 
 		$this->load->view('frete',$data);
 	}
@@ -175,6 +177,8 @@ class Fretes extends CI_Controller {
         $this->pagination->initialize($config);
         $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
 
+        $this->load->model('VeiculosDAO', 'veiculos');
+
       	$data['total'] = $this->fretes->all_fretes_total();
         $data['link'] = $this->pagination->create_links();
 		$data['pesquisas'] = $_SESSION['lista'];
@@ -183,7 +187,7 @@ class Fretes extends CI_Controller {
 		$data['complemento'] = $this->Model->Complemento_group_by();
 		$data['rastreador'] = $this->Model->rastreador_group_by();
 		$data['estados'] = $this->Model->all_estados();
-		$data['categoria_veiculos'] = $this->Model->categorias_veiculos();
+		$data['categoria_veiculos'] = $this->veiculos->categorias_veiculos();
 
 		$this->load->view('frete',$data);
 	}
@@ -199,6 +203,8 @@ class Fretes extends CI_Controller {
 		$this->pagination->initialize($config);
 		$page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
 
+        $this->load->model('VeiculosDAO', 'veiculos');
+
 		$data['total'] = $this->fretes->all_fretes_total();
 		$data['link'] = $this->pagination->create_links();
 	 	$data['pesquisas'] = $this->session->lista;
@@ -207,7 +213,7 @@ class Fretes extends CI_Controller {
 		$data['complemento'] = $this->Model->Complemento_group_by();
 		$data['rastreador'] = $this->Model->rastreador_group_by();
 		$data['estados'] = $this->Model->all_estados();
-		$data['categoria_veiculos'] = $this->Model->categorias_veiculos();
+		$data['categoria_veiculos'] = $this->veiculos->categorias_veiculos();
 
 		$this->load->view('frete',$data);
 	}

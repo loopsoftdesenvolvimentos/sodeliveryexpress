@@ -340,33 +340,41 @@ class pages extends CI_Controller {
 		$data['ramo'] = $this->Model->all_ramos();
 		$this->load->view('cadastros',$data);
 	}
+
 	public function cadastro_veiculo(){
 		$this->load->view('cadastros');
 	}
+
 	public function assinante()
 	{
 		$this->load->view('assinante');
 	}
+
 	public function areacadastro()
 	{
 		$this->load->view('areacadastro');
 	}
+
 	public function areamonitoramento()
 	{
 		$this->load->view('areavizualizacao');
 	}
+
 	public function areaadministrativa()
 	{
 		$this->load->view('areaadministrativa');
 	}
+
 	public function frete($id_frete)
 	{
 		$data['dados_frete'] = $this->Model->frete_unico($id_frete);
 		$this->load->view('frete_unico',$data);
 	}
+
 	public function painelcontrole(){
 		$this->load->view('painelcentralcontrole');		
 	}
+
 	public function email()
 	{
          $this->load->library('email');
@@ -391,6 +399,7 @@ class pages extends CI_Controller {
 
      	}
 	}
+	
 	public function pesquisar_placa($pesquisa)
 	{
 		echo $this->Model->pesquisar_placa($pesquisa);

@@ -94,7 +94,7 @@
                 </a>
               </li>
               <li>
-                <a href="<?php echo base_url()?>pages/veiculos">
+                <a href="<?= site_url('Veiculos')?>">
                   <div class="icon-menu">
                     <img src="<?php echo base_url()?>public/img/icons/truck-front.svg" alt="icone de frete">
                     <p>Veículo</p>

@@ -9,7 +9,52 @@ class Veiculos extends CI_Controller {
         parent::__construct();
 		$this->load->model('Auth_model');
         $this->load->model('Model');
+        $this->load->model('VeiculosDAO', 'veiculos');
         $this->load->library('form_validation');
+    }
+
+    public function index()
+    {
+        $data['check_in_ativo'] = $this->veiculos->check_in_ativo();
+        $data['veiculos_cadastrados'] = $this->veiculos->veiculos_cadastrados();
+        $this->load->view('veiculo',$data);
+    }
+
+    public function cadastro_veiculo()
+    {
+        $data['categoria_veiculos'] = $this->veiculos->categorias_veiculos();
+        $data['estados'] = $this->Model->all_estados();
+        $data['marcas'] = $this->Model->Marcas();
+        $data['carrocerias'] =$this->Model->carrocerias();
+        $this->load->view('areacadastro',$data);
+    }
+
+    public function editar_dados()
+    {
+        $this->verificar_session();
+        $data['categoria_veiculos'] = $this->veiculos->categorias_veiculos();
+        $data['estados'] = $this->Model->all_estados();
+        $data['marcas'] = $this->Model->Marcas();
+        $data['carrocerias'] =$this->Model->carrocerias();
+        $data['motorista'] = $this->veiculos->atualizar_dados($this->session->dados);
+        $this->load->view('editar_cadastro_motorista',$data);
+    }
+
+    public function acessar_veiculo()
+    {
+        $this->verificar_session();
+        $this->load->view('acesso_veiculo_index');
+    }
+
+    public function cadastrar(){
+        $this->load->view('cadastros');
+    }
+
+    public function checkin()
+    {
+        // $this->verificar_session();
+        $data['estados'] = $this->Model->all_estados();
+        $this->load->view('checkin',$data);
     }
     public function verificar_session()
     {
@@ -29,7 +74,7 @@ class Veiculos extends CI_Controller {
                 'user'=>$this->input->post('email_user_veiculo'),
                 'password'=>$this->input->post('senha_user_veiculo')
             );
-            $authenticate = $this->Auth_model->authenticate_motorista($informacoes);
+            $authenticate = $this->veiculos->authenticate_motorista($informacoes);
 
             if ($authenticate)
             {
@@ -53,39 +98,6 @@ class Veiculos extends CI_Controller {
         $this->session->unset_userdata('loggedin');
         $this->session->unset_userdata('dados');
         redirect('pages/login','location');
-    }
-
-    public function cadastro_veiculo()
-    {
-        $data['categoria_veiculos'] = $this->Model->categorias_veiculos();
-        $data['estados'] = $this->Model->all_estados();
-        $data['marcas'] = $this->Model->Marcas();
-        $data['carrocerias'] =$this->Model->carrocerias();
-        $this->load->view('areacadastro',$data);
-    }
-
-    public function editar_dados()
-    {
-        $this->verificar_session();
-        $data['categoria_veiculos'] = $this->Model->categorias_veiculos();
-        $data['estados'] = $this->Model->all_estados();
-        $data['marcas'] = $this->Model->Marcas();
-        $data['carrocerias'] =$this->Model->carrocerias();
-        $data['motorista'] = $this->Auth_model->atualizar_dados($this->session->dados);
-        $this->load->view('editar_cadastro_motorista',$data);
-    }
-
-    public function acesso_veiculo()
-    {
-        $this->verificar_session();
-        $this->load->view('acesso_veiculo_index');
-    }
-
-    public function checkin()
-    {
-        // $this->verificar_session();
-        $data['estados'] = $this->Model->all_estados();
-        $this->load->view('checkin',$data);
     }
 
     public function cadastrar_veiculo()
@@ -129,7 +141,7 @@ class Veiculos extends CI_Controller {
                 'senha'=> $this->input->post('Senha'),
             );
 
-	        if($this->Model->cadastrar_veiculo($data) != true){
+	        if($this->veiculos->cadastrar_veiculo($data) != true){
 	            echo json_encode(['sucess'=>'<p>Veiculo cadastrado com sucesso, redirecionando .. .</p>']);
 	        }
         }
@@ -163,6 +175,7 @@ class Veiculos extends CI_Controller {
             echo json_encode(['sucess'=>'<p>Informações alteradas com sucesso.</p>']);
         }
     }
+
     public function Checkin_efetuar()
     {
         $data = array(
