@@ -7,8 +7,8 @@
             <h3>Sobre Nós</h3>
 
             <ul>
-              <li><a href="<?php echo base_url()?>pages/contato">Contato</a></li>
-              <li><a href="<?php echo base_url()?>pages/quem-somos">Quem somos</a></li>
+              <li><a href="<?= site_url('Home/contato')?>">Contato</a></li>
+              <li><a href="<?= site_url('Home/quem-somos')?>">Quem somos</a></li>
               <li><a href="https://www.youtube.com/watch?v=DPB_IVicb7Y">Como funciona</a></li>
               <li><a href="<?php echo base_url()?>pages/estatisticas">Estatísticas</a></li>
             </ul>
@@ -86,6 +86,6 @@
 
       <div class="end-footer">
         <p>O uso desse site implica na aceitação dos Termos e Condições das Políticas de privacidade <strong><a href="#">Loop Soft</a></strong> Internet Serviços LTDA &copy; 2019 Só Delivery Express - ME. 2019</p>
-        <p><a href="<?php echo base_url() ?>pages/login?6b3c7e24c6afaaaf1c2c61160e25d71b=YWNlc3NvX3Jlc3RyaXRv">Acesso Restrito</a></p>
+        <p><a href="<?= site_url('Home/login') ?>">Acesso Restrito</a></p>
       </div>
     </footer>

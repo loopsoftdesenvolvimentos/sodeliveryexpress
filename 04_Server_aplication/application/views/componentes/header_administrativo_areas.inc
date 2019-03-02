@@ -78,7 +78,7 @@
                 </a>
               </li>
               <li>
-                <a href="<?php echo base_url()?>pages/areacadastro/#cadastramentoVeiculo">
+                <a href="<?= site_url('Home/areacadastro') ?>#cadastramentoVeiculo">
                   <div class="icon-menu">
                     <img src="<?php echo base_url()?>public/img/icons/freteADM.svg" alt="icone de frete">
                     <p>Cadastrar Fretes</p>

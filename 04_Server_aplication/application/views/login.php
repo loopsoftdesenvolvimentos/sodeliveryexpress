@@ -11,7 +11,7 @@
       </div>
       <section id="Assinantecontent" class="tirar_display trocar_display column">
         <div class="icon-home">
-          <a href="<?php echo base_url() ?>pages/index">
+          <a href="<?= site_url('Home') ?>">
             <img src="<?php echo base_url() ?>public/img/icons/home.svg" alt="icons">
           </a>
         </div>
@@ -64,7 +64,7 @@
                 <input type="button" id="Entrar_motorista" value="Entrar">
             </div>
             <div class="container-cadastre">
-              <p>Não tem uma conta? <strong><a id="btn-cadastrar" href="<?<?= site_url('Veiculos/cadastrar') ?>#veiculos">Cadastre-se</a></strong></p>
+              <p>Não tem uma conta? <strong><a id="btn-cadastrar" href="<?= site_url('Veiculos/cadastrar') ?>#veiculos">Cadastre-se</a></strong></p>
             </div>
       </form>
     </section>

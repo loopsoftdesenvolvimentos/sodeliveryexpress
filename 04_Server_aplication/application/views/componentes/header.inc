@@ -70,7 +70,7 @@
           <nav class="none">
             <ul>
               <li class="mobile">
-                <a href="<?php echo base_url()?>pages/login" id="login">
+                <a href="<?= site_url('Home/login')?>" id="login">
                   <div class="icon-menu">
                     <img src="<?php echo base_url()?>public/img/icons/login.svg" alt="">
                     <p>Login</p>
@@ -132,13 +132,13 @@
 
         <div class="conta">
           <div class="mobile-cadastro none">
-            <a href="<?php echo base_url()?>pages/login" id="login">
+            <a href="<?= site_url('Home/login')?>" id="login">
                 <img src="<?php echo base_url()?>public/img/icons/login.svg" alt="">
               login
             </a>
           </div>
           <div class="desk-cadastro">
-            <a href="<?php echo base_url()?>pages/login">
+            <a href="<?= site_url('Home/login')?>">
                 <img src="<?php echo base_url()?>public/img/icons/login.svg" alt="">
                 <p>Entre ou cadastre-se</p>
             </a>

@@ -50,7 +50,7 @@
       </div>
       <div class="logo-publicidade content">
         <div class="logo">
-          <a href="<?php echo base_url() ?>pages/index">
+          <a href="<?= site_url('Home') ?>">
             <img src="<?php echo base_url()?>public/img/logo.png" alt="logo Só Delivery">
           </a>
         </div>
@@ -69,7 +69,7 @@
           <nav class="none">
             <ul>
               <li>
-                <a href="<?php echo base_url()?>pages/index" class="nomarginleft">
+                <a href="<?<?= site_url('Home') ?>" class="nomarginleft">
                   <div class="icon-menu">
                     <img src="<?php echo base_url()?>public/img/icons/home.svg" alt="icone de frete">
                     <p>Página Inicial</p>

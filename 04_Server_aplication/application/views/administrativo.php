@@ -67,7 +67,7 @@
             <div class="area-container">
               <div class="container">
 
-                <a href="<?php echo base_url()?>pages/areacadastro/#cadastramentoFretes">
+                <a href="<?= site_url('Home/areacadastro#cadastramentoFretes') ?>">
                   <img src="<?php echo base_url()?>public/img/icons/freteADM.png">
                   Cadastrar Fretes
                 </a>

@@ -11,7 +11,7 @@
           </div>
             <section id="filtro" class="container-menu none">
               <div class="container-empresa-filtro">
-                 <a href="<?php echo base_url() ?>pages/areacadastro/#cadastramentoFretes"> <button>Cadastrar Frete</button></a>
+                 <a href="<?= site_url('Home/areacadastro') ?>#cadastramentoFretes"> <button>Cadastrar Frete</button></a>
               </div>
                 <div class="container-empresa-titulo">
                     <h1>Filtros</h1>
