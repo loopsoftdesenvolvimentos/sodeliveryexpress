@@ -296,6 +296,9 @@ class pages extends CI_Controller {
 		$data['empresas'] = $this->Model->filter_empresa($config["per_page"], $page,$_SESSION['lista_empresa']);
 		$this->load->view('empresas',$data);
 	}
+	public function perfilEmpresa(){
+		$this->load->view('perfilEmpresa');
+	}
 	public function veiculos()
 	{
      	$data['check_in_ativo'] = $this->Auth_model->check_in_ativo();
@@ -372,7 +375,10 @@ class pages extends CI_Controller {
 	}
 
 	public function painelcontrole(){
-		$this->load->view('painelcentralcontrole');		
+		$this->load->view('painelcentralcontrole');
+	}
+	public function editarpaginas(){
+		$this->load->view('editarpaginas');
 	}
 
 	public function email()
@@ -399,7 +405,7 @@ class pages extends CI_Controller {
 
      	}
 	}
-	
+
 	public function pesquisar_placa($pesquisa)
 	{
 		echo $this->Model->pesquisar_placa($pesquisa);

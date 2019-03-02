@@ -69,18 +69,26 @@
           <nav class="none">
             <ul>
               <li>
-                <a href="<?<?= site_url('Home') ?>" class="nomarginleft">
+                <a href="<?= base_url() ?>pages/" class="nomarginleft">
                   <div class="icon-menu">
-                    <img src="<?php echo base_url()?>public/img/icons/home.svg" alt="icone de frete">
+                    <img src="<?php echo base_url()?>public/img/icons/home.svg" alt="icone ">
                     <p>Página Inicial</p>
                   </div>
                 </a>
               </li>
               <li>
-                <a href="<?php echo base_url()?>pages/areacadastro/#cadastramentoVeiculo">
+                <a href="<?php echo base_url()?>pages/editarpaginas/#editarPaginas">
                   <div class="icon-menu">
-                    <img src="<?php echo base_url()?>public/img/icons/editar_paginas.svg" alt="icone de frete">
+                    <img src="<?php echo base_url()?>public/img/icons/editar_paginas.svg" alt="icone ">
                     <p>Editar Páginas</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="<?php echo base_url() ?>pages/editarpaginas/#cadastrarDuvidas" >
+                  <div class="icon-menu">
+                    <img src="<?php echo base_url()?>public/img/icons/DUVIDAS.svg" alt="icone ">
+                    <p>Cadastro Dúvidas</p>
                   </div>
                 </a>
               </li>
@@ -95,7 +103,7 @@
               <li>
                 <a href="#listaVeiculos">
                   <div class="icon-menu">
-                    <img src="<?php echo base_url()?>public/img/icons/verVeiculosADM.svg" alt="icone de frete">
+                    <img src="<?php echo base_url()?>public/img/icons/verVeiculosADM.svg" alt="icone ">
                     <p>Listar Veículos</p>
                   </div>
                 </a>
@@ -103,7 +111,7 @@
               <li>
                 <a href="#listarFretes" >
                   <div class="icon-menu">
-                    <img src="<?php echo base_url()?>public/img/icons/verFretesADM.svg" alt="icone de frete">
+                    <img src="<?php echo base_url()?>public/img/icons/verFretesADM.svg" alt="icone ">
                     <p>Listar Fretes</p>
                   </div>
                 </a>

@@ -49,5 +49,6 @@
     </main>
     <?php include('componentes/footer.inc'); ?>
   </body>
+  
   <script type="text/javascript" src="<?php echo base_url()?>public/js/menu_mobile.js"></script>
 </html>
